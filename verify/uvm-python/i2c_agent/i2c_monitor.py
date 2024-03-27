@@ -9,15 +9,23 @@ import math
 from EF_UVM.ip_env.ip_agent.ip_monitor import ip_monitor
 
 
-class skeleton_monitor(ip_monitor):
-    def __init__(self, name="skeleton_monitor", parent=None):
+class i2c_monitor(ip_monitor):
+    def __init__(self, name="i2c_monitor", parent=None):
         super().__init__(name, parent)
 
     async def run_phase(self, phase):
-        # TODO: Add logic to monitor the IP 
+        uvm_info(self.tag, "run_phase started", UVM_LOW)
+        self.get_i2c_sample()
         # use self.vif.<signal name> for monitoring interface signals
         # self.monitor_port.write(tr) # this is the port to send the transaction after sampling it
         pass
 
 
-uvm_component_utils(skeleton_monitor)
+    async def get_i2c_sample(self):
+        await RisingEdge (self.vif.RESETn)
+        while(True):
+            
+            self.monitor_port.write(tr)
+
+
+uvm_component_utils(i2c_monitor)

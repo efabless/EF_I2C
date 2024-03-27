@@ -4,8 +4,8 @@ from uvm.base.uvm_object_globals import UVM_ALL_ON, UVM_NOPACK, UVM_HIGH, UVM_ME
 from uvm.base.sv import sv
 from EF_UVM.ip_env.ip_item import ip_item
 
-class skeleton_item(ip_item):
-    def __init__(self, name="skeleton_item"):
+class i2c_item(ip_item):
+    def __init__(self, name="i2c_item"):
         super().__init__(name)
         # TODO: Add the variables that defined the item and thier randomization status
 
@@ -20,4 +20,4 @@ class skeleton_item(ip_item):
         return False
 
 
-uvm_object_utils(skeleton_item)
+uvm_object_utils(i2c_item)

@@ -8,11 +8,11 @@ from uvm.macros.uvm_tlm_defines import uvm_analysis_imp_decl
 from EF_UVM.ip_env.ip_coverage.ip_coverage import ip_coverage
 
 
-class skeleton_coverage(ip_coverage):
+class i2c_coverage(ip_coverage):
     """
     component that initialize the coverage groups and control when to sample the data.
     """
-    def __init__(self, name="skeleton_coverage", parent=None):
+    def __init__(self, name="i2c_coverage", parent=None):
         super().__init__(name, parent)
 
     def build_phase(self, phase):
@@ -25,4 +25,4 @@ class skeleton_coverage(ip_coverage):
         pass
 
 
-uvm_component_utils(skeleton_coverage)
+uvm_component_utils(i2c_coverage)

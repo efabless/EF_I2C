@@ -7,8 +7,8 @@ import random
 from EF_UVM.ip_env.ip_agent.ip_driver import ip_driver
 
 
-class skeleton_driver(ip_driver):
-    def __init__(self, name="skeleton_driver", parent=None):
+class i2c_driver(ip_driver):
+    def __init__(self, name="i2c_driver", parent=None):
         super().__init__(name, parent)
         self.tag = name
 
@@ -24,4 +24,4 @@ class skeleton_driver(ip_driver):
             self.seq_item_port.item_done()
 
 
-uvm_component_utils(skeleton_driver)
+uvm_component_utils(i2c_driver)

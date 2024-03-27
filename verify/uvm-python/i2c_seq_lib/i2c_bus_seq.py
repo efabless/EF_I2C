@@ -8,11 +8,11 @@ from uvm.macros.uvm_sequence_defines import uvm_do_with, uvm_do
 import random
 
 
-class skeleton_bus_seq(bus_seq_base):
+class i2c_bus_seq(bus_seq_base):
     # use this sequence write or read from register by the bus interface
     # this sequence should be connected to the bus sequencer in the testbench
     # you should create as many sequences as you need not only this one
-    def __init__(self, name="skeleton_bus_seq"):
+    def __init__(self, name="i2c_bus_seq"):
         super().__init__(name)
 
     async def body(self):
@@ -27,4 +27,4 @@ class skeleton_bus_seq(bus_seq_base):
         # await self.send_req(is_write=False, reg="control")
 
 
-uvm_object_utils(skeleton_bus_seq)
+uvm_object_utils(i2c_bus_seq)

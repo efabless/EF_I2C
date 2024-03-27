@@ -3,10 +3,10 @@ import cocotb
 from uvm.macros import uvm_component_utils, uvm_fatal
 
 
-class skeleton_logger(ip_logger):
-    def __init__(self, name="skeleton_logger", parent=None):
+class i2c_logger(ip_logger):
+    def __init__(self, name="i2c_logger", parent=None):
         super().__init__(name, parent)
-        uvm_fatal("skeleton_logger", "please write self.header in list format")
+        uvm_fatal("i2c_logger", "please write self.header in list format")
         # self.header = ['Time (ns)', "Direction", "value"]
         self.col_widths = [10]* len(self.header)
 
@@ -17,4 +17,4 @@ class skeleton_logger(ip_logger):
         return [sim_time, ]
 
 
-uvm_component_utils(skeleton_logger)
+uvm_component_utils(i2c_logger)

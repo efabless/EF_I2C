@@ -2,9 +2,9 @@ PLUSARGS += "+UVM_VERBOSITY=UVM_MEDUIM"
 TOPLEVEL := top
 MODULE   ?= top_module
 AHB_FILES ?= # TODO: Add add AHB wrapper file path
-APB_FILES ?= # TODO: Add add APB wrapper file path
+APB_FILES ?= $(PWD)/../../hdl/rtl/EF_I2C_APB.pp.v
 WB_FILES ?= # TODO: Add add WB wrapper file path
-HDL_FILES ?= # TODO: Add ip hdl wrapper file path
+HDL_FILES ?= $(PWD)/../../ip/I2C/hdl/rtl/*.v
 VERILOG_SOURCES ?=  $(PWD)/top.v $(AHB_FILES) $(APB_FILES) $(WB_FILES) $(HDL_FILES)
 RTL_MACROS += "" # Add macros needed
 BUS_TYPE ?= APB
@@ -16,11 +16,11 @@ else ifeq ($(BUS_TYPE),WISHBONE)
     RTL_MACROS += -DBUS_TYPE_WISHBONE
 endif
 # RTL_MACROS ?= "-DSKIP_WAVE_DUMP"
-YAML_FILE = $(PWD)/../../<skeleton>.yaml # TODO: update yaml file path
+YAML_FILE = $(PWD)/../../EF_I2C.json # TODO: update yaml file path
 MAKEFLAGS += --no-print-directory
 
 # List of tests
-TESTS := # TODO: Add tests names
+TESTS := i2c_first_test
 
 # Variable for tag - set this as required
 SIM_TAG ?= default_tag
