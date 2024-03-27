@@ -31,7 +31,7 @@
                                             apb_rd_ack <= 0; \
                                         end
 
-module APB2I2C # (
+module EF_I2C_APB # (
     parameter DEFAULT_PRESCALE = 1,
     parameter FIXED_PRESCALE = 0,
     parameter CMD_FIFO = 1,

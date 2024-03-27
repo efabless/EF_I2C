@@ -1,6 +1,6 @@
 {
     "info": {
-        "name": "I2C_wrapper",
+        "name": "EF_I2C",
         "description": "I2C master controller with an APB interface",
         "repo": "https://github.com/efabless/EF_I2C",
         "owner": "Mohamed Shalan",

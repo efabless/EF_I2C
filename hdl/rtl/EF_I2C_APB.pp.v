@@ -19,7 +19,7 @@
 `timescale			    1ns/1ns
 `default_nettype	    none
 
-module APB2I2C # (
+module EF_I2C_APB # (
     parameter DEFAULT_PRESCALE = 1,
     parameter FIXED_PRESCALE = 0,
     parameter CMD_FIFO = 1,
