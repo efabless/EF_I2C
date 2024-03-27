@@ -19,7 +19,7 @@
 `define     SRSTN(rst, clk, duration)   reg rst=1'bx; initial begin #2 rst <= 1'b0; #(duration); @(posedge clk) rst <= 1'b1; end 
 `define     APBSIG                      reg PWRITE, PENABLE, PSEL; reg [31:0] PWDATA, PADDR; wire PREADY; wire [31:0] PRDATA;
 
-module i2c_master_apb_tb;
+module EF_I2C_APB_tb;
 
     `APBSIG
 
@@ -34,7 +34,7 @@ module i2c_master_apb_tb;
     wire        i2c_sda_o;
     wire        i2c_sda_t;
 
-    `DUMP(i2c_master_apb_tb, 0)
+    `DUMP(EF_I2C_APB_tb, 0)
     `TIMEOUT(10_000_000)
 
     `include "apb_tasks.vh"
@@ -47,7 +47,7 @@ module i2c_master_apb_tb;
     assign  sda_pin = ~i2c_sda_o ? 1'b0 : 1'bz;
     assign  i2c_sda_i = sda_pin;
     
-    APB2I2C MUV (
+    EF_I2C_APB MUV (
         .PCLK(PCLK),
         .PRESETn(PRESETn),
 
