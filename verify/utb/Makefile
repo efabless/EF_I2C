@@ -6,7 +6,7 @@ MGMT_ROOT ?= ""
 
 
 PDK ?= sky130A
-TB_TOP = i2c_master_apb_tb
+TB_TOP = EF_I2C_APB_tb
 IV_RTL_FILES = -c ./$(TB_TOP).f
 IV_FLAGS = -DCOCOTB_SIM -DFUNCTIONAL -DUNIT_DELAY=\#1
 # PDK_INCLUDES = $(PDK_ROOT)/$(PDK)/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v $(PDK_ROOT)/$(PDK)/libs.ref/sky130_fd_sc_hd/verilog/primitives.v 
