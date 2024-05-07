@@ -17,14 +17,12 @@ class i2c_bus_seq(bus_seq_base):
 
     async def body(self):
         await super().body()
-        # Add the sequqnce here
-        # you could use method send_req to send a write or read using the register name
-        # example for writing register by value > 5
-        # await self.send_req(is_write=True, reg="control", data_condition=lambda data: data > 5)
-        # example for writing register by value == 5
-        # await self.send_req(is_write=True, reg="control", data_value=5)
-        # example for reading register from register
-        # await self.send_req(is_write=False, reg="control")
+        await self.send_req(is_write=True, reg="PR", data_value=2)
+        await self.send_req(is_write=True, reg="Command", data_value=0x04_34) # Address: 0x34, write
+        await self.send_req(is_write=True, reg="Data", data_value=0x00_10) # data: 10
+        await self.send_req(is_write=True, reg="Command", data_value=0x04_34) # Address: 0x34, write
+        await self.send_req(is_write=True, reg="Data", data_value=0x00_20) # data: 10
+        await self.send_req(is_write=True, reg="Command", data_value=0x10_34) # Address: 0x34, write
 
 
 uvm_object_utils(i2c_bus_seq)

@@ -18,13 +18,9 @@ class i2c_ip_seq(UVMSequence):
         self.tag = name
 
     async def body(self):
-        # Add sequence to be used by the ip sequencer
-        # you could use method uvm_do and uvm_do_with to send these transactions
-        # send item with conditions 
-        # await uvm_do_with(self, self.req, lambda i2c_var1: i2c_var1 == 10, lambda i2c_var2: i2c_var2 > 7, ......)
-        # send item without conditions
-        # await uvm_do(self, self.req)
-        pass
+        self.req.read_or_write = "write"
+        self.req.data = [0x10, 0x20]
+        await uvm_do(self, self.req)
 
 
 uvm_object_utils(i2c_ip_seq)

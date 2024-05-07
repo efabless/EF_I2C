@@ -33,8 +33,8 @@ module top();
     
         EF_I2C_APB MUV (
 
-            .PCLK(PCLK),
-            .PRESETn(PRESETn),
+            .PCLK(CLK),
+            .PRESETn(RESETn),
 
             .PWRITE(PWRITE),
             .PWDATA(PWDATA),

@@ -7,17 +7,22 @@ from EF_UVM.ip_env.ip_item import ip_item
 class i2c_item(ip_item):
     def __init__(self, name="i2c_item"):
         super().__init__(name)
-        # TODO: Add the variables that defined the item and thier randomization status
+        # self.frame_type = "address"
+        self.slave_address = 0
+        self.read_or_write = "write"
+        self.data = []
+
 
     def convert2string(self):
-        # TODO: return the string representation of the item
-        return ""
+        return sv.sformatf(f" I2C slave address = 0x{self.slave_address:X} , {self.read_or_write} , data = {self.data}")
+        # if frame_type = "address":
+        #     r_w_str = "write to" if self.read_or_write == "write" else "read from"
+        #     return sv.sformatf(f" I2C address frame: {r_w_str} slave with address = 0x{self.slave_address:X}")
+        # elif frame_type = "data":
 
     def do_compare(self, tr):
-        # method used by scoreboard to compare the items
-        # TODO: Add logic to compare the item with another passed item
-        # in the simple case this function should return (self.varaible1 == tr.variable2 and self.varaible2 == tr.variable2 and .. )
-        return False
+        uvm_info(self.tag, "Comparing " + self.convert2string() + " with " + tr.convert2string(), UVM_MEDIUM)
+        return self.slave_address == tr.slave_address and self.data == tr.data and self.read_or_write == tr.read_or_write and self.nack_or_ack == self.nack_or_ack 
 
 
 uvm_object_utils(i2c_item)

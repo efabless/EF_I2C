@@ -6,7 +6,7 @@ from uvm.base.uvm_globals import run_test
 from i2c_interface.i2c_if import i2c_if
 from EF_UVM.bus_env.bus_interface.bus_if import bus_apb_if, bus_irq_if, bus_ahb_if, bus_wb_if
 from cocotb_coverage.coverage import coverage_db
-from cocotb.triggers import Event, First
+from cocotb.triggers import Event, First, Timer
 from EF_UVM.bus_env.bus_regs import bus_regs
 from uvm.base import UVMRoot
 from EF_UVM.base_test import base_test
@@ -87,15 +87,14 @@ class i2c_first_test(i2c_base_test):
         super().__init__(name, parent=parent)
         self.tag = name
 
-    async def run_phase(self, phase):
+    async def main_phase(self, phase):
         uvm_info(self.tag, f"Starting test {self.__class__.__name__}", UVM_LOW)
         phase.raise_objection(self, f"{self.__class__.__name__} OBJECTED")
-        # TODO: conntect sequence with sequencer here
-        # for example if you need to run the 2 sequence sequentially
-        # bus_seq = i2c_bus_seq("i2c_bus_seq")
-        # ip_seq = i2c_ip_seq("i2c_ip_seq")
-        # await bus_seq.start(self.bus_sqr)
-        # await ip_seq.start(self.ip_sqr)
+        bus_seq = i2c_bus_seq("i2c_bus_seq")
+        ip_seq = i2c_ip_seq("i2c_ip_seq")
+        await bus_seq.start(self.bus_sqr)
+        await ip_seq.start(self.ip_sqr)
+        await Timer(10000 , "ns")
         phase.drop_objection(self, f"{self.__class__.__name__} drop objection")
 
 
