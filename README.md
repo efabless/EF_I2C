@@ -38,11 +38,11 @@ The following table is the result for implementing the EF_I2C IP with different 
 |---|---|---|---|---|
 |Command|0004|0x00000000|w|bit 0-6: cmd_address, bit 8: cmd_start, bit 9: cmd_read, bit 10: cmd_write, bit 11: cmd_wr_m, bit 12: cmd_stop. Setting more than one command bit is allowed.  Start or repeated start will be issued first, followed by read or write, followed by stop.  Note that setting read and write at the same time is not allowed, this will result in the command being ignored.|
 |Data|0008|0x00000000|w/r|bit 0-7: data, bit 8: data_valid, bit 9: data_last|
-|PR|000c|0x00000000|w|prescaler = Fclk / (FI2Cclk * 4)|
-|IM|0f00|0x00000000|w|Interrupt Mask Register; write 1/0 to enable/disable interrupts; check the interrupt flags table for more details|
-|RIS|0f08|0x00000000|w|Raw Interrupt Status; reflects the current interrupts status;check the interrupt flags table for more details|
-|MIS|0f04|0x00000000|w|Masked Interrupt Status; On a read, this register gives the current masked status value of the corresponding interrupt. A write has no effect; check the interrupt flags table for more details|
-|IC|0f0c|0x00000000|w|Interrupt Clear Register; On a write of 1, the corresponding interrupt (both raw interrupt and masked interrupt, if enabled) is cleared; check the interrupt flags table for more details|
+|PR|000c|0x00000000|w|prescale = Fclk / (FI2Cclk * 4)|
+|IM|ff00|0x00000000|w|Interrupt Mask Register; write 1/0 to enable/disable interrupts; check the interrupt flags table for more details|
+|RIS|ff08|0x00000000|w|Raw Interrupt Status; reflects the current interrupts status;check the interrupt flags table for more details|
+|MIS|ff04|0x00000000|w|Masked Interrupt Status; On a read, this register gives the current masked status value of the corresponding interrupt. A write has no effect; check the interrupt flags table for more details|
+|IC|ff0c|0x00000000|w|Interrupt Clear Register; On a write of 1, the corresponding interrupt (both raw interrupt and masked interrupt, if enabled) is cleared; check the interrupt flags table for more details|
 
 ### Command Register [Offset: 0x4, mode: w]
 
