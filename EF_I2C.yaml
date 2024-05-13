@@ -1,0 +1,277 @@
+---
+info:
+  name: EF_I2C
+  description: I2C master controller with an APB interface
+  repo: https://github.com/efabless/EF_I2C
+  owner: Mohamed Shalan
+  license: APACHE 2.0
+  author: Mohamed Shalan
+  email: mshalan@efabless.com
+  version: v1.0.1
+  date: 07-5-2024
+  category: digital
+  tags:
+  - peripheral
+  - comm
+  - i2c
+  bus:
+  - APB
+  type: soft
+  status: verified
+  cell_count:
+    - IP: TBD
+    - APB: TBD
+  width: '0.0'
+  height: '0.0'
+  technology: n/a
+  clock_freq_mhz:
+    - IP: TBD
+    - APB: TBD
+  digital_supply_voltage: n/a
+  analog_supply_voltage: n/a
+  irq_reg_offset: 0xFF00
+  fifo_reg_offset: 0xFE00
+parameters:
+- name: DEFAULT_PRESCALE
+  default: 1
+  description: Default value for Prescale; prescale = Fclk / (FI2Cclk * 4)
+- name: FIXED_PRESCALE
+  default: 0
+  description: Prescale value is fixed or could be dynamically configured
+- name: CMD_FIFO
+  default: 1
+  description: Command AXI4 FIFO enable
+- name: CMD_FIFO_DEPTH
+  default: 32
+  description: Command AXI4 FIFO depth
+- name: WRITE_FIFO
+  default: 1
+  description: Write AXI4 FIFO enable
+- name: WRITE_FIFO_DEPTH
+  default: 32
+  description: Write AXI4 FIFO depth
+- name: READ_FIFO
+  default: 1
+  description: Read AXI4 FIFO enable
+- name: READ_FIFO_DEPTH
+  default: 32
+  description: Read AXI4 FIFO depth
+ports:
+- name: wbs_adr_i
+  width: 3
+  direction: input
+  description: wishbone input address
+- name: wbs_dat_i
+  width: 16
+  direction: input
+  description: wishbone input data 
+- name: wbs_dat_o
+  width: 16
+  direction: output
+  description: wishbone data out 
+- name: wbs_we_i
+  width: 1
+  direction: input
+  description: wishbone write enable 
+- name: wbs_sel_i
+  width: 2
+  direction: input
+  description: wishbone select 
+- name: wbs_stb_i
+  width: 1
+  direction: input
+  description: wishbone chip select 
+- name: wbs_ack_o
+  width: 1
+  direction: output
+  description: wishbone acknowledge 
+- name: wbs_cyc_i
+  width: 1
+  direction: input
+  description: wishbone bus cycle 
+- name: i2c_scl_i
+  width: 1
+  direction: input
+  description: i2c scl (Serial Clock) input 
+- name: i2c_scl_o
+  width: 1
+  direction: output
+  description: i2c scl (Serial Clock) output 
+- name: i2c_scl_t
+  width: 1
+  direction: output
+  description: i2c scl (Serial Clock) tristate 
+- name: i2c_sda_i
+  width: 1
+  direction: input
+  description: i2c scl (Serial Data) input 
+- name: i2c_sda_o
+  width: 1
+  direction: output
+  description: i2c scl (Serial Data) output
+- name: i2c_sda_t
+  width: 1
+  direction: output
+  description: i2c scl (Serial Data) tristate 
+- name: flags
+  width: 16
+  direction: output
+  description: i2c flags 
+
+external_interface:
+- name: scl_i
+  port: scl_i
+  direction: input
+  width: 1
+  description: i2c scl (Serial Clock) input 
+- name: scl_o
+  port: scl_o
+  direction: output
+  width: 1
+  description: i2c scl (Serial Clock) output
+- name: scl_oen_o
+  port: scl_oen_o
+  direction: output
+  width: 1
+  description: i2c scl (Serial Clock) output enable 
+- name: sda_i
+  port: sda_i
+  direction: input
+  width: 1
+  description: i2c scl (Serial Data) input 
+- name: sda_o
+  port: sda_o
+  direction: output
+  width: 1
+  description: i2c scl (Serial Data) output
+- name: sda_oen_o
+  port: sda_oen_o
+  direction: output
+  width: 1
+  description: i2c scl (Serial Data) output enable 
+- name: i2c_irq
+  port: i2c_irq
+  direction: output
+  width: 1
+  description: i2c interrupt 
+clock:
+  name: clk
+reset:
+  name: rst
+  level: 1
+registers:
+- name: Command
+  size: 16
+  mode: w
+  fifo: 'no'
+  offset: 4
+  bit_access: 'no'
+  read_port: ''
+  description: 'bit 0-6: cmd_address, bit 8: cmd_start, bit 9: cmd_read, bit 10: cmd_write,
+    bit 11: cmd_wr_m, bit 12: cmd_stop. Setting more than one command bit is allowed.  Start
+    or repeated start will be issued first, followed by read or write, followed by
+    stop.  Note that setting read and write at the same time is not allowed, this
+    will result in the command being ignored.'
+  fields:
+  - name: cmd_address
+    bit_offset: 0
+    bit_width: 7
+    write_port: ''
+    description: I2C address for command
+  - name: cmd_start
+    bit_offset: 8
+    bit_width: 1
+    write_port: ''
+    description: set high to issue I2C start, write to push on command FIFO
+  - name: cmd_read
+    bit_offset: 9
+    bit_width: 1
+    write_port: ''
+    description: set high to start read, write to push on command FIFO
+  - name: cmd_write
+    bit_offset: 10
+    bit_width: 1
+    write_port: ''
+    description: set high to start write, write to push on command FIFO
+  - name: cmd_write_multiple
+    bit_offset: 11
+    bit_width: 1
+    write_port: ''
+    description: set high to start block write, write to push on command FIFO
+  - name: cmd_stop
+    bit_offset: 12
+    bit_width: 1
+    write_port: ''
+    description: set high to issue I2C stop, write to push on command FIFO
+- name: Data
+  size: 16
+  mode: w/r
+  fifo: 'no'
+  offset: 8
+  bit_access: 'no'
+  read_port: ''
+  description: 'bit 0-7: data, bit 8: data_valid, bit 9: data_last'
+  fields:
+  - name: data
+    bit_offset: 0
+    bit_width: 8
+    write_port: ''
+    description: " I2C data, write to push on write data FIFO, read to pull from read
+      data FIFO"
+  - name: data_valid
+    bit_offset: 8
+    bit_width: 1
+    write_port: ''
+    description: indicates valid read data, must be accessed with atomic 16 bit reads
+      and writes
+  - name: data_last
+    bit_offset: 9
+    bit_width: 1
+    write_port: ''
+    description: indicate last byte of block write (write_multiple), must be accessed
+      with atomic 16 bit reads and writes
+- name: PR
+  size: 16
+  mode: w
+  fifo: 'no'
+  offset: 12
+  bit_access: 'no'
+  read_port: ''
+  description: prescale = Fclk / (FI2Cclk * 4)
+flags:
+- name: BUSY
+  port: busy_int
+  description: High when module is performing an I2C operation
+- name: BUSCONT
+  port: bus_control_int
+  description: High when module has control of active bus
+- name: BUSACT
+  port: bus_active_int
+  description: High when bus is active
+- name: MISS_ACK
+  port: missed_ack_flag
+  description: Slave ACK is missed
+- name: CMDE
+  port: cmd_fifo_empty
+  description: Command FIFO is Empty
+- name: CMDF
+  port: cmd_fifo_full
+  description: Command FIFO is Full
+- name: CMDOVF
+  port: cmd_fifo_overflow_flag
+  description: Command FIFO overflow; write 1 to clear
+- name: WRE
+  port: write_fifo_empty
+  description: Write FIFO is Empty
+- name: WRF
+  port: write_fifo_full
+  description: Write FIFO is Full
+- name: WROVF
+  port: write_fifo_overflow_flag
+  description: Write FIFO overflow; write 1 to clear
+- name: RDE
+  port: read_fifo_empty
+  description: Read FIFO is Empty
+- name: RDF
+  port: read_fifo_full
+  description: Read FIFO is Full

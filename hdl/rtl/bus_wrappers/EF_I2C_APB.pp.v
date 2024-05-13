@@ -19,6 +19,18 @@
 `timescale			    1ns/1ns
 `default_nettype	    none
 
+
+
+
+
+
+
+
+
+
+
+
+
 module EF_I2C_APB # (
     parameter DEFAULT_PRESCALE = 1,
     parameter FIXED_PRESCALE = 0,
@@ -53,9 +65,9 @@ module EF_I2C_APB # (
     output wire         i2c_irq
 );
 
-    localparam[15:0] RIS_REG_ADDR = 16'h0f04;
-    localparam[15:0] IM_REG_ADDR = 16'h0f08;
-    localparam[15:0] MIS_REG_ADDR = 16'h0f0c;
+    localparam[15:0] RIS_REG_ADDR = 16'hFF08;
+    localparam[15:0] IM_REG_ADDR = 16'hFF00;
+    localparam[15:0] MIS_REG_ADDR = 16'hFF04;
 
     wire                clk         = PCLK;
     wire                rst         = ~PRESETn;
