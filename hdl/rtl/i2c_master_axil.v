@@ -348,6 +348,9 @@ wire data_in_valid_int;
 wire data_in_ready_int;
 wire data_in_last_int;
 
+wire data_in_valid;
+wire data_in_last;
+
 wire [7:0] data_out_int;
 wire data_out_valid_int;
 wire data_out_ready_int;
