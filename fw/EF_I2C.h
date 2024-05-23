@@ -8,8 +8,8 @@
 
 void EF_I2C_writeAddress(uint32_t i2c_base, char addr);
 void EF_I2C_startCmd(uint32_t i2c_base);
-void EF_I2C_readCmd(uint32_t i2c_base);
-void EF_I2C_writeCmd(uint32_t i2c_base);
+void EF_I2C_readCmd(uint32_t i2c_base, char addr);
+void EF_I2C_writeCmd(uint32_t i2c_base, char addr);
 void EF_I2C_writeMultipleCmd(uint32_t i2c_base);
 void EF_I2C_stopCmd(uint32_t i2c_base);
 void EF_I2C_setCommandReg(uint32_t i2c_base, int value);

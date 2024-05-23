@@ -58,7 +58,7 @@
 #define EF_I2C_RDF_FLAG	0x100
 
 typedef struct _EF_I2C_TYPE_ {
-    __R 	reserved_0[1];
+    __R 	STATUS;
 	__W 	COMMAND;
 	__RW    DATA;
     __W     PR;
