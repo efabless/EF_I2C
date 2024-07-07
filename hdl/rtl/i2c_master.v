@@ -843,8 +843,8 @@ always @(posedge clk, posedge rst) begin
         state_reg <= STATE_IDLE;
         phy_state_reg <= PHY_STATE_IDLE;
         phy_rx_data_reg <= 1'b0;
-        addr_reg <= {AW{1'b0}};
-        data_reg <= {DW{1'b0}};
+        addr_reg <= 7'b0;
+        data_reg <= 8'b0;
         last_reg <= 1'b0;
         mode_read_reg <= 1'b0;
         mode_write_multiple_reg <= 1'b0;
