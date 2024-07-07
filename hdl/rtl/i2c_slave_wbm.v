@@ -226,27 +226,27 @@ localparam [2:0]
 
 reg [2:0] state_reg = STATE_IDLE, state_next;
 
-reg [7:0] count_reg = 8'd0, count_next;
-reg last_cycle_reg = 1'b0;
+reg [7:0] count_reg, count_next;
+reg last_cycle_reg;
 
 reg [ADDR_WIDTH_ADJ-1:0] addr_reg = {ADDR_WIDTH_ADJ{1'b0}}, addr_next;
 reg [WB_DATA_WIDTH-1:0] data_reg = {WB_DATA_WIDTH{1'b0}}, data_next;
 
-reg wb_we_o_reg = 1'b0, wb_we_o_next;
+reg wb_we_o_reg, wb_we_o_next;
 reg [WB_SELECT_WIDTH-1:0] wb_sel_o_reg = {WB_SELECT_WIDTH{1'b0}}, wb_sel_o_next;
-reg wb_stb_o_reg = 1'b0, wb_stb_o_next;
-reg wb_cyc_o_reg = 1'b0, wb_cyc_o_next;
+reg wb_stb_o_reg, wb_stb_o_next;
+reg wb_cyc_o_reg, wb_cyc_o_next;
 
-reg busy_reg = 1'b0;
+reg busy_reg;
 
-reg [7:0] data_in_reg = 8'd0, data_in_next;
-reg data_in_valid_reg = 1'b0, data_in_valid_next;
+reg [7:0] data_in_reg, data_in_next;
+reg data_in_valid_reg, data_in_valid_next;
 wire data_in_ready;
 
 wire [7:0] data_out;
 wire data_out_valid;
 wire data_out_last;
-reg data_out_ready_reg = 1'b0, data_out_ready_next;
+reg data_out_ready_reg, data_out_ready_next;
 
 assign wb_adr_o = {addr_reg[ADDR_WIDTH_ADJ-1:ADDR_WIDTH_ADJ-WB_VALID_ADDR_WIDTH], {WB_ADDR_WIDTH-WB_VALID_ADDR_WIDTH{1'b0}}};
 assign wb_dat_o = data_reg;
@@ -416,36 +416,44 @@ always @* begin
 end
 
 always @(posedge clk, posedge rst) begin
-    state_reg <= state_next;
-
-    count_reg <= count_next;
-
-    if (data_out_ready_reg & data_out_valid) begin
-        last_cycle_reg <= data_out_last;
-    end
-
-    addr_reg <= addr_next;
-    data_reg <= data_next;
-
-    wb_we_o_reg <= wb_we_o_next;
-    wb_sel_o_reg <= wb_sel_o_next;
-    wb_stb_o_reg <= wb_stb_o_next;
-    wb_cyc_o_reg <= wb_cyc_o_next;
-
-    busy_reg <= state_next != STATE_IDLE;
-
-    data_in_reg <= data_in_next;
-    data_in_valid_reg <= data_in_valid_next;
-
-    data_out_ready_reg <= data_out_ready_next;
 
     if (rst) begin
         state_reg <= STATE_IDLE;
+        count_reg <= 8'd0;
+        last_cycle_reg <= 1'b0;
+        addr_reg <= {ADDR_WIDTH{1'b0}};
+        data_reg <= {DATA_WIDTH{1'b0}};
+        wb_we_o_reg <= 1'b0;
+        wb_sel_o_reg <= {WB_SELECT_WIDTH{1'b0}};
         data_in_valid_reg <= 1'b0;
         data_out_ready_reg <= 1'b0;
         wb_stb_o_reg <= 1'b0;
         wb_cyc_o_reg <= 1'b0;
         busy_reg <= 1'b0;
+        data_in_reg <= {8{1'b0}};
+    end else begin
+        state_reg <= state_next;
+        count_reg <= count_next;
+
+        if (data_out_ready_reg & data_out_valid) begin
+            last_cycle_reg <= data_out_last;
+        end
+
+        addr_reg <= addr_next;
+        data_reg <= data_next;
+
+        wb_we_o_reg <= wb_we_o_next;
+        wb_sel_o_reg <= wb_sel_o_next;
+        wb_stb_o_reg <= wb_stb_o_next;
+        wb_cyc_o_reg <= wb_cyc_o_next;
+
+        busy_reg <= state_next != STATE_IDLE;
+
+        data_in_reg <= data_in_next;
+        data_in_valid_reg <= data_in_valid_next;
+
+        data_out_ready_reg <= data_out_ready_next;
+
     end
 end
 
