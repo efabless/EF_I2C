@@ -202,7 +202,7 @@ assign status_full = FRAME_FIFO ? full_cur || full_wr : full;
 assign status_empty = empty;
 
 // Write logic
-always @(posedge clk) begin
+always @(posedge clk, posedge rst) begin
     overflow_reg <= 1'b0;
     bad_frame_reg <= 1'b0;
     good_frame_reg <= 1'b0;
@@ -255,7 +255,7 @@ end
 // Read logic
 integer j;
 
-always @(posedge clk) begin
+always @(posedge clk, posedge rst) begin
     if (m_axis_tready) begin
         // output ready; invalidate stage
         m_axis_tvalid_pipe_reg[PIPELINE_OUTPUT-1] <= 1'b0;

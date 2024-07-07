@@ -102,7 +102,7 @@ wire sda_negedge = !sda_i_reg && last_sda_i_reg;
 wire start_bit = sda_negedge && scl_i_reg;
 wire stop_bit = sda_posedge && scl_i_reg;
 
-always @(posedge clk) begin
+always @(posedge clk, posedge rst) begin
 
     if (start_bit) begin
         sda_o_reg <= 1'b1;

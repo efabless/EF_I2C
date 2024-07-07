@@ -446,7 +446,7 @@ always @* begin
     end
 end
 
-always @(posedge clk) begin
+always @(posedge clk, posedge rst) begin
     state_reg <= state_next;
 
     // read init_data ROM
