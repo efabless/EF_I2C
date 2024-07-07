@@ -612,7 +612,7 @@ always @* begin
     end
 end
 
-always @(posedge clk) begin
+always @(posedge clk, posedge rst) begin
     wbs_dat_o_reg <= wbs_dat_o_next;
     wbs_ack_o_reg <= wbs_ack_o_next;
 

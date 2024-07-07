@@ -436,7 +436,7 @@ always @* begin
     end
 end
 
-always @(posedge clk) begin
+always @(posedge clk, posedge rst) begin
     state_reg <= state_next;
 
     addr_reg <= addr_next;

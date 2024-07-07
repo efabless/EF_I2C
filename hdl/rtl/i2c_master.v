@@ -826,7 +826,7 @@ always @* begin
     end
 end
 
-always @(posedge clk) begin
+always @(posedge clk, posedge rst) begin
     state_reg <= state_next;
     phy_state_reg <= phy_state_next;
 
