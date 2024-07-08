@@ -827,18 +827,6 @@ always @* begin
 end
 
 always @(posedge clk, posedge rst) begin
-    
-    if (start_bit) begin
-        bus_active_reg <= 1'b1;
-    end else if (stop_bit) begin
-        bus_active_reg <= 1'b0;
-    end else begin
-        bus_active_reg <= bus_active_reg;
-    end
-
-    bus_control_reg <= bus_control_next;
-    missed_ack_reg <= missed_ack_next;
-
     if (rst) begin
         state_reg <= STATE_IDLE;
         phy_state_reg <= PHY_STATE_IDLE;
@@ -894,7 +882,16 @@ always @(posedge clk, posedge rst) begin
         last_scl_i_reg <= scl_i_reg;
         last_sda_i_reg <= sda_i_reg;
         busy_reg <= !(state_reg == STATE_IDLE || state_reg == STATE_ACTIVE_WRITE || state_reg == STATE_ACTIVE_READ) || !(phy_state_reg == PHY_STATE_IDLE || phy_state_reg == PHY_STATE_ACTIVE);
-    
+        if (start_bit) begin
+            bus_active_reg <= 1'b1;
+        end else if (stop_bit) begin
+            bus_active_reg <= 1'b0;
+        end else begin
+            bus_active_reg <= bus_active_reg;
+        end
+
+        bus_control_reg <= bus_control_next;
+        missed_ack_reg <= missed_ack_next;
     end
 end
 
