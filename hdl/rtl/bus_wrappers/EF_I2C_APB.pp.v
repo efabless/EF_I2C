@@ -75,16 +75,6 @@ module EF_I2C_APB # (
     localparam[15:0] GCLK_REG_ADDR = 16'hFF10;
 
     reg [0:0] GCLK_REG;
-	always @(posedge PCLK or negedge PRESETn) if(~PRESETn) GCLK_REG <= 0;
-                                        else if(apb_we & (PADDR[15:0]==GCLK_REG_ADDR)) begin
-                                            GCLK_REG <= PWDATA[1-1:0];
-                                            apb_wr_ack <= 1;
-                                        end else if(apb_valid & (PADDR[15:0]==GCLK_REG_ADDR))
-                                            apb_rd_ack <= 1;
-                                        else begin
-                                            apb_wr_ack <= 0;
-                                            apb_rd_ack <= 0;
-                                        end
 
         wire clk_g;
         wire clk_gated_en = GCLK_REG[0];
@@ -169,7 +159,18 @@ module EF_I2C_APB # (
 
         .flags(flags)
     );
- 
+    
+	always @(posedge PCLK or negedge PRESETn) if(~PRESETn) GCLK_REG <= 0;
+                                        else if(apb_we & (PADDR[15:0]==GCLK_REG_ADDR)) begin
+                                            GCLK_REG <= PWDATA[1-1:0];
+                                            apb_wr_ack <= 1;
+                                        end else if(apb_valid & (PADDR[15:0]==GCLK_REG_ADDR))
+                                            apb_rd_ack <= 1;
+                                        else begin
+                                            apb_wr_ack <= 0;
+                                            apb_rd_ack <= 0;
+                                        end
+    
     always @(posedge PCLK or negedge PRESETn) if(~PRESETn) IM_REG <= 0;
                                         else if(apb_we & (PADDR[15:0]==IM_REG_ADDR)) begin
                                             IM_REG <= PWDATA[9-1:0];

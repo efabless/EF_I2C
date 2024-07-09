@@ -75,7 +75,6 @@ module EF_I2C_APB # (
     localparam[15:0] GCLK_REG_ADDR = 16'hFF10;
 
     reg [0:0] GCLK_REG;
-	`APB_REG(GCLK_REG, 0, 1)
 
         wire clk_g;
         wire clk_gated_en = GCLK_REG[0];
@@ -160,7 +159,9 @@ module EF_I2C_APB # (
 
         .flags(flags)
     );
- 
+    
+	`APB_REG(GCLK_REG, 0, 1)
+    
     `APB_REG(IM_REG, 0, 9)
 
     assign i2c_irq = |MIS_REG;
