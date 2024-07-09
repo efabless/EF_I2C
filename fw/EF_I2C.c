@@ -3,6 +3,11 @@
 
 #include <EF_I2C.h>
 
+void EF_I2C_setGclkEnable (uint32_t i2c_base, int value){
+    EF_I2C_TYPE* i2c = (EF_I2C_TYPE*)i2c_base;
+    i2c->GCLK = value;
+}
+
 void EF_I2C_writeToAddress(uint32_t i2c_base, char addr, char data){
     EF_I2C_writeData(i2c_base, data);
     EF_I2C_writeCmd(i2c_base, addr);

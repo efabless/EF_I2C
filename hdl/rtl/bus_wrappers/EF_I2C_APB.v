@@ -41,6 +41,10 @@ module EF_I2C_APB # (
     parameter READ_FIFO = 1,
     parameter READ_FIFO_DEPTH = 16
 ) (
+    `ifdef USE_POWER_PINS
+	inout VPWR,
+	inout VGND,
+    `endif
     input wire          PCLK,
     input wire          PRESETn,
  
@@ -68,8 +72,29 @@ module EF_I2C_APB # (
     localparam[15:0] RIS_REG_ADDR = 16'hFF08;
     localparam[15:0] IM_REG_ADDR = 16'hFF00;
     localparam[15:0] MIS_REG_ADDR = 16'hFF04;
+    localparam[15:0] GCLK_REG_ADDR = 16'hFF10;
 
-    wire                clk         = PCLK;
+    reg [0:0] GCLK_REG;
+	`APB_REG(GCLK_REG, 0, 1)
+
+        wire clk_g;
+        wire clk_gated_en = GCLK_REG[0];
+
+    (* keep *) sky130_fd_sc_hd__dlclkp_4 clk_gate(
+    `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND), 
+        .VNB(VGND),
+		.VPB(VPWR),
+    `endif 
+        .GCLK(clk_g), 
+        .GATE(clk_gated_en), 
+        .CLK(PCLK)
+        );
+        
+	wire		clk = clk_g;
+	wire		rst_n = PRESETn;
+
     wire                rst         = ~PRESETn;
     wire [ 2:0]         wbs_adr_i   = PADDR[3:1];
     wire [15:0]         wbs_dat_i   = PWDATA[15:0];
@@ -95,6 +120,7 @@ module EF_I2C_APB # (
                     (PADDR[15:0] == RIS_REG_ADDR)   ? {23'b0, RIS_REG}  :
                     (PADDR[15:0] == MIS_REG_ADDR)   ? {23'b0, MIS_REG}  :
                     (PADDR[15:0] == IM_REG_ADDR)    ? {23'b0, IM_REG}   :
+                    (PADDR[15:0] == GCLK_REG_ADDR)  ? {23'b0, GCLK_REG}   :
                     32'hDEADBEEF;
     
     i2c_master_wbs_16 #

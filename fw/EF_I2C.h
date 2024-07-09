@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-
+void EF_I2C_setGclkEnable (uint32_t i2c_base, int value);
 void EF_I2C_writeAddress(uint32_t i2c_base, char addr);
 void EF_I2C_startCmd(uint32_t i2c_base);
 void EF_I2C_readCmd(uint32_t i2c_base, char addr);
