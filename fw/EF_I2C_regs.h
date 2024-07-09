@@ -66,6 +66,7 @@ typedef struct _EF_I2C_TYPE_ {
 	__RW	IM;
 	__R 	MIS;
 	__R 	RIS;
+	__R     reserved_2;
 	__W 	GCLK;
 } EF_I2C_TYPE;
 
