@@ -20,15 +20,26 @@
 `default_nettype	    none
 
 `define		APB_BLOCK(name, init)		always @(posedge PCLK or negedge PRESETn) if(~PRESETn) name <= init;
-`define		APB_REG(name, init, size)	`APB_BLOCK(name, init) \
+`define		APB_REG_0(name, init, size)	`APB_BLOCK(name, init) \
                                         else if(apb_we & (PADDR[15:0]==``name``_ADDR)) begin \
                                             name <= PWDATA[``size``-1:0]; \
-                                            apb_wr_ack <= 1; \
+                                            apb_wr_ack_0 <= 1; \
                                         end else if(apb_valid & (PADDR[15:0]==``name``_ADDR)) \
-                                            apb_rd_ack <= 1; \
+                                            apb_rd_ack_0 <= 1; \
                                         else begin \
-                                            apb_wr_ack <= 0; \
-                                            apb_rd_ack <= 0; \
+                                            apb_wr_ack_0 <= 0; \
+                                            apb_rd_ack_0 <= 0; \
+                                        end
+
+`define		APB_REG_1(name, init, size)	`APB_BLOCK(name, init) \
+                                        else if(apb_we & (PADDR[15:0]==``name``_ADDR)) begin \
+                                            name <= PWDATA[``size``-1:0]; \
+                                            apb_wr_ack_1 <= 1; \
+                                        end else if(apb_valid & (PADDR[15:0]==``name``_ADDR)) \
+                                            apb_rd_ack_1 <= 1; \
+                                        else begin \
+                                            apb_wr_ack_1 <= 0; \
+                                            apb_rd_ack_1 <= 0; \
                                         end
 
 module EF_I2C_APB # (
@@ -111,10 +122,10 @@ module EF_I2C_APB # (
     wire [ 8:0]         RIS_REG     = {flags[15:8], flags[3]};
     wire [ 8:0]         MIS_REG     = RIS_REG & IM_REG;
     
-    reg                 apb_wr_ack;
-    reg                 apb_rd_ack;
+    reg                 apb_wr_ack_0, apb_wr_ack_1;
+    reg                 apb_rd_ack_0, apb_rd_ack_1;
 
-    assign PREADY = wbs_ack_o | apb_wr_ack | apb_rd_ack;
+    assign PREADY = wbs_ack_o | apb_wr_ack_0 | apb_wr_ack_1 | apb_rd_ack_0 | apb_rd_ack_1;
     assign PRDATA = (PADDR[15:8] != 8'h0F)          ? {16'b0, wbs_dat_o}:
                     (PADDR[15:0] == RIS_REG_ADDR)   ? {23'b0, RIS_REG}  :
                     (PADDR[15:0] == MIS_REG_ADDR)   ? {23'b0, MIS_REG}  :
@@ -160,9 +171,9 @@ module EF_I2C_APB # (
         .flags(flags)
     );
     
-	`APB_REG(GCLK_REG, 0, 1)
+	`APB_REG_0(GCLK_REG, 0, 1)
     
-    `APB_REG(IM_REG, 0, 9)
+    `APB_REG_1(IM_REG, 0, 9)
 
     assign i2c_irq = |MIS_REG;
 

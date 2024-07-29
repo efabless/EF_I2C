@@ -111,10 +111,10 @@ module EF_I2C_APB # (
     wire [ 8:0]         RIS_REG     = {flags[15:8], flags[3]};
     wire [ 8:0]         MIS_REG     = RIS_REG & IM_REG;
     
-    reg                 apb_wr_ack;
-    reg                 apb_rd_ack;
+    reg                 apb_wr_ack_0, apb_wr_ack_1;
+    reg                 apb_rd_ack_0, apb_rd_ack_1;
 
-    assign PREADY = wbs_ack_o | apb_wr_ack | apb_rd_ack;
+    assign PREADY = wbs_ack_o | apb_wr_ack_0 | apb_wr_ack_1 | apb_rd_ack_0 | apb_rd_ack_1;
     assign PRDATA = (PADDR[15:8] != 8'h0F)          ? {16'b0, wbs_dat_o}:
                     (PADDR[15:0] == RIS_REG_ADDR)   ? {23'b0, RIS_REG}  :
                     (PADDR[15:0] == MIS_REG_ADDR)   ? {23'b0, MIS_REG}  :
@@ -163,23 +163,23 @@ module EF_I2C_APB # (
 	always @(posedge PCLK or negedge PRESETn) if(~PRESETn) GCLK_REG <= 0;
                                         else if(apb_we & (PADDR[15:0]==GCLK_REG_ADDR)) begin
                                             GCLK_REG <= PWDATA[1-1:0];
-                                            apb_wr_ack <= 1;
+                                            apb_wr_ack_0 <= 1;
                                         end else if(apb_valid & (PADDR[15:0]==GCLK_REG_ADDR))
-                                            apb_rd_ack <= 1;
+                                            apb_rd_ack_0 <= 1;
                                         else begin
-                                            apb_wr_ack <= 0;
-                                            apb_rd_ack <= 0;
+                                            apb_wr_ack_0 <= 0;
+                                            apb_rd_ack_0 <= 0;
                                         end
     
     always @(posedge PCLK or negedge PRESETn) if(~PRESETn) IM_REG <= 0;
                                         else if(apb_we & (PADDR[15:0]==IM_REG_ADDR)) begin
                                             IM_REG <= PWDATA[9-1:0];
-                                            apb_wr_ack <= 1;
+                                            apb_wr_ack_1 <= 1;
                                         end else if(apb_valid & (PADDR[15:0]==IM_REG_ADDR))
-                                            apb_rd_ack <= 1;
+                                            apb_rd_ack_1 <= 1;
                                         else begin
-                                            apb_wr_ack <= 0;
-                                            apb_rd_ack <= 0;
+                                            apb_wr_ack_1 <= 0;
+                                            apb_rd_ack_1 <= 0;
                                         end
 
     assign i2c_irq = |MIS_REG;
