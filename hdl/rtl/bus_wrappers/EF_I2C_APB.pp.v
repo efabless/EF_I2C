@@ -122,6 +122,31 @@ module EF_I2C_APB # (
                     (PADDR[15:0] == GCLK_REG_ADDR)  ? {23'b0, GCLK_REG}   :
                     32'hDEADBEEF;
     
+    
+    reg [0:0]	_scl_i_reg_[1:0];
+    wire		_scl_i_w_ = _scl_i_reg_[1];
+    always@(posedge PCLK or negedge PRESETn)
+        if(PRESETn == 0) begin
+            _scl_i_reg_[0] <= 'b0;
+            _scl_i_reg_[1] <= 'b0;
+        end
+        else begin
+            _scl_i_reg_[0] <= scl_i;
+            _scl_i_reg_[1] <= _scl_i_reg_[0];
+        end
+    
+    reg [0:0]	_sda_i_reg_[1:0];
+    wire		_sda_i_w_ = _sda_i_reg_[1];
+    always@(posedge PCLK or negedge PRESETn)
+        if(PRESETn == 0) begin
+            _sda_i_reg_[0] <= 'b0;
+            _sda_i_reg_[1] <= 'b0;
+        end
+        else begin
+            _sda_i_reg_[0] <= sda_i;
+            _sda_i_reg_[1] <= _sda_i_reg_[0];
+        end
+
     i2c_master_wbs_16 #
     (
         .DEFAULT_PRESCALE(DEFAULT_PRESCALE),
@@ -150,10 +175,10 @@ module EF_I2C_APB # (
         .wbs_cyc_i(wbs_cyc_i),   // CYC_I cycle input
 
         // I2C interface
-        .i2c_scl_i(scl_i),
+        .i2c_scl_i(_scl_i_w_),
         .i2c_scl_o(scl_o),
         .i2c_scl_t(scl_oen_o),
-        .i2c_sda_i(sda_i),
+        .i2c_sda_i(_sda_i_w_),
         .i2c_sda_o(sda_o),
         .i2c_sda_t(sda_oen_o),
 
