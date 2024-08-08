@@ -95,18 +95,18 @@ The following are the bit definitions for the interrupt registers:
 
 |Bit|Flag|Width|Description|
 |---|---|---|---|
-|0|BUSY|-1|High when module is performing an I2C operation|
-|-1|BUSCONT|-1|High when module has control of active bus|
-|-2|BUSACT|-1|High when bus is active|
-|-3|MISS_ACK|-1|Slave ACK is missed|
-|-4|CMDE|-1|Command FIFO is Empty|
-|-5|CMDF|-1|Command FIFO is Full|
-|-6|CMDOVF|-1|Command FIFO overflow; write 1 to clear|
-|-7|WRE|-1|Write FIFO is Empty|
-|-8|WRF|-1|Write FIFO is Full|
-|-9|WROVF|-1|Write FIFO overflow; write 1 to clear|
-|-10|RDE|-1|Read FIFO is Empty|
-|-11|RDF|-1|Read FIFO is Full|
+|0|BUSY|1|High when module is performing an I2C operation|
+|1|BUSCONT|1|High when module has control of active bus|
+|2|BUSACT|1|High when bus is active|
+|3|MISS_ACK|1|Slave ACK is missed|
+|4|CMDE|1|Command FIFO is Empty|
+|5|CMDF|1|Command FIFO is Full|
+|6|CMDOVF|1|Command FIFO overflow; write 1 to clear|
+|7|WRE|1|Write FIFO is Empty|
+|8|WRF|1|Write FIFO is Full|
+|9|WROVF|1|Write FIFO overflow; write 1 to clear|
+|10|RDE|1|Read FIFO is Empty|
+|11|RDF|1|Read FIFO is Full|
 
 ### The Interface 
 <img src="docs/i2c_master_wbs_16.svg" width="600"/>
