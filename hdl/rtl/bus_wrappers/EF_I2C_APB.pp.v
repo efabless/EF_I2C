@@ -115,7 +115,7 @@ module EF_I2C_APB # (
     reg                 apb_rd_ack_0, apb_rd_ack_1;
 
     assign PREADY = wbs_ack_o | apb_wr_ack_0 | apb_wr_ack_1 | apb_rd_ack_0 | apb_rd_ack_1;
-    assign PRDATA = (PADDR[15:8] != 8'h0F)          ? {16'b0, wbs_dat_o}:
+    assign PRDATA = (PADDR[15:8] != 8'hFF)          ? {16'b0, wbs_dat_o}:
                     (PADDR[15:0] == RIS_REG_ADDR)   ? {23'b0, RIS_REG}  :
                     (PADDR[15:0] == MIS_REG_ADDR)   ? {23'b0, MIS_REG}  :
                     (PADDR[15:0] == IM_REG_ADDR)    ? {23'b0, IM_REG}   :
