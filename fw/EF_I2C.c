@@ -179,7 +179,7 @@ int EF_I2C_getMIS(uint32_t i2c_base){
 void EF_I2C_setIM(uint32_t i2c_base, int mask){
    
     EF_I2C_TYPE* i2c = (EF_I2C_TYPE*)i2c_base;
-    i2c->IM |= mask;
+    i2c->IM = mask;
 }
 
 int EF_I2C_getIM(uint32_t i2c_base){
