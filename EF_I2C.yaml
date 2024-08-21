@@ -17,7 +17,7 @@ info:
   bus:
   - APB
   type: soft
-  status: verified
+  maturity: verified
   cell_count:
     - IP: TBD
     - APB: TBD
