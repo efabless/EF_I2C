@@ -236,29 +236,29 @@ localparam [2:0]
 
 reg [2:0] state_reg = STATE_IDLE, state_next;
 
-reg [7:0] count_reg = 8'd0, count_next;
-reg last_cycle_reg = 1'b0;
+reg [7:0] count_reg, count_next;
+reg last_cycle_reg;
 
 reg [ADDR_WIDTH_ADJ-1:0] addr_reg = {ADDR_WIDTH_ADJ{1'b0}}, addr_next;
 reg [DATA_WIDTH-1:0] data_reg = {DATA_WIDTH{1'b0}}, data_next;
 
-reg m_axil_awvalid_reg = 1'b0, m_axil_awvalid_next;
-reg [STRB_WIDTH-1:0] m_axil_wstrb_reg = {STRB_WIDTH{1'b0}}, m_axil_wstrb_next;
-reg m_axil_wvalid_reg = 1'b0, m_axil_wvalid_next;
-reg m_axil_bready_reg = 1'b0, m_axil_bready_next;
-reg m_axil_arvalid_reg = 1'b0, m_axil_arvalid_next;
-reg m_axil_rready_reg = 1'b0, m_axil_rready_next;
+reg m_axil_awvalid_reg, m_axil_awvalid_next;
+reg [STRB_WIDTH-1:0] m_axil_wstrb_reg, m_axil_wstrb_next;
+reg m_axil_wvalid_reg, m_axil_wvalid_next;
+reg m_axil_bready_reg, m_axil_bready_next;
+reg m_axil_arvalid_reg, m_axil_arvalid_next;
+reg m_axil_rready_reg, m_axil_rready_next;
 
-reg busy_reg = 1'b0;
+reg busy_reg;
 
-reg [7:0] data_in_reg = 8'd0, data_in_next;
-reg data_in_valid_reg = 1'b0, data_in_valid_next;
+reg [7:0] data_in_reg, data_in_next;
+reg data_in_valid_reg, data_in_valid_next;
 wire data_in_ready;
 
 wire [7:0] data_out;
 wire data_out_valid;
 wire data_out_last;
-reg data_out_ready_reg = 1'b0, data_out_ready_next;
+reg data_out_ready_reg, data_out_ready_next;
 
 assign m_axil_awaddr = {addr_reg[ADDR_WIDTH_ADJ-1:ADDR_WIDTH_ADJ-VALID_ADDR_WIDTH], {ADDR_WIDTH-VALID_ADDR_WIDTH{1'b0}}};
 assign m_axil_awprot = 3'b010;
@@ -427,42 +427,44 @@ always @* begin
     endcase
 end
 
-always @(posedge clk) begin
-    state_reg <= state_next;
-
-    count_reg <= count_next;
-
-    if (data_out_ready_reg & data_out_valid) begin
-        last_cycle_reg <= data_out_last;
-    end
-
-    addr_reg <= addr_next;
-    data_reg <= data_next;
-
-    m_axil_awvalid_reg <= m_axil_awvalid_next;
-    m_axil_wstrb_reg <= m_axil_wstrb_next;
-    m_axil_wvalid_reg <= m_axil_wvalid_next;
-    m_axil_bready_reg <= m_axil_bready_next;
-    m_axil_arvalid_reg <= m_axil_arvalid_next;
-    m_axil_rready_reg <= m_axil_rready_next;
-
-    busy_reg <= state_next != STATE_IDLE;
-
-    data_in_reg <= data_in_next;
-    data_in_valid_reg <= data_in_valid_next;
-
-    data_out_ready_reg <= data_out_ready_next;
+always @(posedge clk, posedge rst) begin
 
     if (rst) begin
         state_reg <= STATE_IDLE;
+        count_reg <= 8'd0;
+        last_cycle_reg <= 1'b0;
+        addr_reg <= {ADDR_WIDTH{1'b0}};
+        data_reg <= {DATA_WIDTH{1'b0}};
         data_in_valid_reg <= 1'b0;
         data_out_ready_reg <= 1'b0;
         m_axil_awvalid_reg <= 1'b0;
+        m_axil_wstrb_reg <= {STRB_WIDTH{1'b0}};
         m_axil_wvalid_reg <= 1'b0;
         m_axil_bready_reg <= 1'b0;
         m_axil_arvalid_reg <= 1'b0;
         m_axil_rready_reg <= 1'b0;
         busy_reg <= 1'b0;
+        data_in_reg <= {8{1'b0}};
+        data_out_ready_reg <= 1'b0;
+
+    end else begin
+        state_reg <= state_next;
+        count_reg <= count_next;
+        if (data_out_ready_reg & data_out_valid) begin
+            last_cycle_reg <= data_out_last;
+        end
+        addr_reg <= addr_next;
+        data_reg <= data_next;
+        m_axil_awvalid_reg <= m_axil_awvalid_next;
+        m_axil_wstrb_reg <= m_axil_wstrb_next;
+        m_axil_wvalid_reg <= m_axil_wvalid_next;
+        m_axil_bready_reg <= m_axil_bready_next;
+        m_axil_arvalid_reg <= m_axil_arvalid_next;
+        m_axil_rready_reg <= m_axil_rready_next;
+        busy_reg <= state_next != STATE_IDLE;
+        data_in_reg <= data_in_next;
+        data_in_valid_reg <= data_in_valid_next;
+        data_out_ready_reg <= data_out_ready_next;
     end
 end
 

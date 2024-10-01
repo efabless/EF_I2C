@@ -255,33 +255,33 @@ I/O pin.  This would prevent devices from stretching the clock period.
 
 */
 
-reg [15:0] wbs_dat_o_reg = 16'd0, wbs_dat_o_next;
-reg wbs_ack_o_reg = 1'b0, wbs_ack_o_next;
+reg [15:0] wbs_dat_o_reg, wbs_dat_o_next;
+reg wbs_ack_o_reg, wbs_ack_o_next;
 
-reg [6:0] cmd_address_reg = 7'd0, cmd_address_next;
-reg cmd_start_reg = 1'b0, cmd_start_next;
-reg cmd_read_reg = 1'b0, cmd_read_next;
-reg cmd_write_reg = 1'b0, cmd_write_next;
-reg cmd_write_multiple_reg = 1'b0, cmd_write_multiple_next;
-reg cmd_stop_reg = 1'b0, cmd_stop_next;
-reg cmd_valid_reg = 1'b0, cmd_valid_next;
+reg [6:0] cmd_address_reg, cmd_address_next;
+reg cmd_start_reg, cmd_start_next;
+reg cmd_read_reg, cmd_read_next;
+reg cmd_write_reg, cmd_write_next;
+reg cmd_write_multiple_reg, cmd_write_multiple_next;
+reg cmd_stop_reg, cmd_stop_next;
+reg cmd_valid_reg, cmd_valid_next;
 wire cmd_ready;
 
-reg [7:0] data_in_reg = 8'd0, data_in_next;
+reg [7:0] data_in_reg, data_in_next;
 wire data_in_valid;
-reg data_in_valid_reg = 1'b0, data_in_valid_next;
+reg data_in_valid_reg, data_in_valid_next;
 wire data_in_ready;
 wire data_in_last;
-reg data_in_last_reg = 1'b0, data_in_last_next;
+reg data_in_last_reg, data_in_last_next;
 
 wire [7:0] data_out;
 wire data_out_valid;
-reg data_out_ready_reg = 1'b0, data_out_ready_next;
+reg data_out_ready_reg, data_out_ready_next;
 wire data_out_last;
 
-reg [15:0] prescale_reg = DEFAULT_PRESCALE, prescale_next;
+reg [15:0] prescale_reg, prescale_next;
 
-reg missed_ack_reg = 1'b0, missed_ack_next;
+reg missed_ack_reg, missed_ack_next;
 
 assign wbs_dat_o = wbs_dat_o_reg;
 assign wbs_ack_o = wbs_ack_o_reg;
@@ -612,41 +612,44 @@ always @* begin
     end
 end
 
-always @(posedge clk) begin
-    wbs_dat_o_reg <= wbs_dat_o_next;
-    wbs_ack_o_reg <= wbs_ack_o_next;
-
-    cmd_address_reg <= cmd_address_next;
-    cmd_start_reg <= cmd_start_next;
-    cmd_read_reg <= cmd_read_next;
-    cmd_write_reg <= cmd_write_next;
-    cmd_write_multiple_reg <= cmd_write_multiple_next;
-    cmd_stop_reg <= cmd_stop_next;
-    cmd_valid_reg <= cmd_valid_next;
-
-    data_in_reg <= data_in_next;
-    data_in_valid_reg <= data_in_valid_next;
-    data_in_last_reg <= data_in_last_next;
-
-    data_out_ready_reg <= data_out_ready_next;
-
-    prescale_reg <= prescale_next;
-
-    missed_ack_reg <= missed_ack_next;
-
-    cmd_fifo_overflow_reg <= cmd_fifo_overflow_next;
-    write_fifo_overflow_reg <= write_fifo_overflow_next;
-
+always @(posedge clk, posedge rst) begin
     if (rst) begin
+        wbs_dat_o_reg <= 16'd0;
         wbs_ack_o_reg <= 1'b0;
+        cmd_address_reg <= 7'd0;
+        cmd_start_reg <= 1'b0;
+        cmd_read_reg <= 1'b0;
+        cmd_write_reg <= 1'b0;
+        cmd_write_multiple_reg <= 1'b0;
+        cmd_stop_reg <= 1'b0;
         cmd_valid_reg <= 1'b0;
+        data_in_reg <= 8'd0;
         data_in_valid_reg <= 1'b0;
+        data_in_last_reg <= 1'b0;
         data_out_ready_reg <= 1'b0;
         prescale_reg <= DEFAULT_PRESCALE;
         missed_ack_reg <= 1'b0;
         cmd_fifo_overflow_reg <= 0;
         write_fifo_overflow_reg <= 0;
-    end
+    end else begin
+        wbs_dat_o_reg <= wbs_dat_o_next;
+        wbs_ack_o_reg <= wbs_ack_o_next;
+        cmd_address_reg <= cmd_address_next;
+        cmd_start_reg <= cmd_start_next;
+        cmd_read_reg <= cmd_read_next;
+        cmd_write_reg <= cmd_write_next;
+        cmd_write_multiple_reg <= cmd_write_multiple_next;
+        cmd_stop_reg <= cmd_stop_next;
+        cmd_valid_reg <= cmd_valid_next;
+        data_in_reg <= data_in_next;
+        data_in_valid_reg <= data_in_valid_next;
+        data_in_last_reg <= data_in_last_next;
+        data_out_ready_reg <= data_out_ready_next;
+        prescale_reg <= prescale_next;
+        missed_ack_reg <= missed_ack_next;
+        cmd_fifo_overflow_reg <= cmd_fifo_overflow_next;
+        write_fifo_overflow_reg <= write_fifo_overflow_next;
+    end 
 end
 
 i2c_master

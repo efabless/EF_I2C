@@ -202,88 +202,85 @@ assign status_full = FRAME_FIFO ? full_cur || full_wr : full;
 assign status_empty = empty;
 
 // Write logic
-always @(posedge clk) begin
-    overflow_reg <= 1'b0;
-    bad_frame_reg <= 1'b0;
-    good_frame_reg <= 1'b0;
-
-    if (s_axis_tready && s_axis_tvalid) begin
-        // transfer in
-        if (!FRAME_FIFO) begin
-            // normal FIFO mode
-            mem[wr_ptr_reg[ADDR_WIDTH-1:0]] <= s_axis;
-            wr_ptr_reg <= wr_ptr_reg + 1;
-        end else if (full_cur || full_wr || drop_frame_reg) begin
-            // full, packet overflow, or currently dropping frame
-            // drop frame
-            drop_frame_reg <= 1'b1;
-            if (s_axis_tlast) begin
-                // end of frame, reset write pointer
-                wr_ptr_cur_reg <= wr_ptr_reg;
-                drop_frame_reg <= 1'b0;
-                overflow_reg <= 1'b1;
-            end
-        end else begin
-            mem[wr_ptr_cur_reg[ADDR_WIDTH-1:0]] <= s_axis;
-            wr_ptr_cur_reg <= wr_ptr_cur_reg + 1;
-            if (s_axis_tlast) begin
-                // end of frame
-                if (DROP_BAD_FRAME && USER_BAD_FRAME_MASK & ~(s_axis_tuser ^ USER_BAD_FRAME_VALUE)) begin
-                    // bad packet, reset write pointer
-                    wr_ptr_cur_reg <= wr_ptr_reg;
-                    bad_frame_reg <= 1'b1;
-                end else begin
-                    // good packet, update write pointer
-                    wr_ptr_reg <= wr_ptr_cur_reg + 1;
-                    good_frame_reg <= 1'b1;
-                end
-            end
-        end
-    end
-
+always @(posedge clk, posedge rst) begin
     if (rst) begin
         wr_ptr_reg <= {ADDR_WIDTH+1{1'b0}};
         wr_ptr_cur_reg <= {ADDR_WIDTH+1{1'b0}};
-
         drop_frame_reg <= 1'b0;
         overflow_reg <= 1'b0;
         bad_frame_reg <= 1'b0;
         good_frame_reg <= 1'b0;
+    end else begin
+        if (s_axis_tready && s_axis_tvalid) begin
+            // transfer in
+            if (!FRAME_FIFO) begin
+                // normal FIFO mode
+                mem[wr_ptr_reg[ADDR_WIDTH-1:0]] <= s_axis;
+                wr_ptr_reg <= wr_ptr_reg + 1;
+            end else if (full_cur || full_wr || drop_frame_reg) begin
+                // full, packet overflow, or currently dropping frame
+                // drop frame
+                drop_frame_reg <= 1'b1;
+                if (s_axis_tlast) begin
+                    // end of frame, reset write pointer
+                    wr_ptr_cur_reg <= wr_ptr_reg;
+                    drop_frame_reg <= 1'b0;
+                    overflow_reg <= 1'b1;
+                end
+            end else begin
+                mem[wr_ptr_cur_reg[ADDR_WIDTH-1:0]] <= s_axis;
+                wr_ptr_cur_reg <= wr_ptr_cur_reg + 1;
+                if (s_axis_tlast) begin
+                    // end of frame
+                    if (DROP_BAD_FRAME && USER_BAD_FRAME_MASK & ~(s_axis_tuser ^ USER_BAD_FRAME_VALUE)) begin
+                        // bad packet, reset write pointer
+                        wr_ptr_cur_reg <= wr_ptr_reg;
+                        bad_frame_reg <= 1'b1;
+                    end else begin
+                        // good packet, update write pointer
+                        wr_ptr_reg <= wr_ptr_cur_reg + 1;
+                        good_frame_reg <= 1'b1;
+                    end
+                end
+            end
+        end
     end
 end
 
 // Read logic
 integer j;
 
-always @(posedge clk) begin
-    if (m_axis_tready) begin
-        // output ready; invalidate stage
-        m_axis_tvalid_pipe_reg[PIPELINE_OUTPUT-1] <= 1'b0;
-    end
-
-    for (j = PIPELINE_OUTPUT-1; j > 0; j = j - 1) begin
-        if (m_axis_tready || ((~m_axis_tvalid_pipe_reg) >> j)) begin
-            // output ready or bubble in pipeline; transfer down pipeline
-            m_axis_tvalid_pipe_reg[j] <= m_axis_tvalid_pipe_reg[j-1];
-            m_axis_pipe_reg[j] <= m_axis_pipe_reg[j-1];
-            m_axis_tvalid_pipe_reg[j-1] <= 1'b0;
-        end
-    end
-
-    if (m_axis_tready || ~m_axis_tvalid_pipe_reg) begin
-        // output ready or bubble in pipeline; read new data from FIFO
-        m_axis_tvalid_pipe_reg[0] <= 1'b0;
-        m_axis_pipe_reg[0] <= mem[rd_ptr_reg[ADDR_WIDTH-1:0]];
-        if (!empty) begin
-            // not empty, increment pointer
-            m_axis_tvalid_pipe_reg[0] <= 1'b1;
-            rd_ptr_reg <= rd_ptr_reg + 1;
-        end
-    end
-
+always @(posedge clk, posedge rst) begin
     if (rst) begin
         rd_ptr_reg <= {ADDR_WIDTH+1{1'b0}};
         m_axis_tvalid_pipe_reg <= {PIPELINE_OUTPUT{1'b0}};
+        for (j = PIPELINE_OUTPUT-1; j > 0; j = j - 1)
+            m_axis_pipe_reg[j] <= {DATA_WIDTH{1'b0}};
+    end else begin
+        if (m_axis_tready) begin
+            // output ready; invalidate stage
+            m_axis_tvalid_pipe_reg[PIPELINE_OUTPUT-1] <= 1'b0;
+        end
+
+        for (j = PIPELINE_OUTPUT-1; j > 0; j = j - 1) begin
+            if (m_axis_tready || ((~m_axis_tvalid_pipe_reg) >> j)) begin
+                // output ready or bubble in pipeline; transfer down pipeline
+                m_axis_tvalid_pipe_reg[j] <= m_axis_tvalid_pipe_reg[j-1];
+                m_axis_pipe_reg[j] <= m_axis_pipe_reg[j-1];
+                m_axis_tvalid_pipe_reg[j-1] <= 1'b0;
+            end
+        end
+
+        if (m_axis_tready || ~m_axis_tvalid_pipe_reg) begin
+            // output ready or bubble in pipeline; read new data from FIFO
+            m_axis_tvalid_pipe_reg[0] <= 1'b0;
+            m_axis_pipe_reg[0] <= mem[rd_ptr_reg[ADDR_WIDTH-1:0]];
+            if (!empty) begin
+                // not empty, increment pointer
+                m_axis_tvalid_pipe_reg[0] <= 1'b1;
+                rd_ptr_reg <= rd_ptr_reg + 1;
+            end
+        end 
     end
 end
 

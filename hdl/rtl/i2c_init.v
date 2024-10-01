@@ -187,13 +187,13 @@ reg [6:0] cur_address_reg = 7'd0, cur_address_next;
 
 reg [31:0] delay_counter_reg = 32'd0, delay_counter_next;
 
-reg [6:0] m_axis_cmd_address_reg = 7'd0, m_axis_cmd_address_next;
-reg m_axis_cmd_start_reg = 1'b0, m_axis_cmd_start_next;
-reg m_axis_cmd_write_reg = 1'b0, m_axis_cmd_write_next;
-reg m_axis_cmd_stop_reg = 1'b0, m_axis_cmd_stop_next;
-reg m_axis_cmd_valid_reg = 1'b0, m_axis_cmd_valid_next;
+reg [6:0] m_axis_cmd_address_reg, m_axis_cmd_address_next; 
+reg m_axis_cmd_start_reg, m_axis_cmd_start_next;
+reg m_axis_cmd_write_reg, m_axis_cmd_write_next;
+reg m_axis_cmd_stop_reg, m_axis_cmd_stop_next;
+reg m_axis_cmd_valid_reg, m_axis_cmd_valid_next;
 
-reg [7:0] m_axis_data_tdata_reg = 8'd0, m_axis_data_tdata_next;
+reg [7:0] m_axis_data_tdata_reg, m_axis_data_tdata_next;
 reg m_axis_data_tvalid_reg = 1'b0, m_axis_data_tvalid_next;
 
 reg start_flag_reg = 1'b0, start_flag_next;
@@ -446,53 +446,45 @@ always @* begin
     end
 end
 
-always @(posedge clk) begin
-    state_reg <= state_next;
-
-    // read init_data ROM
-    init_data_reg <= init_data[address_next];
-
-    address_reg <= address_next;
-    address_ptr_reg <= address_ptr_next;
-    data_ptr_reg <= data_ptr_next;
-
-    cur_address_reg <= cur_address_next;
-
-    delay_counter_reg <= delay_counter_next;
-
-    m_axis_cmd_address_reg <= m_axis_cmd_address_next;
-    m_axis_cmd_start_reg <= m_axis_cmd_start_next;
-    m_axis_cmd_write_reg <= m_axis_cmd_write_next;
-    m_axis_cmd_stop_reg <= m_axis_cmd_stop_next;
-    m_axis_cmd_valid_reg <= m_axis_cmd_valid_next;
-
-    m_axis_data_tdata_reg <= m_axis_data_tdata_next;
-    m_axis_data_tvalid_reg <= m_axis_data_tvalid_next;
-
-    start_flag_reg <= start & start_flag_next;
-
-    busy_reg <= (state_reg != STATE_IDLE);
-
+always @(posedge clk, posedge rst) begin
     if (rst) begin
         state_reg <= STATE_IDLE;
-
         init_data_reg <= 9'd0;
-
         address_reg <= {AW{1'b0}};
         address_ptr_reg <= {AW{1'b0}};
         data_ptr_reg <= {AW{1'b0}};
-
         cur_address_reg <= 7'd0;
-
         delay_counter_reg <= 32'd0;
-
         m_axis_cmd_valid_reg <= 1'b0;
-
         m_axis_data_tvalid_reg <= 1'b0;
-
         start_flag_reg <= 1'b0;
-
         busy_reg <= 1'b0;
+        m_axis_cmd_address_reg <= 7'd0;
+        m_axis_cmd_start_reg <= 1'b0;
+        m_axis_cmd_write_reg <= 1'b0;
+        m_axis_cmd_stop_reg <= 1'b0;
+        m_axis_data_tdata_reg <= 8'd0;
+    end else begin
+        state_reg <= state_next;
+        // read init_data ROM
+        init_data_reg <= init_data[address_next];
+        address_reg <= address_next;
+        address_ptr_reg <= address_ptr_next;
+        data_ptr_reg <= data_ptr_next;
+        cur_address_reg <= cur_address_next;
+        delay_counter_reg <= delay_counter_next;
+        m_axis_cmd_address_reg <= m_axis_cmd_address_next;
+        m_axis_cmd_start_reg <= m_axis_cmd_start_next;
+        m_axis_cmd_write_reg <= m_axis_cmd_write_next;
+        m_axis_cmd_stop_reg <= m_axis_cmd_stop_next;
+        m_axis_cmd_valid_reg <= m_axis_cmd_valid_next;
+
+        m_axis_data_tdata_reg <= m_axis_data_tdata_next;
+        m_axis_data_tvalid_reg <= m_axis_data_tvalid_next;
+
+        start_flag_reg <= start & start_flag_next;
+
+        busy_reg <= (state_reg != STATE_IDLE);
     end
 end
 

@@ -226,43 +226,43 @@ reg phy_release_bus;
 
 reg phy_tx_data;
 
-reg phy_rx_data_reg = 1'b0, phy_rx_data_next;
+reg phy_rx_data_reg, phy_rx_data_next;
 
-reg [6:0] addr_reg = 7'd0, addr_next;
-reg [7:0] data_reg = 8'd0, data_next;
-reg last_reg = 1'b0, last_next;
+reg [6:0] addr_reg, addr_next;
+reg [7:0] data_reg, data_next;
+reg last_reg, last_next;
 
-reg mode_read_reg = 1'b0, mode_read_next;
-reg mode_write_multiple_reg = 1'b0, mode_write_multiple_next;
-reg mode_stop_reg = 1'b0, mode_stop_next;
+reg mode_read_reg, mode_read_next;
+reg mode_write_multiple_reg, mode_write_multiple_next;
+reg mode_stop_reg, mode_stop_next;
 
-reg [16:0] delay_reg = 16'd0, delay_next;
-reg delay_scl_reg = 1'b0, delay_scl_next;
-reg delay_sda_reg = 1'b0, delay_sda_next;
+reg [16:0] delay_reg, delay_next;
+reg delay_scl_reg, delay_scl_next;
+reg delay_sda_reg, delay_sda_next;
 
-reg [3:0] bit_count_reg = 4'd0, bit_count_next;
+reg [3:0] bit_count_reg, bit_count_next;
 
-reg s_axis_cmd_ready_reg = 1'b0, s_axis_cmd_ready_next;
+reg s_axis_cmd_ready_reg, s_axis_cmd_ready_next;
 
-reg s_axis_data_tready_reg = 1'b0, s_axis_data_tready_next;
+reg s_axis_data_tready_reg, s_axis_data_tready_next;
 
-reg [7:0] m_axis_data_tdata_reg = 8'd0, m_axis_data_tdata_next;
-reg m_axis_data_tvalid_reg = 1'b0, m_axis_data_tvalid_next;
-reg m_axis_data_tlast_reg = 1'b0, m_axis_data_tlast_next;
+reg [7:0] m_axis_data_tdata_reg, m_axis_data_tdata_next;
+reg m_axis_data_tvalid_reg, m_axis_data_tvalid_next;
+reg m_axis_data_tlast_reg, m_axis_data_tlast_next;
 
-reg scl_i_reg = 1'b1;
-reg sda_i_reg = 1'b1;
+reg scl_i_reg;
+reg sda_i_reg;
 
-reg scl_o_reg = 1'b1, scl_o_next;
-reg sda_o_reg = 1'b1, sda_o_next;
+reg scl_o_reg, scl_o_next;
+reg sda_o_reg, sda_o_next;
 
-reg last_scl_i_reg = 1'b1;
-reg last_sda_i_reg = 1'b1;
+reg last_scl_i_reg;
+reg last_sda_i_reg;
 
-reg busy_reg = 1'b0;
-reg bus_active_reg = 1'b0;
-reg bus_control_reg = 1'b0, bus_control_next;
-reg missed_ack_reg = 1'b0, missed_ack_next;
+reg busy_reg;
+reg bus_active_reg;
+reg bus_control_reg, bus_control_next;
+reg missed_ack_reg, missed_ack_next;
 
 assign s_axis_cmd_ready = s_axis_cmd_ready_reg;
 
@@ -826,71 +826,72 @@ always @* begin
     end
 end
 
-always @(posedge clk) begin
-    state_reg <= state_next;
-    phy_state_reg <= phy_state_next;
-
-    phy_rx_data_reg <= phy_rx_data_next;
-
-    addr_reg <= addr_next;
-    data_reg <= data_next;
-    last_reg <= last_next;
-
-    mode_read_reg <= mode_read_next;
-    mode_write_multiple_reg <= mode_write_multiple_next;
-    mode_stop_reg <= mode_stop_next;
-
-    delay_reg <= delay_next;
-    delay_scl_reg <= delay_scl_next;
-    delay_sda_reg <= delay_sda_next;
-
-    bit_count_reg <= bit_count_next;
-
-    s_axis_cmd_ready_reg <= s_axis_cmd_ready_next;
-
-    s_axis_data_tready_reg <= s_axis_data_tready_next;
-
-    m_axis_data_tdata_reg <= m_axis_data_tdata_next;
-    m_axis_data_tlast_reg <= m_axis_data_tlast_next;
-    m_axis_data_tvalid_reg <= m_axis_data_tvalid_next;
-
-    scl_i_reg <= scl_i;
-    sda_i_reg <= sda_i;
-
-    scl_o_reg <= scl_o_next;
-    sda_o_reg <= sda_o_next;
-
-    last_scl_i_reg <= scl_i_reg;
-    last_sda_i_reg <= sda_i_reg;
-
-    busy_reg <= !(state_reg == STATE_IDLE || state_reg == STATE_ACTIVE_WRITE || state_reg == STATE_ACTIVE_READ) || !(phy_state_reg == PHY_STATE_IDLE || phy_state_reg == PHY_STATE_ACTIVE);
-
-    if (start_bit) begin
-        bus_active_reg <= 1'b1;
-    end else if (stop_bit) begin
-        bus_active_reg <= 1'b0;
-    end else begin
-        bus_active_reg <= bus_active_reg;
-    end
-
-    bus_control_reg <= bus_control_next;
-    missed_ack_reg <= missed_ack_next;
-
+always @(posedge clk, posedge rst) begin
     if (rst) begin
         state_reg <= STATE_IDLE;
         phy_state_reg <= PHY_STATE_IDLE;
+        phy_rx_data_reg <= 1'b0;
+        addr_reg <= 7'b0;
+        data_reg <= 8'b0;
+        last_reg <= 1'b0;
+        mode_read_reg <= 1'b0;
+        mode_write_multiple_reg <= 1'b0;
+        mode_stop_reg <= 1'b0;
         delay_reg <= 16'd0;
         delay_scl_reg <= 1'b0;
         delay_sda_reg <= 1'b0;
+        bit_count_reg <= 4'd0;
         s_axis_cmd_ready_reg <= 1'b0;
         s_axis_data_tready_reg <= 1'b0;
+        m_axis_data_tdata_reg <= 8'd0;
+        m_axis_data_tlast_reg <= 1'b0;
         m_axis_data_tvalid_reg <= 1'b0;
+        scl_i_reg <= 1'b1;
+        sda_i_reg <= 1'b1;
         scl_o_reg <= 1'b1;
         sda_o_reg <= 1'b1;
-        busy_reg <= 1'b0;
+        last_scl_i_reg <= 1'b1;
+        last_sda_i_reg <= 1'b1;
         bus_active_reg <= 1'b0;
         bus_control_reg <= 1'b0;
         missed_ack_reg <= 1'b0;
+        busy_reg <= 1'b0;
+    end else begin
+        state_reg <= state_next;
+        phy_state_reg <= phy_state_next;
+        phy_rx_data_reg <= phy_rx_data_next;
+        addr_reg <= addr_next;
+        data_reg <= data_next;
+        last_reg <= last_next;
+        mode_read_reg <= mode_read_next;
+        mode_write_multiple_reg <= mode_write_multiple_next;
+        mode_stop_reg <= mode_stop_next;
+        delay_reg <= delay_next;
+        delay_scl_reg <= delay_scl_next;
+        delay_sda_reg <= delay_sda_next;
+        bit_count_reg <= bit_count_next;
+        s_axis_cmd_ready_reg <= s_axis_cmd_ready_next;
+        s_axis_data_tready_reg <= s_axis_data_tready_next;
+        m_axis_data_tdata_reg <= m_axis_data_tdata_next;
+        m_axis_data_tlast_reg <= m_axis_data_tlast_next;
+        m_axis_data_tvalid_reg <= m_axis_data_tvalid_next;
+        scl_i_reg <= scl_i;
+        sda_i_reg <= sda_i;
+        scl_o_reg <= scl_o_next;
+        sda_o_reg <= sda_o_next;
+        last_scl_i_reg <= scl_i_reg;
+        last_sda_i_reg <= sda_i_reg;
+        busy_reg <= !(state_reg == STATE_IDLE || state_reg == STATE_ACTIVE_WRITE || state_reg == STATE_ACTIVE_READ) || !(phy_state_reg == PHY_STATE_IDLE || phy_state_reg == PHY_STATE_ACTIVE);
+        if (start_bit) begin
+            bus_active_reg <= 1'b1;
+        end else if (stop_bit) begin
+            bus_active_reg <= 1'b0;
+        end else begin
+            bus_active_reg <= bus_active_reg;
+        end
+
+        bus_control_reg <= bus_control_next;
+        missed_ack_reg <= missed_ack_next;
     end
 end
 

@@ -299,31 +299,31 @@ reg s_axil_awready_reg = 1'b0, s_axil_awready_next;
 reg s_axil_wready_reg = 1'b0, s_axil_wready_next;
 reg s_axil_bvalid_reg = 1'b0, s_axil_bvalid_next;
 reg s_axil_arready_reg = 1'b0, s_axil_arready_next;
-reg [31:0] s_axil_rdata_reg = 32'd0, s_axil_rdata_next;
+reg [31:0] s_axil_rdata_reg, s_axil_rdata_next;
 reg s_axil_rvalid_reg = 1'b0, s_axil_rvalid_next;
 
-reg [6:0] cmd_address_reg = 7'd0, cmd_address_next;
-reg cmd_start_reg = 1'b0, cmd_start_next;
-reg cmd_read_reg = 1'b0, cmd_read_next;
-reg cmd_write_reg = 1'b0, cmd_write_next;
-reg cmd_write_multiple_reg = 1'b0, cmd_write_multiple_next;
-reg cmd_stop_reg = 1'b0, cmd_stop_next;
+reg [6:0] cmd_address_reg, cmd_address_next;
+reg cmd_start_reg, cmd_start_next;
+reg cmd_read_reg, cmd_read_next;
+reg cmd_write_reg, cmd_write_next;
+reg cmd_write_multiple_reg, cmd_write_multiple_next;
+reg cmd_stop_reg, cmd_stop_next;
 reg cmd_valid_reg = 1'b0, cmd_valid_next;
 wire cmd_ready;
 
-reg [7:0] data_in_reg = 8'd0, data_in_next;
-reg data_in_valid_reg = 1'b0, data_in_valid_next;
+reg [7:0] data_in_reg, data_in_next;
+reg data_in_valid_reg, data_in_valid_next;
 wire data_in_ready;
-reg data_in_last_reg = 1'b0, data_in_last_next;
+reg data_in_last_reg, data_in_last_next;
 
 wire [7:0] data_out;
 wire data_out_valid;
-reg data_out_ready_reg = 1'b0, data_out_ready_next;
+reg data_out_ready_reg, data_out_ready_next;
 wire data_out_last;
 
-reg [15:0] prescale_reg = DEFAULT_PRESCALE, prescale_next;
+reg [15:0] prescale_reg, prescale_next;
 
-reg missed_ack_reg = 1'b0, missed_ack_next;
+reg missed_ack_reg, missed_ack_next;
 
 assign s_axil_awready = s_axil_awready_reg;
 assign s_axil_wready = s_axil_wready_reg;
@@ -348,6 +348,9 @@ wire data_in_valid_int;
 wire data_in_ready_int;
 wire data_in_last_int;
 
+wire data_in_valid;
+wire data_in_last;
+
 wire [7:0] data_out_int;
 wire data_out_valid_int;
 wire data_out_ready_int;
@@ -365,8 +368,8 @@ wire write_fifo_full = !data_in_ready;
 wire read_fifo_empty = !data_out_valid;
 wire read_fifo_full = !data_out_ready_int;
 
-reg cmd_fifo_overflow_reg = 1'b0, cmd_fifo_overflow_next;
-reg write_fifo_overflow_reg = 1'b0, write_fifo_overflow_next;
+reg cmd_fifo_overflow_reg, cmd_fifo_overflow_next;
+reg write_fifo_overflow_reg, write_fifo_overflow_next;
 
 generate
 
@@ -647,34 +650,8 @@ always @* begin
     end
 end
 
-always @(posedge clk) begin
-    s_axil_awready_reg <= s_axil_awready_next;
-    s_axil_wready_reg <= s_axil_wready_next;
-    s_axil_bvalid_reg <= s_axil_bvalid_next;
-    s_axil_arready_reg <= s_axil_arready_next;
-    s_axil_rdata_reg <= s_axil_rdata_next;
-    s_axil_rvalid_reg <= s_axil_rvalid_next;
-
-    cmd_address_reg <= cmd_address_next;
-    cmd_start_reg <= cmd_start_next;
-    cmd_read_reg <= cmd_read_next;
-    cmd_write_reg <= cmd_write_next;
-    cmd_write_multiple_reg <= cmd_write_multiple_next;
-    cmd_stop_reg <= cmd_stop_next;
-    cmd_valid_reg <= cmd_valid_next;
-
-    data_in_reg <= data_in_next;
-    data_in_valid_reg <= data_in_valid_next;
-    data_in_last_reg <= data_in_last_next;
-
-    data_out_ready_reg <= data_out_ready_next;
-
-    prescale_reg <= prescale_next;
-
-    missed_ack_reg <= missed_ack_next;
-
-    cmd_fifo_overflow_reg <= cmd_fifo_overflow_next;
-    write_fifo_overflow_reg <= write_fifo_overflow_next;
+always @(posedge clk, posedge rst) begin
+    
 
     if (rst) begin
         s_axil_awready_reg <= 1'b0;
@@ -689,6 +666,43 @@ always @(posedge clk) begin
         missed_ack_reg <= 1'b0;
         cmd_fifo_overflow_reg <= 1'b0;
         write_fifo_overflow_reg <= 1'b0;
+        s_axil_rdata_reg <= 32'd0;
+        cmd_address_reg <= 7'd0;
+        cmd_start_reg <= 1'b0;
+        cmd_read_reg <= 1'b0;
+        cmd_write_reg <= 1'b0;
+        cmd_write_multiple_reg <= 1'b0;
+        cmd_stop_reg <= 1'b0;
+        data_in_reg <= 8'd0;
+        data_in_valid_reg <= 1'b0;
+        data_in_last_reg <= 1'b0;
+        data_out_ready_reg <= 1'b0;
+        prescale_reg <= DEFAULT_PRESCALE
+        missed_ack_reg <=  1'b0;
+        cmd_fifo_overflow_reg <= 1'b0;
+        write_fifo_overflow_reg <= 1'b0;
+    end else begin
+        s_axil_awready_reg <= s_axil_awready_next;
+        s_axil_wready_reg <= s_axil_wready_next;
+        s_axil_bvalid_reg <= s_axil_bvalid_next;
+        s_axil_arready_reg <= s_axil_arready_next;
+        s_axil_rdata_reg <= s_axil_rdata_next;
+        s_axil_rvalid_reg <= s_axil_rvalid_next;
+        cmd_address_reg <= cmd_address_next;
+        cmd_start_reg <= cmd_start_next;
+        cmd_read_reg <= cmd_read_next;
+        cmd_write_reg <= cmd_write_next;
+        cmd_write_multiple_reg <= cmd_write_multiple_next;
+        cmd_stop_reg <= cmd_stop_next;
+        cmd_valid_reg <= cmd_valid_next;
+        data_in_reg <= data_in_next;
+        data_in_valid_reg <= data_in_valid_next;
+        data_in_last_reg <= data_in_last_next;
+        data_out_ready_reg <= data_out_ready_next;
+        prescale_reg <= prescale_next;
+        missed_ack_reg <= missed_ack_next;
+        cmd_fifo_overflow_reg <= cmd_fifo_overflow_next;
+        write_fifo_overflow_reg <= write_fifo_overflow_next;
     end
 end
 
