@@ -26,6 +26,7 @@ class i2c_monitor(ip_monitor):
 
 
     async def sample_i2c(self):
+        return
         await RisingEdge (self.vif.RESETn)
         while(True):
             data = []

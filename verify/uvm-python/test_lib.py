@@ -93,8 +93,8 @@ class i2c_first_test(i2c_base_test):
         bus_seq = i2c_bus_seq("i2c_bus_seq")
         ip_seq = i2c_ip_seq("i2c_ip_seq")
         await bus_seq.start(self.bus_sqr)
-        await ip_seq.start(self.ip_sqr)
-        await Timer(10000 , "ns")
+        # await ip_seq.start(self.ip_sqr)
+        await Timer(100000 , "ns")
         phase.drop_objection(self, f"{self.__class__.__name__} drop objection")
 
 

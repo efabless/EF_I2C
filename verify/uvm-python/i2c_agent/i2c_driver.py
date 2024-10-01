@@ -18,6 +18,7 @@ class i2c_driver(ip_driver):
         self.slave_3 = i2c_slave("slave_3", address = 0x56)
 
     async def run_phase(self, phase):
+        return
         uvm_info(self.tag, "run_phase started", UVM_LOW)
         while True:
             address = 0

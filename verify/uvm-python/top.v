@@ -30,7 +30,14 @@ module top();
         assign  i2c_scl_i = scl_pin;
         assign  sda_pin = ~i2c_sda_o ? 1'b0 : 1'bz;
         assign  i2c_sda_i = sda_pin;
-    
+        // pullup(i2c_scl_o);
+        // pullup(i2c_sda_o);
+        // assign scl_pin = i2c_scl_o;
+        // assign sda_pin = i2c_sda_o;
+        // assign i2c_scl_i = scl_pin;
+        // assign i2c_sda_i = sda_pin;
+        
+        
         EF_I2C_APB MUV (
 
             .PCLK(CLK),
@@ -54,7 +61,26 @@ module top();
 
             .i2c_irq(irq)
         );
+        // master connected to 2 slaves
+        M24AA64 i2c_slave0(
+            .A0(1'b1), 
+            .A1(1'b0), 
+            .A2(1'b1), 
+            .WP(1'b0), 
+            .SDA(sda_pin), 
+            .SCL(scl_pin), 
+            .RESET(~RESETn)
+        );
 
+        M24AA64 i2c_slave1(
+            .A0(1'b0), 
+            .A1(1'b1), 
+            .A2(1'b1), 
+            .WP(1'b0), 
+            .SDA(sda_pin), 
+            .SCL(scl_pin), 
+            .RESET(~RESETn)
+        );
 
     `endif // BUS_TYPE_APB
     `ifdef BUS_TYPE_AHB

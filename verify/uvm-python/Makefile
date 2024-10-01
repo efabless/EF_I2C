@@ -2,10 +2,11 @@ PLUSARGS += "+UVM_VERBOSITY=UVM_MEDUIM"
 TOPLEVEL := top
 MODULE   ?= top_module
 AHB_FILES ?= # TODO: Add add AHB wrapper file path
-APB_FILES ?= $(PWD)/../../hdl/rtl/EF_I2C_APB.pp.v
+APB_FILES ?= $(PWD)/../../hdl/rtl/bus_wrappers/EF_I2C_APB.pp.v
 WB_FILES ?= # TODO: Add add WB wrapper file path
-HDL_FILES ?= $(PWD)/../../ip/I2C/hdl/rtl/*.v
-VERILOG_SOURCES ?=  $(PWD)/top.v $(AHB_FILES) $(APB_FILES) $(WB_FILES) $(HDL_FILES)
+HDL_FILES ?= $(PWD)/../../hdl/rtl/*.v $(PWD)/../../ip/IP_Utilities/rtl/aucohl_lib.v
+VIP_FILES ?= $(PWD)/../vip/i2c_slave/*.v
+VERILOG_SOURCES ?=  $(PWD)/top.v $(AHB_FILES) $(APB_FILES) $(WB_FILES) $(HDL_FILES) $(VIP_FILES)
 RTL_MACROS += "" # Add macros needed
 BUS_TYPE ?= APB
 ifeq ($(BUS_TYPE),APB)
@@ -16,7 +17,7 @@ else ifeq ($(BUS_TYPE),WISHBONE)
     RTL_MACROS += -DBUS_TYPE_WISHBONE
 endif
 # RTL_MACROS ?= "-DSKIP_WAVE_DUMP"
-YAML_FILE = $(PWD)/../../EF_I2C.json # TODO: update yaml file path
+YAML_FILE = $(PWD)/../../EF_I2C.yaml 
 MAKEFLAGS += --no-print-directory
 
 # List of tests
