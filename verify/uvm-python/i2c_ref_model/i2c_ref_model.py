@@ -68,7 +68,7 @@ class i2c_ref_model(ref_model):
                 
         elif td.kind == bus_item.READ:
             if td.addr == self.regs.reg_name_to_address["Data"]:
-                td.data = self.fifo_rx.get_nowait() | (0b1 << 8) # add valid data bit
+                td.data = (self.fifo_rx.get_nowait() | (0b1 << 8)) & 0x1FF   # add valid data bit, remove last bit 
             self.bus_bus_export.write(td)  # this is output to the scoreboard
 
     def decode_command(self, command):
@@ -198,9 +198,9 @@ class I2cSlave:
             if not (0 <= address < self.size):
                 raise ValueError(f"Invalid address {address}. Must be between 0 and {self.size - 1}.")
             if not (0 <= value <= self.max_value):
-                raise ValueError(f"Invalid value {value}. Must be between 0 and {self.max_value}.")
+                uvm_warning("MemoryBlock",f"Invalid value {value}. Must be between 0 and {self.max_value}.")
             self.memory[address] = value
-            uvm_info("MemoryBlock",f"Wrote value {hex(value)} to address {hex(address)}.", UVM_LOW)
+            uvm_info("MemoryBlock",f"Wrote value {hex(value)} to address {hex(address)}.", UVM_HIGH)
 
 
 

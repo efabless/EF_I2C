@@ -12,7 +12,8 @@ from uvm.base import UVMRoot
 from EF_UVM.base_test import base_test
 
 # seqences import
-from i2c_seq_lib.i2c_bus_seq import i2c_bus_seq
+from i2c_seq_lib.i2c_write_read_seq import i2c_write_read_seq
+from i2c_seq_lib.i2c_write_mul_seq import i2c_write_mul_seq
 from i2c_seq_lib.i2c_ip_seq import i2c_ip_seq
 
 # override classes
@@ -82,7 +83,7 @@ class i2c_base_test(base_test):
 uvm_component_utils(i2c_base_test)
 
 
-class i2c_first_test(i2c_base_test):
+class i2c_write_read_test(i2c_base_test):
     def __init__(self, name="i2c__first_test", parent=None):
         super().__init__(name, parent=parent)
         self.tag = name
@@ -90,12 +91,23 @@ class i2c_first_test(i2c_base_test):
     async def main_phase(self, phase):
         uvm_info(self.tag, f"Starting test {self.__class__.__name__}", UVM_LOW)
         phase.raise_objection(self, f"{self.__class__.__name__} OBJECTED")
-        bus_seq = i2c_bus_seq("i2c_bus_seq")
-        ip_seq = i2c_ip_seq("i2c_ip_seq")
+        bus_seq = i2c_write_read_seq("i2c_write_read_seq")
         await bus_seq.start(self.bus_sqr)
-        # await ip_seq.start(self.ip_sqr)
-        await Timer(100000 , "ns")
+        await Timer(10000 , "ns")
+        phase.drop_objection(self, f"{self.__class__.__name__} drop objection")
+
+class i2c_write_mul_test(i2c_base_test):
+    def __init__(self, name="i2c_write_mul_test", parent=None):
+        super().__init__(name, parent=parent)
+        self.tag = name
+
+    async def main_phase(self, phase):
+        uvm_info(self.tag, f"Starting test {self.__class__.__name__}", UVM_LOW)
+        phase.raise_objection(self, f"{self.__class__.__name__} OBJECTED")
+        bus_seq = i2c_write_mul_seq("i2c_write_mul_seq")
+        await bus_seq.start(self.bus_sqr)
+        await Timer(10000 , "ns")
         phase.drop_objection(self, f"{self.__class__.__name__} drop objection")
 
 
-uvm_component_utils(i2c_first_test)
+uvm_component_utils(i2c_write_mul_test)

@@ -11,14 +11,13 @@ from uvm.macros import uvm_component_utils, uvm_info, uvm_error, uvm_warning
 from uvm.base.uvm_object_globals import UVM_HIGH, UVM_LOW, UVM_MEDIUM 
 
 
-class i2c_bus_seq(i2c_bus_seq_base):
+class i2c_write_read_seq(i2c_bus_seq_base):
     # use this sequence write or read from register by the bus interface
     # this sequence should be connected to the bus sequencer in the testbench
     # you should create as many sequences as you need not only this one
     def __init__(self, name="i2c_bus_seq"):
         super().__init__(name)
-        self.slave0 = slave_valid_addr(0b1010101)
-        self.slave1 = slave_valid_addr(0b1010110)
+
     async def body(self):
         await super().body()
         for i in range(100):
@@ -38,34 +37,4 @@ class i2c_bus_seq(i2c_bus_seq_base):
                     await self.wait_data_rx_not_empty()
                     await self.send_req(is_write=False, reg="Data") # read all so the fifo will not get full                
 
-uvm_object_utils(i2c_bus_seq)
-
-
-class slave_valid_addr():
-    def __init__(self, address):
-        self.slave_address = address
-        self.valid_address = []
-    
-    def write_address(self):
-        address = random.randint(0, 8191) & 0x1FE0  # 0x1FE0 ensures the first 5 bits are 0
-        number_of_data = random.randint(1, 7)
-        for i in range(number_of_data):
-            self.valid_address.append(address + i)
-        return (self.slave_address, "write",address, number_of_data)
-
-    def read_address(self):
-        if len(self.valid_address) == 0:
-            return self.write_address()
-        address = random.choice(self.valid_address)
-        number_of_data = random.randint(1, 7) 
-        for i in range(number_of_data):
-            if (address + i) not in self.valid_address:
-                number_of_data = i
-                break
-        return (self.slave_address, "read", address, number_of_data)
-    
-    def choose_op(self):
-        if random.random() > 0.75:
-            return self.write_address()
-        else:
-            return self.read_address()
+uvm_object_utils(i2c_bus_seq_base)
