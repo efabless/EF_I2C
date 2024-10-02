@@ -31,6 +31,11 @@
 
 
 
+
+
+
+
+
 module EF_I2C_APB # (
     parameter DEFAULT_PRESCALE = 1,
     parameter FIXED_PRESCALE = 0,
@@ -41,10 +46,10 @@ module EF_I2C_APB # (
     parameter READ_FIFO = 1,
     parameter READ_FIFO_DEPTH = 16
 ) (
-`ifdef USE_POWER_PINS 
-	inout VPWR,
-	inout VGND,
-`endif
+    
+
+
+
     input wire          PCLK,
     input wire          PRESETn,
  
@@ -76,16 +81,17 @@ module EF_I2C_APB # (
 
     reg [0:0] GCLK_REG;
 
-    wire clk_g;
-    wire clk_gated_en = GCLK_REG[0];
+        wire clk_g;
+        wire clk_gated_en = GCLK_REG[0];
+
     ef_gating_cell clk_gate_cell(
-        `ifdef USE_POWER_PINS 
-        .vpwr(VPWR),
-        .vgnd(VGND),
-        `endif // USE_POWER_PINS
-        .clk(PCLK),
-        .clk_en(clk_gated_en),
-        .clk_o(clk_g)
+    
+
+
+ // USE_POWER_PINS
+    .clk(PCLK),
+    .clk_en(clk_gated_en),
+    .clk_o(clk_g)
     );
     wire		clk = clk_g;
 	wire		rst_n = PRESETn;
@@ -118,7 +124,7 @@ module EF_I2C_APB # (
                     (PADDR[15:0] == GCLK_REG_ADDR)  ? {23'b0, GCLK_REG}   :
                     32'hDEADBEEF;
     
-
+    
     i2c_master_wbs_16 #
     (
         .DEFAULT_PRESCALE(DEFAULT_PRESCALE),
@@ -172,8 +178,7 @@ module EF_I2C_APB # (
                                         end else begin
                                             apb_wr_ack_1 <= 0;
                                         end
-    
-    // read ack
+     // read ack
     always @(posedge PCLK or negedge PRESETn) begin
         if (~PRESETn) apb_rd_ack <= 0;
         else if (apb_valid & ~apb_we )

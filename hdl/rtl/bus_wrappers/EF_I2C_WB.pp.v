@@ -19,9 +19,59 @@
 `timescale			    1ns/1ns
 `default_nettype	    none
 
-`define				WB_AW		16
 
-`include			"wb_wrapper.vh" 
+
+/*
+	Copyright 2020 AUCOHL
+
+    Author: Mohamed Shalan (mshalan@aucegypt.edu)
+	
+	Licensed under the Apache License, Version 2.0 (the "License"); 
+	you may not use this file except in compliance with the License. 
+	You may obtain a copy of the License at:
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software 
+	distributed under the License is distributed on an "AS IS" BASIS, 
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+	See the License for the specific language governing permissions and 
+	limitations under the License.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        
+
 module EF_I2C_WB # (
     parameter DEFAULT_PRESCALE = 1,
     parameter FIXED_PRESCALE = 0,
@@ -32,11 +82,22 @@ module EF_I2C_WB # (
     parameter READ_FIFO = 1,
     parameter READ_FIFO_DEPTH = 16
 ) (
-    `ifdef USE_POWER_PINS
-	inout VPWR,
-	inout VGND,
-    `endif
-	`WB_SLAVE_PORTS,
+    
+
+
+
+	input   wire            ext_clk,
+                                        input   wire            clk_i,
+                                        input   wire            rst_i,
+                                        input   wire [31:0]     adr_i,
+                                        input   wire [31:0]     dat_i,
+                                        output  wire [31:0]     dat_o,
+                                        input   wire [3:0]      sel_i,
+                                        input   wire            cyc_i,
+                                        input   wire            stb_i,
+                                        output  reg             ack_o,
+                                        input   wire            we_i,
+                                        output  wire            IRQ,
 
     // I2C interface
     input  wire         scl_i,
@@ -48,10 +109,10 @@ module EF_I2C_WB # (
 
 );
 
-    localparam[15:0] RIS_REG_OFFSET = `WB_AW'hFF08;
-    localparam[15:0] IM_REG_OFFSET = `WB_AW'hFF00;
-    localparam[15:0] MIS_REG_OFFSET = `WB_AW'hFF04;
-    localparam[15:0] GCLK_REG_OFFSET = `WB_AW'hFF10;
+    localparam[15:0] RIS_REG_OFFSET = 16'hFF08;
+    localparam[15:0] IM_REG_OFFSET = 16'hFF00;
+    localparam[15:0] MIS_REG_OFFSET = 16'hFF04;
+    localparam[15:0] GCLK_REG_OFFSET = 16'hFF10;
 
     reg [0:0] GCLK_REG;
 
@@ -59,17 +120,20 @@ module EF_I2C_WB # (
     wire clk_gated_en = GCLK_REG[0];
 
     ef_gating_cell clk_gate_cell(
-    `ifdef USE_POWER_PINS 
-    .vpwr(VPWR),
-    .vgnd(VGND),
-    `endif // USE_POWER_PINS
+    
+
+
+ // USE_POWER_PINS
     .clk(clk_i),
     .clk_en(clk_gated_en),
     .clk_o(clk_g)
     );
     wire		clk = clk_g;
 	wire		rst_n = ~rst_i;
-    `WB_CTRL_SIGNALS
+    wire            wb_valid    = cyc_i & stb_i;
+                                        wire            wb_we       = we_i & wb_valid;
+                                        wire            wb_re       = ~we_i & wb_valid;
+                                        wire[3:0]       wb_byte_sel = sel_i & {4{wb_we}};
     wire                rst         = rst_i;
     wire [15:0]         wbs_dat_o;
     wire                wbs_ack_o;
@@ -130,9 +194,9 @@ module EF_I2C_WB # (
         .flags(flags)
     );
 
-    `WB_REG(GCLK_REG, 0, 1)
+    always @(posedge clk_i or posedge rst_i) if(rst_i) GCLK_REG <= 0; else if(wb_we & (adr_i[16-1:0]==GCLK_REG_OFFSET)) GCLK_REG <= dat_i[1-1:0];
 
-    `WB_REG(IM_REG, 0, 9)
+    always @(posedge clk_i or posedge rst_i) if(rst_i) IM_REG <= 0; else if(wb_we & (adr_i[16-1:0]==IM_REG_OFFSET)) IM_REG <= dat_i[9-1:0];
 
     always @ (posedge clk_i or posedge rst_i)
         if(rst_i)
