@@ -674,13 +674,7 @@ always @(posedge clk, posedge rst) begin
         cmd_write_multiple_reg <= 1'b0;
         cmd_stop_reg <= 1'b0;
         data_in_reg <= 8'd0;
-        data_in_valid_reg <= 1'b0;
         data_in_last_reg <= 1'b0;
-        data_out_ready_reg <= 1'b0;
-        prescale_reg <= DEFAULT_PRESCALE
-        missed_ack_reg <=  1'b0;
-        cmd_fifo_overflow_reg <= 1'b0;
-        write_fifo_overflow_reg <= 1'b0;
     end else begin
         s_axil_awready_reg <= s_axil_awready_next;
         s_axil_wready_reg <= s_axil_wready_next;

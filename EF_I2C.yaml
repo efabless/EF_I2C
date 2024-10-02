@@ -15,7 +15,8 @@ info:
   - comm
   - i2c
   bus:
-  - APB
+    - APB
+    - WB
   type: soft
   status: verified
   cell_count:

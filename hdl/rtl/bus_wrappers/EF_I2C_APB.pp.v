@@ -31,6 +31,11 @@
 
 
 
+
+
+
+
+
 module EF_I2C_APB # (
     parameter DEFAULT_PRESCALE = 1,
     parameter FIXED_PRESCALE = 0,
@@ -41,10 +46,10 @@ module EF_I2C_APB # (
     parameter READ_FIFO = 1,
     parameter READ_FIFO_DEPTH = 16
 ) (
-`ifdef USE_POWER_PINS 
-	inout VPWR,
-	inout VGND,
-`endif
+    
+
+
+
     input wire          PCLK,
     input wire          PRESETn,
  
@@ -79,23 +84,16 @@ module EF_I2C_APB # (
         wire clk_g;
         wire clk_gated_en = GCLK_REG[0];
 
-    `ifdef FPGA
-		wire clk = PCLK;
-	`else
-		(* keep *) sky130_fd_sc_hd__dlclkp_4 clk_gate(
-		`ifdef USE_POWER_PINS 
-			.VPWR(VPWR), 
-			.VGND(VGND), 
-			.VNB(VGND),
-			.VPB(VPWR),
-		`endif
-			.GCLK(clk_g), 
-			.GATE(clk_gated_en), 
-			.CLK(PCLK)
-			);
-			
-		wire		clk = clk_g;
-	`endif
+    ef_gating_cell clk_gate_cell(
+    
+
+
+ // USE_POWER_PINS
+    .clk(PCLK),
+    .clk_en(clk_gated_en),
+    .clk_o(clk_g)
+    );
+    wire		clk = clk_g;
 	wire		rst_n = PRESETn;
 
     wire                rst         = ~PRESETn;
@@ -106,9 +104,9 @@ module EF_I2C_APB # (
     wire  [1:0]         wbs_sel_i   = 2'b11;
     wire                apb_valid	= PSEL & PENABLE;
     wire                apb_we	    = PWRITE & apb_valid;
-    wire                wbs_stb_i   = (PADDR[15:8] != 8'h0F) & apb_valid;
+    wire                wbs_stb_i   = (PADDR[15:8] != 8'hFF) & apb_valid;
     wire                wbs_ack_o;
-    wire                wbs_cyc_i   = (PADDR[15:8] != 8'h0F) & PSEL;
+    wire                wbs_cyc_i   = (PADDR[15:8] != 8'hFF) & PSEL;
 
     wire [15:0]         flags;
     reg  [ 8:0]         IM_REG;
@@ -116,9 +114,9 @@ module EF_I2C_APB # (
     wire [ 8:0]         MIS_REG     = RIS_REG & IM_REG;
     
     reg                 apb_wr_ack_0, apb_wr_ack_1;
-    reg                 apb_rd_ack_0, apb_rd_ack_1;
+    reg                 apb_rd_ack;
 
-    assign PREADY = wbs_ack_o | apb_wr_ack_0 | apb_wr_ack_1 | apb_rd_ack_0 | apb_rd_ack_1;
+    assign PREADY = wbs_ack_o | apb_wr_ack_0 | apb_wr_ack_1 | apb_rd_ack;
     assign PRDATA = (PADDR[15:8] != 8'hFF)          ? {16'b0, wbs_dat_o}:
                     (PADDR[15:0] == RIS_REG_ADDR)   ? {23'b0, RIS_REG}  :
                     (PADDR[15:0] == MIS_REG_ADDR)   ? {23'b0, MIS_REG}  :
@@ -126,7 +124,7 @@ module EF_I2C_APB # (
                     (PADDR[15:0] == GCLK_REG_ADDR)  ? {23'b0, GCLK_REG}   :
                     32'hDEADBEEF;
     
-
+    
     i2c_master_wbs_16 #
     (
         .DEFAULT_PRESCALE(DEFAULT_PRESCALE),
@@ -169,24 +167,28 @@ module EF_I2C_APB # (
                                         else if(apb_we & (PADDR[15:0]==GCLK_REG_ADDR)) begin
                                             GCLK_REG <= PWDATA[1-1:0];
                                             apb_wr_ack_0 <= 1;
-                                        end else if(apb_valid & (PADDR[15:0]==GCLK_REG_ADDR))
-                                            apb_rd_ack_0 <= 1;
-                                        else begin
+                                        end else begin
                                             apb_wr_ack_0 <= 0;
-                                            apb_rd_ack_0 <= 0;
                                         end
     
     always @(posedge PCLK or negedge PRESETn) if(~PRESETn) IM_REG <= 0;
                                         else if(apb_we & (PADDR[15:0]==IM_REG_ADDR)) begin
                                             IM_REG <= PWDATA[9-1:0];
                                             apb_wr_ack_1 <= 1;
-                                        end else if(apb_valid & (PADDR[15:0]==IM_REG_ADDR))
-                                            apb_rd_ack_1 <= 1;
-                                        else begin
+                                        end else begin
                                             apb_wr_ack_1 <= 0;
-                                            apb_rd_ack_1 <= 0;
                                         end
-
+     // read ack
+    always @(posedge PCLK or negedge PRESETn) begin
+        if (~PRESETn) apb_rd_ack <= 0;
+        else if (apb_valid & ~apb_we )
+            if (PADDR[15:8] == 8'hFF)
+                apb_rd_ack <= 1;
+            else
+                apb_rd_ack <= 0;
+        else
+            apb_rd_ack <= 0;
+    end
     assign i2c_irq = |MIS_REG;
 
 endmodule
