@@ -40,7 +40,7 @@ YAML_FILE = $(PWD)/../../EF_I2C.yaml
 MAKEFLAGS += --no-print-directory
 
 # List of tests
-TESTS := i2c_write_read_test i2c_write_mul_test
+TESTS := i2c_write_read_test i2c_write_mul_test WriteReadRegsTest
 
 # Variable for tag - set this as required
 SIM_TAG ?= default_tag

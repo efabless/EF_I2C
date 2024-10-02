@@ -27,6 +27,8 @@ from EF_UVM.ip_env.ip_coverage.ip_coverage import ip_coverage
 from i2c_coverage.i2c_coverage import i2c_coverage
 from EF_UVM.ip_env.ip_logger.ip_logger import ip_logger
 from i2c_logger.i2c_logger import i2c_logger
+from EF_UVM.bus_env.bus_seq_lib.write_read_regs import write_read_regs
+from i2c_seq_lib.i2c_bus_seq_base import i2c_bus_seq_base
 
 
 @cocotb.test()
@@ -81,6 +83,25 @@ class i2c_base_test(base_test):
 
 
 uvm_component_utils(i2c_base_test)
+
+
+class WriteReadRegsTest(i2c_base_test):
+    def __init__(self, name="WriteReadRegsTest", parent=None):
+        super().__init__(name, parent)
+        self.tag = name
+
+    async def main_phase(self, phase):
+        uvm_info(self.tag, f"Starting test {self.__class__.__name__}", UVM_LOW)
+        phase.raise_objection(self, f"{self.__class__.__name__} OBJECTED")
+        bus_seq = i2c_bus_seq_base("i2c_bus_seq_base") # enable CLKgate
+        await bus_seq.start(self.bus_sqr)
+        bus_seq = write_read_regs()
+        await bus_seq.start(self.bus_sqr)
+        phase.drop_objection(self, f"{self.__class__.__name__} drop objection")
+
+
+uvm_component_utils(WriteReadRegsTest)
+
 
 
 class i2c_write_read_test(i2c_base_test):
