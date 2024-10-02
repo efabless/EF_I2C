@@ -3,9 +3,9 @@ TOPLEVEL := top
 MODULE   ?= top_module
 AHB_FILES ?= # TODO: Add add AHB wrapper file path
 APB_FILES ?= $(PWD)/../../hdl/rtl/bus_wrappers/EF_I2C_APB.pp.v
-WB_FILES ?= # TODO: Add add WB wrapper file path
+WB_FILES ?= $(PWD)/../../hdl/rtl/bus_wrappers/EF_I2C_WB.pp.v
 HDL_FILES ?= $(PWD)/../../hdl/rtl/*.v $(PWD)/../../ip/IP_Utilities/rtl/aucohl_lib.v
-VIP_FILES ?= $(PWD)/../vip/i2c_slave/*.v
+VIP_FILES ?= $(PWD)/i2c_slaves/24AA64.v
 VERILOG_SOURCES ?=  $(PWD)/top.v $(AHB_FILES) $(APB_FILES) $(WB_FILES) $(HDL_FILES) $(VIP_FILES)
 RTL_MACROS += "" # Add macros needed
 BUS_TYPE ?= APB
@@ -36,5 +36,6 @@ clone_ef_uvm := $(shell if [ ! -d "EF_UVM" ]; then \
 	git clone https://github.com/efabless/EF_UVM.git; \
 fi;)
 
+slave_download := $(shell python3 $(PWD)/download_slave.py)
 
 include EF_UVM/Makefile.test

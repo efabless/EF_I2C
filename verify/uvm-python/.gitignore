@@ -11,3 +11,4 @@
 *.gtkw
 /EF_UVM/
 IP_Utilities/
+i2c_slaves/
