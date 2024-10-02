@@ -96,6 +96,10 @@ class i2c_write_read_test(i2c_base_test):
         await Timer(10000 , "ns")
         phase.drop_objection(self, f"{self.__class__.__name__} drop objection")
 
+
+uvm_component_utils(i2c_write_read_test)
+
+
 class i2c_write_mul_test(i2c_base_test):
     def __init__(self, name="i2c_write_mul_test", parent=None):
         super().__init__(name, parent=parent)
