@@ -22,7 +22,9 @@ class i2c_write_mul_seq(i2c_bus_seq_base):
         await super().body()
         address = random.randint(0, 8191)
         data = [random.randint(0, 255) for i in range(random.randint(1, 10))]
+        data = self.check_block_boundry(address, data)
         for i in range(10):
+            print(f"seq nume = {i}")
             if random.random() > 0.5:
                 slave_address = self.slave0.slave_address
             else:
@@ -32,7 +34,12 @@ class i2c_write_mul_seq(i2c_bus_seq_base):
             # read rx fifo
             for i in range(len(data)):
                 await self.wait_data_rx_not_empty()
-                await self.send_req(is_write=False, reg="Data") # read all so the fifo will not get full                
-           
+                await self.send_req(is_write=False, reg="Data") # read all so the fifo will not get full 
+            
+    def check_block_boundry(self, address, data):
+        """Check if data write would be in 2 blocks the block shares address [12:5] in used slave"""
+        if address & 0b1111111100000 != (address+ len(data)) & 0b1111111100000:
+            return self.check_block_boundry(address, data[:-1])
+        return data
 
 uvm_object_utils(i2c_write_mul_seq)
