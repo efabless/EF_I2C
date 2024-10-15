@@ -3,12 +3,12 @@ info:
   name: EF_I2C
   description: I2C master controller with an APB interface
   repo: https://github.com/efabless/EF_I2C
-  owner: Mohamed Shalan
+  owner: Efabless Corp.
   license: APACHE 2.0
-  author: Mohamed Shalan
-  email: mshalan@efabless.com
+  author: Efabless Corp.
+  email: purchase_ip@efabless.com
   version: v1.0.13
-  date: 17-09-2024
+  date: 2024-09-17
   category: digital
   tags:
   - peripheral
@@ -18,12 +18,12 @@ info:
     - APB
     - WB
   type: soft
-  status: verified
+  maturity: verified
   cell_count:
     - IP: TBD
     - APB: TBD
-  width: '0.0'
-  height: '0.0'
+  width: n/a
+  height: n/a
   technology: n/a
   clock_freq_mhz:
     - IP: TBD
