@@ -45,29 +45,29 @@
 ******************************************************************************/
 
 
-void EF_I2C_setGclkEnable (uint32_t i2c_base, int value);
-void EF_I2C_writeAddress(uint32_t i2c_base, char addr);
-void EF_I2C_startCmd(uint32_t i2c_base);
-void EF_I2C_readCmd(uint32_t i2c_base, char addr);
-void EF_I2C_writeCmd(uint32_t i2c_base, char addr);
-void EF_I2C_writeMultipleCmd(uint32_t i2c_base);
-void EF_I2C_stopCmd(uint32_t i2c_base);
-void EF_I2C_setCommandReg(uint32_t i2c_base, int value);
-int EF_I2C_getCommandReg(uint32_t i2c_base);
-void EF_I2C_writeData(uint32_t i2c_base, char data);
-char EF_I2C_readData(uint32_t i2c_base);
-void EF_I2C_setDataValid(uint32_t i2c_base, bool valid);
-bool EF_I2C_getDataValid(uint32_t i2c_base);
-void EF_I2C_setDataLast(uint32_t i2c_base, bool valid);
-bool EF_I2C_getDataLast(uint32_t i2c_base);
-void EF_I2C_setDataReg(uint32_t i2c_base, int value);
-int EF_I2C_getDataReg(uint32_t i2c_base);
-void EF_I2C_setPrescaler(uint32_t i2c_base, int value);
-int EF_I2C_getPrescaler(uint32_t i2c_base);
-int EF_I2C_getRIS(uint32_t i2c_base);
-int EF_I2C_getMIS(uint32_t i2c_base);
-void EF_I2C_setIM(uint32_t i2c_base, int mask);
-int EF_I2C_getIM(uint32_t i2c_base);
+EF_DRIVER_STATUS EF_I2C_setGclkEnable (EF_I2C_PTR i2c, uint32_t value);
+EF_DRIVER_STATUS EF_I2C_writeAddress(EF_I2C_PTR i2c, char addr);
+EF_DRIVER_STATUS EF_I2C_startCmd(EF_I2C_PTR i2c);
+EF_DRIVER_STATUS EF_I2C_readCmd(EF_I2C_PTR i2c, char addr);
+EF_DRIVER_STATUS EF_I2C_writeCmd(EF_I2C_PTR i2c, char addr);
+EF_DRIVER_STATUS EF_I2C_writeMultipleCmd(EF_I2C_PTR i2c);
+EF_DRIVER_STATUS EF_I2C_stopCmd(EF_I2C_PTR i2c);
+EF_DRIVER_STATUS EF_I2C_setCommandReg(EF_I2C_PTR i2c, uint32_t value);
+EF_DRIVER_STATUS EF_I2C_getCommandReg(EF_I2C_PTR i2c, uint32_t* command_value);
+EF_DRIVER_STATUS EF_I2C_writeData(EF_I2C_PTR i2c, char data);
+EF_DRIVER_STATUS EF_I2C_readData(EF_I2C_PTR i2c, char *data);
+EF_DRIVER_STATUS EF_I2C_setDataValid(EF_I2C_PTR i2c, bool valid);
+EF_DRIVER_STATUS EF_I2C_getDataValid(EF_I2C_PTR i2c, bool *data_valid);
+EF_DRIVER_STATUS EF_I2C_setDataLast(EF_I2C_PTR i2c, bool valid);
+EF_DRIVER_STATUS EF_I2C_getDataLast(EF_I2C_PTR i2c, bool *data_last);
+EF_DRIVER_STATUS EF_I2C_setDataReg(EF_I2C_PTR i2c, uint32_t value);
+EF_DRIVER_STATUS EF_I2C_getDataReg(EF_I2C_PTR i2c, uint32_t* data_reg_value);
+EF_DRIVER_STATUS EF_I2C_setPrescaler(EF_I2C_PTR i2c, uint32_t value);
+EF_DRIVER_STATUS EF_I2C_getPrescaler(EF_I2C_PTR i2c, uint32_t* prescaler_value);
+EF_DRIVER_STATUS EF_I2C_getRIS(EF_I2C_PTR i2c, uint32_t* ris_value);
+EF_DRIVER_STATUS EF_I2C_getMIS(EF_I2C_PTR i2c, uint32_t* mis_value);
+EF_DRIVER_STATUS EF_I2C_setIM(EF_I2C_PTR i2c, uint32_t mask);
+EF_DRIVER_STATUS EF_I2C_getIM(EF_I2C_PTR i2c, uint32_t* im_value);
 
 /******************************************************************************
 * External Variables
