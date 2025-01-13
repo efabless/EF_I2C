@@ -114,29 +114,32 @@
 <codeline></codeline>
 <codeline><highlight class="normal">|<sp/>Type<sp/>|<sp/>Name<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/>---:<sp/>|<sp/>:---<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getCommandReg**](#function-ef_i2c_getcommandreg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*command\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getDataLast**](#function-ef_i2c_getdatalast)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>\*data\_last)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getDataReg**](#function-ef_i2c_getdatareg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*data\_reg\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getDataValid**](#function-ef_i2c_getdatavalid)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>\*data\_valid)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getIM**](#function-ef_i2c_getim)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*im\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getMIS**](#function-ef_i2c_getmis)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*mis\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getPrescaler**](#function-ef_i2c_getprescaler)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*prescaler\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getRIS**](#function-ef_i2c_getris)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*ris\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_readCmd**](#function-ef_i2c_readcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_readData**](#function-ef_i2c_readdata)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>\*data)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setCommandReg**](#function-ef_i2c_setcommandreg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataLast**](#function-ef_i2c_setdatalast)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>valid)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataReg**](#function-ef_i2c_setdatareg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataValid**](#function-ef_i2c_setdatavalid)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>valid)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setGclkEnable**](#function-ef_i2c_setgclkenable)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_sets<sp/>the<sp/>GCLK<sp/>enable<sp/>bit<sp/>in<sp/>the<sp/>I2C<sp/>register<sp/>to<sp/>a<sp/>certain<sp/>value_<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setIM**](#function-ef_i2c_setim)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>mask)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setPrescaler**](#function-ef_i2c_setprescaler)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_startCmd**](#function-ef_i2c_startcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_stopCmd**](#function-ef_i2c_stopcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeAddress**](#function-ef_i2c_writeaddress)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeCmd**](#function-ef_i2c_writecmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeData**](#function-ef_i2c_writedata)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>data)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeMultipleCmd**](#function-ef_i2c_writemultiplecmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getCommandReg**](#function-ef_i2c_getcommandreg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*command\_value)<sp/>&lt;br&gt;_Gets<sp/>the<sp/>value<sp/>of<sp/>the<sp/>I2C<sp/>command<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getDataLast**](#function-ef_i2c_getdatalast)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>\*data\_last)<sp/>&lt;br&gt;_Reads<sp/>the<sp/>data<sp/>last<sp/>flag<sp/>from<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getDataReg**](#function-ef_i2c_getdatareg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*data\_reg\_value)<sp/>&lt;br&gt;_Reads<sp/>the<sp/>value<sp/>from<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getDataValid**](#function-ef_i2c_getdatavalid)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>\*data\_valid)<sp/>&lt;br&gt;_Reads<sp/>the<sp/>data<sp/>valid<sp/>flag<sp/>from<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getIM**](#function-ef_i2c_getim)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*im\_value)<sp/>&lt;br&gt;_Reads<sp/>the<sp/>Interrupt<sp/>Mask<sp/>(IM)<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getMIS**](#function-ef_i2c_getmis)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*mis\_value)<sp/>&lt;br&gt;_Reads<sp/>the<sp/>Masked<sp/>Interrupt<sp/>Status<sp/>(MIS)<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getPrescaler**](#function-ef_i2c_getprescaler)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*prescaler\_value)<sp/>&lt;br&gt;_Gets<sp/>the<sp/>I2C<sp/>prescaler<sp/>value._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getRIS**](#function-ef_i2c_getris)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*ris\_value)<sp/>&lt;br&gt;_Reads<sp/>the<sp/>Raw<sp/>Interrupt<sp/>Status<sp/>(RIS)<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_readCmd**](#function-ef_i2c_readcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;_Sends<sp/>a<sp/>read<sp/>command<sp/>to<sp/>the<sp/>specified<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_readCommand**](#function-ef_i2c_readcommand)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;_Issues<sp/>an<sp/>I2C<sp/>read<sp/>command<sp/>to<sp/>a<sp/>specific<sp/>address<sp/>and<sp/>waits<sp/>for<sp/>completion._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_readData**](#function-ef_i2c_readdata)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>\*data)<sp/>&lt;br&gt;_Reads<sp/>a<sp/>data<sp/>value<sp/>from<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setCommandReg**](#function-ef_i2c_setcommandreg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>command<sp/>register<sp/>of<sp/>the<sp/>I2C<sp/>controller._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataLast**](#function-ef_i2c_setdatalast)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>valid)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>data<sp/>last<sp/>flag<sp/>in<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataReg**](#function-ef_i2c_setdatareg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Writes<sp/>a<sp/>value<sp/>to<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataValid**](#function-ef_i2c_setdatavalid)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>valid)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>data<sp/>valid<sp/>flag<sp/>in<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setGclkEnable**](#function-ef_i2c_setgclkenable)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>GCLK<sp/>enable<sp/>bit<sp/>in<sp/>the<sp/>I2C<sp/>register<sp/>to<sp/>a<sp/>certain<sp/>value._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setIM**](#function-ef_i2c_setim)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>mask)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>Interrupt<sp/>Mask<sp/>(IM)<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setPrescaler**](#function-ef_i2c_setprescaler)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>I2C<sp/>prescaler<sp/>value._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_startCmd**](#function-ef_i2c_startcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;_Issues<sp/>a<sp/>start<sp/>condition<sp/>on<sp/>the<sp/>I2C<sp/>bus._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_stopCmd**](#function-ef_i2c_stopcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;_Issues<sp/>a<sp/>stop<sp/>condition<sp/>on<sp/>the<sp/>I2C<sp/>bus._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_waitBusy**](#function-ef_i2c_waitbusy)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeAddress**](#function-ef_i2c_writeaddress)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;_Writes<sp/>an<sp/>address<sp/>to<sp/>the<sp/>I2C<sp/>command<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeCmd**](#function-ef_i2c_writecmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;_Sends<sp/>a<sp/>write<sp/>command<sp/>to<sp/>the<sp/>specified<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeData**](#function-ef_i2c_writedata)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>data)<sp/>&lt;br&gt;_Writes<sp/>a<sp/>data<sp/>value<sp/>to<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeMultipleCmd**](#function-ef_i2c_writemultiplecmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;_Enables<sp/>the<sp/>write<sp/>multiple<sp/>command<sp/>mode<sp/>for<sp/>the<sp/>I2C<sp/>controller._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeToAddress**](#function-ef_i2c_writetoaddress)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr,<sp/>char<sp/>data)<sp/>&lt;br&gt;_Performs<sp/>an<sp/>I2C<sp/>write<sp/>operation<sp/>to<sp/>a<sp/>specific<sp/>address._<sp/>|</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -144,6 +147,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getCommandReg`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Gets<sp/>the<sp/>value<sp/>of<sp/>the<sp/>I2C<sp/>command<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getCommandReg<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -151,8 +155,24 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>reads<sp/>the<sp/>current<sp/>value<sp/>of<sp/>the<sp/>I2C<sp/>command<sp/>register.<sp/>It<sp/>allows<sp/>the<sp/>user<sp/>to<sp/>retrieve<sp/>the<sp/>current<sp/>configuration<sp/>of<sp/>the<sp/>I2C<sp/>controller<sp/>for<sp/>debugging<sp/>or<sp/>monitoring<sp/>purposes.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`command_value`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>32-bit<sp/>variable<sp/>where<sp/>the<sp/>command<sp/>register<sp/>value<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getDataLast`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Reads<sp/>the<sp/>data<sp/>last<sp/>flag<sp/>from<sp/>the<sp/>I2C<sp/>data<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getDataLast<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -160,8 +180,24 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>retrieves<sp/>the<sp/>current<sp/>state<sp/>of<sp/>the<sp/>data<sp/>last<sp/>flag<sp/>in<sp/>the<sp/>I2C<sp/>data<sp/>register.<sp/>The<sp/>flag<sp/>indicates<sp/>whether<sp/>the<sp/>current<sp/>data<sp/>is<sp/>the<sp/>last<sp/>in<sp/>an<sp/>I2C<sp/>transaction.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`data_last`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>boolean<sp/>variable<sp/>where<sp/>the<sp/>state<sp/>of<sp/>the<sp/>data<sp/>last<sp/>flag<sp/>will<sp/>be<sp/>stored.<sp/>The<sp/>value<sp/>is<sp/>set<sp/>to<sp/>`true`<sp/>if<sp/>the<sp/>data<sp/>is<sp/>the<sp/>last<sp/>in<sp/>the<sp/>transaction,<sp/>or`false`<sp/>otherwise.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getDataReg`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Reads<sp/>the<sp/>value<sp/>from<sp/>the<sp/>I2C<sp/>data<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getDataReg<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -169,8 +205,31 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>reads<sp/>the<sp/>32-bit<sp/>value<sp/>from<sp/>the<sp/>I2C<sp/>data<sp/>register.<sp/>The<sp/>data<sp/>register<sp/>holds<sp/>the<sp/>I2C<sp/>data<sp/>(either<sp/>for<sp/>reading<sp/>or<sp/>writing)<sp/>and<sp/>status<sp/>flags<sp/>for<sp/>data<sp/>validity<sp/>and<sp/>the<sp/>last<sp/>byte<sp/>in<sp/>a<sp/>block<sp/>write.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Data<sp/>Register<sp/>Breakdown\*\*:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Bits<sp/>[0-7]:<sp/>Data<sp/>-<sp/>Contains<sp/>the<sp/>data<sp/>pulled<sp/>from<sp/>the<sp/>read<sp/>FIFO<sp/>or<sp/>to<sp/>be<sp/>pushed<sp/>into<sp/>the<sp/>write<sp/>FIFO.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>[8]:<sp/>Data<sp/>Valid<sp/>-<sp/>Indicates<sp/>whether<sp/>the<sp/>read<sp/>data<sp/>is<sp/>valid.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>[9]:<sp/>Data<sp/>Last<sp/>-<sp/>Indicates<sp/>if<sp/>the<sp/>byte<sp/>read<sp/>or<sp/>written<sp/>is<sp/>the<sp/>last<sp/>byte<sp/>of<sp/>a<sp/>block<sp/>write<sp/>(write\_multiple).</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bits<sp/>[10-31]:<sp/>Reserved<sp/>-<sp/>These<sp/>bits<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`data_reg_value`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>32-bit<sp/>variable<sp/>where<sp/>the<sp/>value<sp/>of<sp/>the<sp/>data<sp/>register<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getDataValid`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Reads<sp/>the<sp/>data<sp/>valid<sp/>flag<sp/>from<sp/>the<sp/>I2C<sp/>data<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getDataValid<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -178,8 +237,24 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>retrieves<sp/>the<sp/>current<sp/>state<sp/>of<sp/>the<sp/>data<sp/>valid<sp/>flag<sp/>in<sp/>the<sp/>I2C<sp/>data<sp/>register.<sp/>The<sp/>flag<sp/>indicates<sp/>whether<sp/>the<sp/>data<sp/>is<sp/>valid<sp/>for<sp/>an<sp/>I2C<sp/>transaction.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`data_valid`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>boolean<sp/>variable<sp/>where<sp/>the<sp/>state<sp/>of<sp/>the<sp/>data<sp/>valid<sp/>flag<sp/>will<sp/>be<sp/>stored.<sp/>The<sp/>value<sp/>is<sp/>set<sp/>to<sp/>`true`<sp/>if<sp/>the<sp/>data<sp/>is<sp/>valid,<sp/>or`false`<sp/>otherwise.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getIM`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Reads<sp/>the<sp/>Interrupt<sp/>Mask<sp/>(IM)<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getIM<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -187,8 +262,33 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>reads<sp/>the<sp/>interrupt<sp/>mask<sp/>register<sp/>(IM)<sp/>of<sp/>the<sp/>I2C<sp/>peripheral.<sp/>The<sp/>IM<sp/>register<sp/>contains<sp/>a<sp/>mask<sp/>value<sp/>that<sp/>determines<sp/>which<sp/>interrupt<sp/>sources<sp/>are<sp/>enabled.<sp/>It<sp/>shows<sp/>the<sp/>status<sp/>of<sp/>interrupt<sp/>enablement<sp/>for<sp/>various<sp/>interrupt<sp/>sources.<sp/>IM<sp/>Register<sp/>Breakdown\*\*:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>0:<sp/>MISS\_ACK<sp/>-<sp/>Slave<sp/>ACK<sp/>is<sp/>missed</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>1:<sp/>CMDE<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>2:<sp/>CMDF<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>3:<sp/>CMDOVF<sp/>-<sp/>Command<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>4:<sp/>WRE<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>5:<sp/>WRF<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>6:<sp/>WROVF<sp/>-<sp/>Write<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>7:<sp/>RDE<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>8:<sp/>RDF<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bits<sp/>[9-31]:<sp/>Reserved.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>`im_value`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>32-bit<sp/>variable<sp/>where<sp/>the<sp/>interrupt<sp/>mask<sp/>value<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getMIS`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Reads<sp/>the<sp/>Masked<sp/>Interrupt<sp/>Status<sp/>(MIS)<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getMIS<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -196,8 +296,35 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>reads<sp/>the<sp/>masked<sp/>interrupt<sp/>status<sp/>register<sp/>(MIS)<sp/>of<sp/>the<sp/>I2C<sp/>peripheral.<sp/>MIS<sp/>Register<sp/>Breakdown\*\*:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>0:<sp/>MISS\_ACK<sp/>-<sp/>Slave<sp/>ACK<sp/>is<sp/>missed</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>1:<sp/>CMDE<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>2:<sp/>CMDF<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>3:<sp/>CMDOVF<sp/>-<sp/>Command<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>4:<sp/>WRE<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>5:<sp/>WRF<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>6:<sp/>WROVF<sp/>-<sp/>Write<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>7:<sp/>RDE<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>8:<sp/>RDF<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bits<sp/>[9-31]:<sp/>Reserved.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`mis_value`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>32-bit<sp/>variable<sp/>where<sp/>the<sp/>masked<sp/>interrupt<sp/>status<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getPrescaler`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Gets<sp/>the<sp/>I2C<sp/>prescaler<sp/>value._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getPrescaler<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -205,8 +332,24 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>reads<sp/>the<sp/>current<sp/>prescaler<sp/>value<sp/>from<sp/>the<sp/>I2C<sp/>peripheral.<sp/>The<sp/>prescaler<sp/>determines<sp/>the<sp/>clock<sp/>frequency<sp/>for<sp/>the<sp/>I2C<sp/>communication.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`prescaler_value`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>32-bit<sp/>variable<sp/>where<sp/>the<sp/>current<sp/>prescaler<sp/>value<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getRIS`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Reads<sp/>the<sp/>Raw<sp/>Interrupt<sp/>Status<sp/>(RIS)<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getRIS<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -214,8 +357,37 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>reads<sp/>the<sp/>raw<sp/>interrupt<sp/>status<sp/>register<sp/>(RIS)<sp/>of<sp/>the<sp/>I2C<sp/>peripheral.<sp/>The<sp/>RIS<sp/>register<sp/>provides<sp/>raw<sp/>interrupt<sp/>status<sp/>flags<sp/>indicating<sp/>various<sp/>conditions<sp/>within<sp/>the<sp/>I2C<sp/>communication.<sp/>These<sp/>flags<sp/>include<sp/>information<sp/>such<sp/>as<sp/>FIFO<sp/>states<sp/>and<sp/>errors.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">RIS<sp/>Register<sp/>Breakdown\*\*:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>0:<sp/>MISS\_ACK<sp/>-<sp/>Slave<sp/>ACK<sp/>is<sp/>missed</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>1:<sp/>CMDE<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>2:<sp/>CMDF<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>3:<sp/>CMDOVF<sp/>-<sp/>Command<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>4:<sp/>WRE<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>5:<sp/>WRF<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>6:<sp/>WROVF<sp/>-<sp/>Write<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>7:<sp/>RDE<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>8:<sp/>RDF<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bits<sp/>[9-31]:<sp/>Reserved.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`ris_value`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>32-bit<sp/>variable<sp/>where<sp/>the<sp/>raw<sp/>interrupt<sp/>status<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_readCmd`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Sends<sp/>a<sp/>read<sp/>command<sp/>to<sp/>the<sp/>specified<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_readCmd<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -223,8 +395,53 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>configures<sp/>the<sp/>I2C<sp/>controller<sp/>to<sp/>read<sp/>from<sp/>the<sp/>specified<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus.<sp/>It<sp/>sets<sp/>the<sp/>read<sp/>bit<sp/>and<sp/>writes<sp/>the<sp/>target<sp/>address<sp/>into<sp/>the<sp/>I2C<sp/>command<sp/>register.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`addr`<sp/>The<sp/>target<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus<sp/>to<sp/>read<sp/>from.<sp/>This<sp/>is<sp/>typically<sp/>a<sp/>7-bit<sp/>or<sp/>10-bit<sp/>address.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_readCommand`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Issues<sp/>an<sp/>I2C<sp/>read<sp/>command<sp/>to<sp/>a<sp/>specific<sp/>address<sp/>and<sp/>waits<sp/>for<sp/>completion._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_readCommand<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>addr</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>initiates<sp/>a<sp/>read<sp/>operation<sp/>on<sp/>the<sp/>I2C<sp/>bus.<sp/>It<sp/>performs<sp/>the<sp/>following<sp/>steps:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Sends<sp/>a<sp/>read<sp/>command<sp/>to<sp/>the<sp/>specified<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Issues<sp/>a<sp/>stop<sp/>condition<sp/>to<sp/>signal<sp/>the<sp/>end<sp/>of<sp/>the<sp/>transaction.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Waits<sp/>for<sp/>the<sp/>I2C<sp/>hardware<sp/>to<sp/>complete<sp/>the<sp/>read<sp/>operation.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>,<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`addr`<sp/>The<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus<sp/>from<sp/>which<sp/>to<sp/>read.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_readData`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Reads<sp/>a<sp/>data<sp/>value<sp/>from<sp/>the<sp/>I2C<sp/>data<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_readData<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -232,8 +449,24 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>reads<sp/>the<sp/>current<sp/>value<sp/>of<sp/>the<sp/>I2C<sp/>data<sp/>register.<sp/>The<sp/>data<sp/>register<sp/>is<sp/>used<sp/>to<sp/>store<sp/>the<sp/>data<sp/>to<sp/>be<sp/>transmitted<sp/>or<sp/>received<sp/>over<sp/>the<sp/>I2C<sp/>bus.<sp/>read<sp/>to<sp/>pull<sp/>from<sp/>read<sp/>data<sp/>FIFO.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`data`<sp/>A<sp/>pointer<sp/>to<sp/>an<sp/>8-bit<sp/>variable<sp/>where<sp/>the<sp/>data<sp/>register<sp/>value<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setCommandReg`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>command<sp/>register<sp/>of<sp/>the<sp/>I2C<sp/>controller._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setCommandReg<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -241,8 +474,24 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>writes<sp/>a<sp/>specified<sp/>value<sp/>directly<sp/>to<sp/>the<sp/>I2C<sp/>command<sp/>register.<sp/>It<sp/>allows<sp/>manual<sp/>configuration<sp/>of<sp/>the<sp/>I2C<sp/>controller<sp/>for<sp/>advanced<sp/>or<sp/>custom<sp/>operations.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`value`<sp/>The<sp/>32-bit<sp/>value<sp/>to<sp/>write<sp/>to<sp/>the<sp/>I2C<sp/>command<sp/>register.<sp/>This<sp/>value<sp/>typically<sp/>contains<sp/>specific<sp/>bit<sp/>fields<sp/>to<sp/>configure<sp/>the<sp/>I2C<sp/>operation.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setDataLast`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>data<sp/>last<sp/>flag<sp/>in<sp/>the<sp/>I2C<sp/>data<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setDataLast<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -250,8 +499,24 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>modifies<sp/>the<sp/>data<sp/>last<sp/>flag<sp/>in<sp/>the<sp/>I2C<sp/>data<sp/>register.<sp/>The<sp/>flag<sp/>indicates<sp/>whether<sp/>the<sp/>current<sp/>data<sp/>is<sp/>the<sp/>last<sp/>in<sp/>an<sp/>I2C<sp/>transaction.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`valid`<sp/>A<sp/>boolean<sp/>value<sp/>specifying<sp/>the<sp/>state<sp/>of<sp/>the<sp/>data<sp/>last<sp/>flag.<sp/>Set<sp/>to<sp/>`true`<sp/>to<sp/>mark<sp/>the<sp/>data<sp/>as<sp/>the<sp/>last<sp/>in<sp/>the<sp/>transaction,<sp/>or`false`<sp/>to<sp/>clear<sp/>the<sp/>flag.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setDataReg`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Writes<sp/>a<sp/>value<sp/>to<sp/>the<sp/>I2C<sp/>data<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setDataReg<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -259,8 +524,32 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>writes<sp/>a<sp/>32-bit<sp/>value<sp/>to<sp/>the<sp/>I2C<sp/>data<sp/>register.<sp/>The<sp/>data<sp/>register<sp/>is<sp/>used<sp/>for<sp/>handling<sp/>the<sp/>I2C<sp/>read<sp/>and<sp/>write<sp/>FIFOs,<sp/>along<sp/>with<sp/>managing<sp/>data<sp/>validity<sp/>and<sp/>the<sp/>last<sp/>byte<sp/>flag.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Data<sp/>Register<sp/>Breakdown\*\*:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Bits<sp/>[0-7]:<sp/>Data<sp/>-<sp/>Used<sp/>to<sp/>push<sp/>data<sp/>into<sp/>the<sp/>write<sp/>FIFO<sp/>or<sp/>pull<sp/>data<sp/>from<sp/>the<sp/>read<sp/>FIFO.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>[8]:<sp/>Data<sp/>Valid<sp/>-<sp/>Indicates<sp/>whether<sp/>the<sp/>read<sp/>data<sp/>is<sp/>valid.<sp/>Must<sp/>be<sp/>accessed<sp/>atomically<sp/>with<sp/>16-bit<sp/>reads<sp/>and<sp/>writes.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>[9]:<sp/>Data<sp/>Last<sp/>-<sp/>Indicates<sp/>the<sp/>last<sp/>byte<sp/>of<sp/>a<sp/>block<sp/>write<sp/>(write\_multiple).<sp/>Must<sp/>be<sp/>accessed<sp/>atomically<sp/>with<sp/>16-bit<sp/>reads<sp/>and<sp/>writes.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bits<sp/>[10-31]:<sp/>Reserved<sp/>-<sp/>These<sp/>bits<sp/>are<sp/>reserved<sp/>for<sp/>future<sp/>use<sp/>and<sp/>should<sp/>always<sp/>be<sp/>written<sp/>as<sp/>zero<sp/>to<sp/>avoid<sp/>undefined<sp/>behavior.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`value`<sp/>A<sp/>32-bit<sp/>value<sp/>to<sp/>write<sp/>to<sp/>the<sp/>data<sp/>register.<sp/>The<sp/>value<sp/>should<sp/>include<sp/>all<sp/>relevant<sp/>fields<sp/>(data,<sp/>data<sp/>valid,<sp/>data<sp/>last)<sp/>as<sp/>specified<sp/>in<sp/>the<sp/>register<sp/>breakdown.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>The<sp/>reserved<sp/>bits<sp/>(10-31)<sp/>must<sp/>always<sp/>be<sp/>set<sp/>to<sp/>zero.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setDataValid`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>data<sp/>valid<sp/>flag<sp/>in<sp/>the<sp/>I2C<sp/>data<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setDataValid<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -268,9 +557,24 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>modifies<sp/>the<sp/>data<sp/>valid<sp/>flag<sp/>in<sp/>the<sp/>I2C<sp/>data<sp/>register.<sp/>The<sp/>flag<sp/>indicates<sp/>whether<sp/>the<sp/>current<sp/>data<sp/>in<sp/>the<sp/>register<sp/>is<sp/>valid<sp/>for<sp/>an<sp/>I2C<sp/>transaction.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`valid`<sp/>A<sp/>boolean<sp/>value<sp/>specifying<sp/>the<sp/>state<sp/>of<sp/>the<sp/>data<sp/>valid<sp/>flag.<sp/>Set<sp/>to<sp/>`true`<sp/>to<sp/>mark<sp/>the<sp/>data<sp/>as<sp/>valid,<sp/>or`false`<sp/>to<sp/>clear<sp/>the<sp/>flag.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setGclkEnable`</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">_sets<sp/>the<sp/>GCLK<sp/>enable<sp/>bit<sp/>in<sp/>the<sp/>I2C<sp/>register<sp/>to<sp/>a<sp/>certain<sp/>value_</highlight></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>GCLK<sp/>enable<sp/>bit<sp/>in<sp/>the<sp/>I2C<sp/>register<sp/>to<sp/>a<sp/>certain<sp/>value._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setGclkEnable<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -291,6 +595,7 @@
 <codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setIM`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>Interrupt<sp/>Mask<sp/>(IM)<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setIM<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -298,8 +603,33 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>writes<sp/>a<sp/>mask<sp/>value<sp/>to<sp/>the<sp/>interrupt<sp/>mask<sp/>register<sp/>(IM)<sp/>of<sp/>the<sp/>I2C<sp/>peripheral.<sp/>The<sp/>IM<sp/>register<sp/>enables<sp/>or<sp/>disables<sp/>the<sp/>interrupt<sp/>sources.<sp/>The<sp/>bits<sp/>set<sp/>in<sp/>this<sp/>register<sp/>determine<sp/>which<sp/>interrupt<sp/>sources<sp/>generate<sp/>masked<sp/>interrupts.<sp/>IM<sp/>Register<sp/>Breakdown\*\*:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>0:<sp/>MISS\_ACK<sp/>-<sp/>Slave<sp/>ACK<sp/>is<sp/>missed</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>1:<sp/>CMDE<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>2:<sp/>CMDF<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>3:<sp/>CMDOVF<sp/>-<sp/>Command<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>4:<sp/>WRE<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>5:<sp/>WRF<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>6:<sp/>WROVF<sp/>-<sp/>Write<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>7:<sp/>RDE<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>8:<sp/>RDF<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bits<sp/>[9-31]:<sp/>Reserved.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>`mask`<sp/>A<sp/>32-bit<sp/>mask<sp/>value<sp/>to<sp/>be<sp/>written<sp/>to<sp/>the<sp/>IM<sp/>register.<sp/>Each<sp/>bit<sp/>corresponds<sp/>to<sp/>a<sp/>specific<sp/>interrupt<sp/>source,<sp/>with<sp/>1<sp/>enabling<sp/>the<sp/>interrupt<sp/>and<sp/>0<sp/>disabling<sp/>it.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setPrescaler`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>I2C<sp/>prescaler<sp/>value._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setPrescaler<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -307,24 +637,78 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>sets<sp/>the<sp/>prescaler<sp/>value<sp/>for<sp/>the<sp/>I2C<sp/>peripheral.<sp/>The<sp/>prescaler<sp/>is<sp/>used<sp/>to<sp/>configure<sp/>the<sp/>speed<sp/>of<sp/>the<sp/>I2C<sp/>communication<sp/>by<sp/>adjusting<sp/>the<sp/>clock<sp/>frequency.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`value`<sp/>The<sp/>prescaler<sp/>value<sp/>to<sp/>set<sp/>for<sp/>the<sp/>I2C<sp/>clock.<sp/>This<sp/>value<sp/>determines<sp/>the<sp/>clock<sp/>frequency<sp/>for<sp/>I2C<sp/>communication.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_startCmd`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Issues<sp/>a<sp/>start<sp/>condition<sp/>on<sp/>the<sp/>I2C<sp/>bus._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_startCmd<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>sends<sp/>a<sp/>start<sp/>condition<sp/>to<sp/>initiate<sp/>an<sp/>I2C<sp/>transaction.<sp/>The<sp/>start<sp/>condition<sp/>is<sp/>a<sp/>signal<sp/>to<sp/>indicate<sp/>the<sp/>beginning<sp/>of<sp/>communication<sp/>with<sp/>an<sp/>I2C<sp/>device.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_stopCmd`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Issues<sp/>a<sp/>stop<sp/>condition<sp/>on<sp/>the<sp/>I2C<sp/>bus._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_stopCmd<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>sends<sp/>a<sp/>stop<sp/>condition,<sp/>signaling<sp/>the<sp/>end<sp/>of<sp/>an<sp/>I2C<sp/>transaction.<sp/>The<sp/>stop<sp/>condition<sp/>releases<sp/>the<sp/>I2C<sp/>bus<sp/>for<sp/>other<sp/>devices<sp/>to<sp/>communicate.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_waitBusy`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_waitBusy<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_writeAddress`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Writes<sp/>an<sp/>address<sp/>to<sp/>the<sp/>I2C<sp/>command<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_writeAddress<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -332,8 +716,27 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>writes<sp/>an<sp/>address<sp/>to<sp/>the<sp/>I2C<sp/>command<sp/>register.<sp/>It<sp/>performs<sp/>the<sp/>following<sp/>steps:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Clears<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>,<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`addr`<sp/>The<sp/>address<sp/>to<sp/>write<sp/>to</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_writeCmd`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Sends<sp/>a<sp/>write<sp/>command<sp/>to<sp/>the<sp/>specified<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_writeCmd<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -341,8 +744,24 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>configures<sp/>the<sp/>I2C<sp/>controller<sp/>to<sp/>write<sp/>to<sp/>the<sp/>specified<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus.<sp/>It<sp/>sets<sp/>the<sp/>write<sp/>bit<sp/>and<sp/>writes<sp/>the<sp/>target<sp/>address<sp/>into<sp/>the<sp/>I2C<sp/>command<sp/>register.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`addr`<sp/>The<sp/>target<sp/>address<sp/>on<sp/>the<sp/>I2C<sp/>bus<sp/>to<sp/>write<sp/>to.<sp/>This<sp/>is<sp/>typically<sp/>a<sp/>7-bit<sp/>or<sp/>10-bit<sp/>address.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_writeData`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Writes<sp/>a<sp/>data<sp/>value<sp/>to<sp/>the<sp/>I2C<sp/>data<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_writeData<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
@@ -350,14 +769,76 @@
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>writes<sp/>a<sp/>data<sp/>value<sp/>to<sp/>the<sp/>I2C<sp/>data<sp/>register.<sp/>The<sp/>data<sp/>register<sp/>is<sp/>used<sp/>to<sp/>store<sp/>the<sp/>data<sp/>to<sp/>be<sp/>transmitted<sp/>or<sp/>received<sp/>over<sp/>the<sp/>I2C<sp/>bus.<sp/>write<sp/>to<sp/>push<sp/>on<sp/>write<sp/>data<sp/>FIFO,<sp/>read<sp/>to<sp/>pull<sp/>from<sp/>read<sp/>data<sp/>FIFO.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`data`<sp/>The<sp/>8-bit<sp/>data<sp/>value<sp/>to<sp/>write<sp/>to<sp/>the<sp/>I2C<sp/>data<sp/>register.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_writeMultipleCmd`</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">_Enables<sp/>the<sp/>write<sp/>multiple<sp/>command<sp/>mode<sp/>for<sp/>the<sp/>I2C<sp/>controller._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_writeMultipleCmd<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>configures<sp/>the<sp/>I2C<sp/>controller<sp/>to<sp/>enter<sp/>write<sp/>multiple<sp/>command<sp/>mode,<sp/>allowing<sp/>consecutive<sp/>data<sp/>writes<sp/>without<sp/>sending<sp/>a<sp/>stop<sp/>condition<sp/>between<sp/>each<sp/>write.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_writeToAddress`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Performs<sp/>an<sp/>I2C<sp/>write<sp/>operation<sp/>to<sp/>a<sp/>specific<sp/>address._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_writeToAddress<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>addr,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>data</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>enables<sp/>communication<sp/>over<sp/>the<sp/>I2C<sp/>bus<sp/>by<sp/>writing<sp/>a<sp/>single<sp/>data<sp/>byte<sp/>to<sp/>a<sp/>specific<sp/>address.<sp/>It<sp/>follows<sp/>the<sp/>standard<sp/>I2C<sp/>sequence<sp/>for<sp/>writing:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Loads<sp/>the<sp/>data<sp/>to<sp/>be<sp/>sent<sp/>into<sp/>the<sp/>I2C<sp/>data<sp/>buffer.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sends<sp/>the<sp/>target<sp/>device<sp/>address<sp/>as<sp/>a<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Issues<sp/>a<sp/>stop<sp/>condition<sp/>to<sp/>signal<sp/>the<sp/>end<sp/>of<sp/>the<sp/>transaction.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Waits<sp/>for<sp/>the<sp/>I2C<sp/>hardware<sp/>to<sp/>complete<sp/>the<sp/>operation.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>,<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`addr`<sp/>The<sp/>address<sp/>to<sp/>write<sp/>to<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`data`<sp/>The<sp/>data<sp/>to<sp/>write</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>File<sp/>EF_I2C_regs.h</highlight></codeline>

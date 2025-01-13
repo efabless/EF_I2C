@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="54" column="18" bodyfile="EF_I2C.c" bodystart="62" bodyend="65" declfile="EF_I2C.h" declline="54" declcolumn="18"/>
+        <location file="EF_I2C.h" line="54" column="18" bodyfile="EF_I2C.c" bodystart="56" bodyend="69" declfile="EF_I2C.h" declline="54" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1ac8020e16b3158054341ac0bce22d8b7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="71" column="18" bodyfile="EF_I2C.c" bodystart="81" bodyend="87" declfile="EF_I2C.h" declline="71" declcolumn="18"/>
+        <location file="EF_I2C.h" line="71" column="18" bodyfile="EF_I2C.c" bodystart="71" bodyend="84" declfile="EF_I2C.h" declline="71" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1af50c9788e5f7dce39b36641ba4dd1abc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="86" column="18" bodyfile="EF_I2C.c" bodystart="100" bodyend="105" declfile="EF_I2C.h" declline="86" declcolumn="18"/>
+        <location file="EF_I2C.h" line="86" column="18" bodyfile="EF_I2C.c" bodystart="86" bodyend="98" declfile="EF_I2C.h" declline="86" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a8b32d8e6a1cb03a0c948ee85a917c652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="100" column="18" bodyfile="EF_I2C.c" bodystart="118" bodyend="125" declfile="EF_I2C.h" declline="100" declcolumn="18"/>
+        <location file="EF_I2C.h" line="100" column="18" bodyfile="EF_I2C.c" bodystart="101" bodyend="115" declfile="EF_I2C.h" declline="100" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a6bcf2d08643ce620b0f75b980a875a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -280,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="113" column="18" bodyfile="EF_I2C.c" bodystart="137" bodyend="140" declfile="EF_I2C.h" declline="113" declcolumn="18"/>
+        <location file="EF_I2C.h" line="113" column="18" bodyfile="EF_I2C.c" bodystart="118" bodyend="128" declfile="EF_I2C.h" declline="113" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1abd603b15315bef595a6bee15a56c1c99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -323,7 +323,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="127" column="18" bodyfile="EF_I2C.c" bodystart="153" bodyend="156" declfile="EF_I2C.h" declline="127" declcolumn="18"/>
+        <location file="EF_I2C.h" line="127" column="18" bodyfile="EF_I2C.c" bodystart="131" bodyend="141" declfile="EF_I2C.h" declline="127" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a9c8ce9f9c67bd5ce3e965e1b8c05b437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -366,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="141" column="18" bodyfile="EF_I2C.c" bodystart="170" bodyend="173" declfile="EF_I2C.h" declline="141" declcolumn="18"/>
+        <location file="EF_I2C.h" line="141" column="18" bodyfile="EF_I2C.c" bodystart="145" bodyend="155" declfile="EF_I2C.h" declline="141" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1ae6094788f5d9a6cf203350161d6a1194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -397,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="154" column="18" bodyfile="EF_I2C.c" bodystart="186" bodyend="189" declfile="EF_I2C.h" declline="154" declcolumn="18"/>
+        <location file="EF_I2C.h" line="154" column="18" bodyfile="EF_I2C.c" bodystart="159" bodyend="169" declfile="EF_I2C.h" declline="154" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a67cb25a7e6a9f2f0c4cbda50361f38e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -428,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="167" column="18" bodyfile="EF_I2C.c" bodystart="202" bodyend="205" declfile="EF_I2C.h" declline="167" declcolumn="18"/>
+        <location file="EF_I2C.h" line="167" column="18" bodyfile="EF_I2C.c" bodystart="172" bodyend="182" declfile="EF_I2C.h" declline="167" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a2286c60de589dcecb0fc78a48187440b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -471,7 +471,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="182" column="18" bodyfile="EF_I2C.c" bodystart="221" bodyend="224" declfile="EF_I2C.h" declline="182" declcolumn="18"/>
+        <location file="EF_I2C.h" line="182" column="18" bodyfile="EF_I2C.c" bodystart="188" bodyend="200" declfile="EF_I2C.h" declline="182" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1aa76113b5cce43aedb3e34ffe98377210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -514,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="196" column="18" bodyfile="EF_I2C.c" bodystart="239" bodyend="242" declfile="EF_I2C.h" declline="196" declcolumn="18"/>
+        <location file="EF_I2C.h" line="196" column="18" bodyfile="EF_I2C.c" bodystart="204" bodyend="216" declfile="EF_I2C.h" declline="196" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1afb19bc6a6238b42d38eefff40d8b988b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -557,7 +557,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="210" column="18" bodyfile="EF_I2C.c" bodystart="256" bodyend="264" declfile="EF_I2C.h" declline="210" declcolumn="18"/>
+        <location file="EF_I2C.h" line="210" column="18" bodyfile="EF_I2C.c" bodystart="220" bodyend="229" declfile="EF_I2C.h" declline="210" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a46ebdd220798a0082da434fc07f4999a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -600,7 +600,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="224" column="18" bodyfile="EF_I2C.c" bodystart="278" bodyend="287" declfile="EF_I2C.h" declline="224" declcolumn="18"/>
+        <location file="EF_I2C.h" line="224" column="18" bodyfile="EF_I2C.c" bodystart="233" bodyend="252" declfile="EF_I2C.h" declline="224" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1acf62f06af5f37ae067b6314c5f3f1d0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -643,7 +643,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="239" column="18" bodyfile="EF_I2C.c" bodystart="302" bodyend="308" declfile="EF_I2C.h" declline="239" declcolumn="18"/>
+        <location file="EF_I2C.h" line="239" column="18" bodyfile="EF_I2C.c" bodystart="256" bodyend="272" declfile="EF_I2C.h" declline="239" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a97ff9205de09e49d12dc62eb1acdcf62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -686,7 +686,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="254" column="18" bodyfile="EF_I2C.c" bodystart="324" bodyend="330" declfile="EF_I2C.h" declline="254" declcolumn="18"/>
+        <location file="EF_I2C.h" line="254" column="18" bodyfile="EF_I2C.c" bodystart="276" bodyend="293" declfile="EF_I2C.h" declline="254" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a8f157164f51a0ea88e03311615b21ffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -729,7 +729,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="269" column="18" bodyfile="EF_I2C.c" bodystart="345" bodyend="351" declfile="EF_I2C.h" declline="269" declcolumn="18"/>
+        <location file="EF_I2C.h" line="269" column="18" bodyfile="EF_I2C.c" bodystart="297" bodyend="311" declfile="EF_I2C.h" declline="269" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a95c96062892f3d3061365eb5d6f83dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -772,7 +772,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="285" column="18" bodyfile="EF_I2C.c" bodystart="367" bodyend="373" declfile="EF_I2C.h" declline="285" declcolumn="18"/>
+        <location file="EF_I2C.h" line="285" column="18" bodyfile="EF_I2C.c" bodystart="315" bodyend="331" declfile="EF_I2C.h" declline="285" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a3006b2445e7a7419cb1e00e11fea923e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -824,7 +824,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="310" column="18" bodyfile="EF_I2C.c" bodystart="398" bodyend="401" declfile="EF_I2C.h" declline="310" declcolumn="18"/>
+        <location file="EF_I2C.h" line="310" column="18" bodyfile="EF_I2C.c" bodystart="335" bodyend="347" declfile="EF_I2C.h" declline="310" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a7424199ff032dabdec9b03a8c7e49f0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -874,7 +874,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="331" column="18" bodyfile="EF_I2C.c" bodystart="422" bodyend="425" declfile="EF_I2C.h" declline="331" declcolumn="18"/>
+        <location file="EF_I2C.h" line="331" column="18" bodyfile="EF_I2C.c" bodystart="351" bodyend="363" declfile="EF_I2C.h" declline="331" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a824f4aaa04cf1518f65a558c67172fdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -917,7 +917,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="346" column="18" bodyfile="EF_I2C.c" bodystart="440" bodyend="443" declfile="EF_I2C.h" declline="346" declcolumn="18"/>
+        <location file="EF_I2C.h" line="346" column="18" bodyfile="EF_I2C.c" bodystart="367" bodyend="379" declfile="EF_I2C.h" declline="346" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a8fa9bab21502620a499c6f943fc69c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -960,7 +960,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="361" column="18" bodyfile="EF_I2C.c" bodystart="457" bodyend="460" declfile="EF_I2C.h" declline="361" declcolumn="18"/>
+        <location file="EF_I2C.h" line="361" column="18" bodyfile="EF_I2C.c" bodystart="382" bodyend="393" declfile="EF_I2C.h" declline="361" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a8efd0e0e84b49d60edbea6c2513929a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1016,7 +1016,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="390" column="18" bodyfile="EF_I2C.c" bodystart="489" bodyend="492" declfile="EF_I2C.h" declline="390" declcolumn="18"/>
+        <location file="EF_I2C.h" line="390" column="18" bodyfile="EF_I2C.c" bodystart="397" bodyend="411" declfile="EF_I2C.h" declline="390" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1aa87448a542b497393695dca2acc6d6b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1071,7 +1071,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="415" column="18" bodyfile="EF_I2C.c" bodystart="516" bodyend="519" declfile="EF_I2C.h" declline="415" declcolumn="18"/>
+        <location file="EF_I2C.h" line="415" column="18" bodyfile="EF_I2C.c" bodystart="414" bodyend="428" declfile="EF_I2C.h" declline="415" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1ac9a53ca41924b84ebf52d2b659c029c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1125,7 +1125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="440" column="18" bodyfile="EF_I2C.c" bodystart="545" bodyend="548" declfile="EF_I2C.h" declline="440" declcolumn="18"/>
+        <location file="EF_I2C.h" line="440" column="18" bodyfile="EF_I2C.c" bodystart="432" bodyend="446" declfile="EF_I2C.h" declline="440" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1ac4509f632d8b0b1157ec42828a957600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1179,7 +1179,62 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="466" column="18" bodyfile="EF_I2C.c" bodystart="574" bodyend="577" declfile="EF_I2C.h" declline="466" declcolumn="18"/>
+        <location file="EF_I2C.h" line="466" column="18" bodyfile="EF_I2C.c" bodystart="449" bodyend="463" declfile="EF_I2C.h" declline="466" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___i2_c_8h_1aea0bfa8a6cdd44b3d5ef8f97b7a4723e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_I2C_setICR</definition>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint32_t mask)</argsstring>
+        <name>EF_I2C_setICR</name>
+        <param>
+          <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
+          <declname>i2c</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Interrupt Clear (ICR) register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes a mask value to the interrupt clear register (ICR) of the I2C peripheral. The ICR register is used to clear the interrupt status bits. Writing a 1 to a bit in the ICR register clears the corresponding interrupt status bit in the RIS register. IM Register Breakdown**:<itemizedlist>
+<listitem><para>Bit 0: MISS_ACK - Slave ACK is missed</para>
+</listitem><listitem><para>Bit 1: CMDE - Command FIFO is Empty</para>
+</listitem><listitem><para>Bit 2: CMDF - Command FIFO is Full</para>
+</listitem><listitem><para>Bit 3: CMDOVF - Command FIFO overflow; write 1 to clear</para>
+</listitem><listitem><para>Bit 4: WRE - Write FIFO is Empty</para>
+</listitem><listitem><para>Bit 5: WRF - Write FIFO is Full</para>
+</listitem><listitem><para>Bit 6: WROVF - Write FIFO overflow; write 1 to clear</para>
+</listitem><listitem><para>Bit 7: RDE - Read FIFO is Empty</para>
+</listitem><listitem><para>Bit 8: RDF - Read FIFO is Full</para>
+</listitem><listitem><para>Bits [9-31]: Reserved. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref>, which points to the base memory address of I2C registers. <ref refid="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" kindref="member">EF_I2C_TYPE</ref> is a structure that contains the I2C registers. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32-bit mask value to be written to the ICR register. Each bit corresponds to a specific interrupt source, with 1 clearing the interrupt status and 0 leaving it unchanged.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C.h" line="492" column="18" declfile="EF_I2C.h" declline="492" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a032dfe3e03b164ccf42871ea66fe2fc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1196,7 +1251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C.h" line="470" column="18" bodyfile="EF_I2C.c" bodystart="579" bodyend="582" declfile="EF_I2C.h" declline="470" declcolumn="18"/>
+        <location file="EF_I2C.h" line="495" column="18" bodyfile="EF_I2C.c" bodystart="482" bodyend="485" declfile="EF_I2C.h" declline="495" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1343,19 +1398,22 @@
 <codeline lineno="466"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8h_1ac4509f632d8b0b1157ec42828a957600" kindref="member">EF_I2C_getIM</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint32_t*<sp/>im_value);</highlight></codeline>
 <codeline lineno="467"><highlight class="normal"></highlight></codeline>
 <codeline lineno="468"><highlight class="normal"></highlight></codeline>
-<codeline lineno="469"><highlight class="normal"></highlight></codeline>
-<codeline lineno="470"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8h_1a032dfe3e03b164ccf42871ea66fe2fc9" kindref="member">EF_I2C_waitBusy</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c);</highlight></codeline>
-<codeline lineno="471"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
-<codeline lineno="472"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
-<codeline lineno="473"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="474"><highlight class="normal"></highlight></codeline>
-<codeline lineno="475"><highlight class="normal"></highlight></codeline>
-<codeline lineno="476"><highlight class="normal"></highlight></codeline>
-<codeline lineno="477"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EF_I2C_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="478"><highlight class="normal"></highlight></codeline>
-<codeline lineno="479"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
-<codeline lineno="480"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
-<codeline lineno="481"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492" refid="_e_f___i2_c_8h_1aea0bfa8a6cdd44b3d5ef8f97b7a4723e" refkind="member"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8h_1aea0bfa8a6cdd44b3d5ef8f97b7a4723e" kindref="member">EF_I2C_setICR</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint32_t<sp/>mask);</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8h_1a032dfe3e03b164ccf42871ea66fe2fc9" kindref="member">EF_I2C_waitBusy</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="497"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
+<codeline lineno="498"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EF_I2C_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="505"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
+<codeline lineno="506"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="EF_I2C.h"/>
   </compounddef>

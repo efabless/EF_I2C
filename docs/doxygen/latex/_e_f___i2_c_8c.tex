@@ -10,6 +10,16 @@ C header file for I2C APIs which contains the function implementations.
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{_e_f___i2_c_8c_a98665e54f362f24f55bedf0ce552c852}{EF\+\_\+\+I2\+C\+\_\+C}}
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c_8c_a6c5c548b64cb71bdc4b7021d5bc0ac40}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+CORRECT\+\_\+\+MASK}}~0x\+FFFFE080
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c_8c_aee1d5b91d81a060b21af4bd49a2dde9e}{EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE}}~0x000003\+FF
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c_8c_a5fafabd8b05d8b014293383617d961d5}{EF\+\_\+\+I2\+C\+\_\+\+PR\+\_\+\+MAX\+\_\+\+VALUE}}~0x0000\+FFFF
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c_8c_ab1fdffc2f516327a24051b9b7f6061f5}{EF\+\_\+\+I2\+C\+\_\+\+IM\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE}}~0x000001\+FF
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c_8c_a602154856cc6d698f903f4e5c2b0a59f}{EF\+\_\+\+I2\+C\+\_\+\+IC\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE}}~0x000001\+FF
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -79,6 +89,36 @@ C header file for I2C APIs which contains the function implementations.
 \index{EF\_I2C\_C@{EF\_I2C\_C}!EF\_I2C.c@{EF\_I2C.c}}
 \doxysubsubsection{\texorpdfstring{EF\_I2C\_C}{EF\_I2C\_C}}
 {\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+C}
+
+\mbox{\Hypertarget{_e_f___i2_c_8c_a6c5c548b64cb71bdc4b7021d5bc0ac40}\label{_e_f___i2_c_8c_a6c5c548b64cb71bdc4b7021d5bc0ac40}} 
+\index{EF\_I2C.c@{EF\_I2C.c}!EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK}!EF\_I2C.c@{EF\_I2C.c}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK}{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+CORRECT\+\_\+\+MASK~0x\+FFFFE080}
+
+\mbox{\Hypertarget{_e_f___i2_c_8c_aee1d5b91d81a060b21af4bd49a2dde9e}\label{_e_f___i2_c_8c_aee1d5b91d81a060b21af4bd49a2dde9e}} 
+\index{EF\_I2C.c@{EF\_I2C.c}!EF\_I2C\_DATA\_REG\_MAX\_VALUE@{EF\_I2C\_DATA\_REG\_MAX\_VALUE}}
+\index{EF\_I2C\_DATA\_REG\_MAX\_VALUE@{EF\_I2C\_DATA\_REG\_MAX\_VALUE}!EF\_I2C.c@{EF\_I2C.c}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_DATA\_REG\_MAX\_VALUE}{EF\_I2C\_DATA\_REG\_MAX\_VALUE}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE~0x000003\+FF}
+
+\mbox{\Hypertarget{_e_f___i2_c_8c_a602154856cc6d698f903f4e5c2b0a59f}\label{_e_f___i2_c_8c_a602154856cc6d698f903f4e5c2b0a59f}} 
+\index{EF\_I2C.c@{EF\_I2C.c}!EF\_I2C\_IC\_REG\_MAX\_VALUE@{EF\_I2C\_IC\_REG\_MAX\_VALUE}}
+\index{EF\_I2C\_IC\_REG\_MAX\_VALUE@{EF\_I2C\_IC\_REG\_MAX\_VALUE}!EF\_I2C.c@{EF\_I2C.c}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_IC\_REG\_MAX\_VALUE}{EF\_I2C\_IC\_REG\_MAX\_VALUE}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+IC\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE~0x000001\+FF}
+
+\mbox{\Hypertarget{_e_f___i2_c_8c_ab1fdffc2f516327a24051b9b7f6061f5}\label{_e_f___i2_c_8c_ab1fdffc2f516327a24051b9b7f6061f5}} 
+\index{EF\_I2C.c@{EF\_I2C.c}!EF\_I2C\_IM\_REG\_MAX\_VALUE@{EF\_I2C\_IM\_REG\_MAX\_VALUE}}
+\index{EF\_I2C\_IM\_REG\_MAX\_VALUE@{EF\_I2C\_IM\_REG\_MAX\_VALUE}!EF\_I2C.c@{EF\_I2C.c}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_IM\_REG\_MAX\_VALUE}{EF\_I2C\_IM\_REG\_MAX\_VALUE}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+IM\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE~0x000001\+FF}
+
+\mbox{\Hypertarget{_e_f___i2_c_8c_a5fafabd8b05d8b014293383617d961d5}\label{_e_f___i2_c_8c_a5fafabd8b05d8b014293383617d961d5}} 
+\index{EF\_I2C.c@{EF\_I2C.c}!EF\_I2C\_PR\_MAX\_VALUE@{EF\_I2C\_PR\_MAX\_VALUE}}
+\index{EF\_I2C\_PR\_MAX\_VALUE@{EF\_I2C\_PR\_MAX\_VALUE}!EF\_I2C.c@{EF\_I2C.c}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_PR\_MAX\_VALUE}{EF\_I2C\_PR\_MAX\_VALUE}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+PR\+\_\+\+MAX\+\_\+\+VALUE~0x0000\+FFFF}
 
 
 

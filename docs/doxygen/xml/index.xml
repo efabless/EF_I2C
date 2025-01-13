@@ -24,6 +24,11 @@
   </compound>
   <compound refid="_e_f___i2_c_8c" kind="file"><name>EF_I2C.c</name>
     <member refid="_e_f___i2_c_8c_1a98665e54f362f24f55bedf0ce552c852" kind="define"><name>EF_I2C_C</name></member>
+    <member refid="_e_f___i2_c_8c_1a6c5c548b64cb71bdc4b7021d5bc0ac40" kind="define"><name>EF_I2C_COMMAND_REG_CMD_CORRECT_MASK</name></member>
+    <member refid="_e_f___i2_c_8c_1aee1d5b91d81a060b21af4bd49a2dde9e" kind="define"><name>EF_I2C_DATA_REG_MAX_VALUE</name></member>
+    <member refid="_e_f___i2_c_8c_1a5fafabd8b05d8b014293383617d961d5" kind="define"><name>EF_I2C_PR_MAX_VALUE</name></member>
+    <member refid="_e_f___i2_c_8c_1ab1fdffc2f516327a24051b9b7f6061f5" kind="define"><name>EF_I2C_IM_REG_MAX_VALUE</name></member>
+    <member refid="_e_f___i2_c_8c_1a602154856cc6d698f903f4e5c2b0a59f" kind="define"><name>EF_I2C_IC_REG_MAX_VALUE</name></member>
     <member refid="_e_f___i2_c_8c_1a8cd33e8dde8407bb760d8a9e06548dea" kind="function"><name>EF_I2C_setGclkEnable</name></member>
     <member refid="_e_f___i2_c_8c_1ac8020e16b3158054341ac0bce22d8b7e" kind="function"><name>EF_I2C_writeToAddress</name></member>
     <member refid="_e_f___i2_c_8c_1af50c9788e5f7dce39b36641ba4dd1abc" kind="function"><name>EF_I2C_readCommand</name></member>
@@ -77,6 +82,7 @@
     <member refid="_e_f___i2_c_8h_1aa87448a542b497393695dca2acc6d6b8" kind="function"><name>EF_I2C_getMIS</name></member>
     <member refid="_e_f___i2_c_8h_1ac9a53ca41924b84ebf52d2b659c029c7" kind="function"><name>EF_I2C_setIM</name></member>
     <member refid="_e_f___i2_c_8h_1ac4509f632d8b0b1157ec42828a957600" kind="function"><name>EF_I2C_getIM</name></member>
+    <member refid="_e_f___i2_c_8h_1aea0bfa8a6cdd44b3d5ef8f97b7a4723e" kind="function"><name>EF_I2C_setICR</name></member>
     <member refid="_e_f___i2_c_8h_1a032dfe3e03b164ccf42871ea66fe2fc9" kind="function"><name>EF_I2C_waitBusy</name></member>
   </compound>
   <compound refid="_e_f___i2_c__regs_8h" kind="file"><name>EF_I2C_regs.h</name>
