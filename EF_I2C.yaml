@@ -15,7 +15,8 @@ info:
   - comm
   - i2c
   bus:
-  - APB
+    - APB
+    - WB
   type: soft
   status: verified
   cell_count:
@@ -165,7 +166,7 @@ registers:
 - name: Command
   size: 16
   mode: w
-  fifo: 'no'
+  fifo: yes
   offset: 4
   bit_access: 'no'
   read_port: ''
@@ -208,7 +209,7 @@ registers:
 - name: Data
   size: 16
   mode: w/r
-  fifo: 'no'
+  fifo: yes
   offset: 8
   bit_access: 'no'
   read_port: ''
@@ -235,7 +236,7 @@ registers:
 - name: PR
   size: 16
   mode: w
-  fifo: 'no'
+  fifo: no
   offset: 12
   bit_access: 'no'
   read_port: ''
