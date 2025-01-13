@@ -1,0 +1,692 @@
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Header files}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item EF\+\_\+\+Driver\+\_\+\+Common.h
+\item EF\+\_\+\+I2C.h
+\item EF\+\_\+\+I2\+C\+\_\+regs.h
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{File EF\+\_\+\+Driver\+\_\+\+Common.\+h}\label{md__r_e_a_d_m_e_autotoc_md2}
+{\itshape C header file for common driver definitions and types.}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Structures and Types}\label{md__r_e_a_d_m_e_autotoc_md3}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft typedef uint32\+\_\+t   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ ~\newline
+{\itshape A type that is used to return the status of the driver functions.}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Macros}\label{md__r_e_a_d_m_e_autotoc_md4}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR$\ast$$\ast$ ((uint32\+\_\+t)1)~\newline
+{\itshape Unspecified error.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+BUSY$\ast$$\ast$ ((uint32\+\_\+t)2)~\newline
+{\itshape Driver is busy.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+PARAMETER$\ast$$\ast$ ((uint32\+\_\+t)5)~\newline
+{\itshape Parameter error.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+SPECIFIC$\ast$$\ast$ ((uint32\+\_\+t)6)~\newline
+{\itshape Start of driver specific errors.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+TIMEOUT$\ast$$\ast$ ((uint32\+\_\+t)3)~\newline
+{\itshape Timeout occurred.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+UNSUPPORTED$\ast$$\ast$ ((uint32\+\_\+t)4)~\newline
+{\itshape Operation not supported.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+OK$\ast$$\ast$ ((uint32\+\_\+t)0)~\newline
+{\itshape Operation succeeded.}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Structures and Types Documentation}\label{md__r_e_a_d_m_e_autotoc_md5}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{typedef $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+STATUS$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md6}
+{\itshape A type that is used to return the status of the driver functions.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ uint32\_t\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}};}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{Macros Documentation}\label{md__r_e_a_d_m_e_autotoc_md7}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md8}
+{\itshape Unspecified error.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\ ((uint32\_t)1)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+BUSY$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md9}
+{\itshape Driver is busy.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_BUSY\ ((uint32\_t)2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+PARAMETER$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md10}
+{\itshape Parameter error.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_PARAMETER\ ((uint32\_t)5)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+SPECIFIC$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md11}
+{\itshape Start of driver specific errors.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_SPECIFIC\ ((uint32\_t)6)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+TIMEOUT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md12}
+{\itshape Timeout occurred.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_TIMEOUT\ ((uint32\_t)3)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+UNSUPPORTED$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md13}
+{\itshape Operation not supported.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_UNSUPPORTED\ ((uint32\_t)4)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+OK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md14}
+{\itshape Operation succeeded.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_OK\ ((uint32\_t)0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysection{File EF\+\_\+\+I2\+C.\+h}\label{md__r_e_a_d_m_e_autotoc_md15}
+{\itshape C header file for I2C APIs which contains the function prototypes.}\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysection{Functions}\label{md__r_e_a_d_m_e_autotoc_md16}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+get\+Command\+Reg$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t $\ast$command\+\_\+value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+get\+Data\+Last$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, bool $\ast$data\+\_\+last) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+get\+Data\+Reg$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t $\ast$data\+\_\+reg\+\_\+value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+get\+Data\+Valid$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, bool $\ast$data\+\_\+valid) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+get\+IM$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t $\ast$im\+\_\+value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+get\+MIS$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t $\ast$mis\+\_\+value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+get\+Prescaler$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t $\ast$prescaler\+\_\+value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+get\+RIS$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t $\ast$ris\+\_\+value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+read\+Cmd$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, char addr) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+read\+Data$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, char $\ast$data) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+set\+Command\+Reg$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+set\+Data\+Last$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, bool valid) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+set\+Data\+Reg$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+set\+Data\+Valid$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, bool valid) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+set\+Gclk\+Enable$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t value) ~\newline
+{\itshape sets the GCLK enable bit in the I2C register to a certain value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+set\+IM$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t mask) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+set\+Prescaler$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, uint32\+\_\+t value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+start\+Cmd$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+stop\+Cmd$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+write\+Address$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, char addr) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+write\+Cmd$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, char addr) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+write\+Data$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c, char data) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+write\+Multiple\+Cmd$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ i2c) ~\newline
+   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysection{Functions Documentation}\label{md__r_e_a_d_m_e_autotoc_md17}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+get\+Command\+Reg$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md18}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_aa76113b5cce43aedb3e34ffe98377210}{EF\_I2C\_getCommandReg}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *command\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+get\+Data\+Last$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md19}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a95c96062892f3d3061365eb5d6f83dfe}{EF\_I2C\_getDataLast}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ *data\_last}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+get\+Data\+Reg$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md20}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a7424199ff032dabdec9b03a8c7e49f0a}{EF\_I2C\_getDataReg}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *data\_reg\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+get\+Data\+Valid$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md21}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a97ff9205de09e49d12dc62eb1acdcf62}{EF\_I2C\_getDataValid}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ *data\_valid}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+get\+IM$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md22}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_ac4509f632d8b0b1157ec42828a957600}{EF\_I2C\_getIM}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *im\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md23}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+get\+MIS$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md23}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_aa87448a542b497393695dca2acc6d6b8}{EF\_I2C\_getMIS}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *mis\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+get\+Prescaler$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md24}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a8fa9bab21502620a499c6f943fc69c4c}{EF\_I2C\_getPrescaler}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *prescaler\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md25}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+get\+RIS$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md25}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a8efd0e0e84b49d60edbea6c2513929a5}{EF\_I2C\_getRIS}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *ris\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md26}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+read\+Cmd$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md26}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_abd603b15315bef595a6bee15a56c1c99}{EF\_I2C\_readCmd}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}\ addr}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md27}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+read\+Data$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md27}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a46ebdd220798a0082da434fc07f4999a}{EF\_I2C\_readData}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}\ *data}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md28}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+set\+Command\+Reg$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md28}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a2286c60de589dcecb0fc78a48187440b}{EF\_I2C\_setCommandReg}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md29}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+set\+Data\+Last$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md29}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a8f157164f51a0ea88e03311615b21ffd}{EF\_I2C\_setDataLast}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ valid}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md30}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+set\+Data\+Reg$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md30}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a3006b2445e7a7419cb1e00e11fea923e}{EF\_I2C\_setDataReg}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md31}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+set\+Data\+Valid$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md31}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_acf62f06af5f37ae067b6314c5f3f1d0b}{EF\_I2C\_setDataValid}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ valid}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md32}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+set\+Gclk\+Enable$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md32}
+{\itshape sets the GCLK enable bit in the I2C register to a certain value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a8cd33e8dde8407bb760d8a9e06548dea}{EF\_I2C\_setGclkEnable}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily i2c} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of I2C registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the I2C registers.
+\item {\ttfamily value} The value of the GCLK enable bit
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md33}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+set\+IM$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md33}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_ac9a53ca41924b84ebf52d2b659c029c7}{EF\_I2C\_setIM}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ mask}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md34}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+set\+Prescaler$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md34}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a824f4aaa04cf1518f65a558c67172fdd}{EF\_I2C\_setPrescaler}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md35}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+start\+Cmd$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md35}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a6bcf2d08643ce620b0f75b980a875a7f}{EF\_I2C\_startCmd}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md36}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+stop\+Cmd$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md36}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a67cb25a7e6a9f2f0c4cbda50361f38e9}{EF\_I2C\_stopCmd}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md37}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+write\+Address$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md37}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a8b32d8e6a1cb03a0c948ee85a917c652}{EF\_I2C\_writeAddress}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}\ addr}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md38}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+write\+Cmd$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md38}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_a9c8ce9f9c67bd5ce3e965e1b8c05b437}{EF\_I2C\_writeCmd}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}\ addr}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md39}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+write\+Data$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md39}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_afb19bc6a6238b42d38eefff40d8b988b}{EF\_I2C\_writeData}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}\ data}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md40}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+write\+Multiple\+Cmd$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md40}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8c_ae6094788f5d9a6cf203350161d6a1194}{EF\_I2C\_writeMultipleCmd}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md41}{}\doxysection{File EF\+\_\+\+I2\+C\+\_\+regs.\+h}\label{md__r_e_a_d_m_e_autotoc_md41}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md42}{}\doxysection{Structures and Types}\label{md__r_e_a_d_m_e_autotoc_md42}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft typedef struct $\ast$$\ast$\textbackslash{}\+\_\+\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft typedef $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ $\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft struct   &$\ast$$\ast$\textbackslash{}\+\_\+\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+$\ast$$\ast$ ~\newline
+   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md43}{}\doxysection{Macros}\label{md__r_e_a_d_m_e_autotoc_md43}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+CMDE\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+CMDF\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x4)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+CMDOVF\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x8)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+ADDRESS\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ ((uint32\+\_\+t)0)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+ADDRESS\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ ((uint32\+\_\+t)0x7f)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+READ\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ ((uint32\+\_\+t)9)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+READ\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ ((uint32\+\_\+t)0x200)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+START\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ ((uint32\+\_\+t)8)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+START\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ ((uint32\+\_\+t)0x100)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+STOP\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ ((uint32\+\_\+t)12)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+STOP\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ ((uint32\+\_\+t)0x1000)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+WRITE\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ ((uint32\+\_\+t)10)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+WRITE\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ ((uint32\+\_\+t)0x400)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+WRITE\textbackslash{}\+\_\+\+MULTIPLE\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ ((uint32\+\_\+t)11)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+COMMAND\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+CMD\textbackslash{}\+\_\+\+WRITE\textbackslash{}\+\_\+\+MULTIPLE\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ ((uint32\+\_\+t)0x800)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ ((uint32\+\_\+t)0)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+LAST\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ ((uint32\+\_\+t)9)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+LAST\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ ((uint32\+\_\+t)0x200)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ ((uint32\+\_\+t)0xff)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+VALID\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ ((uint32\+\_\+t)8)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DATA\textbackslash{}\+\_\+\+VALID\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ ((uint32\+\_\+t)0x100)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+MISS\textbackslash{}\+\_\+\+ACK\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x1)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+RDE\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x80)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+RDF\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x100)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+WRE\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x10)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+WRF\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x20)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+I2C\textbackslash{}\+\_\+\+WROVF\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x40)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+IO\textbackslash{}\+\_\+\+TYPES$\ast$$\ast$ ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ volatile const uint32\+\_\+t~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+\+RW$\ast$$\ast$ volatile uint32\+\_\+t~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ volatile uint32\+\_\+t~\newline
+   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md44}{}\doxysection{Structures and Types Documentation}\label{md__r_e_a_d_m_e_autotoc_md44}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md45}{}\doxysubsection{typedef $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+TYPE$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md45}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{\_EF\_I2C\_TYPE\_}}\ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE}};}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md46}{}\doxysubsection{typedef $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md46}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE}}*\ \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\_I2C\_TYPE\_PTR}};}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md47}{}\doxysubsection{struct $<$tt$>$\+\_\+\+EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md47}
+Variables\+:
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ COMMAND ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+\+RW$\ast$$\ast$ DATA ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ GCLK ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+\+RW$\ast$$\ast$ IM ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ MIS ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ PR ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ RIS ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ STATUS ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ reserved\+\_\+1 ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ reserved\+\_\+2 ~\newline
+
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md48}{}\doxysection{Macros Documentation}\label{md__r_e_a_d_m_e_autotoc_md48}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md49}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+CMDE\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md49}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_CMDE\_FLAG\ ((uint32\_t)0x2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md50}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+CMDF\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md50}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_CMDF\_FLAG\ ((uint32\_t)0x4)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md51}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+CMDOVF\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md51}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_CMDOVF\_FLAG\ ((uint32\_t)0x8)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md52}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+ADDRESS\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md52}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT\ ((uint32\_t)0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md53}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+ADDRESS\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md53}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK\ ((uint32\_t)0x7f)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md54}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+READ\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md54}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT\ ((uint32\_t)9)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md55}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+READ\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md55}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK\ ((uint32\_t)0x200)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md56}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+START\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md56}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT\ ((uint32\_t)8)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md57}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+START\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md57}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK\ ((uint32\_t)0x100)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md58}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+STOP\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md58}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT\ ((uint32\_t)12)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md59}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+STOP\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md59}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK\ ((uint32\_t)0x1000)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md60}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md60}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT\ ((uint32\_t)10)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md61}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md61}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK\ ((uint32\_t)0x400)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md62}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+MULTIPLE\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md62}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT\ ((uint32\_t)11)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md63}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+MULTIPLE\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md63}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK\ ((uint32\_t)0x800)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md64}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md64}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_BIT\ ((uint32\_t)0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md65}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+LAST\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md65}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT\ ((uint32\_t)9)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md66}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+LAST\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md66}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK\ ((uint32\_t)0x200)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md67}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md67}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_MASK\ ((uint32\_t)0xff)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md68}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+VALID\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md68}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT\ ((uint32\_t)8)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md69}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+VALID\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md69}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK\ ((uint32\_t)0x100)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md70}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+MISS\+\_\+\+ACK\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md70}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_MISS\_ACK\_FLAG\ ((uint32\_t)0x1)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md71}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+RDE\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md71}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_RDE\_FLAG\ ((uint32\_t)0x80)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md72}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+RDF\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md72}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_RDF\_FLAG\ ((uint32\_t)0x100)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md73}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+WRE\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md73}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_WRE\_FLAG\ ((uint32\_t)0x10)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md74}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+WRF\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md74}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_WRF\_FLAG\ ((uint32\_t)0x20)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md75}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+I2\+C\+\_\+\+WROVF\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md75}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_I2C\_WROVF\_FLAG\ ((uint32\_t)0x40)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md76}{}\doxysubsection{define $<$tt$>$\+IO\+\_\+\+TYPES$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md76}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ IO\_TYPES\ }}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md77}{}\doxysubsection{define $<$tt$>$\+\_\+\+\_\+\+R$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md77}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ \_\_R\ volatile\ const\ uint32\_t}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md78}{}\doxysubsection{define $<$tt$>$\+\_\+\+\_\+\+RW$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md78}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ \_\_RW\ volatile\ \ \ \ \ \ \ uint32\_t}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md79}{}\doxysubsection{define $<$tt$>$\+\_\+\+\_\+\+W$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md79}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ \_\_W\ volatile\ \ \ \ \ \ \ uint32\_t}}
+
+\end{DoxyCode}
+ 

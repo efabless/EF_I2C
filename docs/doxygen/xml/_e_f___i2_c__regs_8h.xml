@@ -406,11 +406,11 @@
         </inbodydescription>
         <location file="EF_I2C_regs.h" line="82" column="13"/>
       </memberdef>
-      <memberdef kind="typedef" id="_e_f___i2_c__regs_8h_1affb413da2854fa5bbd6d42b9b0c4e73f" prot="public" static="no">
+      <memberdef kind="typedef" id="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" prot="public" static="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" kindref="member">EF_I2C_TYPE</ref> *</type>
-        <definition>typedef EF_I2C_TYPE* EF_I2C_PTR</definition>
+        <definition>typedef EF_I2C_TYPE* EF_I2C_TYPE_PTR</definition>
         <argsstring></argsstring>
-        <name>EF_I2C_PTR</name>
+        <name>EF_I2C_TYPE_PTR</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -509,7 +509,7 @@
 <codeline lineno="82" refid="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" refkind="member"><highlight class="normal">}<sp/><ref refid="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" kindref="member">EF_I2C_TYPE</ref>;</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85" refid="_e_f___i2_c__regs_8h_1affb413da2854fa5bbd6d42b9b0c4e73f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE</ref><sp/>*<sp/><ref refid="_e_f___i2_c__regs_8h_1affb413da2854fa5bbd6d42b9b0c4e73f" kindref="member">EF_I2C_PTR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>EF_I2C_PTR<sp/>is<sp/>a<sp/>pointer<sp/>to<sp/>a<sp/>structure<sp/>of<sp/>type<sp/>EF_I2C_TYPE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE</ref><sp/>*<sp/><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>EF_I2C_PTR<sp/>is<sp/>a<sp/>pointer<sp/>to<sp/>a<sp/>structure<sp/>of<sp/>type<sp/>EF_I2C_TYPE</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>

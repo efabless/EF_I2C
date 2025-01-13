@@ -1,0 +1,647 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>API<sp/>Reference</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Header<sp/>files</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[EF_Driver_Common.h](#file-ef_driver_commonh)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[EF_I2C.h](#file-ef_i2ch)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[EF_I2C_regs.h](#file-ef_i2c_regsh)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>File<sp/>EF_Driver_Common.h</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_C<sp/>header<sp/>file<sp/>for<sp/>common<sp/>driver<sp/>definitions<sp/>and<sp/>types._</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Structures<sp/>and<sp/>Types</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Type<sp/>|<sp/>Name<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>---:<sp/>|<sp/>:---<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>typedef<sp/>uint32\_t<sp/>|<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/><sp/>&lt;br&gt;_A<sp/>type<sp/>that<sp/>is<sp/>used<sp/>to<sp/>return<sp/>the<sp/>status<sp/>of<sp/>the<sp/>driver<sp/>functions._<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Macros</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Type<sp/>|<sp/>Name<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>---:<sp/>|<sp/>:---<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_DRIVER\_ERROR**](#define-ef_driver_error)<sp/><sp/>((uint32\_t)1)&lt;br&gt;_Unspecified<sp/>error._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_DRIVER\_ERROR\_BUSY**](#define-ef_driver_error_busy)<sp/><sp/>((uint32\_t)2)&lt;br&gt;_Driver<sp/>is<sp/>busy._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_DRIVER\_ERROR\_PARAMETER**](#define-ef_driver_error_parameter)<sp/><sp/>((uint32\_t)5)&lt;br&gt;_Parameter<sp/>error._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_DRIVER\_ERROR\_SPECIFIC**](#define-ef_driver_error_specific)<sp/><sp/>((uint32\_t)6)&lt;br&gt;_Start<sp/>of<sp/>driver<sp/>specific<sp/>errors._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_DRIVER\_ERROR\_TIMEOUT**](#define-ef_driver_error_timeout)<sp/><sp/>((uint32\_t)3)&lt;br&gt;_Timeout<sp/>occurred._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_DRIVER\_ERROR\_UNSUPPORTED**](#define-ef_driver_error_unsupported)<sp/><sp/>((uint32\_t)4)&lt;br&gt;_Operation<sp/>not<sp/>supported._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_DRIVER\_OK**](#define-ef_driver_ok)<sp/><sp/>((uint32\_t)0)&lt;br&gt;_Operation<sp/>succeeded._<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Structures<sp/>and<sp/>Types<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>typedef<sp/>`EF_DRIVER_STATUS`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_A<sp/>type<sp/>that<sp/>is<sp/>used<sp/>to<sp/>return<sp/>the<sp/>status<sp/>of<sp/>the<sp/>driver<sp/>functions._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">typedef<sp/>uint32_t<sp/>EF_DRIVER_STATUS;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Macros<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_DRIVER_ERROR`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Unspecified<sp/>error._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_DRIVER_ERROR<sp/>((uint32_t)1)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_DRIVER_ERROR_BUSY`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Driver<sp/>is<sp/>busy._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_DRIVER_ERROR_BUSY<sp/>((uint32_t)2)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_DRIVER_ERROR_PARAMETER`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Parameter<sp/>error._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>((uint32_t)5)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_DRIVER_ERROR_SPECIFIC`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Start<sp/>of<sp/>driver<sp/>specific<sp/>errors._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_DRIVER_ERROR_SPECIFIC<sp/>((uint32_t)6)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_DRIVER_ERROR_TIMEOUT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Timeout<sp/>occurred._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_DRIVER_ERROR_TIMEOUT<sp/>((uint32_t)3)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_DRIVER_ERROR_UNSUPPORTED`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Operation<sp/>not<sp/>supported._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_DRIVER_ERROR_UNSUPPORTED<sp/>((uint32_t)4)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_DRIVER_OK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Operation<sp/>succeeded._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_DRIVER_OK<sp/>((uint32_t)0)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>File<sp/>EF_I2C.h</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_C<sp/>header<sp/>file<sp/>for<sp/>I2C<sp/>APIs<sp/>which<sp/>contains<sp/>the<sp/>function<sp/>prototypes._</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Functions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Type<sp/>|<sp/>Name<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>---:<sp/>|<sp/>:---<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getCommandReg**](#function-ef_i2c_getcommandreg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*command\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getDataLast**](#function-ef_i2c_getdatalast)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>\*data\_last)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getDataReg**](#function-ef_i2c_getdatareg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*data\_reg\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getDataValid**](#function-ef_i2c_getdatavalid)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>\*data\_valid)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getIM**](#function-ef_i2c_getim)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*im\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getMIS**](#function-ef_i2c_getmis)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*mis\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getPrescaler**](#function-ef_i2c_getprescaler)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*prescaler\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_getRIS**](#function-ef_i2c_getris)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>\*ris\_value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_readCmd**](#function-ef_i2c_readcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_readData**](#function-ef_i2c_readdata)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>\*data)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setCommandReg**](#function-ef_i2c_setcommandreg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataLast**](#function-ef_i2c_setdatalast)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>valid)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataReg**](#function-ef_i2c_setdatareg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataValid**](#function-ef_i2c_setdatavalid)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>valid)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setGclkEnable**](#function-ef_i2c_setgclkenable)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_sets<sp/>the<sp/>GCLK<sp/>enable<sp/>bit<sp/>in<sp/>the<sp/>I2C<sp/>register<sp/>to<sp/>a<sp/>certain<sp/>value_<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setIM**](#function-ef_i2c_setim)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>mask)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setPrescaler**](#function-ef_i2c_setprescaler)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_startCmd**](#function-ef_i2c_startcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_stopCmd**](#function-ef_i2c_stopcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeAddress**](#function-ef_i2c_writeaddress)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeCmd**](#function-ef_i2c_writecmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>addr)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeData**](#function-ef_i2c_writedata)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>data)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeMultipleCmd**](#function-ef_i2c_writemultiplecmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Functions<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getCommandReg`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getCommandReg<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*command_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getDataLast`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getDataLast<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>*data_last</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getDataReg`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getDataReg<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*data_reg_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getDataValid`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getDataValid<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>*data_valid</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getIM`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getIM<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*im_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getMIS`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getMIS<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*mis_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getPrescaler`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getPrescaler<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*prescaler_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_getRIS`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_getRIS<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*ris_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_readCmd`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_readCmd<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>addr</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_readData`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_readData<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>*data</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setCommandReg`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setCommandReg<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setDataLast`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setDataLast<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>valid</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setDataReg`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setDataReg<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setDataValid`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setDataValid<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>valid</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setGclkEnable`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_sets<sp/>the<sp/>GCLK<sp/>enable<sp/>bit<sp/>in<sp/>the<sp/>I2C<sp/>register<sp/>to<sp/>a<sp/>certain<sp/>value_</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setGclkEnable<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>,<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`value`<sp/>The<sp/>value<sp/>of<sp/>the<sp/>GCLK<sp/>enable<sp/>bit</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setIM`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setIM<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mask</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setPrescaler`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setPrescaler<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_startCmd`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_startCmd<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_stopCmd`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_stopCmd<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_writeAddress`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_writeAddress<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>addr</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_writeCmd`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_writeCmd<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>addr</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_writeData`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_writeData<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>data</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_writeMultipleCmd`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_writeMultipleCmd<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>File<sp/>EF_I2C_regs.h</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Structures<sp/>and<sp/>Types</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Type<sp/>|<sp/>Name<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>---:<sp/>|<sp/>:---<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>typedef<sp/>struct<sp/>[**\_EF\_I2C\_TYPE\_**](#struct-_ef_i2c_type_)<sp/>|<sp/>[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/><sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>typedef<sp/>[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>\*<sp/>|<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/><sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>struct<sp/>|<sp/>[**\_EF\_I2C\_TYPE\_**](#struct-_ef_i2c_type_)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Macros</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Type<sp/>|<sp/>Name<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>---:<sp/>|<sp/>:---<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_CMDE\_FLAG**](#define-ef_i2c_cmde_flag)<sp/><sp/>((uint32\_t)0x2)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_CMDF\_FLAG**](#define-ef_i2c_cmdf_flag)<sp/><sp/>((uint32\_t)0x4)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_CMDOVF\_FLAG**](#define-ef_i2c_cmdovf_flag)<sp/><sp/>((uint32\_t)0x8)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT**](#define-ef_i2c_command_reg_cmd_address_bit)<sp/><sp/>((uint32\_t)0)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK**](#define-ef_i2c_command_reg_cmd_address_mask)<sp/><sp/>((uint32\_t)0x7f)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT**](#define-ef_i2c_command_reg_cmd_read_bit)<sp/><sp/>((uint32\_t)9)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK**](#define-ef_i2c_command_reg_cmd_read_mask)<sp/><sp/>((uint32\_t)0x200)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT**](#define-ef_i2c_command_reg_cmd_start_bit)<sp/><sp/>((uint32\_t)8)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK**](#define-ef_i2c_command_reg_cmd_start_mask)<sp/><sp/>((uint32\_t)0x100)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT**](#define-ef_i2c_command_reg_cmd_stop_bit)<sp/><sp/>((uint32\_t)12)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK**](#define-ef_i2c_command_reg_cmd_stop_mask)<sp/><sp/>((uint32\_t)0x1000)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT**](#define-ef_i2c_command_reg_cmd_write_bit)<sp/><sp/>((uint32\_t)10)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK**](#define-ef_i2c_command_reg_cmd_write_mask)<sp/><sp/>((uint32\_t)0x400)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT**](#define-ef_i2c_command_reg_cmd_write_multiple_bit)<sp/><sp/>((uint32\_t)11)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK**](#define-ef_i2c_command_reg_cmd_write_multiple_mask)<sp/><sp/>((uint32\_t)0x800)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_DATA\_REG\_DATA\_BIT**](#define-ef_i2c_data_reg_data_bit)<sp/><sp/>((uint32\_t)0)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT**](#define-ef_i2c_data_reg_data_last_bit)<sp/><sp/>((uint32\_t)9)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK**](#define-ef_i2c_data_reg_data_last_mask)<sp/><sp/>((uint32\_t)0x200)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_DATA\_REG\_DATA\_MASK**](#define-ef_i2c_data_reg_data_mask)<sp/><sp/>((uint32\_t)0xff)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT**](#define-ef_i2c_data_reg_data_valid_bit)<sp/><sp/>((uint32\_t)8)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK**](#define-ef_i2c_data_reg_data_valid_mask)<sp/><sp/>((uint32\_t)0x100)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_MISS\_ACK\_FLAG**](#define-ef_i2c_miss_ack_flag)<sp/><sp/>((uint32\_t)0x1)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_RDE\_FLAG**](#define-ef_i2c_rde_flag)<sp/><sp/>((uint32\_t)0x80)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_RDF\_FLAG**](#define-ef_i2c_rdf_flag)<sp/><sp/>((uint32\_t)0x100)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_WRE\_FLAG**](#define-ef_i2c_wre_flag)<sp/><sp/>((uint32\_t)0x10)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_WRF\_FLAG**](#define-ef_i2c_wrf_flag)<sp/><sp/>((uint32\_t)0x20)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_WROVF\_FLAG**](#define-ef_i2c_wrovf_flag)<sp/><sp/>((uint32\_t)0x40)&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**IO\_TYPES**](#define-io_types)<sp/><sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**\_\_R**](#define-__r)<sp/><sp/>volatile<sp/>const<sp/>uint32\_t&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**\_\_RW**](#define-__rw)<sp/><sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32\_t&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**\_\_W**](#define-__w)<sp/><sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32\_t&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Structures<sp/>and<sp/>Types<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>typedef<sp/>`EF_I2C_TYPE`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">typedef<sp/>struct<sp/>_EF_I2C_TYPE_<sp/>EF_I2C_TYPE;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>typedef<sp/>`EF_I2C_TYPE_PTR`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">typedef<sp/>EF_I2C_TYPE*<sp/>EF_I2C_TYPE_PTR;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>struct<sp/>`_EF_I2C_TYPE_`</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Variables:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_W**](#define-__w)<sp/>COMMAND<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_RW**](#define-__rw)<sp/>DATA<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_W**](#define-__w)<sp/>GCLK<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_RW**](#define-__rw)<sp/>IM<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_R**](#define-__r)<sp/>MIS<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_W**](#define-__w)<sp/>PR<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_R**](#define-__r)<sp/>RIS<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_R**](#define-__r)<sp/>STATUS<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_R**](#define-__r)<sp/>reserved_1<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>[**\_\_R**](#define-__r)<sp/>reserved_2<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Macros<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_CMDE_FLAG`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_CMDE_FLAG<sp/>((uint32_t)0x2)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_CMDF_FLAG`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_CMDF_FLAG<sp/>((uint32_t)0x4)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_CMDOVF_FLAG`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_CMDOVF_FLAG<sp/>((uint32_t)0x8)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT<sp/>((uint32_t)0)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK<sp/>((uint32_t)0x7f)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_READ_BIT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_READ_BIT<sp/>((uint32_t)9)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_READ_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_READ_MASK<sp/>((uint32_t)0x200)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_START_BIT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_START_BIT<sp/>((uint32_t)8)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_START_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_START_MASK<sp/>((uint32_t)0x100)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_STOP_BIT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_STOP_BIT<sp/>((uint32_t)12)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_STOP_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_STOP_MASK<sp/>((uint32_t)0x1000)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_WRITE_BIT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_BIT<sp/>((uint32_t)10)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_WRITE_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MASK<sp/>((uint32_t)0x400)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT<sp/>((uint32_t)11)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK<sp/>((uint32_t)0x800)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_DATA_REG_DATA_BIT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_DATA_REG_DATA_BIT<sp/>((uint32_t)0)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_DATA_REG_DATA_LAST_BIT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_DATA_REG_DATA_LAST_BIT<sp/>((uint32_t)9)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_DATA_REG_DATA_LAST_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_DATA_REG_DATA_LAST_MASK<sp/>((uint32_t)0x200)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_DATA_REG_DATA_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_DATA_REG_DATA_MASK<sp/>((uint32_t)0xff)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_DATA_REG_DATA_VALID_BIT`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_DATA_REG_DATA_VALID_BIT<sp/>((uint32_t)8)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_DATA_REG_DATA_VALID_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_DATA_REG_DATA_VALID_MASK<sp/>((uint32_t)0x100)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_MISS_ACK_FLAG`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_MISS_ACK_FLAG<sp/>((uint32_t)0x1)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_RDE_FLAG`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_RDE_FLAG<sp/>((uint32_t)0x80)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_RDF_FLAG`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_RDF_FLAG<sp/>((uint32_t)0x100)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_WRE_FLAG`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_WRE_FLAG<sp/>((uint32_t)0x10)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_WRF_FLAG`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_WRF_FLAG<sp/>((uint32_t)0x20)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_WROVF_FLAG`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_WROVF_FLAG<sp/>((uint32_t)0x40)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`IO_TYPES`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>IO_TYPES<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`__R`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>__R<sp/>volatile<sp/>const<sp/>uint32_t</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`__RW`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>__RW<sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`__W`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>__W<sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

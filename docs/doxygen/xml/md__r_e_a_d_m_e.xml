@@ -1,0 +1,838 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>API Reference</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md1">
+<title>Header files</title>
+<para><itemizedlist>
+<listitem><para>EF_Driver_Common.h</para>
+</listitem><listitem><para>EF_I2C.h</para>
+</listitem><listitem><para>EF_I2C_regs.h</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md2">
+<title>File EF_Driver_Common.h</title>
+<para><emphasis>C header file for common driver definitions and types.</emphasis></para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md3">
+<title>Structures and Types</title>
+<para><table rows="2" cols="2"><row>
+<entry thead="yes" align='right'><para>Type   </para>
+</entry><entry thead="yes" align='left'><para>Name    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>typedef uint32_t   </para>
+</entry><entry thead="no" align='left'><para>**EF\_DRIVER\_STATUS** <linebreak/>
+<emphasis>A type that is used to return the status of the driver functions.</emphasis>   </para>
+</entry></row>
+</table>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md4">
+<title>Macros</title>
+<para><table rows="8" cols="2"><row>
+<entry thead="yes" align='right'><para>Type   </para>
+</entry><entry thead="yes" align='left'><para>Name    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_DRIVER\_ERROR** ((uint32_t)1)<linebreak/>
+<emphasis>Unspecified error.</emphasis>    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_DRIVER\_ERROR\_BUSY** ((uint32_t)2)<linebreak/>
+<emphasis>Driver is busy.</emphasis>    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_DRIVER\_ERROR\_PARAMETER** ((uint32_t)5)<linebreak/>
+<emphasis>Parameter error.</emphasis>    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_DRIVER\_ERROR\_SPECIFIC** ((uint32_t)6)<linebreak/>
+<emphasis>Start of driver specific errors.</emphasis>    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_DRIVER\_ERROR\_TIMEOUT** ((uint32_t)3)<linebreak/>
+<emphasis>Timeout occurred.</emphasis>    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_DRIVER\_ERROR\_UNSUPPORTED** ((uint32_t)4)<linebreak/>
+<emphasis>Operation not supported.</emphasis>    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_DRIVER\_OK** ((uint32_t)0)<linebreak/>
+<emphasis>Operation succeeded.</emphasis>   </para>
+</entry></row>
+</table>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md5">
+<title>Structures and Types Documentation</title>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md6">
+<title>typedef &lt;tt&gt;EF_DRIVER_STATUS&lt;/tt&gt;</title>
+<para><emphasis>A type that is used to return the status of the driver functions.</emphasis> <programlisting filename=".c"><codeline><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref>;</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md7">
+<title>Macros Documentation</title>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md8">
+<title>define &lt;tt&gt;EF_DRIVER_ERROR&lt;/tt&gt;</title>
+<para><emphasis>Unspecified error.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_DRIVER_ERROR<sp/>((uint32_t)1)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md9">
+<title>define &lt;tt&gt;EF_DRIVER_ERROR_BUSY&lt;/tt&gt;</title>
+<para><emphasis>Driver is busy.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_DRIVER_ERROR_BUSY<sp/>((uint32_t)2)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md10">
+<title>define &lt;tt&gt;EF_DRIVER_ERROR_PARAMETER&lt;/tt&gt;</title>
+<para><emphasis>Parameter error.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>((uint32_t)5)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md11">
+<title>define &lt;tt&gt;EF_DRIVER_ERROR_SPECIFIC&lt;/tt&gt;</title>
+<para><emphasis>Start of driver specific errors.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_DRIVER_ERROR_SPECIFIC<sp/>((uint32_t)6)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md12">
+<title>define &lt;tt&gt;EF_DRIVER_ERROR_TIMEOUT&lt;/tt&gt;</title>
+<para><emphasis>Timeout occurred.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_DRIVER_ERROR_TIMEOUT<sp/>((uint32_t)3)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md13">
+<title>define &lt;tt&gt;EF_DRIVER_ERROR_UNSUPPORTED&lt;/tt&gt;</title>
+<para><emphasis>Operation not supported.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_DRIVER_ERROR_UNSUPPORTED<sp/>((uint32_t)4)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md14">
+<title>define &lt;tt&gt;EF_DRIVER_OK&lt;/tt&gt;</title>
+<para><emphasis>Operation succeeded.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_DRIVER_OK<sp/>((uint32_t)0)</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md15">
+<title>File EF_I2C.h</title>
+<para><emphasis>C header file for I2C APIs which contains the function prototypes.</emphasis></para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md16">
+<title>Functions</title>
+<para><table rows="24" cols="2"><row>
+<entry thead="yes" align='right'><para>Type   </para>
+</entry><entry thead="yes" align='left'><para>Name    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_getCommandReg** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t *command_value) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_getDataLast** (**EF\_I2C\_TYPE\_PTR** i2c, bool *data_last) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_getDataReg** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t *data_reg_value) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_getDataValid** (**EF\_I2C\_TYPE\_PTR** i2c, bool *data_valid) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_getIM** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t *im_value) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_getMIS** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t *mis_value) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_getPrescaler** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t *prescaler_value) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_getRIS** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t *ris_value) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_readCmd** (**EF\_I2C\_TYPE\_PTR** i2c, char addr) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_readData** (**EF\_I2C\_TYPE\_PTR** i2c, char *data) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_setCommandReg** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t value) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_setDataLast** (**EF\_I2C\_TYPE\_PTR** i2c, bool valid) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_setDataReg** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t value) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_setDataValid** (**EF\_I2C\_TYPE\_PTR** i2c, bool valid) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_setGclkEnable** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t value) <linebreak/>
+<emphasis>sets the GCLK enable bit in the I2C register to a certain value</emphasis>    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_setIM** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t mask) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_setPrescaler** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t value) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_startCmd** (**EF\_I2C\_TYPE\_PTR** i2c) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_stopCmd** (**EF\_I2C\_TYPE\_PTR** i2c) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_writeAddress** (**EF\_I2C\_TYPE\_PTR** i2c, char addr) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_writeCmd** (**EF\_I2C\_TYPE\_PTR** i2c, char addr) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_writeData** (**EF\_I2C\_TYPE\_PTR** i2c, char data) <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_writeMultipleCmd** (**EF\_I2C\_TYPE\_PTR** i2c) <linebreak/>
+   </para>
+</entry></row>
+</table>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md17">
+<title>Functions Documentation</title>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md18">
+<title>function &lt;tt&gt;EF_I2C_getCommandReg&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1aa76113b5cce43aedb3e34ffe98377210" kindref="member">EF_I2C_getCommandReg</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*command_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md19">
+<title>function &lt;tt&gt;EF_I2C_getDataLast&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a95c96062892f3d3061365eb5d6f83dfe" kindref="member">EF_I2C_getDataLast</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*data_last</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md20">
+<title>function &lt;tt&gt;EF_I2C_getDataReg&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a7424199ff032dabdec9b03a8c7e49f0a" kindref="member">EF_I2C_getDataReg</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*data_reg_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md21">
+<title>function &lt;tt&gt;EF_I2C_getDataValid&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a97ff9205de09e49d12dc62eb1acdcf62" kindref="member">EF_I2C_getDataValid</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*data_valid</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md22">
+<title>function &lt;tt&gt;EF_I2C_getIM&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1ac4509f632d8b0b1157ec42828a957600" kindref="member">EF_I2C_getIM</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*im_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md23">
+<title>function &lt;tt&gt;EF_I2C_getMIS&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1aa87448a542b497393695dca2acc6d6b8" kindref="member">EF_I2C_getMIS</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*mis_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md24">
+<title>function &lt;tt&gt;EF_I2C_getPrescaler&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a8fa9bab21502620a499c6f943fc69c4c" kindref="member">EF_I2C_getPrescaler</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*prescaler_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md25">
+<title>function &lt;tt&gt;EF_I2C_getRIS&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a8efd0e0e84b49d60edbea6c2513929a5" kindref="member">EF_I2C_getRIS</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*ris_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md26">
+<title>function &lt;tt&gt;EF_I2C_readCmd&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1abd603b15315bef595a6bee15a56c1c99" kindref="member">EF_I2C_readCmd</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md27">
+<title>function &lt;tt&gt;EF_I2C_readData&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a46ebdd220798a0082da434fc07f4999a" kindref="member">EF_I2C_readData</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md28">
+<title>function &lt;tt&gt;EF_I2C_setCommandReg&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a2286c60de589dcecb0fc78a48187440b" kindref="member">EF_I2C_setCommandReg</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md29">
+<title>function &lt;tt&gt;EF_I2C_setDataLast&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a8f157164f51a0ea88e03311615b21ffd" kindref="member">EF_I2C_setDataLast</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md30">
+<title>function &lt;tt&gt;EF_I2C_setDataReg&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a3006b2445e7a7419cb1e00e11fea923e" kindref="member">EF_I2C_setDataReg</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md31">
+<title>function &lt;tt&gt;EF_I2C_setDataValid&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1acf62f06af5f37ae067b6314c5f3f1d0b" kindref="member">EF_I2C_setDataValid</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md32">
+<title>function &lt;tt&gt;EF_I2C_setGclkEnable&lt;/tt&gt;</title>
+<para><emphasis>sets the GCLK enable bit in the I2C register to a certain value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a8cd33e8dde8407bb760d8a9e06548dea" kindref="member">EF_I2C_setGclkEnable</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>i2c</computeroutput> An **EF\_I2C\_TYPE\_PTR** , which points to the base memory address of I2C registers.**EF\_I2C\_TYPE** is a structure that contains the I2C registers.</para>
+</listitem><listitem><para><computeroutput>value</computeroutput> The value of the GCLK enable bit</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md33">
+<title>function &lt;tt&gt;EF_I2C_setIM&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1ac9a53ca41924b84ebf52d2b659c029c7" kindref="member">EF_I2C_setIM</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mask</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md34">
+<title>function &lt;tt&gt;EF_I2C_setPrescaler&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a824f4aaa04cf1518f65a558c67172fdd" kindref="member">EF_I2C_setPrescaler</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md35">
+<title>function &lt;tt&gt;EF_I2C_startCmd&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a6bcf2d08643ce620b0f75b980a875a7f" kindref="member">EF_I2C_startCmd</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md36">
+<title>function &lt;tt&gt;EF_I2C_stopCmd&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a67cb25a7e6a9f2f0c4cbda50361f38e9" kindref="member">EF_I2C_stopCmd</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md37">
+<title>function &lt;tt&gt;EF_I2C_writeAddress&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a8b32d8e6a1cb03a0c948ee85a917c652" kindref="member">EF_I2C_writeAddress</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md38">
+<title>function &lt;tt&gt;EF_I2C_writeCmd&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a9c8ce9f9c67bd5ce3e965e1b8c05b437" kindref="member">EF_I2C_writeCmd</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md39">
+<title>function &lt;tt&gt;EF_I2C_writeData&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1afb19bc6a6238b42d38eefff40d8b988b" kindref="member">EF_I2C_writeData</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md40">
+<title>function &lt;tt&gt;EF_I2C_writeMultipleCmd&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1ae6094788f5d9a6cf203350161d6a1194" kindref="member">EF_I2C_writeMultipleCmd</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md41">
+<title>File EF_I2C_regs.h</title>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md42">
+<title>Structures and Types</title>
+<para><table rows="4" cols="2"><row>
+<entry thead="yes" align='right'><para>Type   </para>
+</entry><entry thead="yes" align='left'><para>Name    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>typedef struct **\_EF\_I2C\_TYPE\_**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_TYPE** <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>typedef **EF\_I2C\_TYPE** *   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_TYPE\_PTR** <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>struct   </para>
+</entry><entry thead="no" align='left'><para>**\_EF\_I2C\_TYPE\_** <linebreak/>
+   </para>
+</entry></row>
+</table>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md43">
+<title>Macros</title>
+<para><table rows="32" cols="2"><row>
+<entry thead="yes" align='right'><para>Type   </para>
+</entry><entry thead="yes" align='left'><para>Name    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_CMDE\_FLAG** ((uint32_t)0x2)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_CMDF\_FLAG** ((uint32_t)0x4)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_CMDOVF\_FLAG** ((uint32_t)0x8)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT** ((uint32_t)0)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK** ((uint32_t)0x7f)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT** ((uint32_t)9)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK** ((uint32_t)0x200)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT** ((uint32_t)8)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK** ((uint32_t)0x100)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT** ((uint32_t)12)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK** ((uint32_t)0x1000)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT** ((uint32_t)10)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK** ((uint32_t)0x400)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT** ((uint32_t)11)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK** ((uint32_t)0x800)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_DATA\_REG\_DATA\_BIT** ((uint32_t)0)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT** ((uint32_t)9)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK** ((uint32_t)0x200)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_DATA\_REG\_DATA\_MASK** ((uint32_t)0xff)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT** ((uint32_t)8)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK** ((uint32_t)0x100)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_MISS\_ACK\_FLAG** ((uint32_t)0x1)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_RDE\_FLAG** ((uint32_t)0x80)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_RDF\_FLAG** ((uint32_t)0x100)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_WRE\_FLAG** ((uint32_t)0x10)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_WRF\_FLAG** ((uint32_t)0x20)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_WROVF\_FLAG** ((uint32_t)0x40)<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**IO\_TYPES** <linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**\_\_R** volatile const uint32_t<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**\_\_RW** volatile uint32_t<linebreak/>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>define   </para>
+</entry><entry thead="no" align='left'><para>**\_\_W** volatile uint32_t<linebreak/>
+   </para>
+</entry></row>
+</table>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md44">
+<title>Structures and Types Documentation</title>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md45">
+<title>typedef &lt;tt&gt;EF_I2C_TYPE&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">_EF_I2C_TYPE_</ref><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE</ref>;</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md46">
+<title>typedef &lt;tt&gt;EF_I2C_TYPE_PTR&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE</ref>*<sp/><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref>;</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md47">
+<title>struct &lt;tt&gt;_EF_I2C_TYPE_&lt;/tt&gt;</title>
+<para>Variables:</para>
+<para><itemizedlist>
+<listitem><para>**\_\_W** COMMAND <linebreak/>
+</para>
+</listitem><listitem><para>**\_\_RW** DATA <linebreak/>
+</para>
+</listitem><listitem><para>**\_\_W** GCLK <linebreak/>
+</para>
+</listitem><listitem><para>**\_\_RW** IM <linebreak/>
+</para>
+</listitem><listitem><para>**\_\_R** MIS <linebreak/>
+</para>
+</listitem><listitem><para>**\_\_W** PR <linebreak/>
+</para>
+</listitem><listitem><para>**\_\_R** RIS <linebreak/>
+</para>
+</listitem><listitem><para>**\_\_R** STATUS <linebreak/>
+</para>
+</listitem><listitem><para>**\_\_R** reserved_1 <linebreak/>
+</para>
+</listitem><listitem><para>**\_\_R** reserved_2 <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md48">
+<title>Macros Documentation</title>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md49">
+<title>define &lt;tt&gt;EF_I2C_CMDE_FLAG&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_CMDE_FLAG<sp/>((uint32_t)0x2)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md50">
+<title>define &lt;tt&gt;EF_I2C_CMDF_FLAG&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_CMDF_FLAG<sp/>((uint32_t)0x4)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md51">
+<title>define &lt;tt&gt;EF_I2C_CMDOVF_FLAG&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_CMDOVF_FLAG<sp/>((uint32_t)0x8)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md52">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT<sp/>((uint32_t)0)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md53">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK<sp/>((uint32_t)0x7f)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md54">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_READ_BIT&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_READ_BIT<sp/>((uint32_t)9)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md55">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_READ_MASK&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_READ_MASK<sp/>((uint32_t)0x200)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md56">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_START_BIT&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_START_BIT<sp/>((uint32_t)8)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md57">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_START_MASK&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_START_MASK<sp/>((uint32_t)0x100)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md58">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_STOP_BIT&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_STOP_BIT<sp/>((uint32_t)12)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md59">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_STOP_MASK&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_STOP_MASK<sp/>((uint32_t)0x1000)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md60">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_BIT&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_BIT<sp/>((uint32_t)10)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md61">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_MASK&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MASK<sp/>((uint32_t)0x400)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md62">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT<sp/>((uint32_t)11)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md63">
+<title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK<sp/>((uint32_t)0x800)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md64">
+<title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_BIT&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_BIT<sp/>((uint32_t)0)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md65">
+<title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_LAST_BIT&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_LAST_BIT<sp/>((uint32_t)9)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md66">
+<title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_LAST_MASK&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_LAST_MASK<sp/>((uint32_t)0x200)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md67">
+<title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_MASK&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_MASK<sp/>((uint32_t)0xff)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md68">
+<title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_VALID_BIT&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_VALID_BIT<sp/>((uint32_t)8)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md69">
+<title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_VALID_MASK&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_VALID_MASK<sp/>((uint32_t)0x100)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md70">
+<title>define &lt;tt&gt;EF_I2C_MISS_ACK_FLAG&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_MISS_ACK_FLAG<sp/>((uint32_t)0x1)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md71">
+<title>define &lt;tt&gt;EF_I2C_RDE_FLAG&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_RDE_FLAG<sp/>((uint32_t)0x80)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md72">
+<title>define &lt;tt&gt;EF_I2C_RDF_FLAG&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_RDF_FLAG<sp/>((uint32_t)0x100)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md73">
+<title>define &lt;tt&gt;EF_I2C_WRE_FLAG&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_WRE_FLAG<sp/>((uint32_t)0x10)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md74">
+<title>define &lt;tt&gt;EF_I2C_WRF_FLAG&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_WRF_FLAG<sp/>((uint32_t)0x20)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md75">
+<title>define &lt;tt&gt;EF_I2C_WROVF_FLAG&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_WROVF_FLAG<sp/>((uint32_t)0x40)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md76">
+<title>define &lt;tt&gt;IO_TYPES&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>IO_TYPES<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md77">
+<title>define &lt;tt&gt;__R&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>__R<sp/>volatile<sp/>const<sp/>uint32_t</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md78">
+<title>define &lt;tt&gt;__RW&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>__RW<sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md79">
+<title>define &lt;tt&gt;__W&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>__W<sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
+</programlisting> </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

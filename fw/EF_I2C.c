@@ -52,12 +52,13 @@
 * Function Definitions
 ******************************************************************************/
 
-EF_DRIVER_STATUS EF_I2C_setGclkEnable (EF_I2C_PTR i2c, uint32_t value){
+
+EF_DRIVER_STATUS EF_I2C_setGclkEnable (EF_I2C_TYPE_PTR i2c, uint32_t value){
     
     i2c->GCLK = value;
 }
 
-EF_DRIVER_STATUS EF_I2C_writeToAddress(EF_I2C_PTR i2c, char addr, char data){
+EF_DRIVER_STATUS EF_I2C_writeToAddress(EF_I2C_TYPE_PTR i2c, char addr, char data){
 
     EF_I2C_writeData(i2c, data);
     EF_I2C_writeCmd(i2c, addr);
@@ -65,13 +66,15 @@ EF_DRIVER_STATUS EF_I2C_writeToAddress(EF_I2C_PTR i2c, char addr, char data){
     EF_I2C_waitBusy(i2c);
 }
 
-EF_DRIVER_STATUS EF_I2C_readCommand(EF_I2C_PTR i2c, char addr){
+EF_DRIVER_STATUS EF_I2C_readCommand(EF_I2C_TYPE_PTR i2c, char addr){
 
     EF_I2C_readCmd(i2c, addr);
     EF_I2C_stopCmd(i2c);
     EF_I2C_waitBusy(i2c);
 }
-EF_DRIVER_STATUS EF_I2C_writeAddress(EF_I2C_PTR i2c, char addr){
+
+
+EF_DRIVER_STATUS EF_I2C_writeAddress(EF_I2C_TYPE_PTR i2c, char addr){
 
     // Clear the field bits in the register using the defined mask
     uint32_t command =  i2c->COMMAND & ~EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK;
@@ -80,42 +83,57 @@ EF_DRIVER_STATUS EF_I2C_writeAddress(EF_I2C_PTR i2c, char addr){
     i2c->COMMAND = command | ((addr << EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT) & EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK);
 }
 
-EF_DRIVER_STATUS EF_I2C_startCmd(EF_I2C_PTR i2c){
+
+EF_DRIVER_STATUS EF_I2C_startCmd(EF_I2C_TYPE_PTR i2c){
     
     i2c->COMMAND |= ((1 << EF_I2C_COMMAND_REG_CMD_START_BIT) & EF_I2C_COMMAND_REG_CMD_START_MASK);
 }
 
-EF_DRIVER_STATUS EF_I2C_readCmd(EF_I2C_PTR i2c, char addr){
+
+EF_DRIVER_STATUS EF_I2C_readCmd(EF_I2C_TYPE_PTR i2c, char addr){
     
     i2c->COMMAND = ((addr << EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT ) | EF_I2C_COMMAND_REG_CMD_READ_MASK);
 }
 
-EF_DRIVER_STATUS EF_I2C_writeCmd(EF_I2C_PTR i2c, char addr){
+
+
+EF_DRIVER_STATUS EF_I2C_writeCmd(EF_I2C_TYPE_PTR i2c, char addr){
     
     i2c->COMMAND = ((addr << EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT) | EF_I2C_COMMAND_REG_CMD_WRITE_MASK);
 }
 
-EF_DRIVER_STATUS EF_I2C_writeMultipleCmd(EF_I2C_PTR i2c){
+
+
+EF_DRIVER_STATUS EF_I2C_writeMultipleCmd(EF_I2C_TYPE_PTR i2c){
 
     i2c->COMMAND |= ((1 << EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT) & EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK);
 }
 
-EF_DRIVER_STATUS EF_I2C_stopCmd(EF_I2C_PTR i2c){
+
+
+EF_DRIVER_STATUS EF_I2C_stopCmd(EF_I2C_TYPE_PTR i2c){
     
     i2c->COMMAND = ((1 << EF_I2C_COMMAND_REG_CMD_STOP_BIT) & EF_I2C_COMMAND_REG_CMD_STOP_MASK);
 }
 
-EF_DRIVER_STATUS EF_I2C_setCommandReg(EF_I2C_PTR i2c, uint32_t value){
+
+
+
+EF_DRIVER_STATUS EF_I2C_setCommandReg(EF_I2C_TYPE_PTR i2c, uint32_t value){
 
     i2c->COMMAND = value;
 }
 
-EF_DRIVER_STATUS EF_I2C_getCommandReg(EF_I2C_PTR i2c, uint32_t* command_value){
+
+
+EF_DRIVER_STATUS EF_I2C_getCommandReg(EF_I2C_TYPE_PTR i2c, uint32_t* command_value){
 
     *command_value = i2c->COMMAND;
 }
 
-EF_DRIVER_STATUS EF_I2C_writeData(EF_I2C_PTR i2c, char data){
+
+
+EF_DRIVER_STATUS EF_I2C_writeData(EF_I2C_TYPE_PTR i2c, char data){
 
     // Clear the field bits in the register using the defined mask
     // i2c->DATA &= ~EF_I2C_DATA_REG_DATA_MASK;
@@ -125,7 +143,9 @@ EF_DRIVER_STATUS EF_I2C_writeData(EF_I2C_PTR i2c, char data){
     i2c->DATA = ((data << EF_I2C_DATA_REG_DATA_BIT) & EF_I2C_DATA_REG_DATA_MASK);
 }
 
-EF_DRIVER_STATUS EF_I2C_readData(EF_I2C_PTR i2c, char *data){
+
+
+EF_DRIVER_STATUS EF_I2C_readData(EF_I2C_TYPE_PTR i2c, char *data){
     
     *data = i2c->DATA;
     bool valid = (*data & EF_I2C_DATA_REG_DATA_VALID_MASK) >> EF_I2C_DATA_REG_DATA_VALID_BIT;
@@ -136,7 +156,9 @@ EF_DRIVER_STATUS EF_I2C_readData(EF_I2C_PTR i2c, char *data){
     }
 }
 
-EF_DRIVER_STATUS EF_I2C_setDataValid(EF_I2C_PTR i2c, bool valid){
+
+
+EF_DRIVER_STATUS EF_I2C_setDataValid(EF_I2C_TYPE_PTR i2c, bool valid){
 
     if (valid)
         i2c->DATA |= ((1 << EF_I2C_DATA_REG_DATA_VALID_BIT) & EF_I2C_DATA_REG_DATA_VALID_MASK);
@@ -144,7 +166,9 @@ EF_DRIVER_STATUS EF_I2C_setDataValid(EF_I2C_PTR i2c, bool valid){
         i2c->DATA &= ~EF_I2C_DATA_REG_DATA_VALID_MASK;
 }
 
-EF_DRIVER_STATUS EF_I2C_getDataValid(EF_I2C_PTR i2c, bool *data_valid){
+
+
+EF_DRIVER_STATUS EF_I2C_getDataValid(EF_I2C_TYPE_PTR i2c, bool *data_valid){
 
     if ((i2c->DATA & EF_I2C_DATA_REG_DATA_VALID_MASK) >> EF_I2C_DATA_REG_DATA_VALID_BIT)
         *data_valid = true;
@@ -152,7 +176,9 @@ EF_DRIVER_STATUS EF_I2C_getDataValid(EF_I2C_PTR i2c, bool *data_valid){
         *data_valid = false;
 }
 
-EF_DRIVER_STATUS EF_I2C_setDataLast(EF_I2C_PTR i2c, bool valid){
+
+
+EF_DRIVER_STATUS EF_I2C_setDataLast(EF_I2C_TYPE_PTR i2c, bool valid){
 
     if (valid)
         i2c->DATA |= ((1 << EF_I2C_DATA_REG_DATA_LAST_BIT) & EF_I2C_DATA_REG_DATA_LAST_MASK);
@@ -160,7 +186,9 @@ EF_DRIVER_STATUS EF_I2C_setDataLast(EF_I2C_PTR i2c, bool valid){
         i2c->DATA &= ~EF_I2C_DATA_REG_DATA_LAST_MASK;
 }
 
-EF_DRIVER_STATUS EF_I2C_getDataLast(EF_I2C_PTR i2c, bool *data_last){
+
+
+EF_DRIVER_STATUS EF_I2C_getDataLast(EF_I2C_TYPE_PTR i2c, bool *data_last){
 
     if ((i2c->DATA & EF_I2C_DATA_REG_DATA_LAST_MASK) >> EF_I2C_DATA_REG_DATA_LAST_BIT)
         *data_last = true;
@@ -168,47 +196,61 @@ EF_DRIVER_STATUS EF_I2C_getDataLast(EF_I2C_PTR i2c, bool *data_last){
         *data_last = false;
 }
 
-EF_DRIVER_STATUS EF_I2C_setDataReg(EF_I2C_PTR i2c, uint32_t value){
+
+
+EF_DRIVER_STATUS EF_I2C_setDataReg(EF_I2C_TYPE_PTR i2c, uint32_t value){
 
     i2c->DATA = value;
 }
 
-EF_DRIVER_STATUS EF_I2C_getDataReg(EF_I2C_PTR i2c, uint32_t* data_reg_value){
+
+
+EF_DRIVER_STATUS EF_I2C_getDataReg(EF_I2C_TYPE_PTR i2c, uint32_t* data_reg_value){
 
     *data_reg_value = i2c->DATA;
 }
 
-EF_DRIVER_STATUS EF_I2C_setPrescaler(EF_I2C_PTR i2c, uint32_t value){
+
+
+EF_DRIVER_STATUS EF_I2C_setPrescaler(EF_I2C_TYPE_PTR i2c, uint32_t value){
 
     i2c->PR = value;
 }
 
-EF_DRIVER_STATUS EF_I2C_getPrescaler(EF_I2C_PTR i2c, uint32_t* prescaler_value){
+
+EF_DRIVER_STATUS EF_I2C_getPrescaler(EF_I2C_TYPE_PTR i2c, uint32_t* prescaler_value){
 
     *prescaler_value = i2c->PR;
 }
 
-EF_DRIVER_STATUS EF_I2C_getRIS(EF_I2C_PTR i2c, uint32_t* ris_value){
+
+
+EF_DRIVER_STATUS EF_I2C_getRIS(EF_I2C_TYPE_PTR i2c, uint32_t* ris_value){
     
     *ris_value = i2c->RIS;
 }
 
-EF_DRIVER_STATUS EF_I2C_getMIS(EF_I2C_PTR i2c, uint32_t* mis_value){
+
+EF_DRIVER_STATUS EF_I2C_getMIS(EF_I2C_TYPE_PTR i2c, uint32_t* mis_value){
 
     *mis_value = i2c->MIS;
 }
 
-EF_DRIVER_STATUS EF_I2C_setIM(EF_I2C_PTR i2c, uint32_t mask){
+
+
+EF_DRIVER_STATUS EF_I2C_setIM(EF_I2C_TYPE_PTR i2c, uint32_t mask){
    
     i2c->IM = mask;
 }
 
-EF_DRIVER_STATUS EF_I2C_getIM(EF_I2C_PTR i2c, uint32_t* im_value){
+
+
+EF_DRIVER_STATUS EF_I2C_getIM(EF_I2C_TYPE_PTR i2c, uint32_t* im_value){
 
     *im_value = i2c->IM;
 }
 
-EF_DRIVER_STATUS EF_I2C_waitBusy(EF_I2C_PTR i2c){
+EF_DRIVER_STATUS EF_I2C_waitBusy(EF_I2C_TYPE_PTR i2c){
 
     while(i2c->STATUS & 0b1 == 1);
 }

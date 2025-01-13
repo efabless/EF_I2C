@@ -24,57 +24,60 @@
   </compound>
   <compound refid="_e_f___i2_c_8c" kind="file"><name>EF_I2C.c</name>
     <member refid="_e_f___i2_c_8c_1a98665e54f362f24f55bedf0ce552c852" kind="define"><name>EF_I2C_C</name></member>
-    <member refid="_e_f___i2_c_8c_1acc45aacbd2537a2bff4c031f31866524" kind="function"><name>EF_I2C_setGclkEnable</name></member>
-    <member refid="_e_f___i2_c_8c_1a6d07db42bd75a796b8ec546fc367c9f8" kind="function"><name>EF_I2C_writeToAddress</name></member>
-    <member refid="_e_f___i2_c_8c_1a672166b0912393c7c9496fc529327d05" kind="function"><name>EF_I2C_readCommand</name></member>
-    <member refid="_e_f___i2_c_8c_1a0f58ec9c8e2833a317849f6e7397f975" kind="function"><name>EF_I2C_writeAddress</name></member>
-    <member refid="_e_f___i2_c_8c_1af9b99ab7d998d458b3581d4efa7d5677" kind="function"><name>EF_I2C_startCmd</name></member>
-    <member refid="_e_f___i2_c_8c_1a3f4fc47dc287dc172380017f5ba1ba76" kind="function"><name>EF_I2C_readCmd</name></member>
-    <member refid="_e_f___i2_c_8c_1a65d02666b30dfa93ff84c2f050f0c4d4" kind="function"><name>EF_I2C_writeCmd</name></member>
-    <member refid="_e_f___i2_c_8c_1a32c3ace7f086e924ccf2d2a516781e0b" kind="function"><name>EF_I2C_writeMultipleCmd</name></member>
-    <member refid="_e_f___i2_c_8c_1a41f2c6eaa708acaf5ec335305d081ab0" kind="function"><name>EF_I2C_stopCmd</name></member>
-    <member refid="_e_f___i2_c_8c_1a463bc65949c17db4ea88309a639196cc" kind="function"><name>EF_I2C_setCommandReg</name></member>
-    <member refid="_e_f___i2_c_8c_1aeb43294563fcfca9026b591d8e56281b" kind="function"><name>EF_I2C_getCommandReg</name></member>
-    <member refid="_e_f___i2_c_8c_1a36095bc30b2815da2586e7ca9d00dc07" kind="function"><name>EF_I2C_writeData</name></member>
-    <member refid="_e_f___i2_c_8c_1a6cf63669e5cff65a8c0179c3ee604e11" kind="function"><name>EF_I2C_readData</name></member>
-    <member refid="_e_f___i2_c_8c_1adf55e1d9c0e04ce14f02b203cc162eb2" kind="function"><name>EF_I2C_setDataValid</name></member>
-    <member refid="_e_f___i2_c_8c_1a0b9bab5ff86b97332323d405b91c6458" kind="function"><name>EF_I2C_getDataValid</name></member>
-    <member refid="_e_f___i2_c_8c_1a4508f26e14e7749976583e7edaa6dfb3" kind="function"><name>EF_I2C_setDataLast</name></member>
-    <member refid="_e_f___i2_c_8c_1a2f2106493a872e461d9636ffea9bdc3a" kind="function"><name>EF_I2C_getDataLast</name></member>
-    <member refid="_e_f___i2_c_8c_1a31085c48c88225577f50d3aa775a207e" kind="function"><name>EF_I2C_setDataReg</name></member>
-    <member refid="_e_f___i2_c_8c_1a25225abd1caf2eaabd63c0fefc300e3a" kind="function"><name>EF_I2C_getDataReg</name></member>
-    <member refid="_e_f___i2_c_8c_1a31eb5194bd0194de3b76fc5a6a55de01" kind="function"><name>EF_I2C_setPrescaler</name></member>
-    <member refid="_e_f___i2_c_8c_1aaf918c88e2ad08276957215d7e92be11" kind="function"><name>EF_I2C_getPrescaler</name></member>
-    <member refid="_e_f___i2_c_8c_1a9734206e847e18e8200a755541ded839" kind="function"><name>EF_I2C_getRIS</name></member>
-    <member refid="_e_f___i2_c_8c_1a116c0ec466973c1798769ca2a6072d44" kind="function"><name>EF_I2C_getMIS</name></member>
-    <member refid="_e_f___i2_c_8c_1ae75ed322a00e605f0489213ee29d7230" kind="function"><name>EF_I2C_setIM</name></member>
-    <member refid="_e_f___i2_c_8c_1a68f8ca9c1674b72b2b5045f00e0986a6" kind="function"><name>EF_I2C_getIM</name></member>
-    <member refid="_e_f___i2_c_8c_1a41c441d833f35c70c78b90dcb48a455e" kind="function"><name>EF_I2C_waitBusy</name></member>
+    <member refid="_e_f___i2_c_8c_1a8cd33e8dde8407bb760d8a9e06548dea" kind="function"><name>EF_I2C_setGclkEnable</name></member>
+    <member refid="_e_f___i2_c_8c_1ac8020e16b3158054341ac0bce22d8b7e" kind="function"><name>EF_I2C_writeToAddress</name></member>
+    <member refid="_e_f___i2_c_8c_1af50c9788e5f7dce39b36641ba4dd1abc" kind="function"><name>EF_I2C_readCommand</name></member>
+    <member refid="_e_f___i2_c_8c_1a8b32d8e6a1cb03a0c948ee85a917c652" kind="function"><name>EF_I2C_writeAddress</name></member>
+    <member refid="_e_f___i2_c_8c_1a6bcf2d08643ce620b0f75b980a875a7f" kind="function"><name>EF_I2C_startCmd</name></member>
+    <member refid="_e_f___i2_c_8c_1abd603b15315bef595a6bee15a56c1c99" kind="function"><name>EF_I2C_readCmd</name></member>
+    <member refid="_e_f___i2_c_8c_1a9c8ce9f9c67bd5ce3e965e1b8c05b437" kind="function"><name>EF_I2C_writeCmd</name></member>
+    <member refid="_e_f___i2_c_8c_1ae6094788f5d9a6cf203350161d6a1194" kind="function"><name>EF_I2C_writeMultipleCmd</name></member>
+    <member refid="_e_f___i2_c_8c_1a67cb25a7e6a9f2f0c4cbda50361f38e9" kind="function"><name>EF_I2C_stopCmd</name></member>
+    <member refid="_e_f___i2_c_8c_1a2286c60de589dcecb0fc78a48187440b" kind="function"><name>EF_I2C_setCommandReg</name></member>
+    <member refid="_e_f___i2_c_8c_1aa76113b5cce43aedb3e34ffe98377210" kind="function"><name>EF_I2C_getCommandReg</name></member>
+    <member refid="_e_f___i2_c_8c_1afb19bc6a6238b42d38eefff40d8b988b" kind="function"><name>EF_I2C_writeData</name></member>
+    <member refid="_e_f___i2_c_8c_1a46ebdd220798a0082da434fc07f4999a" kind="function"><name>EF_I2C_readData</name></member>
+    <member refid="_e_f___i2_c_8c_1acf62f06af5f37ae067b6314c5f3f1d0b" kind="function"><name>EF_I2C_setDataValid</name></member>
+    <member refid="_e_f___i2_c_8c_1a97ff9205de09e49d12dc62eb1acdcf62" kind="function"><name>EF_I2C_getDataValid</name></member>
+    <member refid="_e_f___i2_c_8c_1a8f157164f51a0ea88e03311615b21ffd" kind="function"><name>EF_I2C_setDataLast</name></member>
+    <member refid="_e_f___i2_c_8c_1a95c96062892f3d3061365eb5d6f83dfe" kind="function"><name>EF_I2C_getDataLast</name></member>
+    <member refid="_e_f___i2_c_8c_1a3006b2445e7a7419cb1e00e11fea923e" kind="function"><name>EF_I2C_setDataReg</name></member>
+    <member refid="_e_f___i2_c_8c_1a7424199ff032dabdec9b03a8c7e49f0a" kind="function"><name>EF_I2C_getDataReg</name></member>
+    <member refid="_e_f___i2_c_8c_1a824f4aaa04cf1518f65a558c67172fdd" kind="function"><name>EF_I2C_setPrescaler</name></member>
+    <member refid="_e_f___i2_c_8c_1a8fa9bab21502620a499c6f943fc69c4c" kind="function"><name>EF_I2C_getPrescaler</name></member>
+    <member refid="_e_f___i2_c_8c_1a8efd0e0e84b49d60edbea6c2513929a5" kind="function"><name>EF_I2C_getRIS</name></member>
+    <member refid="_e_f___i2_c_8c_1aa87448a542b497393695dca2acc6d6b8" kind="function"><name>EF_I2C_getMIS</name></member>
+    <member refid="_e_f___i2_c_8c_1ac9a53ca41924b84ebf52d2b659c029c7" kind="function"><name>EF_I2C_setIM</name></member>
+    <member refid="_e_f___i2_c_8c_1ac4509f632d8b0b1157ec42828a957600" kind="function"><name>EF_I2C_getIM</name></member>
+    <member refid="_e_f___i2_c_8c_1a032dfe3e03b164ccf42871ea66fe2fc9" kind="function"><name>EF_I2C_waitBusy</name></member>
   </compound>
   <compound refid="_e_f___i2_c_8h" kind="file"><name>EF_I2C.h</name>
-    <member refid="_e_f___i2_c_8h_1acc45aacbd2537a2bff4c031f31866524" kind="function"><name>EF_I2C_setGclkEnable</name></member>
-    <member refid="_e_f___i2_c_8h_1a0f58ec9c8e2833a317849f6e7397f975" kind="function"><name>EF_I2C_writeAddress</name></member>
-    <member refid="_e_f___i2_c_8h_1af9b99ab7d998d458b3581d4efa7d5677" kind="function"><name>EF_I2C_startCmd</name></member>
-    <member refid="_e_f___i2_c_8h_1a3f4fc47dc287dc172380017f5ba1ba76" kind="function"><name>EF_I2C_readCmd</name></member>
-    <member refid="_e_f___i2_c_8h_1a65d02666b30dfa93ff84c2f050f0c4d4" kind="function"><name>EF_I2C_writeCmd</name></member>
-    <member refid="_e_f___i2_c_8h_1a32c3ace7f086e924ccf2d2a516781e0b" kind="function"><name>EF_I2C_writeMultipleCmd</name></member>
-    <member refid="_e_f___i2_c_8h_1a41f2c6eaa708acaf5ec335305d081ab0" kind="function"><name>EF_I2C_stopCmd</name></member>
-    <member refid="_e_f___i2_c_8h_1a463bc65949c17db4ea88309a639196cc" kind="function"><name>EF_I2C_setCommandReg</name></member>
-    <member refid="_e_f___i2_c_8h_1aeb43294563fcfca9026b591d8e56281b" kind="function"><name>EF_I2C_getCommandReg</name></member>
-    <member refid="_e_f___i2_c_8h_1a36095bc30b2815da2586e7ca9d00dc07" kind="function"><name>EF_I2C_writeData</name></member>
-    <member refid="_e_f___i2_c_8h_1a6cf63669e5cff65a8c0179c3ee604e11" kind="function"><name>EF_I2C_readData</name></member>
-    <member refid="_e_f___i2_c_8h_1adf55e1d9c0e04ce14f02b203cc162eb2" kind="function"><name>EF_I2C_setDataValid</name></member>
-    <member refid="_e_f___i2_c_8h_1a0b9bab5ff86b97332323d405b91c6458" kind="function"><name>EF_I2C_getDataValid</name></member>
-    <member refid="_e_f___i2_c_8h_1a4508f26e14e7749976583e7edaa6dfb3" kind="function"><name>EF_I2C_setDataLast</name></member>
-    <member refid="_e_f___i2_c_8h_1a2f2106493a872e461d9636ffea9bdc3a" kind="function"><name>EF_I2C_getDataLast</name></member>
-    <member refid="_e_f___i2_c_8h_1a31085c48c88225577f50d3aa775a207e" kind="function"><name>EF_I2C_setDataReg</name></member>
-    <member refid="_e_f___i2_c_8h_1a25225abd1caf2eaabd63c0fefc300e3a" kind="function"><name>EF_I2C_getDataReg</name></member>
-    <member refid="_e_f___i2_c_8h_1a31eb5194bd0194de3b76fc5a6a55de01" kind="function"><name>EF_I2C_setPrescaler</name></member>
-    <member refid="_e_f___i2_c_8h_1aaf918c88e2ad08276957215d7e92be11" kind="function"><name>EF_I2C_getPrescaler</name></member>
-    <member refid="_e_f___i2_c_8h_1a9734206e847e18e8200a755541ded839" kind="function"><name>EF_I2C_getRIS</name></member>
-    <member refid="_e_f___i2_c_8h_1a116c0ec466973c1798769ca2a6072d44" kind="function"><name>EF_I2C_getMIS</name></member>
-    <member refid="_e_f___i2_c_8h_1ae75ed322a00e605f0489213ee29d7230" kind="function"><name>EF_I2C_setIM</name></member>
-    <member refid="_e_f___i2_c_8h_1a68f8ca9c1674b72b2b5045f00e0986a6" kind="function"><name>EF_I2C_getIM</name></member>
+    <member refid="_e_f___i2_c_8h_1a8cd33e8dde8407bb760d8a9e06548dea" kind="function"><name>EF_I2C_setGclkEnable</name></member>
+    <member refid="_e_f___i2_c_8h_1ac8020e16b3158054341ac0bce22d8b7e" kind="function"><name>EF_I2C_writeToAddress</name></member>
+    <member refid="_e_f___i2_c_8h_1af50c9788e5f7dce39b36641ba4dd1abc" kind="function"><name>EF_I2C_readCommand</name></member>
+    <member refid="_e_f___i2_c_8h_1a8b32d8e6a1cb03a0c948ee85a917c652" kind="function"><name>EF_I2C_writeAddress</name></member>
+    <member refid="_e_f___i2_c_8h_1a6bcf2d08643ce620b0f75b980a875a7f" kind="function"><name>EF_I2C_startCmd</name></member>
+    <member refid="_e_f___i2_c_8h_1abd603b15315bef595a6bee15a56c1c99" kind="function"><name>EF_I2C_readCmd</name></member>
+    <member refid="_e_f___i2_c_8h_1a9c8ce9f9c67bd5ce3e965e1b8c05b437" kind="function"><name>EF_I2C_writeCmd</name></member>
+    <member refid="_e_f___i2_c_8h_1ae6094788f5d9a6cf203350161d6a1194" kind="function"><name>EF_I2C_writeMultipleCmd</name></member>
+    <member refid="_e_f___i2_c_8h_1a67cb25a7e6a9f2f0c4cbda50361f38e9" kind="function"><name>EF_I2C_stopCmd</name></member>
+    <member refid="_e_f___i2_c_8h_1a2286c60de589dcecb0fc78a48187440b" kind="function"><name>EF_I2C_setCommandReg</name></member>
+    <member refid="_e_f___i2_c_8h_1aa76113b5cce43aedb3e34ffe98377210" kind="function"><name>EF_I2C_getCommandReg</name></member>
+    <member refid="_e_f___i2_c_8h_1afb19bc6a6238b42d38eefff40d8b988b" kind="function"><name>EF_I2C_writeData</name></member>
+    <member refid="_e_f___i2_c_8h_1a46ebdd220798a0082da434fc07f4999a" kind="function"><name>EF_I2C_readData</name></member>
+    <member refid="_e_f___i2_c_8h_1acf62f06af5f37ae067b6314c5f3f1d0b" kind="function"><name>EF_I2C_setDataValid</name></member>
+    <member refid="_e_f___i2_c_8h_1a97ff9205de09e49d12dc62eb1acdcf62" kind="function"><name>EF_I2C_getDataValid</name></member>
+    <member refid="_e_f___i2_c_8h_1a8f157164f51a0ea88e03311615b21ffd" kind="function"><name>EF_I2C_setDataLast</name></member>
+    <member refid="_e_f___i2_c_8h_1a95c96062892f3d3061365eb5d6f83dfe" kind="function"><name>EF_I2C_getDataLast</name></member>
+    <member refid="_e_f___i2_c_8h_1a3006b2445e7a7419cb1e00e11fea923e" kind="function"><name>EF_I2C_setDataReg</name></member>
+    <member refid="_e_f___i2_c_8h_1a7424199ff032dabdec9b03a8c7e49f0a" kind="function"><name>EF_I2C_getDataReg</name></member>
+    <member refid="_e_f___i2_c_8h_1a824f4aaa04cf1518f65a558c67172fdd" kind="function"><name>EF_I2C_setPrescaler</name></member>
+    <member refid="_e_f___i2_c_8h_1a8fa9bab21502620a499c6f943fc69c4c" kind="function"><name>EF_I2C_getPrescaler</name></member>
+    <member refid="_e_f___i2_c_8h_1a8efd0e0e84b49d60edbea6c2513929a5" kind="function"><name>EF_I2C_getRIS</name></member>
+    <member refid="_e_f___i2_c_8h_1aa87448a542b497393695dca2acc6d6b8" kind="function"><name>EF_I2C_getMIS</name></member>
+    <member refid="_e_f___i2_c_8h_1ac9a53ca41924b84ebf52d2b659c029c7" kind="function"><name>EF_I2C_setIM</name></member>
+    <member refid="_e_f___i2_c_8h_1ac4509f632d8b0b1157ec42828a957600" kind="function"><name>EF_I2C_getIM</name></member>
+    <member refid="_e_f___i2_c_8h_1a032dfe3e03b164ccf42871ea66fe2fc9" kind="function"><name>EF_I2C_waitBusy</name></member>
   </compound>
   <compound refid="_e_f___i2_c__regs_8h" kind="file"><name>EF_I2C_regs.h</name>
     <member refid="_e_f___i2_c__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" kind="define"><name>IO_TYPES</name></member>
@@ -109,6 +112,10 @@
     <member refid="_e_f___i2_c__regs_8h_1a6962145e677bc44cd92a61a3b8bda194" kind="define"><name>EF_I2C_RDE_FLAG</name></member>
     <member refid="_e_f___i2_c__regs_8h_1a5ab5f89051e51377123174626c98cba9" kind="define"><name>EF_I2C_RDF_FLAG</name></member>
     <member refid="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" kind="typedef"><name>EF_I2C_TYPE</name></member>
-    <member refid="_e_f___i2_c__regs_8h_1affb413da2854fa5bbd6d42b9b0c4e73f" kind="typedef"><name>EF_I2C_PTR</name></member>
+    <member refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kind="typedef"><name>EF_I2C_TYPE_PTR</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
   </compound>
 </doxygenindex>
