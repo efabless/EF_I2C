@@ -30,6 +30,7 @@ module EF_I2C_WB #(
     parameter READ_FIFO_DEPTH = 16
 ) (
 
+    input  wire        ext_clk,
     input  wire        clk_i,
     input  wire        rst_i,
     input  wire [31:0] adr_i,
@@ -48,7 +49,8 @@ module EF_I2C_WB #(
     output wire scl_oen_o,
     input  wire sda_i,
     output wire sda_o,
-    output wire sda_oen_o
+    output wire sda_oen_o,
+    input  wire sc_testmode
 
 );
 
@@ -60,7 +62,8 @@ module EF_I2C_WB #(
   reg [0:0] GCLK_REG;
 
   wire clk_g;
-  wire clk_gated_en = GCLK_REG[0];
+  // wire clk_gated_en = GCLK_REG[0];
+  wire clk_gated_en = sc_testmode ? 1'b1 : GCLK_REG[0];
 
   ef_gating_cell clk_gate_cell (
 

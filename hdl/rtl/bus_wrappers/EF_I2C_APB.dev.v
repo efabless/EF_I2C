@@ -1,40 +1,41 @@
 /*
-    Copyright (c) 2023 Mohamed Shalan (mshalan@aucegypt.edu)
-
-    APB Interface with Interrupt management for the 
-    i2c Master Controller by Alex Forencich
-
-	Licensed under the Apache License, Version 2.0 (the "License"); 
-	you may not use this file except in compliance with the License. 
-	You may obtain a copy of the License at:
-	http://www.apache.org/licenses/LICENSE-2.0
-	
-    Unless required by applicable law or agreed to in writing, software 
-	distributed under the License is distributed on an "AS IS" BASIS, 
-	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-	See the License for the specific language governing permissions and 
-	limitations under the License.
-*/
+ Copyright 2024 Efabless Corp.
+ 
+ Author: Efabless Corp. (ip_admin@efabless.com)
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ 
+ */
 
 `timescale			    1ns/1ns
 `default_nettype	    none
 
+`define		APB_BLOCK(name, init)		always @(posedge PCLK or negedge PRESETn) if(~PRESETn) name <= init;
+`define		APB_REG_0(name, init, size)	`APB_BLOCK(name, init) \
+                                        else if(apb_we & (PADDR[15:0]==``name``_ADDR)) begin \
+                                            name <= PWDATA[``size``-1:0]; \
+                                            apb_wr_ack_0 <= 1; \
+                                        end else begin \
+                                            apb_wr_ack_0 <= 0; \
+                                        end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`define		APB_REG_1(name, init, size)	`APB_BLOCK(name, init) \
+                                        else if(apb_we & (PADDR[15:0]==``name``_ADDR)) begin \
+                                            name <= PWDATA[``size``-1:0]; \
+                                            apb_wr_ack_1 <= 1; \
+                                        end else begin \
+                                            apb_wr_ack_1 <= 0; \
+                                        end
 
 module EF_I2C_APB # (
     parameter DEFAULT_PRESCALE = 1,
@@ -46,10 +47,10 @@ module EF_I2C_APB # (
     parameter READ_FIFO = 1,
     parameter READ_FIFO_DEPTH = 16
 ) (
-    
-
-
-
+    `ifdef USE_POWER_PINS
+	inout VPWR,
+	inout VGND,
+    `endif
     input wire          PCLK,
     input wire          PRESETn,
  
@@ -85,10 +86,10 @@ module EF_I2C_APB # (
         wire clk_gated_en = GCLK_REG[0];
 
     ef_gating_cell clk_gate_cell(
-    
-
-
- // USE_POWER_PINS
+    `ifdef USE_POWER_PINS 
+    .vpwr(VPWR),
+    .vgnd(VGND),
+    `endif // USE_POWER_PINS
     .clk(PCLK),
     .clk_en(clk_gated_en),
     .clk_o(clk_g)
@@ -163,21 +164,9 @@ module EF_I2C_APB # (
         .flags(flags)
     );
     
-	always @(posedge PCLK or negedge PRESETn) if(~PRESETn) GCLK_REG <= 0;
-                                        else if(apb_we & (PADDR[15:0]==GCLK_REG_ADDR)) begin
-                                            GCLK_REG <= PWDATA[1-1:0];
-                                            apb_wr_ack_0 <= 1;
-                                        end else begin
-                                            apb_wr_ack_0 <= 0;
-                                        end
+	`APB_REG_0(GCLK_REG, 0, 1)
     
-    always @(posedge PCLK or negedge PRESETn) if(~PRESETn) IM_REG <= 0;
-                                        else if(apb_we & (PADDR[15:0]==IM_REG_ADDR)) begin
-                                            IM_REG <= PWDATA[9-1:0];
-                                            apb_wr_ack_1 <= 1;
-                                        end else begin
-                                            apb_wr_ack_1 <= 0;
-                                        end
+    `APB_REG_1(IM_REG, 0, 9)
      // read ack
     always @(posedge PCLK or negedge PRESETn) begin
         if (~PRESETn) apb_rd_ack <= 0;

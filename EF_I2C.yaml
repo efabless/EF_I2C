@@ -1,7 +1,7 @@
 ---
 info:
   name: EF_I2C
-  description: I2C master controller with an APB interface
+  description: I2C master controller with an APB and wishbone interfaces
   repo: https://github.com/efabless/EF_I2C
   owner: Efabless Corp.
   license: APACHE 2.0
