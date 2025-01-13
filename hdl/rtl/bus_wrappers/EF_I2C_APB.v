@@ -17,7 +17,8 @@
  
  */
 
-`timescale 1ns / 1ns `default_nettype none
+`timescale 1ns / 1ns 
+`default_nettype none
 
 module EF_I2C_APB #(
     parameter DEFAULT_PRESCALE = 1,

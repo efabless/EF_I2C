@@ -1,13 +1,9 @@
 # EF_I2C
 
-I2C master controller with an APB and wishbone interfaces
-## The wrapped IP
+APB and wishbone wrappers for the I2C master controller which is implemented in Verilog in the [alexforencich/verilog-i2c](https://github.com/efabless/I2C) repository.
 
-
- The IP comes with APB and wishbone Wrappers
 
 #### Wrapped IP System Integration
-Based on your use case, use one of the provided wrappers or create a wrapper for your system bus type. For an example of how to integrate the wishbone wrapper:
 
 ```verilog
 EF_I2C_WB INST (
@@ -48,6 +44,7 @@ The following table is the result for implementing the EF_I2C IP with different 
 
 |Name|Offset|Reset Value|Access Mode|Description|
 |---|---|---|---|---|
+|Status|0000|0x00000000|w|status register|
 |Command|0004|0x00000000|w|bit 0-6: cmd_address, bit 8: cmd_start, bit 9: cmd_read, bit 10: cmd_write, bit 11: cmd_wr_m, bit 12: cmd_stop. Setting more than one command bit is allowed.  Start or repeated start will be issued first, followed by read or write, followed by stop.  Note that setting read and write at the same time is not allowed, this will result in the command being ignored.|
 |Data|0008|0x00000000|w/r|bit 0-7: data, bit 8: data_valid, bit 9: data_last|
 |PR|000c|0x00000000|w|prescale = Fclk / (FI2Cclk * 4)|
@@ -56,6 +53,26 @@ The following table is the result for implementing the EF_I2C IP with different 
 |MIS|ff04|0x00000000|w|Masked Interrupt Status; On a read, this register gives the current masked status value of the corresponding interrupt. A write has no effect; check the interrupt flags table for more details|
 |IC|ff0c|0x00000000|w|Interrupt Clear Register; On a write of 1, the corresponding interrupt (both raw interrupt and masked interrupt, if enabled) is cleared; check the interrupt flags table for more details|
 |GCLK|ff10|0x00000000|w|Gated clock enable; 1: enable clock, 0: disable clock|
+
+### Status Register [Offset: 0x0, mode: w]
+
+status register
+<img src="https://svg.wavedrom.com/{reg:[{name:'busy', bits:1},{name:'bus_cont', bits:1},{name:'bus_act', bits:1},{name:'miss_ack', bits:1},{bits: 4},{name:'cmd_empty', bits:1},{name:'cmd_full', bits:1},{name:'cmd_ovf', bits:1},{name:'wr_empty', bits:1},{name:'wr_full', bits:1},{name:'wr_ovf', bits:1},{name:'rd_empty', bits:1},{name:'rd_full', bits:1},{bits: 16}], config: {lanes: 2, hflip: true}} "/>
+
+|bit|field name|width|description|
+|---|---|---|---|
+|0|busy|1|high when module is performing an I2C operation|
+|1|bus_cont|1|high when module has control of active bus|
+|2|bus_act|1|high when bus is active|
+|3|miss_ack|1|set high when an ACK pulse from a slave device is not seen; write 1 to clear|
+|8|cmd_empty|1|command FIFO empty|
+|9|cmd_full|1|command FIFO full|
+|10|cmd_ovf|1|command FIFO overflow; write 1 to clear|
+|11|wr_empty|1|write data FIFO empty|
+|12|wr_full|1|write data FIFO full|
+|13|wr_ovf|1|write data FIFO overflow; write 1 to clear|
+|14|rd_empty|1|read data FIFO is empty|
+|15|rd_full|1|read data FIFO is full|
 
 ### Command Register [Offset: 0x4, mode: w]
 
@@ -125,9 +142,9 @@ The following are the bit definitions for the interrupt registers:
 |7|RDE|1|Read FIFO is Empty|
 |8|RDF|1|Read FIFO is Full|
 ### Clock Gating
-The IP has clock gating feature, enabling the selective activation and deactivation of the clock as required through the ``GCLK`` register. This functionality is implemented through the ``ef_util_gating_cell``, which is part of the the common modules library, [ef_util_lib.v](https://github.com/efabless/EF_IP_UTIL/blob/main/hdl/ef_util_lib.v). By default, the cell operates with a behavioral implementation, but when the ``CLKG_SKY130_HD`` macro is enabled, the ``sky130_fd_sc_hd__dlclkp_4`` clock gating cell is used.
+The IP has clock gating feature, enabling the selective activation and deactivation of the clock as required through the ``GCLK`` register. This functionality is implemented through the ``ef_util_gating_cell``, which is part of the the common modules library, [ef_util_lib.v](https://github.com/efabless/EF_IP_UTIL/blob/main/hdl/ef_util_lib.v). By default, the clock gating is disabled. To enable behavioral implmentation clock gating for simulation purposes, you should use the ``CLKG_GENERIC`` macro. Alternatively, if you wish to use the SKY130 clock gating cell, ``sky130_fd_sc_hd__dlclkp_4``, you can enable it by using the ``CLKG_SKY130_HD`` macro.
 
-**Note:** If you choose the [OpenLane2](https://github.com/efabless/openlane2) flow for implementation and would like to add the clock gating feature, you need to add ``CLKG_SKY130_HD`` macro to the ``VERILOG_DEFINES`` configuration variable. Update the YAML configuration file as follows: 
+**Note:** If you choose the [OpenLane2](https://github.com/efabless/openlane2) flow for implementation and would like to add the clock gating feature, you need to add ``CLKG_SKY130_HD`` macro to the ``VERILOG_DEFINES`` configuration variable. Update OpenLane2 YAML configuration file as follows: 
 ```
 VERILOG_DEFINES:
 - CLKG_SKY130_HD
@@ -180,10 +197,13 @@ VERILOG_DEFINES:
 Firmware drivers for EF_I2C can be found in the [fw](https://github.com/efabless/EF_I2C/tree/main/fw) directory. EF_I2C driver documentation  is available [here](https://github.com/efabless/EF_I2C/blob/main/fw/README.md).
 You can also find an example C application using the EF_I2C drivers [here]().
 ## Installation:
-You can either clone repo or use [IPM](https://github.com/efabless/IPM) which is an open-source IPs Package Manager
-* To clone repo:
-```git clone https://https://github.com/efabless/EF_I2C```
-> **Note:** If you choose this method, you need to clone [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) repository, as it includes required modules from the common modules library, [ef_util_lib.v](https://github.com/efabless/EF_IP_UTIL/blob/main/hdl/ef_util_lib.v)
-* To download via IPM , follow installation guides [here](https://github.com/efabless/IPM/blob/main/README.md) then run 
-```ipm install EF_I2C```
+You can install the IP either by cloning the repository or using [IPM](https://github.com/efabless/IPM), an open-source IP Package Manager.
+##### 1. Using [IPM](https://github.com/efabless/IPM):
+- If you do not have IPM installed, follow installation guide  [here](https://github.com/efabless/IPM/blob/main/README.md)
+- Run ```ipm install EF_I2C```
 > **Note:** This method is recommended as it automatically installs [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) as a dependency.
+##### 2. Cloning: 
+- Clone [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) repository, which includes the required modules from the common.
+```git clone https://github.com/efabless/EF_IP_UTIL.git```
+- Then, clone the IP repository
+```git clone https://github.com/efabless/EF_I2C```

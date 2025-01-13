@@ -1,7 +1,7 @@
 ---
 info:
   name: EF_I2C
-  description: I2C master controller with an APB and wishbone interfaces
+  description: APB and wishbone wrappers for the I2C master controller which is implemented in Verilog in the [alexforencich/verilog-i2c](https://github.com/efabless/I2C) repository.
   repo: https://github.com/efabless/EF_I2C
   owner: Efabless Corp.
   license: APACHE 2.0
@@ -163,6 +163,75 @@ reset:
   name: rst
   level: 1
 registers:
+- name: Status
+  size: 16
+  mode: w
+  fifo: no
+  offset: 0
+  bit_access: 'no'
+  read_port: ''
+  description: 'status register'
+  fields:
+  - name: busy
+    bit_offset: 0
+    bit_width: 1
+    write_port: ''
+    description: high when module is performing an I2C operation
+  - name: bus_cont
+    bit_offset: 1
+    bit_width: 1
+    write_port: ''
+    description: high when module has control of active bus
+  - name: bus_act
+    bit_offset: 2
+    bit_width: 1
+    write_port: ''
+    description: high when bus is active
+  - name: miss_ack
+    bit_offset: 3
+    bit_width: 1
+    write_port: ''
+    description: set high when an ACK pulse from a slave device is not seen; write 1 to clear
+  - name: cmd_empty
+    bit_offset: 8
+    bit_width: 1
+    write_port: ''
+    description: command FIFO empty
+  - name: cmd_full
+    bit_offset: 9
+    bit_width: 1
+    write_port: ''
+    description: command FIFO full
+  - name: cmd_ovf
+    bit_offset: 10
+    bit_width: 1
+    write_port: ''
+    description:  command FIFO overflow; write 1 to clear
+  - name: wr_empty
+    bit_offset: 11
+    bit_width: 1
+    write_port: ''
+    description: write data FIFO empty
+  - name: wr_full
+    bit_offset: 12
+    bit_width: 1
+    write_port: ''
+    description: write data FIFO full
+  - name: wr_ovf
+    bit_offset: 13
+    bit_width: 1
+    write_port: ''
+    description: write data FIFO overflow; write 1 to clear
+  - name: rd_empty
+    bit_offset: 14
+    bit_width: 1
+    write_port: ''
+    description: read data FIFO is empty
+  - name: rd_full
+    bit_offset: 15
+    bit_width: 1
+    write_port: ''
+    description: read data FIFO is full
 - name: Command
   size: 16
   mode: w

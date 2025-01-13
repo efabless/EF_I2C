@@ -17,7 +17,8 @@
  
  */
 
-`timescale 1ns / 1ps `default_nettype none
+`timescale 1ns / 1ps
+`default_nettype none
 
 module EF_I2S_APB #(
     parameter DW = 32,
