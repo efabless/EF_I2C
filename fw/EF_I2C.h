@@ -466,6 +466,31 @@ EF_DRIVER_STATUS EF_I2C_setIM(EF_I2C_TYPE_PTR i2c, uint32_t mask);
 EF_DRIVER_STATUS EF_I2C_getIM(EF_I2C_TYPE_PTR i2c, uint32_t* im_value);
 
 
+//! Sets the Interrupt Clear (ICR) register.
+/*!
+    This function writes a mask value to the interrupt clear register (ICR) of the I2C peripheral. 
+    The ICR register is used to clear the interrupt status bits. Writing a 1 to a bit in the ICR 
+    register clears the corresponding interrupt status bit in the RIS register.
+    **IM Register Breakdown**:
+    - Bit 0: MISS_ACK - Slave ACK is missed
+    - Bit 1: CMDE - Command FIFO is Empty
+    - Bit 2: CMDF - Command FIFO is Full
+    - Bit 3: CMDOVF - Command FIFO overflow; write 1 to clear
+    - Bit 4: WRE - Write FIFO is Empty
+    - Bit 5: WRF - Write FIFO is Full
+    - Bit 6: WROVF - Write FIFO overflow; write 1 to clear
+    - Bit 7: RDE - Read FIFO is Empty
+    - Bit 8: RDF - Read FIFO is Full
+    - Bits [9-31]: Reserved.
+    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
+                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.    
+    \param [in] mask A 32-bit mask value to be written to the ICR register. Each bit corresponds 
+                     to a specific interrupt source, with 1 clearing the interrupt status and 0 leaving it unchanged.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_setICR(EF_I2C_TYPE_PTR i2c, uint32_t mask);
+
 
 EF_DRIVER_STATUS EF_I2C_waitBusy(EF_I2C_TYPE_PTR i2c);
 /******************************************************************************
