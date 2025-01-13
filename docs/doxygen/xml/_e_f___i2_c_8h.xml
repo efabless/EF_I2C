@@ -1181,61 +1181,6 @@
         </inbodydescription>
         <location file="EF_I2C.h" line="466" column="18" bodyfile="EF_I2C.c" bodystart="449" bodyend="463" declfile="EF_I2C.h" declline="466" declcolumn="18"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8h_1aea0bfa8a6cdd44b3d5ef8f97b7a4723e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
-        <definition>EF_DRIVER_STATUS EF_I2C_setICR</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, uint32_t mask)</argsstring>
-        <name>EF_I2C_setICR</name>
-        <param>
-          <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
-          <declname>i2c</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>mask</declname>
-        </param>
-        <briefdescription>
-<para>Sets the Interrupt Clear (ICR) register. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>This function writes a mask value to the interrupt clear register (ICR) of the I2C peripheral. The ICR register is used to clear the interrupt status bits. Writing a 1 to a bit in the ICR register clears the corresponding interrupt status bit in the RIS register. IM Register Breakdown**:<itemizedlist>
-<listitem><para>Bit 0: MISS_ACK - Slave ACK is missed</para>
-</listitem><listitem><para>Bit 1: CMDE - Command FIFO is Empty</para>
-</listitem><listitem><para>Bit 2: CMDF - Command FIFO is Full</para>
-</listitem><listitem><para>Bit 3: CMDOVF - Command FIFO overflow; write 1 to clear</para>
-</listitem><listitem><para>Bit 4: WRE - Write FIFO is Empty</para>
-</listitem><listitem><para>Bit 5: WRF - Write FIFO is Full</para>
-</listitem><listitem><para>Bit 6: WROVF - Write FIFO overflow; write 1 to clear</para>
-</listitem><listitem><para>Bit 7: RDE - Read FIFO is Empty</para>
-</listitem><listitem><para>Bit 8: RDF - Read FIFO is Full</para>
-</listitem><listitem><para>Bits [9-31]: Reserved. <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">i2c</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An <ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref>, which points to the base memory address of I2C registers. <ref refid="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" kindref="member">EF_I2C_TYPE</ref> is a structure that contains the I2C registers. <linebreak/>
- </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">mask</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A 32-bit mask value to be written to the ICR register. Each bit corresponds to a specific interrupt source, with 1 clearing the interrupt status and 0 leaving it unchanged.</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
-</simplesect>
-</para>
-</listitem></itemizedlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="EF_I2C.h" line="492" column="18" declfile="EF_I2C.h" declline="492" declcolumn="18"/>
-      </memberdef>
       <memberdef kind="function" id="_e_f___i2_c_8h_1a032dfe3e03b164ccf42871ea66fe2fc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_waitBusy</definition>
@@ -1248,6 +1193,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>! Sets the Interrupt Clear (ICR) register. *! </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1398,8 +1344,28 @@
 <codeline lineno="466"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8h_1ac4509f632d8b0b1157ec42828a957600" kindref="member">EF_I2C_getIM</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint32_t*<sp/>im_value);</highlight></codeline>
 <codeline lineno="467"><highlight class="normal"></highlight></codeline>
 <codeline lineno="468"><highlight class="normal"></highlight></codeline>
-<codeline lineno="470"><highlight class="normal"></highlight></codeline>
-<codeline lineno="492" refid="_e_f___i2_c_8h_1aea0bfa8a6cdd44b3d5ef8f97b7a4723e" refkind="member"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8h_1aea0bfa8a6cdd44b3d5ef8f97b7a4723e" kindref="member">EF_I2C_setICR</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint32_t<sp/>mask);</highlight></codeline>
+<codeline lineno="471"><highlight class="comment">//<sp/><sp/><sp/><sp/>This<sp/>function<sp/>writes<sp/>a<sp/>mask<sp/>value<sp/>to<sp/>the<sp/>interrupt<sp/>clear<sp/>register<sp/>(ICR)<sp/>of<sp/>the<sp/>I2C<sp/>peripheral.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>The<sp/>ICR<sp/>register<sp/>is<sp/>used<sp/>to<sp/>clear<sp/>the<sp/>interrupt<sp/>status<sp/>bits.<sp/>Writing<sp/>a<sp/>1<sp/>to<sp/>a<sp/>bit<sp/>in<sp/>the<sp/>ICR<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>register<sp/>clears<sp/>the<sp/>corresponding<sp/>interrupt<sp/>status<sp/>bit<sp/>in<sp/>the<sp/>RIS<sp/>register.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>**IM<sp/>Register<sp/>Breakdown**:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bit<sp/>0:<sp/>MISS_ACK<sp/>-<sp/>Slave<sp/>ACK<sp/>is<sp/>missed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bit<sp/>1:<sp/>CMDE<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bit<sp/>2:<sp/>CMDF<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Full</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bit<sp/>3:<sp/>CMDOVF<sp/>-<sp/>Command<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bit<sp/>4:<sp/>WRE<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bit<sp/>5:<sp/>WRF<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Full</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bit<sp/>6:<sp/>WROVF<sp/>-<sp/>Write<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bit<sp/>7:<sp/>RDE<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="483"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bit<sp/>8:<sp/>RDF<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Full</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>Bits<sp/>[9-31]:<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>\param<sp/>[in]<sp/>i2c<sp/>An<sp/>\ref<sp/>EF_I2C_TYPE_PTR,<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\ref<sp/>EF_I2C_TYPE<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>\param<sp/>[in]<sp/>mask<sp/>A<sp/>32-bit<sp/>mask<sp/>value<sp/>to<sp/>be<sp/>written<sp/>to<sp/>the<sp/>ICR<sp/>register.<sp/>Each<sp/>bit<sp/>corresponds<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to<sp/>a<sp/>specific<sp/>interrupt<sp/>source,<sp/>with<sp/>1<sp/>clearing<sp/>the<sp/>interrupt<sp/>status<sp/>and<sp/>0<sp/>leaving<sp/>it<sp/>unchanged.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>\return<sp/>status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>\ref<sp/>EF_DRIVER_STATUS<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"></highlight><highlight class="comment">//EF_DRIVER_STATUS<sp/>EF_I2C_setICR(EF_I2C_TYPE_PTR<sp/>i2c,<sp/>uint32_t<sp/>mask);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="493"><highlight class="normal"></highlight></codeline>
 <codeline lineno="494"><highlight class="normal"></highlight></codeline>
 <codeline lineno="495"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8h_1a032dfe3e03b164ccf42871ea66fe2fc9" kindref="member">EF_I2C_waitBusy</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c);</highlight></codeline>

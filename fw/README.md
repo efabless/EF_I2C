@@ -121,7 +121,6 @@ _C header file for I2C APIs which contains the function prototypes._
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setDataReg**](#function-ef_i2c_setdatareg) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t value) <br>_Writes a value to the I2C data register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setDataValid**](#function-ef_i2c_setdatavalid) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, bool valid) <br>_Sets the data valid flag in the I2C data register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setGclkEnable**](#function-ef_i2c_setgclkenable) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t value) <br>_Sets the GCLK enable bit in the I2C register to a certain value._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setICR**](#function-ef_i2c_seticr) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t mask) <br>_Sets the Interrupt Clear (ICR) register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setIM**](#function-ef_i2c_setim) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t mask) <br>_Sets the Interrupt Mask (IM) register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setPrescaler**](#function-ef_i2c_setprescaler) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t value) <br>_Sets the I2C prescaler value._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_startCmd**](#function-ef_i2c_startcmd) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c) <br>_Issues a start condition on the I2C bus._ |
@@ -585,40 +584,6 @@ EF_DRIVER_STATUS EF_I2C_setGclkEnable (
 **Returns:**
 
 status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
-### function `EF_I2C_setICR`
-
-_Sets the Interrupt Clear (ICR) register._
-```c
-EF_DRIVER_STATUS EF_I2C_setICR (
-    EF_I2C_TYPE_PTR i2c,
-    uint32_t mask
-) 
-```
-
-
-This function writes a mask value to the interrupt clear register (ICR) of the I2C peripheral. The ICR register is used to clear the interrupt status bits. Writing a 1 to a bit in the ICR register clears the corresponding interrupt status bit in the RIS register. IM Register Breakdown\*\*:
-
-* Bit 0: MISS\_ACK - Slave ACK is missed
-* Bit 1: CMDE - Command FIFO is Empty
-* Bit 2: CMDF - Command FIFO is Full
-* Bit 3: CMDOVF - Command FIFO overflow; write 1 to clear
-* Bit 4: WRE - Write FIFO is Empty
-* Bit 5: WRF - Write FIFO is Full
-* Bit 6: WROVF - Write FIFO overflow; write 1 to clear
-* Bit 7: RDE - Read FIFO is Empty
-* Bit 8: RDF - Read FIFO is Full
-* Bits [9-31]: Reserved. 
-
-**Parameters:**
-
-
-  * `i2c` An [**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr), which points to the base memory address of I2C registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type) is a structure that contains the I2C registers.
-  * `mask` A 32-bit mask value to be written to the ICR register. Each bit corresponds to a specific interrupt source, with 1 clearing the interrupt status and 0 leaving it unchanged.
-
-
-**Returns:**
-
-status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
 ### function `EF_I2C_setIM`
 
 _Sets the Interrupt Mask (IM) register._
@@ -732,6 +697,8 @@ EF_DRIVER_STATUS EF_I2C_waitBusy (
 ) 
 ```
 
+
+! Sets the Interrupt Clear (ICR) register. \*!
 ### function `EF_I2C_writeAddress`
 
 _Writes an address to the I2C command register._

@@ -130,6 +130,7 @@
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataReg**](#function-ef_i2c_setdatareg)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Writes<sp/>a<sp/>value<sp/>to<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setDataValid**](#function-ef_i2c_setdatavalid)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>bool<sp/>valid)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>data<sp/>valid<sp/>flag<sp/>in<sp/>the<sp/>I2C<sp/>data<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setGclkEnable**](#function-ef_i2c_setgclkenable)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>GCLK<sp/>enable<sp/>bit<sp/>in<sp/>the<sp/>I2C<sp/>register<sp/>to<sp/>a<sp/>certain<sp/>value._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setICR**](#function-ef_i2c_seticr)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>mask)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>Interrupt<sp/>Clear<sp/>(ICR)<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setIM**](#function-ef_i2c_setim)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>mask)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>Interrupt<sp/>Mask<sp/>(IM)<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_setPrescaler**](#function-ef_i2c_setprescaler)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>I2C<sp/>prescaler<sp/>value._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_startCmd**](#function-ef_i2c_startcmd)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c)<sp/>&lt;br&gt;_Issues<sp/>a<sp/>start<sp/>condition<sp/>on<sp/>the<sp/>I2C<sp/>bus._<sp/>|</highlight></codeline>
@@ -588,6 +589,40 @@
 <codeline></codeline>
 <codeline><highlight class="normal">*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>,<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
 <codeline><highlight class="normal">*<sp/>`value`<sp/>The<sp/>value<sp/>of<sp/>the<sp/>GCLK<sp/>enable<sp/>bit</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_I2C_setICR`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>Interrupt<sp/>Clear<sp/>(ICR)<sp/>register._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_I2C_setICR<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_I2C_TYPE_PTR<sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mask</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>writes<sp/>a<sp/>mask<sp/>value<sp/>to<sp/>the<sp/>interrupt<sp/>clear<sp/>register<sp/>(ICR)<sp/>of<sp/>the<sp/>I2C<sp/>peripheral.<sp/>The<sp/>ICR<sp/>register<sp/>is<sp/>used<sp/>to<sp/>clear<sp/>the<sp/>interrupt<sp/>status<sp/>bits.<sp/>Writing<sp/>a<sp/>1<sp/>to<sp/>a<sp/>bit<sp/>in<sp/>the<sp/>ICR<sp/>register<sp/>clears<sp/>the<sp/>corresponding<sp/>interrupt<sp/>status<sp/>bit<sp/>in<sp/>the<sp/>RIS<sp/>register.<sp/>IM<sp/>Register<sp/>Breakdown\*\*:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>0:<sp/>MISS\_ACK<sp/>-<sp/>Slave<sp/>ACK<sp/>is<sp/>missed</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>1:<sp/>CMDE<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>2:<sp/>CMDF<sp/>-<sp/>Command<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>3:<sp/>CMDOVF<sp/>-<sp/>Command<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>4:<sp/>WRE<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>5:<sp/>WRF<sp/>-<sp/>Write<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>6:<sp/>WROVF<sp/>-<sp/>Write<sp/>FIFO<sp/>overflow;<sp/>write<sp/>1<sp/>to<sp/>clear</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>7:<sp/>RDE<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Empty</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bit<sp/>8:<sp/>RDF<sp/>-<sp/>Read<sp/>FIFO<sp/>is<sp/>Full</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Bits<sp/>[9-31]:<sp/>Reserved.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>`i2c`<sp/>An<sp/>[**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>I2C<sp/>registers.[**EF\_I2C\_TYPE**](#typedef-ef_i2c_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>I2C<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>`mask`<sp/>A<sp/>32-bit<sp/>mask<sp/>value<sp/>to<sp/>be<sp/>written<sp/>to<sp/>the<sp/>ICR<sp/>register.<sp/>Each<sp/>bit<sp/>corresponds<sp/>to<sp/>a<sp/>specific<sp/>interrupt<sp/>source,<sp/>with<sp/>1<sp/>clearing<sp/>the<sp/>interrupt<sp/>status<sp/>and<sp/>0<sp/>leaving<sp/>it<sp/>unchanged.</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">**Returns:**</highlight></codeline>

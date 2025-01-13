@@ -129,7 +129,7 @@
 </sect1>
 <sect1 id="md__r_e_a_d_m_e_1autotoc_md16">
 <title>Functions</title>
-<para><table rows="27" cols="2"><row>
+<para><table rows="28" cols="2"><row>
 <entry thead="yes" align='right'><para>Type   </para>
 </entry><entry thead="yes" align='left'><para>Name    </para>
 </entry></row>
@@ -212,6 +212,11 @@
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_I2C\_setGclkEnable** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t value) <linebreak/>
 <emphasis>Sets the GCLK enable bit in the I2C register to a certain value.</emphasis>    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_I2C\_setICR** (**EF\_I2C\_TYPE\_PTR** i2c, uint32_t mask) <linebreak/>
+<emphasis>Sets the Interrupt Clear (ICR) register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
@@ -602,6 +607,36 @@
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md34">
+<title>function &lt;tt&gt;EF_I2C_setICR&lt;/tt&gt;</title>
+<para><emphasis>Sets the Interrupt Clear (ICR) register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_I2C_setICR<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mask</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>This function writes a mask value to the interrupt clear register (ICR) of the I2C peripheral. The ICR register is used to clear the interrupt status bits. Writing a 1 to a bit in the ICR register clears the corresponding interrupt status bit in the RIS register. IM Register Breakdown**:</para>
+<para><itemizedlist>
+<listitem><para>Bit 0: MISS_ACK - Slave ACK is missed</para>
+</listitem><listitem><para>Bit 1: CMDE - Command FIFO is Empty</para>
+</listitem><listitem><para>Bit 2: CMDF - Command FIFO is Full</para>
+</listitem><listitem><para>Bit 3: CMDOVF - Command FIFO overflow; write 1 to clear</para>
+</listitem><listitem><para>Bit 4: WRE - Write FIFO is Empty</para>
+</listitem><listitem><para>Bit 5: WRF - Write FIFO is Full</para>
+</listitem><listitem><para>Bit 6: WROVF - Write FIFO overflow; write 1 to clear</para>
+</listitem><listitem><para>Bit 7: RDE - Read FIFO is Empty</para>
+</listitem><listitem><para>Bit 8: RDF - Read FIFO is Full</para>
+</listitem><listitem><para>Bits [9-31]: Reserved.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>i2c</computeroutput> An **EF\_I2C\_TYPE\_PTR**, which points to the base memory address of I2C registers.**EF\_I2C\_TYPE** is a structure that contains the I2C registers.</para>
+</listitem><listitem><para><computeroutput>mask</computeroutput> A 32-bit mask value to be written to the ICR register. Each bit corresponds to a specific interrupt source, with 1 clearing the interrupt status and 0 leaving it unchanged.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md35">
 <title>function &lt;tt&gt;EF_I2C_setIM&lt;/tt&gt;</title>
 <para><emphasis>Sets the Interrupt Mask (IM) register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1ac9a53ca41924b84ebf52d2b659c029c7" kindref="member">EF_I2C_setIM</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
@@ -631,7 +666,7 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md35">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md36">
 <title>function &lt;tt&gt;EF_I2C_setPrescaler&lt;/tt&gt;</title>
 <para><emphasis>Sets the I2C prescaler value.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a824f4aaa04cf1518f65a558c67172fdd" kindref="member">EF_I2C_setPrescaler</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
@@ -648,7 +683,7 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md36">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md37">
 <title>function &lt;tt&gt;EF_I2C_startCmd&lt;/tt&gt;</title>
 <para><emphasis>Issues a start condition on the I2C bus.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a6bcf2d08643ce620b0f75b980a875a7f" kindref="member">EF_I2C_startCmd</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c</highlight></codeline>
@@ -663,7 +698,7 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md37">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md38">
 <title>function &lt;tt&gt;EF_I2C_stopCmd&lt;/tt&gt;</title>
 <para><emphasis>Issues a stop condition on the I2C bus.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a67cb25a7e6a9f2f0c4cbda50361f38e9" kindref="member">EF_I2C_stopCmd</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c</highlight></codeline>
@@ -678,14 +713,14 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md38">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md39">
 <title>function &lt;tt&gt;EF_I2C_waitBusy&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a032dfe3e03b164ccf42871ea66fe2fc9" kindref="member">EF_I2C_waitBusy</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md39">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md40">
 <title>function &lt;tt&gt;EF_I2C_writeAddress&lt;/tt&gt;</title>
 <para><emphasis>Writes an address to the I2C command register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a8b32d8e6a1cb03a0c948ee85a917c652" kindref="member">EF_I2C_writeAddress</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
@@ -707,7 +742,7 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md40">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md41">
 <title>function &lt;tt&gt;EF_I2C_writeCmd&lt;/tt&gt;</title>
 <para><emphasis>Sends a write command to the specified address on the I2C bus.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a9c8ce9f9c67bd5ce3e965e1b8c05b437" kindref="member">EF_I2C_writeCmd</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
@@ -724,7 +759,7 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md41">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md42">
 <title>function &lt;tt&gt;EF_I2C_writeData&lt;/tt&gt;</title>
 <para><emphasis>Writes a data value to the I2C data register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1afb19bc6a6238b42d38eefff40d8b988b" kindref="member">EF_I2C_writeData</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
@@ -741,7 +776,7 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md42">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md43">
 <title>function &lt;tt&gt;EF_I2C_writeMultipleCmd&lt;/tt&gt;</title>
 <para><emphasis>Enables the write multiple command mode for the I2C controller.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1ae6094788f5d9a6cf203350161d6a1194" kindref="member">EF_I2C_writeMultipleCmd</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c</highlight></codeline>
@@ -756,7 +791,7 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md43">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md44">
 <title>function &lt;tt&gt;EF_I2C_writeToAddress&lt;/tt&gt;</title>
 <para><emphasis>Performs an I2C write operation to a specific address.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1ac8020e16b3158054341ac0bce22d8b7e" kindref="member">EF_I2C_writeToAddress</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,</highlight></codeline>
@@ -783,10 +818,10 @@
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code</para>
 </sect2>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md44">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md45">
 <title>File EF_I2C_regs.h</title>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md45">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md46">
 <title>Structures and Types</title>
 <para><table rows="4" cols="2"><row>
 <entry thead="yes" align='right'><para>Type   </para>
@@ -810,7 +845,7 @@
 </table>
 </para>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md46">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md47">
 <title>Macros</title>
 <para><table rows="32" cols="2"><row>
 <entry thead="yes" align='right'><para>Type   </para>
@@ -974,19 +1009,19 @@
 </table>
 </para>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md47">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md48">
 <title>Structures and Types Documentation</title>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md48">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md49">
 <title>typedef &lt;tt&gt;EF_I2C_TYPE&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">_EF_I2C_TYPE_</ref><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE</ref>;</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md49">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md50">
 <title>typedef &lt;tt&gt;EF_I2C_TYPE_PTR&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE</ref>*<sp/><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref>;</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md50">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md51">
 <title>struct &lt;tt&gt;_EF_I2C_TYPE_&lt;/tt&gt;</title>
 <para>Variables:</para>
 <para><itemizedlist>
@@ -1014,159 +1049,159 @@
 </para>
 </sect2>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md51">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md52">
 <title>Macros Documentation</title>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md52">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md53">
 <title>define &lt;tt&gt;EF_I2C_CMDE_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_CMDE_FLAG<sp/>((uint32_t)0x2)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md53">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md54">
 <title>define &lt;tt&gt;EF_I2C_CMDF_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_CMDF_FLAG<sp/>((uint32_t)0x4)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md54">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md55">
 <title>define &lt;tt&gt;EF_I2C_CMDOVF_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_CMDOVF_FLAG<sp/>((uint32_t)0x8)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md55">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md56">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT<sp/>((uint32_t)0)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md56">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md57">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK<sp/>((uint32_t)0x7f)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md57">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md58">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_READ_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_READ_BIT<sp/>((uint32_t)9)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md58">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md59">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_READ_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_READ_MASK<sp/>((uint32_t)0x200)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md59">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md60">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_START_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_START_BIT<sp/>((uint32_t)8)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md60">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md61">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_START_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_START_MASK<sp/>((uint32_t)0x100)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md61">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md62">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_STOP_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_STOP_BIT<sp/>((uint32_t)12)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md62">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md63">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_STOP_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_STOP_MASK<sp/>((uint32_t)0x1000)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md63">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md64">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_BIT<sp/>((uint32_t)10)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md64">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md65">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MASK<sp/>((uint32_t)0x400)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md65">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md66">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT<sp/>((uint32_t)11)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md66">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md67">
 <title>define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK<sp/>((uint32_t)0x800)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md67">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md68">
 <title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_BIT<sp/>((uint32_t)0)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md68">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md69">
 <title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_LAST_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_LAST_BIT<sp/>((uint32_t)9)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md69">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md70">
 <title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_LAST_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_LAST_MASK<sp/>((uint32_t)0x200)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md70">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md71">
 <title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_MASK<sp/>((uint32_t)0xff)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md71">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md72">
 <title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_VALID_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_VALID_BIT<sp/>((uint32_t)8)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md72">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md73">
 <title>define &lt;tt&gt;EF_I2C_DATA_REG_DATA_VALID_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_VALID_MASK<sp/>((uint32_t)0x100)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md73">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md74">
 <title>define &lt;tt&gt;EF_I2C_MISS_ACK_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_MISS_ACK_FLAG<sp/>((uint32_t)0x1)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md74">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md75">
 <title>define &lt;tt&gt;EF_I2C_RDE_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_RDE_FLAG<sp/>((uint32_t)0x80)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md75">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md76">
 <title>define &lt;tt&gt;EF_I2C_RDF_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_RDF_FLAG<sp/>((uint32_t)0x100)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md76">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md77">
 <title>define &lt;tt&gt;EF_I2C_WRE_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_WRE_FLAG<sp/>((uint32_t)0x10)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md77">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md78">
 <title>define &lt;tt&gt;EF_I2C_WRF_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_WRF_FLAG<sp/>((uint32_t)0x20)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md78">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md79">
 <title>define &lt;tt&gt;EF_I2C_WROVF_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_I2C_WROVF_FLAG<sp/>((uint32_t)0x40)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md79">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md80">
 <title>define &lt;tt&gt;IO_TYPES&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>IO_TYPES<sp/></highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md80">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md81">
 <title>define &lt;tt&gt;__R&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>__R<sp/>volatile<sp/>const<sp/>uint32_t</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md81">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md82">
 <title>define &lt;tt&gt;__RW&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>__RW<sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md82">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md83">
 <title>define &lt;tt&gt;__W&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>__W<sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
 </programlisting> </para>

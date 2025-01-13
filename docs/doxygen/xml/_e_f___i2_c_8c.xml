@@ -1252,6 +1252,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>! Sets the Interrupt Clear (ICR) register. *! </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

@@ -139,8 +139,28 @@
 \DoxyCodeLine{00466\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ac4509f632d8b0b1157ec42828a957600}{EF\_I2C\_getIM}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ im\_value);}
 \DoxyCodeLine{00467\ }
 \DoxyCodeLine{00468\ }
-\DoxyCodeLine{00470\ }
-\DoxyCodeLine{00492\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_aea0bfa8a6cdd44b3d5ef8f97b7a4723e}{EF\_I2C\_setICR}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ mask);}
+\DoxyCodeLine{00471\ \textcolor{comment}{//\ \ \ \ This\ function\ writes\ a\ mask\ value\ to\ the\ interrupt\ clear\ register\ (ICR)\ of\ the\ I2C\ peripheral.\ }}
+\DoxyCodeLine{00472\ \textcolor{comment}{//\ \ \ \ The\ ICR\ register\ is\ used\ to\ clear\ the\ interrupt\ status\ bits.\ Writing\ a\ 1\ to\ a\ bit\ in\ the\ ICR\ }}
+\DoxyCodeLine{00473\ \textcolor{comment}{//\ \ \ \ register\ clears\ the\ corresponding\ interrupt\ status\ bit\ in\ the\ RIS\ register.}}
+\DoxyCodeLine{00474\ \textcolor{comment}{//\ \ \ \ **IM\ Register\ Breakdown**:}}
+\DoxyCodeLine{00475\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 0:\ MISS\_ACK\ -\/\ Slave\ ACK\ is\ missed}}
+\DoxyCodeLine{00476\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 1:\ CMDE\ -\/\ Command\ FIFO\ is\ Empty}}
+\DoxyCodeLine{00477\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 2:\ CMDF\ -\/\ Command\ FIFO\ is\ Full}}
+\DoxyCodeLine{00478\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 3:\ CMDOVF\ -\/\ Command\ FIFO\ overflow;\ write\ 1\ to\ clear}}
+\DoxyCodeLine{00479\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 4:\ WRE\ -\/\ Write\ FIFO\ is\ Empty}}
+\DoxyCodeLine{00480\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 5:\ WRF\ -\/\ Write\ FIFO\ is\ Full}}
+\DoxyCodeLine{00481\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 6:\ WROVF\ -\/\ Write\ FIFO\ overflow;\ write\ 1\ to\ clear}}
+\DoxyCodeLine{00482\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 7:\ RDE\ -\/\ Read\ FIFO\ is\ Empty}}
+\DoxyCodeLine{00483\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 8:\ RDF\ -\/\ Read\ FIFO\ is\ Full}}
+\DoxyCodeLine{00484\ \textcolor{comment}{//\ \ \ \ -\/\ Bits\ [9-\/31]:\ Reserved.}}
+\DoxyCodeLine{00485\ \textcolor{comment}{//\ \ \ \ \(\backslash\)param\ [in]\ i2c\ An\ \(\backslash\)ref\ EF\_I2C\_TYPE\_PTR,\ which\ points\ to\ the\ base\ memory\ address\ of\ I2C\ registers.\ }}
+\DoxyCodeLine{00486\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)ref\ EF\_I2C\_TYPE\ is\ a\ structure\ that\ contains\ the\ I2C\ registers.\ \ \ \ }}
+\DoxyCodeLine{00487\ \textcolor{comment}{//\ \ \ \ \(\backslash\)param\ [in]\ mask\ A\ 32-\/bit\ mask\ value\ to\ be\ written\ to\ the\ ICR\ register.\ Each\ bit\ corresponds\ }}
+\DoxyCodeLine{00488\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ to\ a\ specific\ interrupt\ source,\ with\ 1\ clearing\ the\ interrupt\ status\ and\ 0\ leaving\ it\ unchanged.}}
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \textcolor{comment}{//\ \ \ \ \(\backslash\)return\ status\ A\ value\ of\ type\ \(\backslash\)ref\ EF\_DRIVER\_STATUS\ :\ returns\ a\ success\ or\ error\ code}}
+\DoxyCodeLine{00491\ \textcolor{comment}{//*/}}
+\DoxyCodeLine{00492\ \textcolor{comment}{//EF\_DRIVER\_STATUS\ EF\_I2C\_setICR(EF\_I2C\_TYPE\_PTR\ i2c,\ uint32\_t\ mask);}}
 \DoxyCodeLine{00493\ }
 \DoxyCodeLine{00494\ }
 \DoxyCodeLine{00495\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a032dfe3e03b164ccf42871ea66fe2fc9}{EF\_I2C\_waitBusy}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c);}

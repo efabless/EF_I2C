@@ -159,9 +159,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ac4509f632d8b0b1157ec42828a957600"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___i2_c_8h.html#ac4509f632d8b0b1157ec42828a957600">EF_I2C_getIM</a> (<a class="el" href="_e_f___i2_c__regs_8h.html#aa2269a016ba045981b24348570da1bbe">EF_I2C_TYPE_PTR</a> i2c, uint32_t *im_value)</td></tr>
 <tr class="memdesc:ac4509f632d8b0b1157ec42828a957600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the Interrupt Mask (IM) register.  <br /></td></tr>
 <tr class="separator:ac4509f632d8b0b1157ec42828a957600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea0bfa8a6cdd44b3d5ef8f97b7a4723e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___i2_c_8h.html#aea0bfa8a6cdd44b3d5ef8f97b7a4723e">EF_I2C_setICR</a> (<a class="el" href="_e_f___i2_c__regs_8h.html#aa2269a016ba045981b24348570da1bbe">EF_I2C_TYPE_PTR</a> i2c, uint32_t mask)</td></tr>
-<tr class="memdesc:aea0bfa8a6cdd44b3d5ef8f97b7a4723e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Interrupt Clear (ICR) register.  <br /></td></tr>
-<tr class="separator:aea0bfa8a6cdd44b3d5ef8f97b7a4723e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a032dfe3e03b164ccf42871ea66fe2fc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___i2_c_8h.html#a032dfe3e03b164ccf42871ea66fe2fc9">EF_I2C_waitBusy</a> (<a class="el" href="_e_f___i2_c__regs_8h.html#aa2269a016ba045981b24348570da1bbe">EF_I2C_TYPE_PTR</a> i2c)</td></tr>
 <tr class="separator:a032dfe3e03b164ccf42871ea66fe2fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -843,57 +840,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aea0bfa8a6cdd44b3d5ef8f97b7a4723e" name="aea0bfa8a6cdd44b3d5ef8f97b7a4723e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea0bfa8a6cdd44b3d5ef8f97b7a4723e">&#9670;&#160;</a></span>EF_I2C_setICR()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> EF_I2C_setICR </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_e_f___i2_c__regs_8h.html#aa2269a016ba045981b24348570da1bbe">EF_I2C_TYPE_PTR</a>&#160;</td>
-          <td class="paramname"><em>i2c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>mask</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the Interrupt Clear (ICR) register. </p>
-<p>This function writes a mask value to the interrupt clear register (ICR) of the I2C peripheral. The ICR register is used to clear the interrupt status bits. Writing a 1 to a bit in the ICR register clears the corresponding interrupt status bit in the RIS register. IM Register Breakdown**:</p><ul>
-<li>Bit 0: MISS_ACK - Slave ACK is missed</li>
-<li>Bit 1: CMDE - Command FIFO is Empty</li>
-<li>Bit 2: CMDF - Command FIFO is Full</li>
-<li>Bit 3: CMDOVF - Command FIFO overflow; write 1 to clear</li>
-<li>Bit 4: WRE - Write FIFO is Empty</li>
-<li>Bit 5: WRF - Write FIFO is Full</li>
-<li>Bit 6: WROVF - Write FIFO overflow; write 1 to clear</li>
-<li>Bit 7: RDE - Read FIFO is Empty</li>
-<li>Bit 8: RDF - Read FIFO is Full</li>
-<li>Bits [9-31]: Reserved. <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">i2c</td><td>An <a class="el" href="_e_f___i2_c__regs_8h.html#aa2269a016ba045981b24348570da1bbe">EF_I2C_TYPE_PTR</a>, which points to the base memory address of I2C registers. <a class="el" href="_e_f___i2_c__regs_8h.html#ab0d3f158914422e7299a70fcd51e6141">EF_I2C_TYPE</a> is a structure that contains the I2C registers. <br  />
- </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>A 32-bit mask value to be written to the ICR register. Each bit corresponds to a specific interrupt source, with 1 clearing the interrupt status and 0 leaving it unchanged.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>status A value of type <a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> : returns a success or error code </dd></dl>
-</li>
-</ul>
-
-</div>
-</div>
 <a id="ac9a53ca41924b84ebf52d2b659c029c7" name="ac9a53ca41924b84ebf52d2b659c029c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac9a53ca41924b84ebf52d2b659c029c7">&#9670;&#160;</a></span>EF_I2C_setIM()</h2>
 
@@ -1054,6 +1000,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>! Sets the Interrupt Clear (ICR) register. *! </p>
 
 </div>
 </div>

@@ -82,7 +82,6 @@
     <member refid="_e_f___i2_c_8h_1aa87448a542b497393695dca2acc6d6b8" kind="function"><name>EF_I2C_getMIS</name></member>
     <member refid="_e_f___i2_c_8h_1ac9a53ca41924b84ebf52d2b659c029c7" kind="function"><name>EF_I2C_setIM</name></member>
     <member refid="_e_f___i2_c_8h_1ac4509f632d8b0b1157ec42828a957600" kind="function"><name>EF_I2C_getIM</name></member>
-    <member refid="_e_f___i2_c_8h_1aea0bfa8a6cdd44b3d5ef8f97b7a4723e" kind="function"><name>EF_I2C_setICR</name></member>
     <member refid="_e_f___i2_c_8h_1a032dfe3e03b164ccf42871ea66fe2fc9" kind="function"><name>EF_I2C_waitBusy</name></member>
   </compound>
   <compound refid="_e_f___i2_c__regs_8h" kind="file"><name>EF_I2C_regs.h</name>
