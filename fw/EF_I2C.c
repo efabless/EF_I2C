@@ -1,7 +1,56 @@
+/*
+	Copyright 2025 Efabless Corp.
+
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	    www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+*/
+
+
+/*! \file EF_I2C.c
+    \brief C header file for I2C APIs which contains the function implementations 
+    
+*/
+
 #ifndef EF_I2C_C
 #define EF_I2C_C
 
-#include <EF_I2C.h>
+/******************************************************************************
+* Includes
+******************************************************************************/
+#include "EF_I2C.h"
+
+/******************************************************************************
+* File-Specific Macros and Constants
+******************************************************************************/
+
+
+
+/******************************************************************************
+* Static Variables
+******************************************************************************/
+
+
+
+/******************************************************************************
+* Static Function Prototypes
+******************************************************************************/
+
+
+
+/******************************************************************************
+* Function Definitions
+******************************************************************************/
 
 void EF_I2C_setGclkEnable (uint32_t i2c_base, int value){
     EF_I2C_TYPE* i2c = (EF_I2C_TYPE*)i2c_base;
@@ -194,4 +243,19 @@ void EF_I2C_waitBusy(uint32_t i2c_base){
     while(i2c->STATUS & 0b1 == 1);
 }
 
-#endif
+
+
+/******************************************************************************
+* Static Function Definitions
+******************************************************************************/
+
+
+
+
+
+#endif // EF_I2C_C
+
+/******************************************************************************
+* End of File
+******************************************************************************/
+
