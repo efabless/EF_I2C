@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct___e_f___i2_c___t_y_p_e__" kind="struct" language="C++" prot="public">
+    <compoundname>_EF_I2C_TYPE_</compoundname>
+    <includes refid="_e_f___i2_c__regs_8h" local="no">EF_I2C_regs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a8b611d8a980d59a5749bb66fb7fd1b29" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _EF_I2C_TYPE_::STATUS</definition>
+        <argsstring></argsstring>
+        <name>STATUS</name>
+        <qualifiedname>_EF_I2C_TYPE_::STATUS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="72" column="9" bodyfile="EF_I2C_regs.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_I2C_TYPE_::COMMAND</definition>
+        <argsstring></argsstring>
+        <name>COMMAND</name>
+        <qualifiedname>_EF_I2C_TYPE_::COMMAND</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="73" column="5" bodyfile="EF_I2C_regs.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref></type>
+        <definition>__RW _EF_I2C_TYPE_::DATA</definition>
+        <argsstring></argsstring>
+        <name>DATA</name>
+        <qualifiedname>_EF_I2C_TYPE_::DATA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="74" column="9" bodyfile="EF_I2C_regs.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a8c9e5bd31504ac9b8fe8bda91850597c" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_I2C_TYPE_::PR</definition>
+        <argsstring></argsstring>
+        <name>PR</name>
+        <qualifiedname>_EF_I2C_TYPE_::PR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="75" column="13" bodyfile="EF_I2C_regs.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1ac714b19e4609e62b11da82c1f829a7d6" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _EF_I2C_TYPE_::reserved_1[16316]</definition>
+        <argsstring>[16316]</argsstring>
+        <name>reserved_1</name>
+        <qualifiedname>_EF_I2C_TYPE_::reserved_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="76" column="13" bodyfile="EF_I2C_regs.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a7503b5affe705e7cfd968a31ca9ad7a3" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref></type>
+        <definition>__RW _EF_I2C_TYPE_::IM</definition>
+        <argsstring></argsstring>
+        <name>IM</name>
+        <qualifiedname>_EF_I2C_TYPE_::IM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="77" column="5" bodyfile="EF_I2C_regs.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a0f2c90771caed07ebcc3cae40508b5df" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _EF_I2C_TYPE_::MIS</definition>
+        <argsstring></argsstring>
+        <name>MIS</name>
+        <qualifiedname>_EF_I2C_TYPE_::MIS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="78" column="5" bodyfile="EF_I2C_regs.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1ad256d7e50338d33da8a41c98d9766be4" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _EF_I2C_TYPE_::RIS</definition>
+        <argsstring></argsstring>
+        <name>RIS</name>
+        <qualifiedname>_EF_I2C_TYPE_::RIS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="79" column="5" bodyfile="EF_I2C_regs.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a886b8d6fbc8f06cdf662de460ec04825" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _EF_I2C_TYPE_::reserved_2</definition>
+        <argsstring></argsstring>
+        <name>reserved_2</name>
+        <qualifiedname>_EF_I2C_TYPE_::reserved_2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="80" column="9" bodyfile="EF_I2C_regs.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a16243abba225c900732085b8ea82f943" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_I2C_TYPE_::GCLK</definition>
+        <argsstring></argsstring>
+        <name>GCLK</name>
+        <qualifiedname>_EF_I2C_TYPE_::GCLK</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="81" column="5" bodyfile="EF_I2C_regs.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="EF_I2C_regs.h" line="71" column="1" bodyfile="EF_I2C_regs.h" bodystart="71" bodyend="82"/>
+    <listofallmembers>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>COMMAND</name></member>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>DATA</name></member>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1a16243abba225c900732085b8ea82f943" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>GCLK</name></member>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1a7503b5affe705e7cfd968a31ca9ad7a3" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>IM</name></member>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1a0f2c90771caed07ebcc3cae40508b5df" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>MIS</name></member>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1a8c9e5bd31504ac9b8fe8bda91850597c" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>PR</name></member>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1ac714b19e4609e62b11da82c1f829a7d6" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>reserved_1</name></member>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1a886b8d6fbc8f06cdf662de460ec04825" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>reserved_2</name></member>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1ad256d7e50338d33da8a41c98d9766be4" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>RIS</name></member>
+      <member refid="struct___e_f___i2_c___t_y_p_e___1a8b611d8a980d59a5749bb66fb7fd1b29" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>STATUS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,110 @@
+\hypertarget{_e_f___i2_c__regs_8h_source}{}\doxysection{EF\+\_\+\+I2\+C\+\_\+regs.\+h}
+\mbox{\hyperlink{_e_f___i2_c__regs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ \ \ \ \ Copyright\ 2024\ Mohamed\ Shalan}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ \ \ \ \ Author:\ Mohamed\ Shalan\ (mshalan@efabless.com)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ \ \ \ \ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ \ \ \ \ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ \ \ \ \ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00011\ \textcolor{comment}{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ \ \ \ \ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ \ \ \ \ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ EF\_I2CREGS\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ EF\_I2CREGS\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ Includes}}
+\DoxyCodeLine{00025\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_e_f___driver___common_8h}{EF\_Driver\_Common.h}}"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ Macros\ and\ Constants}}
+\DoxyCodeLine{00031\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#ifndef\ IO\_TYPES}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ IO\_TYPES}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ \ \ \_\_R\ \ \ \ \ volatile\ const\ uint32\_t}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ \ \ \_\_W\ \ \ \ \ volatile\ \ \ \ \ \ \ uint32\_t}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ \ \ \_\_RW\ \ \ \ volatile\ \ \ \ \ \ \ uint32\_t}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0)}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x7f)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)8)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x100)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)9)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x200)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)10)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x400)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT\ \ \ \ \ \ \ ((uint32\_t)11)}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK\ \ \ \ \ \ ((uint32\_t)0x800)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)12)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x1000)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0xff)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)8)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x100)}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)9)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x200)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ EF\_I2C\_MISS\_ACK\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x1)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ EF\_I2C\_CMDE\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x2)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ EF\_I2C\_CMDF\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x4)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ EF\_I2C\_CMDOVF\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x8)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ EF\_I2C\_WRE\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x10)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ EF\_I2C\_WRF\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x20)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ EF\_I2C\_WROVF\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x40)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ EF\_I2C\_RDE\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x80)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ EF\_I2C\_RDF\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x100)}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00069\ \textcolor{comment}{*\ Typedefs\ and\ Enums}}
+\DoxyCodeLine{00070\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{\_EF\_I2C\_TYPE\_}}\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___a8b611d8a980d59a5749bb66fb7fd1b29}{STATUS}};}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___a4dc8938ade35c9aa6a6aa76cc78dea07}{COMMAND}};}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_a81f369079976a46554fd9798ab035697}{\_\_RW}}\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___a1d71f2b00aacf91465563f68b25642ee}{DATA}};}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___a8c9e5bd31504ac9b8fe8bda91850597c}{PR}};}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___ac714b19e4609e62b11da82c1f829a7d6}{reserved\_1}}[16316];}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_a81f369079976a46554fd9798ab035697}{\_\_RW}}\ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___a7503b5affe705e7cfd968a31ca9ad7a3}{IM}};}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___a0f2c90771caed07ebcc3cae40508b5df}{MIS}};}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___ad256d7e50338d33da8a41c98d9766be4}{RIS}};}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \ \ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___a886b8d6fbc8f06cdf662de460ec04825}{reserved\_2}};}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{_e_f___i2_c__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e___a16243abba225c900732085b8ea82f943}{GCLK}};}
+\DoxyCodeLine{00082\ \}\ \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\_I2C\_TYPE}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE}}\ *\ \mbox{\hyperlink{_e_f___i2_c__regs_8h_affb413da2854fa5bbd6d42b9b0c4e73f}{EF\_I2C\_PTR}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EF\_I2C\_PTR\ is\ a\ pointer\ to\ a\ structure\ of\ type\ EF\_I2C\_TYPE}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00089\ \textcolor{comment}{*\ Function\ Prototypes}}
+\DoxyCodeLine{00090\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00095\ \textcolor{comment}{*\ External\ Variables}}
+\DoxyCodeLine{00096\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EF\_I2CREGS\_H}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00104\ \textcolor{comment}{*\ End\ of\ File}}
+\DoxyCodeLine{00105\ \textcolor{comment}{******************************************************************************/}}
+
+\end{DoxyCode}

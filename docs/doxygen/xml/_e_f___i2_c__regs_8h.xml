@@ -1,0 +1,536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_e_f___i2_c__regs_8h" kind="file" language="C++">
+    <compoundname>EF_I2C_regs.h</compoundname>
+    <includes refid="_e_f___driver___common_8h" local="yes">EF_Driver_Common.h</includes>
+    <includedby refid="_e_f___i2_c_8h" local="yes">EF_I2C.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>EF_Driver_Common.h</label>
+        <link refid="_e_f___driver___common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EF_I2C_regs.h</label>
+        <link refid="_e_f___i2_c__regs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>EF_I2C.c</label>
+        <link refid="_e_f___i2_c_8c"/>
+      </node>
+      <node id="2">
+        <label>EF_I2C.h</label>
+        <link refid="_e_f___i2_c_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EF_I2C_regs.h</label>
+        <link refid="_e_f___i2_c__regs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct___e_f___i2_c___t_y_p_e__" prot="public">_EF_I2C_TYPE_</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" prot="public" static="no">
+        <name>IO_TYPES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="33" column="9" bodyfile="EF_I2C_regs.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" prot="public" static="no">
+        <name>__R</name>
+        <initializer>volatile const uint32_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="34" column="11" bodyfile="EF_I2C_regs.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" prot="public" static="no">
+        <name>__W</name>
+        <initializer>volatile       uint32_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="35" column="11" bodyfile="EF_I2C_regs.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a81f369079976a46554fd9798ab035697" prot="public" static="no">
+        <name>__RW</name>
+        <initializer>volatile       uint32_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="36" column="11" bodyfile="EF_I2C_regs.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a1bceef95d7131b66c7ffa2800519f326" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="39" column="9" bodyfile="EF_I2C_regs.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a8db27e3e6180e108c2c4a5604c244e1c" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK</name>
+        <initializer>((uint32_t)0x7f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="40" column="9" bodyfile="EF_I2C_regs.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a37c7a7e1a9c95bbd1c6d6bde3c4f513d" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_START_BIT</name>
+        <initializer>((uint32_t)8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="41" column="9" bodyfile="EF_I2C_regs.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a57898082e7f89df311756096cf82b53a" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_START_MASK</name>
+        <initializer>((uint32_t)0x100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="42" column="9" bodyfile="EF_I2C_regs.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a82e325da6b9a90086de4dc4afdd087cb" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_READ_BIT</name>
+        <initializer>((uint32_t)9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="43" column="9" bodyfile="EF_I2C_regs.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a9d1da55d246f79075a4e4d21c8f075fa" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_READ_MASK</name>
+        <initializer>((uint32_t)0x200)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="44" column="9" bodyfile="EF_I2C_regs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1abb825fdfd772c531d966a36569076993" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_WRITE_BIT</name>
+        <initializer>((uint32_t)10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="45" column="9" bodyfile="EF_I2C_regs.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a61732106db243022783f6498c65d3583" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_WRITE_MASK</name>
+        <initializer>((uint32_t)0x400)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="46" column="9" bodyfile="EF_I2C_regs.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a1ce068cc21a8dd04853eca8fafa86e8b" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT</name>
+        <initializer>((uint32_t)11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="47" column="9" bodyfile="EF_I2C_regs.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a4f3157f848946db64740fb331db483cb" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK</name>
+        <initializer>((uint32_t)0x800)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="48" column="9" bodyfile="EF_I2C_regs.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a5dd2e00cae19e862ca6e50b32d28af0f" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_STOP_BIT</name>
+        <initializer>((uint32_t)12)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="49" column="9" bodyfile="EF_I2C_regs.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a49de998bf6fc603985ece7d4b5f1a2a8" prot="public" static="no">
+        <name>EF_I2C_COMMAND_REG_CMD_STOP_MASK</name>
+        <initializer>((uint32_t)0x1000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="50" column="9" bodyfile="EF_I2C_regs.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1aba38352530617be5adc5880991d82e1e" prot="public" static="no">
+        <name>EF_I2C_DATA_REG_DATA_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="51" column="9" bodyfile="EF_I2C_regs.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a11522682dcda2538dfd16ad350ff00bc" prot="public" static="no">
+        <name>EF_I2C_DATA_REG_DATA_MASK</name>
+        <initializer>((uint32_t)0xff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="52" column="9" bodyfile="EF_I2C_regs.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a9bd367f94dd56d4da68fd7d01b4b03ef" prot="public" static="no">
+        <name>EF_I2C_DATA_REG_DATA_VALID_BIT</name>
+        <initializer>((uint32_t)8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="53" column="9" bodyfile="EF_I2C_regs.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a43093f7f9657aa84c882e41024d2086b" prot="public" static="no">
+        <name>EF_I2C_DATA_REG_DATA_VALID_MASK</name>
+        <initializer>((uint32_t)0x100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="54" column="9" bodyfile="EF_I2C_regs.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a6988500ab62cd3c3c68c94cab9cdd1d4" prot="public" static="no">
+        <name>EF_I2C_DATA_REG_DATA_LAST_BIT</name>
+        <initializer>((uint32_t)9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="55" column="9" bodyfile="EF_I2C_regs.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a7f3b7a8f8a3ac82a0846217c396a68cf" prot="public" static="no">
+        <name>EF_I2C_DATA_REG_DATA_LAST_MASK</name>
+        <initializer>((uint32_t)0x200)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="56" column="9" bodyfile="EF_I2C_regs.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a617f1961f9590113149c57a24528d9f3" prot="public" static="no">
+        <name>EF_I2C_MISS_ACK_FLAG</name>
+        <initializer>((uint32_t)0x1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="57" column="9" bodyfile="EF_I2C_regs.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1af6390e411dd903baf932fe1b8891a2f1" prot="public" static="no">
+        <name>EF_I2C_CMDE_FLAG</name>
+        <initializer>((uint32_t)0x2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="58" column="9" bodyfile="EF_I2C_regs.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a0766ab0a3fdf37163804418f660e53c6" prot="public" static="no">
+        <name>EF_I2C_CMDF_FLAG</name>
+        <initializer>((uint32_t)0x4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="59" column="9" bodyfile="EF_I2C_regs.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a563328ef60c9eb97dbc11abdf58dcb83" prot="public" static="no">
+        <name>EF_I2C_CMDOVF_FLAG</name>
+        <initializer>((uint32_t)0x8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="60" column="9" bodyfile="EF_I2C_regs.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a0c6247440952e214e6ada57c4590d945" prot="public" static="no">
+        <name>EF_I2C_WRE_FLAG</name>
+        <initializer>((uint32_t)0x10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="61" column="9" bodyfile="EF_I2C_regs.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1aaa5350b7f90f9759da9c012b264e10b7" prot="public" static="no">
+        <name>EF_I2C_WRF_FLAG</name>
+        <initializer>((uint32_t)0x20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="62" column="9" bodyfile="EF_I2C_regs.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1ac9b74b802468935191e3bb131f701712" prot="public" static="no">
+        <name>EF_I2C_WROVF_FLAG</name>
+        <initializer>((uint32_t)0x40)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="63" column="9" bodyfile="EF_I2C_regs.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a6962145e677bc44cd92a61a3b8bda194" prot="public" static="no">
+        <name>EF_I2C_RDE_FLAG</name>
+        <initializer>((uint32_t)0x80)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="64" column="9" bodyfile="EF_I2C_regs.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___i2_c__regs_8h_1a5ab5f89051e51377123174626c98cba9" prot="public" static="no">
+        <name>EF_I2C_RDF_FLAG</name>
+        <initializer>((uint32_t)0x100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="65" column="9" bodyfile="EF_I2C_regs.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" prot="public" static="no">
+        <type>struct <ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">_EF_I2C_TYPE_</ref></type>
+        <definition>typedef struct _EF_I2C_TYPE_ EF_I2C_TYPE</definition>
+        <argsstring></argsstring>
+        <name>EF_I2C_TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="82" column="13"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_e_f___i2_c__regs_8h_1affb413da2854fa5bbd6d42b9b0c4e73f" prot="public" static="no">
+        <type><ref refid="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" kindref="member">EF_I2C_TYPE</ref> *</type>
+        <definition>typedef EF_I2C_TYPE* EF_I2C_PTR</definition>
+        <argsstring></argsstring>
+        <name>EF_I2C_PTR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_I2C_regs.h" line="85" column="22" bodyfile="EF_I2C_regs.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>2024<sp/>Mohamed<sp/>Shalan</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Mohamed<sp/>Shalan<sp/>(mshalan@efabless.com)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EF_I2CREGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2CREGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>Includes</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_e_f___driver___common_8h" kindref="compound">EF_Driver_Common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>Macros<sp/>and<sp/>Constants</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IO_TYPES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="_e_f___i2_c__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_TYPES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>__R<sp/><sp/><sp/><sp/><sp/>volatile<sp/>const<sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>__W<sp/><sp/><sp/><sp/><sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="_e_f___i2_c__regs_8h_1a81f369079976a46554fd9798ab035697" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>__RW<sp/><sp/><sp/><sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_e_f___i2_c__regs_8h_1a1bceef95d7131b66c7ffa2800519f326" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_e_f___i2_c__regs_8h_1a8db27e3e6180e108c2c4a5604c244e1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x7f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_e_f___i2_c__regs_8h_1a37c7a7e1a9c95bbd1c6d6bde3c4f513d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_START_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_e_f___i2_c__regs_8h_1a57898082e7f89df311756096cf82b53a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_START_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="_e_f___i2_c__regs_8h_1a82e325da6b9a90086de4dc4afdd087cb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_READ_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)9)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_e_f___i2_c__regs_8h_1a9d1da55d246f79075a4e4d21c8f075fa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_READ_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x200)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_e_f___i2_c__regs_8h_1abb825fdfd772c531d966a36569076993" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_e_f___i2_c__regs_8h_1a61732106db243022783f6498c65d3583" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x400)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="_e_f___i2_c__regs_8h_1a1ce068cc21a8dd04853eca8fafa86e8b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)11)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="_e_f___i2_c__regs_8h_1a4f3157f848946db64740fb331db483cb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK<sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x800)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_e_f___i2_c__regs_8h_1a5dd2e00cae19e862ca6e50b32d28af0f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_STOP_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)12)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="_e_f___i2_c__regs_8h_1a49de998bf6fc603985ece7d4b5f1a2a8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_COMMAND_REG_CMD_STOP_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="_e_f___i2_c__regs_8h_1aba38352530617be5adc5880991d82e1e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="_e_f___i2_c__regs_8h_1a11522682dcda2538dfd16ad350ff00bc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0xff)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="_e_f___i2_c__regs_8h_1a9bd367f94dd56d4da68fd7d01b4b03ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_VALID_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_e_f___i2_c__regs_8h_1a43093f7f9657aa84c882e41024d2086b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_VALID_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_e_f___i2_c__regs_8h_1a6988500ab62cd3c3c68c94cab9cdd1d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_LAST_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)9)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="_e_f___i2_c__regs_8h_1a7f3b7a8f8a3ac82a0846217c396a68cf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_DATA_REG_DATA_LAST_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x200)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_e_f___i2_c__regs_8h_1a617f1961f9590113149c57a24528d9f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_MISS_ACK_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_e_f___i2_c__regs_8h_1af6390e411dd903baf932fe1b8891a2f1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_CMDE_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="_e_f___i2_c__regs_8h_1a0766ab0a3fdf37163804418f660e53c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_CMDF_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_e_f___i2_c__regs_8h_1a563328ef60c9eb97dbc11abdf58dcb83" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_CMDOVF_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="_e_f___i2_c__regs_8h_1a0c6247440952e214e6ada57c4590d945" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_WRE_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_e_f___i2_c__regs_8h_1aaa5350b7f90f9759da9c012b264e10b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_WRF_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x20)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_e_f___i2_c__regs_8h_1ac9b74b802468935191e3bb131f701712" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_WROVF_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x40)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_e_f___i2_c__regs_8h_1a6962145e677bc44cd92a61a3b8bda194" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_RDE_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x80)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_e_f___i2_c__regs_8h_1a5ab5f89051e51377123174626c98cba9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_I2C_RDF_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">*<sp/>Typedefs<sp/>and<sp/>Enums</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="struct___e_f___i2_c___t_y_p_e__" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">_EF_I2C_TYPE_</ref><sp/>{</highlight></codeline>
+<codeline lineno="72" refid="struct___e_f___i2_c___t_y_p_e___1a8b611d8a980d59a5749bb66fb7fd1b29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1a8b611d8a980d59a5749bb66fb7fd1b29" kindref="member">STATUS</ref>;</highlight></codeline>
+<codeline lineno="73" refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref>;</highlight></codeline>
+<codeline lineno="74" refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" kindref="member">DATA</ref>;</highlight></codeline>
+<codeline lineno="75" refid="struct___e_f___i2_c___t_y_p_e___1a8c9e5bd31504ac9b8fe8bda91850597c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1a8c9e5bd31504ac9b8fe8bda91850597c" kindref="member">PR</ref>;</highlight></codeline>
+<codeline lineno="76" refid="struct___e_f___i2_c___t_y_p_e___1ac714b19e4609e62b11da82c1f829a7d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1ac714b19e4609e62b11da82c1f829a7d6" kindref="member">reserved_1</ref>[16316];</highlight></codeline>
+<codeline lineno="77" refid="struct___e_f___i2_c___t_y_p_e___1a7503b5affe705e7cfd968a31ca9ad7a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1a7503b5affe705e7cfd968a31ca9ad7a3" kindref="member">IM</ref>;</highlight></codeline>
+<codeline lineno="78" refid="struct___e_f___i2_c___t_y_p_e___1a0f2c90771caed07ebcc3cae40508b5df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1a0f2c90771caed07ebcc3cae40508b5df" kindref="member">MIS</ref>;</highlight></codeline>
+<codeline lineno="79" refid="struct___e_f___i2_c___t_y_p_e___1ad256d7e50338d33da8a41c98d9766be4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1ad256d7e50338d33da8a41c98d9766be4" kindref="member">RIS</ref>;</highlight></codeline>
+<codeline lineno="80" refid="struct___e_f___i2_c___t_y_p_e___1a886b8d6fbc8f06cdf662de460ec04825" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1a886b8d6fbc8f06cdf662de460ec04825" kindref="member">reserved_2</ref>;</highlight></codeline>
+<codeline lineno="81" refid="struct___e_f___i2_c___t_y_p_e___1a16243abba225c900732085b8ea82f943" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___i2_c___t_y_p_e___1a16243abba225c900732085b8ea82f943" kindref="member">GCLK</ref>;</highlight></codeline>
+<codeline lineno="82" refid="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" refkind="member"><highlight class="normal">}<sp/><ref refid="_e_f___i2_c__regs_8h_1ab0d3f158914422e7299a70fcd51e6141" kindref="member">EF_I2C_TYPE</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_e_f___i2_c__regs_8h_1affb413da2854fa5bbd6d42b9b0c4e73f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE</ref><sp/>*<sp/><ref refid="_e_f___i2_c__regs_8h_1affb413da2854fa5bbd6d42b9b0c4e73f" kindref="member">EF_I2C_PTR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>EF_I2C_PTR<sp/>is<sp/>a<sp/>pointer<sp/>to<sp/>a<sp/>structure<sp/>of<sp/>type<sp/>EF_I2C_TYPE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">*<sp/>Function<sp/>Prototypes</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EF_I2CREGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">******************************************************************************/</highlight></codeline>
+    </programlisting>
+    <location file="EF_I2C_regs.h"/>
+  </compounddef>
+</doxygen>

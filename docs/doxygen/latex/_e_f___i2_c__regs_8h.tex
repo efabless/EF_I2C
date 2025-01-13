@@ -1,0 +1,284 @@
+\hypertarget{_e_f___i2_c__regs_8h}{}\doxysection{EF\+\_\+\+I2\+C\+\_\+regs.\+h File Reference}
+\label{_e_f___i2_c__regs_8h}\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+{\ttfamily \#include \char`\"{}EF\+\_\+\+Driver\+\_\+\+Common.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{\+\_\+\+EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a470cd5845bed94d8b8b358933e4a3442}{IO\+\_\+\+TYPES}}
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\+\_\+\+\_\+R}}~volatile const uint32\+\_\+t
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\+\_\+\+\_\+W}}~volatile       uint32\+\_\+t
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a81f369079976a46554fd9798ab035697}{\+\_\+\+\_\+\+RW}}~volatile       uint32\+\_\+t
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a1bceef95d7131b66c7ffa2800519f326}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+ADDRESS\+\_\+\+BIT}}~((uint32\+\_\+t)0)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a8db27e3e6180e108c2c4a5604c244e1c}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+ADDRESS\+\_\+\+MASK}}~((uint32\+\_\+t)0x7f)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a37c7a7e1a9c95bbd1c6d6bde3c4f513d}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+START\+\_\+\+BIT}}~((uint32\+\_\+t)8)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a57898082e7f89df311756096cf82b53a}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+START\+\_\+\+MASK}}~((uint32\+\_\+t)0x100)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a82e325da6b9a90086de4dc4afdd087cb}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+READ\+\_\+\+BIT}}~((uint32\+\_\+t)9)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a9d1da55d246f79075a4e4d21c8f075fa}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+READ\+\_\+\+MASK}}~((uint32\+\_\+t)0x200)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_abb825fdfd772c531d966a36569076993}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+BIT}}~((uint32\+\_\+t)10)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a61732106db243022783f6498c65d3583}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+MASK}}~((uint32\+\_\+t)0x400)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a1ce068cc21a8dd04853eca8fafa86e8b}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+MULTIPLE\+\_\+\+BIT}}~((uint32\+\_\+t)11)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a4f3157f848946db64740fb331db483cb}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+MULTIPLE\+\_\+\+MASK}}~((uint32\+\_\+t)0x800)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a5dd2e00cae19e862ca6e50b32d28af0f}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+STOP\+\_\+\+BIT}}~((uint32\+\_\+t)12)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a49de998bf6fc603985ece7d4b5f1a2a8}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+STOP\+\_\+\+MASK}}~((uint32\+\_\+t)0x1000)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_aba38352530617be5adc5880991d82e1e}{EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+BIT}}~((uint32\+\_\+t)0)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a11522682dcda2538dfd16ad350ff00bc}{EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+MASK}}~((uint32\+\_\+t)0xff)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a9bd367f94dd56d4da68fd7d01b4b03ef}{EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+VALID\+\_\+\+BIT}}~((uint32\+\_\+t)8)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a43093f7f9657aa84c882e41024d2086b}{EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+VALID\+\_\+\+MASK}}~((uint32\+\_\+t)0x100)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a6988500ab62cd3c3c68c94cab9cdd1d4}{EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+LAST\+\_\+\+BIT}}~((uint32\+\_\+t)9)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a7f3b7a8f8a3ac82a0846217c396a68cf}{EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+LAST\+\_\+\+MASK}}~((uint32\+\_\+t)0x200)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a617f1961f9590113149c57a24528d9f3}{EF\+\_\+\+I2\+C\+\_\+\+MISS\+\_\+\+ACK\+\_\+\+FLAG}}~((uint32\+\_\+t)0x1)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_af6390e411dd903baf932fe1b8891a2f1}{EF\+\_\+\+I2\+C\+\_\+\+CMDE\+\_\+\+FLAG}}~((uint32\+\_\+t)0x2)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a0766ab0a3fdf37163804418f660e53c6}{EF\+\_\+\+I2\+C\+\_\+\+CMDF\+\_\+\+FLAG}}~((uint32\+\_\+t)0x4)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a563328ef60c9eb97dbc11abdf58dcb83}{EF\+\_\+\+I2\+C\+\_\+\+CMDOVF\+\_\+\+FLAG}}~((uint32\+\_\+t)0x8)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a0c6247440952e214e6ada57c4590d945}{EF\+\_\+\+I2\+C\+\_\+\+WRE\+\_\+\+FLAG}}~((uint32\+\_\+t)0x10)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_aaa5350b7f90f9759da9c012b264e10b7}{EF\+\_\+\+I2\+C\+\_\+\+WRF\+\_\+\+FLAG}}~((uint32\+\_\+t)0x20)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_ac9b74b802468935191e3bb131f701712}{EF\+\_\+\+I2\+C\+\_\+\+WROVF\+\_\+\+FLAG}}~((uint32\+\_\+t)0x40)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a6962145e677bc44cd92a61a3b8bda194}{EF\+\_\+\+I2\+C\+\_\+\+RDE\+\_\+\+FLAG}}~((uint32\+\_\+t)0x80)
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c__regs_8h_a5ab5f89051e51377123174626c98cba9}{EF\+\_\+\+I2\+C\+\_\+\+RDF\+\_\+\+FLAG}}~((uint32\+\_\+t)0x100)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{\+\_\+\+EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+}} \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}}
+\item 
+typedef \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} $\ast$ \mbox{\hyperlink{_e_f___i2_c__regs_8h_affb413da2854fa5bbd6d42b9b0c4e73f}{EF\+\_\+\+I2\+C\+\_\+\+PTR}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_aef00c279597b188e4cdd14d288ddf77a}\label{_e_f___i2_c__regs_8h_aef00c279597b188e4cdd14d288ddf77a}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!\_\_R@{\_\_R}}
+\index{\_\_R@{\_\_R}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{\_\_R}{\_\_R}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+R~volatile const uint32\+\_\+t}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a81f369079976a46554fd9798ab035697}\label{_e_f___i2_c__regs_8h_a81f369079976a46554fd9798ab035697}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!\_\_RW@{\_\_RW}}
+\index{\_\_RW@{\_\_RW}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{\_\_RW}{\_\_RW}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+RW~volatile       uint32\+\_\+t}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}\label{_e_f___i2_c__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!\_\_W@{\_\_W}}
+\index{\_\_W@{\_\_W}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{\_\_W}{\_\_W}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+W~volatile       uint32\+\_\+t}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_af6390e411dd903baf932fe1b8891a2f1}\label{_e_f___i2_c__regs_8h_af6390e411dd903baf932fe1b8891a2f1}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_CMDE\_FLAG@{EF\_I2C\_CMDE\_FLAG}}
+\index{EF\_I2C\_CMDE\_FLAG@{EF\_I2C\_CMDE\_FLAG}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_CMDE\_FLAG}{EF\_I2C\_CMDE\_FLAG}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+CMDE\+\_\+\+FLAG~((uint32\+\_\+t)0x2)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a0766ab0a3fdf37163804418f660e53c6}\label{_e_f___i2_c__regs_8h_a0766ab0a3fdf37163804418f660e53c6}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_CMDF\_FLAG@{EF\_I2C\_CMDF\_FLAG}}
+\index{EF\_I2C\_CMDF\_FLAG@{EF\_I2C\_CMDF\_FLAG}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_CMDF\_FLAG}{EF\_I2C\_CMDF\_FLAG}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+CMDF\+\_\+\+FLAG~((uint32\+\_\+t)0x4)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a563328ef60c9eb97dbc11abdf58dcb83}\label{_e_f___i2_c__regs_8h_a563328ef60c9eb97dbc11abdf58dcb83}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_CMDOVF\_FLAG@{EF\_I2C\_CMDOVF\_FLAG}}
+\index{EF\_I2C\_CMDOVF\_FLAG@{EF\_I2C\_CMDOVF\_FLAG}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_CMDOVF\_FLAG}{EF\_I2C\_CMDOVF\_FLAG}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+CMDOVF\+\_\+\+FLAG~((uint32\+\_\+t)0x8)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a1bceef95d7131b66c7ffa2800519f326}\label{_e_f___i2_c__regs_8h_a1bceef95d7131b66c7ffa2800519f326}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT}{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_BIT}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+ADDRESS\+\_\+\+BIT~((uint32\+\_\+t)0)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a8db27e3e6180e108c2c4a5604c244e1c}\label{_e_f___i2_c__regs_8h_a8db27e3e6180e108c2c4a5604c244e1c}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK}{EF\_I2C\_COMMAND\_REG\_CMD\_ADDRESS\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+ADDRESS\+\_\+\+MASK~((uint32\+\_\+t)0x7f)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a82e325da6b9a90086de4dc4afdd087cb}\label{_e_f___i2_c__regs_8h_a82e325da6b9a90086de4dc4afdd087cb}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT}{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_BIT}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+READ\+\_\+\+BIT~((uint32\+\_\+t)9)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a9d1da55d246f79075a4e4d21c8f075fa}\label{_e_f___i2_c__regs_8h_a9d1da55d246f79075a4e4d21c8f075fa}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK}{EF\_I2C\_COMMAND\_REG\_CMD\_READ\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+READ\+\_\+\+MASK~((uint32\+\_\+t)0x200)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a37c7a7e1a9c95bbd1c6d6bde3c4f513d}\label{_e_f___i2_c__regs_8h_a37c7a7e1a9c95bbd1c6d6bde3c4f513d}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT}{EF\_I2C\_COMMAND\_REG\_CMD\_START\_BIT}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+START\+\_\+\+BIT~((uint32\+\_\+t)8)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a57898082e7f89df311756096cf82b53a}\label{_e_f___i2_c__regs_8h_a57898082e7f89df311756096cf82b53a}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK}{EF\_I2C\_COMMAND\_REG\_CMD\_START\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+START\+\_\+\+MASK~((uint32\+\_\+t)0x100)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a5dd2e00cae19e862ca6e50b32d28af0f}\label{_e_f___i2_c__regs_8h_a5dd2e00cae19e862ca6e50b32d28af0f}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT}{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_BIT}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+STOP\+\_\+\+BIT~((uint32\+\_\+t)12)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a49de998bf6fc603985ece7d4b5f1a2a8}\label{_e_f___i2_c__regs_8h_a49de998bf6fc603985ece7d4b5f1a2a8}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK}{EF\_I2C\_COMMAND\_REG\_CMD\_STOP\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+STOP\+\_\+\+MASK~((uint32\+\_\+t)0x1000)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_abb825fdfd772c531d966a36569076993}\label{_e_f___i2_c__regs_8h_abb825fdfd772c531d966a36569076993}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT}{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_BIT}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+BIT~((uint32\+\_\+t)10)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a61732106db243022783f6498c65d3583}\label{_e_f___i2_c__regs_8h_a61732106db243022783f6498c65d3583}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK}{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+MASK~((uint32\+\_\+t)0x400)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a1ce068cc21a8dd04853eca8fafa86e8b}\label{_e_f___i2_c__regs_8h_a1ce068cc21a8dd04853eca8fafa86e8b}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT@{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT}{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_BIT}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+MULTIPLE\+\_\+\+BIT~((uint32\+\_\+t)11)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a4f3157f848946db64740fb331db483cb}\label{_e_f___i2_c__regs_8h_a4f3157f848946db64740fb331db483cb}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK}{EF\_I2C\_COMMAND\_REG\_CMD\_WRITE\_MULTIPLE\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+WRITE\+\_\+\+MULTIPLE\+\_\+\+MASK~((uint32\+\_\+t)0x800)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_aba38352530617be5adc5880991d82e1e}\label{_e_f___i2_c__regs_8h_aba38352530617be5adc5880991d82e1e}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_DATA\_REG\_DATA\_BIT@{EF\_I2C\_DATA\_REG\_DATA\_BIT}}
+\index{EF\_I2C\_DATA\_REG\_DATA\_BIT@{EF\_I2C\_DATA\_REG\_DATA\_BIT}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_DATA\_REG\_DATA\_BIT}{EF\_I2C\_DATA\_REG\_DATA\_BIT}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+BIT~((uint32\+\_\+t)0)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a6988500ab62cd3c3c68c94cab9cdd1d4}\label{_e_f___i2_c__regs_8h_a6988500ab62cd3c3c68c94cab9cdd1d4}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT@{EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT}}
+\index{EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT@{EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT}{EF\_I2C\_DATA\_REG\_DATA\_LAST\_BIT}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+LAST\+\_\+\+BIT~((uint32\+\_\+t)9)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a7f3b7a8f8a3ac82a0846217c396a68cf}\label{_e_f___i2_c__regs_8h_a7f3b7a8f8a3ac82a0846217c396a68cf}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK@{EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK}}
+\index{EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK@{EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK}{EF\_I2C\_DATA\_REG\_DATA\_LAST\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+LAST\+\_\+\+MASK~((uint32\+\_\+t)0x200)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a11522682dcda2538dfd16ad350ff00bc}\label{_e_f___i2_c__regs_8h_a11522682dcda2538dfd16ad350ff00bc}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_DATA\_REG\_DATA\_MASK@{EF\_I2C\_DATA\_REG\_DATA\_MASK}}
+\index{EF\_I2C\_DATA\_REG\_DATA\_MASK@{EF\_I2C\_DATA\_REG\_DATA\_MASK}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_DATA\_REG\_DATA\_MASK}{EF\_I2C\_DATA\_REG\_DATA\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+MASK~((uint32\+\_\+t)0xff)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a9bd367f94dd56d4da68fd7d01b4b03ef}\label{_e_f___i2_c__regs_8h_a9bd367f94dd56d4da68fd7d01b4b03ef}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT@{EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT}}
+\index{EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT@{EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT}{EF\_I2C\_DATA\_REG\_DATA\_VALID\_BIT}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+VALID\+\_\+\+BIT~((uint32\+\_\+t)8)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a43093f7f9657aa84c882e41024d2086b}\label{_e_f___i2_c__regs_8h_a43093f7f9657aa84c882e41024d2086b}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK@{EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK}}
+\index{EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK@{EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK}{EF\_I2C\_DATA\_REG\_DATA\_VALID\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+DATA\+\_\+\+REG\+\_\+\+DATA\+\_\+\+VALID\+\_\+\+MASK~((uint32\+\_\+t)0x100)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a617f1961f9590113149c57a24528d9f3}\label{_e_f___i2_c__regs_8h_a617f1961f9590113149c57a24528d9f3}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_MISS\_ACK\_FLAG@{EF\_I2C\_MISS\_ACK\_FLAG}}
+\index{EF\_I2C\_MISS\_ACK\_FLAG@{EF\_I2C\_MISS\_ACK\_FLAG}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_MISS\_ACK\_FLAG}{EF\_I2C\_MISS\_ACK\_FLAG}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+MISS\+\_\+\+ACK\+\_\+\+FLAG~((uint32\+\_\+t)0x1)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a6962145e677bc44cd92a61a3b8bda194}\label{_e_f___i2_c__regs_8h_a6962145e677bc44cd92a61a3b8bda194}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_RDE\_FLAG@{EF\_I2C\_RDE\_FLAG}}
+\index{EF\_I2C\_RDE\_FLAG@{EF\_I2C\_RDE\_FLAG}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_RDE\_FLAG}{EF\_I2C\_RDE\_FLAG}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+RDE\+\_\+\+FLAG~((uint32\+\_\+t)0x80)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a5ab5f89051e51377123174626c98cba9}\label{_e_f___i2_c__regs_8h_a5ab5f89051e51377123174626c98cba9}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_RDF\_FLAG@{EF\_I2C\_RDF\_FLAG}}
+\index{EF\_I2C\_RDF\_FLAG@{EF\_I2C\_RDF\_FLAG}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_RDF\_FLAG}{EF\_I2C\_RDF\_FLAG}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+RDF\+\_\+\+FLAG~((uint32\+\_\+t)0x100)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a0c6247440952e214e6ada57c4590d945}\label{_e_f___i2_c__regs_8h_a0c6247440952e214e6ada57c4590d945}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_WRE\_FLAG@{EF\_I2C\_WRE\_FLAG}}
+\index{EF\_I2C\_WRE\_FLAG@{EF\_I2C\_WRE\_FLAG}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_WRE\_FLAG}{EF\_I2C\_WRE\_FLAG}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+WRE\+\_\+\+FLAG~((uint32\+\_\+t)0x10)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_aaa5350b7f90f9759da9c012b264e10b7}\label{_e_f___i2_c__regs_8h_aaa5350b7f90f9759da9c012b264e10b7}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_WRF\_FLAG@{EF\_I2C\_WRF\_FLAG}}
+\index{EF\_I2C\_WRF\_FLAG@{EF\_I2C\_WRF\_FLAG}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_WRF\_FLAG}{EF\_I2C\_WRF\_FLAG}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+WRF\+\_\+\+FLAG~((uint32\+\_\+t)0x20)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_ac9b74b802468935191e3bb131f701712}\label{_e_f___i2_c__regs_8h_ac9b74b802468935191e3bb131f701712}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_WROVF\_FLAG@{EF\_I2C\_WROVF\_FLAG}}
+\index{EF\_I2C\_WROVF\_FLAG@{EF\_I2C\_WROVF\_FLAG}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_WROVF\_FLAG}{EF\_I2C\_WROVF\_FLAG}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+WROVF\+\_\+\+FLAG~((uint32\+\_\+t)0x40)}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_a470cd5845bed94d8b8b358933e4a3442}\label{_e_f___i2_c__regs_8h_a470cd5845bed94d8b8b358933e4a3442}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!IO\_TYPES@{IO\_TYPES}}
+\index{IO\_TYPES@{IO\_TYPES}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{IO\_TYPES}{IO\_TYPES}}
+{\footnotesize\ttfamily \#define IO\+\_\+\+TYPES}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_affb413da2854fa5bbd6d42b9b0c4e73f}\label{_e_f___i2_c__regs_8h_affb413da2854fa5bbd6d42b9b0c4e73f}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_PTR@{EF\_I2C\_PTR}}
+\index{EF\_I2C\_PTR@{EF\_I2C\_PTR}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_PTR}{EF\_I2C\_PTR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}}$\ast$ \mbox{\hyperlink{_e_f___i2_c__regs_8h_affb413da2854fa5bbd6d42b9b0c4e73f}{EF\+\_\+\+I2\+C\+\_\+\+PTR}}}
+
+\mbox{\Hypertarget{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}\label{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}} 
+\index{EF\_I2C\_regs.h@{EF\_I2C\_regs.h}!EF\_I2C\_TYPE@{EF\_I2C\_TYPE}}
+\index{EF\_I2C\_TYPE@{EF\_I2C\_TYPE}!EF\_I2C\_regs.h@{EF\_I2C\_regs.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_TYPE}{EF\_I2C\_TYPE}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{\+\_\+\+EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+}} \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}}}
+
