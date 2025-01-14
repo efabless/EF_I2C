@@ -33,147 +33,218 @@
 \DoxyCodeLine{00035\ \textcolor{comment}{/******************************************************************************}}
 \DoxyCodeLine{00036\ \textcolor{comment}{*\ Macros\ and\ Constants}}
 \DoxyCodeLine{00037\ \textcolor{comment}{******************************************************************************/}}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \textcolor{comment}{/******************************************************************************}}
-\DoxyCodeLine{00040\ \textcolor{comment}{*\ Typedefs\ and\ Enums}}
-\DoxyCodeLine{00041\ \textcolor{comment}{******************************************************************************/}}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{comment}{/******************************************************************************}}
-\DoxyCodeLine{00044\ \textcolor{comment}{*\ Function\ Prototypes}}
-\DoxyCodeLine{00045\ \textcolor{comment}{******************************************************************************/}}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00054\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a8cd33e8dde8407bb760d8a9e06548dea}{EF\_I2C\_setGclkEnable}}\ (\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ value);}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00071\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ac8020e16b3158054341ac0bce22d8b7e}{EF\_I2C\_writeToAddress}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ addr,\ \textcolor{keywordtype}{char}\ data);}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK\ 0xFFFFE080}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ EF\_I2C\_PR\_MAX\_VALUE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000FFFF}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ EF\_I2C\_IM\_REG\_MAX\_VALUE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x000001FF}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ EF\_I2C\_IC\_REG\_MAX\_VALUE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x000001FF}}
+\DoxyCodeLine{00042\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ Typedefs\ and\ Enums}}
+\DoxyCodeLine{00044\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00047\ \textcolor{comment}{*\ Function\ Prototypes}}
+\DoxyCodeLine{00048\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a8cd33e8dde8407bb760d8a9e06548dea}{EF\_I2C\_setGclkEnable}}\ (\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ value);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00073\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a2286c60de589dcecb0fc78a48187440b}{EF\_I2C\_setCommandReg}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ value);}
+\DoxyCodeLine{00074\ }
 \DoxyCodeLine{00075\ }
-\DoxyCodeLine{00086\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_af50c9788e5f7dce39b36641ba4dd1abc}{EF\_I2C\_readCommand}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ addr);}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00100\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a8b32d8e6a1cb03a0c948ee85a917c652}{EF\_I2C\_writeAddress}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ addr);}
-\DoxyCodeLine{00101\ }
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00104\ }
-\DoxyCodeLine{00113\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a6bcf2d08643ce620b0f75b980a875a7f}{EF\_I2C\_startCmd}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c);}
-\DoxyCodeLine{00114\ }
-\DoxyCodeLine{00115\ }
-\DoxyCodeLine{00117\ }
-\DoxyCodeLine{00127\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_abd603b15315bef595a6bee15a56c1c99}{EF\_I2C\_readCmd}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ addr);}
-\DoxyCodeLine{00128\ }
-\DoxyCodeLine{00129\ }
-\DoxyCodeLine{00131\ }
-\DoxyCodeLine{00141\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a9c8ce9f9c67bd5ce3e965e1b8c05b437}{EF\_I2C\_writeCmd}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ addr);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00090\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ac5ca754457eaaeeab83e607fd78039e9}{EF\_I2C\_setCommandRegNonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ value,\ \textcolor{keywordtype}{bool}\ *command\_sent);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00106\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a97ff9205de09e49d12dc62eb1acdcf62}{EF\_I2C\_getDataValid}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *data\_valid);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00121\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a20ba0e48023589b93dc8fe15519c5482}{EF\_I2C\_setDataLast}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00137\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a95c96062892f3d3061365eb5d6f83dfe}{EF\_I2C\_getDataLast}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *data\_last);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ }
 \DoxyCodeLine{00142\ }
-\DoxyCodeLine{00143\ }
-\DoxyCodeLine{00145\ }
-\DoxyCodeLine{00154\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ae6094788f5d9a6cf203350161d6a1194}{EF\_I2C\_writeMultipleCmd}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c);}
+\DoxyCodeLine{00153\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a824f4aaa04cf1518f65a558c67172fdd}{EF\_I2C\_setPrescaler}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ value);}
+\DoxyCodeLine{00154\ }
 \DoxyCodeLine{00155\ }
-\DoxyCodeLine{00156\ }
-\DoxyCodeLine{00158\ }
-\DoxyCodeLine{00167\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a67cb25a7e6a9f2f0c4cbda50361f38e9}{EF\_I2C\_stopCmd}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c);}
-\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00168\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a8fa9bab21502620a499c6f943fc69c4c}{EF\_I2C\_getPrescaler}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ prescaler\_value);}
 \DoxyCodeLine{00169\ }
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00182\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a2286c60de589dcecb0fc78a48187440b}{EF\_I2C\_setCommandReg}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ value);}
-\DoxyCodeLine{00183\ }
-\DoxyCodeLine{00184\ }
-\DoxyCodeLine{00186\ }
-\DoxyCodeLine{00196\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_aa76113b5cce43aedb3e34ffe98377210}{EF\_I2C\_getCommandReg}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ command\_value);}
-\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00197\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a8efd0e0e84b49d60edbea6c2513929a5}{EF\_I2C\_getRIS}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ ris\_value);}
 \DoxyCodeLine{00198\ }
-\DoxyCodeLine{00200\ }
-\DoxyCodeLine{00210\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_afb19bc6a6238b42d38eefff40d8b988b}{EF\_I2C\_writeData}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ data);}
-\DoxyCodeLine{00211\ }
-\DoxyCodeLine{00212\ }
-\DoxyCodeLine{00214\ }
-\DoxyCodeLine{00224\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a46ebdd220798a0082da434fc07f4999a}{EF\_I2C\_readData}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ *data);}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00222\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_aa87448a542b497393695dca2acc6d6b8}{EF\_I2C\_getMIS}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ mis\_value);}
+\DoxyCodeLine{00223\ }
 \DoxyCodeLine{00225\ }
-\DoxyCodeLine{00226\ }
-\DoxyCodeLine{00228\ }
-\DoxyCodeLine{00239\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_acf62f06af5f37ae067b6314c5f3f1d0b}{EF\_I2C\_setDataValid}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ valid);}
-\DoxyCodeLine{00240\ }
-\DoxyCodeLine{00242\ }
-\DoxyCodeLine{00254\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a97ff9205de09e49d12dc62eb1acdcf62}{EF\_I2C\_getDataValid}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *data\_valid);}
-\DoxyCodeLine{00255\ }
-\DoxyCodeLine{00256\ }
-\DoxyCodeLine{00258\ }
-\DoxyCodeLine{00269\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a8f157164f51a0ea88e03311615b21ffd}{EF\_I2C\_setDataLast}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ valid);}
-\DoxyCodeLine{00270\ }
-\DoxyCodeLine{00271\ }
-\DoxyCodeLine{00273\ }
-\DoxyCodeLine{00285\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a95c96062892f3d3061365eb5d6f83dfe}{EF\_I2C\_getDataLast}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *data\_last);}
-\DoxyCodeLine{00286\ }
-\DoxyCodeLine{00287\ }
-\DoxyCodeLine{00289\ }
-\DoxyCodeLine{00310\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a3006b2445e7a7419cb1e00e11fea923e}{EF\_I2C\_setDataReg}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ value);}
-\DoxyCodeLine{00311\ }
-\DoxyCodeLine{00312\ }
-\DoxyCodeLine{00314\ }
-\DoxyCodeLine{00331\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a7424199ff032dabdec9b03a8c7e49f0a}{EF\_I2C\_getDataReg}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ data\_reg\_value);}
-\DoxyCodeLine{00332\ }
-\DoxyCodeLine{00333\ }
-\DoxyCodeLine{00335\ }
-\DoxyCodeLine{00346\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a824f4aaa04cf1518f65a558c67172fdd}{EF\_I2C\_setPrescaler}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ value);}
-\DoxyCodeLine{00347\ }
-\DoxyCodeLine{00348\ }
-\DoxyCodeLine{00350\ }
-\DoxyCodeLine{00361\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a8fa9bab21502620a499c6f943fc69c4c}{EF\_I2C\_getPrescaler}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ prescaler\_value);}
-\DoxyCodeLine{00362\ }
-\DoxyCodeLine{00363\ }
-\DoxyCodeLine{00365\ }
-\DoxyCodeLine{00390\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a8efd0e0e84b49d60edbea6c2513929a5}{EF\_I2C\_getRIS}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ ris\_value);}
-\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00247\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ac9a53ca41924b84ebf52d2b659c029c7}{EF\_I2C\_setIM}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ mask);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00273\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ac4509f632d8b0b1157ec42828a957600}{EF\_I2C\_getIM}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ im\_value);}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00278\ \textcolor{comment}{//\ \ \ \ This\ function\ writes\ a\ mask\ value\ to\ the\ interrupt\ clear\ register\ (ICR)\ of\ the\ I2C\ peripheral.\ }}
+\DoxyCodeLine{00279\ \textcolor{comment}{//\ \ \ \ The\ ICR\ register\ is\ used\ to\ clear\ the\ interrupt\ status\ bits.\ Writing\ a\ 1\ to\ a\ bit\ in\ the\ ICR\ }}
+\DoxyCodeLine{00280\ \textcolor{comment}{//\ \ \ \ register\ clears\ the\ corresponding\ interrupt\ status\ bit\ in\ the\ RIS\ register.}}
+\DoxyCodeLine{00281\ \textcolor{comment}{//\ \ \ \ **IM\ Register\ Breakdown**:}}
+\DoxyCodeLine{00282\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 0:\ MISS\_ACK\ -\/\ Slave\ ACK\ is\ missed}}
+\DoxyCodeLine{00283\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 1:\ CMDE\ -\/\ Command\ FIFO\ is\ Empty}}
+\DoxyCodeLine{00284\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 2:\ CMDF\ -\/\ Command\ FIFO\ is\ Full}}
+\DoxyCodeLine{00285\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 3:\ CMDOVF\ -\/\ Command\ FIFO\ overflow;\ write\ 1\ to\ clear}}
+\DoxyCodeLine{00286\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 4:\ WRE\ -\/\ Write\ FIFO\ is\ Empty}}
+\DoxyCodeLine{00287\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 5:\ WRF\ -\/\ Write\ FIFO\ is\ Full}}
+\DoxyCodeLine{00288\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 6:\ WROVF\ -\/\ Write\ FIFO\ overflow;\ write\ 1\ to\ clear}}
+\DoxyCodeLine{00289\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 7:\ RDE\ -\/\ Read\ FIFO\ is\ Empty}}
+\DoxyCodeLine{00290\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 8:\ RDF\ -\/\ Read\ FIFO\ is\ Full}}
+\DoxyCodeLine{00291\ \textcolor{comment}{//\ \ \ \ -\/\ Bits\ [9-\/31]:\ Reserved.}}
+\DoxyCodeLine{00292\ \textcolor{comment}{//\ \ \ \ \(\backslash\)param\ [in]\ i2c\ An\ \(\backslash\)ref\ EF\_I2C\_TYPE\_PTR,\ which\ points\ to\ the\ base\ memory\ address\ of\ I2C\ registers.\ }}
+\DoxyCodeLine{00293\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)ref\ EF\_I2C\_TYPE\ is\ a\ structure\ that\ contains\ the\ I2C\ registers.\ \ \ \ }}
+\DoxyCodeLine{00294\ \textcolor{comment}{//\ \ \ \ \(\backslash\)param\ [in]\ mask\ A\ 32-\/bit\ mask\ value\ to\ be\ written\ to\ the\ ICR\ register.\ Each\ bit\ corresponds\ }}
+\DoxyCodeLine{00295\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ to\ a\ specific\ interrupt\ source,\ with\ 1\ clearing\ the\ interrupt\ status\ and\ 0\ leaving\ it\ unchanged.}}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \textcolor{comment}{//\ \ \ \ \(\backslash\)return\ status\ A\ value\ of\ type\ \(\backslash\)ref\ EF\_DRIVER\_STATUS\ :\ returns\ a\ success\ or\ error\ code}}
+\DoxyCodeLine{00298\ \textcolor{comment}{//*/}}
+\DoxyCodeLine{00299\ \textcolor{comment}{//EF\_DRIVER\_STATUS\ EF\_I2C\_setICR(EF\_I2C\_TYPE\_PTR\ i2c,\ uint32\_t\ mask);}}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \textcolor{comment}{//\ The\ following\ functions\ are\ not\ verified\ yet}}
+\DoxyCodeLine{00303\ \textcolor{comment}{/******************************************************************************************************************************************/}}
+\DoxyCodeLine{00304\ \textcolor{comment}{/******************************************************************************************************************************************/}}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00321\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a69c76d64d9e2e6d29d53026b0fa1055c}{EF\_I2C\_isBusy}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *is\_busy);}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00338\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a14e5de684a330a987584ba5219bf8304}{EF\_I2C\_isCommandFIFOAvailable}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *is\_available);}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00355\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_aba9df55dc50dffa193d8990d9d3354b3}{EF\_I2C\_isWriteFIFOAvailable}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *is\_available);}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00372\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a463bfb817bed4b5d06308211df98c7b4}{EF\_I2C\_isReadFIFOAvailable}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *is\_available);}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00387\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a0403b347e88030457b2681d17780b1e0}{EF\_I2C\_sendWriteCommand}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ addr);}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ }
 \DoxyCodeLine{00392\ }
-\DoxyCodeLine{00394\ }
-\DoxyCodeLine{00415\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_aa87448a542b497393695dca2acc6d6b8}{EF\_I2C\_getMIS}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ mis\_value);}
-\DoxyCodeLine{00416\ }
-\DoxyCodeLine{00418\ }
-\DoxyCodeLine{00440\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ac9a53ca41924b84ebf52d2b659c029c7}{EF\_I2C\_setIM}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t\ mask);}
-\DoxyCodeLine{00441\ }
-\DoxyCodeLine{00442\ }
-\DoxyCodeLine{00444\ }
-\DoxyCodeLine{00466\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ac4509f632d8b0b1157ec42828a957600}{EF\_I2C\_getIM}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ uint32\_t*\ im\_value);}
-\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00404\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ab809b36771601fc4fcc0ebe5b7c3c2b3}{EF\_I2C\_sendWriteCommandNonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ addr,\ \textcolor{keywordtype}{bool}\ *command\_sent);}
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00418\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a5a686c3ed733700ac19aa163b98023c9}{EF\_I2C\_sendReadCommand}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ addr);}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00420\ }
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00435\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a62ef1d56f7cbc0c4fdc66551fbc6f882}{EF\_I2C\_sendReadCommandNonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ addr,\ \textcolor{keywordtype}{bool}\ *command\_sent);}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00440\ }
+\DoxyCodeLine{00448\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ad1fa3cec145bfbd8027e0370137c1b9d}{EF\_I2C\_sendStartCommand}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c);}
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00450\ }
+\DoxyCodeLine{00451\ }
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00464\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a5895919e916705ee1082efade9f1488e}{EF\_I2C\_sendStartCommandNonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *command\_sent);}
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ }
 \DoxyCodeLine{00468\ }
-\DoxyCodeLine{00471\ \textcolor{comment}{//\ \ \ \ This\ function\ writes\ a\ mask\ value\ to\ the\ interrupt\ clear\ register\ (ICR)\ of\ the\ I2C\ peripheral.\ }}
-\DoxyCodeLine{00472\ \textcolor{comment}{//\ \ \ \ The\ ICR\ register\ is\ used\ to\ clear\ the\ interrupt\ status\ bits.\ Writing\ a\ 1\ to\ a\ bit\ in\ the\ ICR\ }}
-\DoxyCodeLine{00473\ \textcolor{comment}{//\ \ \ \ register\ clears\ the\ corresponding\ interrupt\ status\ bit\ in\ the\ RIS\ register.}}
-\DoxyCodeLine{00474\ \textcolor{comment}{//\ \ \ \ **IM\ Register\ Breakdown**:}}
-\DoxyCodeLine{00475\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 0:\ MISS\_ACK\ -\/\ Slave\ ACK\ is\ missed}}
-\DoxyCodeLine{00476\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 1:\ CMDE\ -\/\ Command\ FIFO\ is\ Empty}}
-\DoxyCodeLine{00477\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 2:\ CMDF\ -\/\ Command\ FIFO\ is\ Full}}
-\DoxyCodeLine{00478\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 3:\ CMDOVF\ -\/\ Command\ FIFO\ overflow;\ write\ 1\ to\ clear}}
-\DoxyCodeLine{00479\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 4:\ WRE\ -\/\ Write\ FIFO\ is\ Empty}}
-\DoxyCodeLine{00480\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 5:\ WRF\ -\/\ Write\ FIFO\ is\ Full}}
-\DoxyCodeLine{00481\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 6:\ WROVF\ -\/\ Write\ FIFO\ overflow;\ write\ 1\ to\ clear}}
-\DoxyCodeLine{00482\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 7:\ RDE\ -\/\ Read\ FIFO\ is\ Empty}}
-\DoxyCodeLine{00483\ \textcolor{comment}{//\ \ \ \ -\/\ Bit\ 8:\ RDF\ -\/\ Read\ FIFO\ is\ Full}}
-\DoxyCodeLine{00484\ \textcolor{comment}{//\ \ \ \ -\/\ Bits\ [9-\/31]:\ Reserved.}}
-\DoxyCodeLine{00485\ \textcolor{comment}{//\ \ \ \ \(\backslash\)param\ [in]\ i2c\ An\ \(\backslash\)ref\ EF\_I2C\_TYPE\_PTR,\ which\ points\ to\ the\ base\ memory\ address\ of\ I2C\ registers.\ }}
-\DoxyCodeLine{00486\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)ref\ EF\_I2C\_TYPE\ is\ a\ structure\ that\ contains\ the\ I2C\ registers.\ \ \ \ }}
-\DoxyCodeLine{00487\ \textcolor{comment}{//\ \ \ \ \(\backslash\)param\ [in]\ mask\ A\ 32-\/bit\ mask\ value\ to\ be\ written\ to\ the\ ICR\ register.\ Each\ bit\ corresponds\ }}
-\DoxyCodeLine{00488\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ to\ a\ specific\ interrupt\ source,\ with\ 1\ clearing\ the\ interrupt\ status\ and\ 0\ leaving\ it\ unchanged.}}
-\DoxyCodeLine{00489\ }
-\DoxyCodeLine{00490\ \textcolor{comment}{//\ \ \ \ \(\backslash\)return\ status\ A\ value\ of\ type\ \(\backslash\)ref\ EF\_DRIVER\_STATUS\ :\ returns\ a\ success\ or\ error\ code}}
-\DoxyCodeLine{00491\ \textcolor{comment}{//*/}}
-\DoxyCodeLine{00492\ \textcolor{comment}{//EF\_DRIVER\_STATUS\ EF\_I2C\_setICR(EF\_I2C\_TYPE\_PTR\ i2c,\ uint32\_t\ mask);}}
+\DoxyCodeLine{00476\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a4545f7e33e2e35e7b100b6f3857433bd}{EF\_I2C\_sendStopCommand}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c);}
+\DoxyCodeLine{00477\ }
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ }
+\DoxyCodeLine{00481\ }
+\DoxyCodeLine{00492\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_adc35bddf018b22d9f822442360d9a1e5}{EF\_I2C\_sendStopCommandNonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *command\_sent);}
 \DoxyCodeLine{00493\ }
 \DoxyCodeLine{00494\ }
-\DoxyCodeLine{00495\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a032dfe3e03b164ccf42871ea66fe2fc9}{EF\_I2C\_waitBusy}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c);}
-\DoxyCodeLine{00496\ \textcolor{comment}{/******************************************************************************}}
-\DoxyCodeLine{00497\ \textcolor{comment}{*\ External\ Variables}}
-\DoxyCodeLine{00498\ \textcolor{comment}{******************************************************************************/}}
-\DoxyCodeLine{00499\ }
-\DoxyCodeLine{00500\ }
-\DoxyCodeLine{00501\ }
-\DoxyCodeLine{00502\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EF\_I2C\_H}}
-\DoxyCodeLine{00503\ }
-\DoxyCodeLine{00504\ \textcolor{comment}{/******************************************************************************}}
-\DoxyCodeLine{00505\ \textcolor{comment}{*\ End\ of\ File}}
-\DoxyCodeLine{00506\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00497\ }
+\DoxyCodeLine{00505\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a8016d94edabbc9e56aa8632d81f93a4e}{EF\_I2C\_sendWriteMultipleCommand}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c);}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00510\ }
+\DoxyCodeLine{00521\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_aebf50811caef2dbdd664a60ade5c0514}{EF\_I2C\_sendWriteMultipleCommandNonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{bool}\ *command\_sent);}
+\DoxyCodeLine{00522\ }
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00533\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a976c6f1e98d2dfbf0cc9bf31bab0b110}{EF\_I2C\_writeDataToWriteFIFO}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ data);}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00537\ }
+\DoxyCodeLine{00549\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a5908b86c6c3a5c276472e1a70fadbbd4}{EF\_I2C\_writeDataToWriteFIFONonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ data,\ \textcolor{keywordtype}{bool}\ *data\_written);}
+\DoxyCodeLine{00550\ }
+\DoxyCodeLine{00551\ }
+\DoxyCodeLine{00552\ }
+\DoxyCodeLine{00554\ }
+\DoxyCodeLine{00566\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_ac2d5590e0da84534bca5496836811664}{EF\_I2C\_readDataFromReadFIFO}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ *data);}
+\DoxyCodeLine{00567\ }
+\DoxyCodeLine{00568\ }
+\DoxyCodeLine{00569\ }
+\DoxyCodeLine{00571\ }
+\DoxyCodeLine{00586\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a1c701c4aecb1bc623f530674337ba608}{EF\_I2C\_readDataFromReadFIFONonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ *data,\ \textcolor{keywordtype}{bool}\ *data\_read);}
+\DoxyCodeLine{00587\ }
+\DoxyCodeLine{00588\ }
+\DoxyCodeLine{00590\ }
+\DoxyCodeLine{00600\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a756e2b744dadf6851b99c5c2cf163938}{EF\_I2C\_transmitByte}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ data,\ \textcolor{keywordtype}{char}\ addr);}
+\DoxyCodeLine{00601\ }
+\DoxyCodeLine{00602\ }
+\DoxyCodeLine{00603\ }
+\DoxyCodeLine{00605\ }
+\DoxyCodeLine{00619\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_acbe3b21327e821e4a28f9db978e6eaaa}{EF\_I2C\_transmitByteNonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ data,\ \textcolor{keywordtype}{char}\ addr,\ \textcolor{keywordtype}{bool}\ *transmitted);}
+\DoxyCodeLine{00620\ }
+\DoxyCodeLine{00621\ }
+\DoxyCodeLine{00622\ }
+\DoxyCodeLine{00624\ }
+\DoxyCodeLine{00634\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a60288fe0351fce34b2872e31f1c9951b}{EF\_I2C\_receiveByte}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ *data,\ \textcolor{keywordtype}{char}\ addr);}
+\DoxyCodeLine{00635\ }
+\DoxyCodeLine{00636\ }
+\DoxyCodeLine{00638\ }
+\DoxyCodeLine{00652\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a1789020facae10eb7788fae74ccc3bc8}{EF\_I2C\_receiveByteNonBlocking}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ *data,\ \textcolor{keywordtype}{char}\ addr,\ \textcolor{keywordtype}{bool}\ *received);}
+\DoxyCodeLine{00653\ }
+\DoxyCodeLine{00654\ }
+\DoxyCodeLine{00656\ }
+\DoxyCodeLine{00667\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a4b3ffb782170b3f8a621ad3ca9fade8e}{EF\_I2C\_transmitCharArr}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ *data,\ uint32\_t\ data\_length,\ \textcolor{keywordtype}{char}\ addr);}
+\DoxyCodeLine{00668\ }
+\DoxyCodeLine{00669\ }
+\DoxyCodeLine{00671\ }
+\DoxyCodeLine{00683\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___i2_c_8h_a774873c939f5d172d92a6587298deb5d}{EF\_I2C\_recieveCharArr}}(\mbox{\hyperlink{struct___e_f___i2_c___t_y_p_e__}{EF\_I2C\_TYPE\_PTR}}\ i2c,\ \textcolor{keywordtype}{char}\ *data,\ uint32\_t\ data\_length,\ \textcolor{keywordtype}{char}\ addr);}
+\DoxyCodeLine{00684\ }
+\DoxyCodeLine{00685\ }
+\DoxyCodeLine{00686\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00687\ \textcolor{comment}{*\ External\ Variables}}
+\DoxyCodeLine{00688\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00689\ }
+\DoxyCodeLine{00690\ }
+\DoxyCodeLine{00691\ }
+\DoxyCodeLine{00692\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EF\_I2C\_H}}
+\DoxyCodeLine{00693\ }
+\DoxyCodeLine{00694\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00695\ \textcolor{comment}{*\ End\ of\ File}}
+\DoxyCodeLine{00696\ \textcolor{comment}{******************************************************************************/}}
 
 \end{DoxyCode}

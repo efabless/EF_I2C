@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="72" column="9" bodyfile="EF_I2C_regs.h" bodystart="72" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="97" column="9" bodyfile="EF_I2C_regs.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" prot="public" static="no" mutable="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="73" column="5" bodyfile="EF_I2C_regs.h" bodystart="73" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="98" column="9" bodyfile="EF_I2C_regs.h" bodystart="98" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" prot="public" static="no" mutable="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="74" column="9" bodyfile="EF_I2C_regs.h" bodystart="74" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="99" column="13" bodyfile="EF_I2C_regs.h" bodystart="99" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a8c9e5bd31504ac9b8fe8bda91850597c" prot="public" static="no" mutable="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="75" column="13" bodyfile="EF_I2C_regs.h" bodystart="75" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="100" column="13" bodyfile="EF_I2C_regs.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1ac714b19e4609e62b11da82c1f829a7d6" prot="public" static="no" mutable="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="76" column="13" bodyfile="EF_I2C_regs.h" bodystart="76" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="101" column="13" bodyfile="EF_I2C_regs.h" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a7503b5affe705e7cfd968a31ca9ad7a3" prot="public" static="no" mutable="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref></type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="77" column="5" bodyfile="EF_I2C_regs.h" bodystart="77" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="102" column="9" bodyfile="EF_I2C_regs.h" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a0f2c90771caed07ebcc3cae40508b5df" prot="public" static="no" mutable="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="78" column="5" bodyfile="EF_I2C_regs.h" bodystart="78" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="103" column="9" bodyfile="EF_I2C_regs.h" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1ad256d7e50338d33da8a41c98d9766be4" prot="public" static="no" mutable="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="79" column="5" bodyfile="EF_I2C_regs.h" bodystart="79" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="104" column="9" bodyfile="EF_I2C_regs.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a886b8d6fbc8f06cdf662de460ec04825" prot="public" static="no" mutable="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="80" column="9" bodyfile="EF_I2C_regs.h" bodystart="80" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="105" column="13" bodyfile="EF_I2C_regs.h" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct___e_f___i2_c___t_y_p_e___1a16243abba225c900732085b8ea82f943" prot="public" static="no" mutable="no">
         <type><ref refid="_e_f___i2_c__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
@@ -142,14 +142,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_I2C_regs.h" line="81" column="5" bodyfile="EF_I2C_regs.h" bodystart="81" bodyend="-1"/>
+        <location file="EF_I2C_regs.h" line="106" column="9" bodyfile="EF_I2C_regs.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="EF_I2C_regs.h" line="71" column="1" bodyfile="EF_I2C_regs.h" bodystart="71" bodyend="82"/>
+    <location file="EF_I2C_regs.h" line="96" column="1" bodyfile="EF_I2C_regs.h" bodystart="96" bodyend="107"/>
     <listofallmembers>
       <member refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>COMMAND</name></member>
       <member refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" prot="public" virt="non-virtual"><scope>_EF_I2C_TYPE_</scope><name>DATA</name></member>

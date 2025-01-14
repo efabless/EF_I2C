@@ -7,47 +7,32 @@ C header file for I2C APIs which contains the function prototypes.
 
 {\ttfamily \#include \char`\"{}EF\+\_\+\+I2\+C\+\_\+regs.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}EF\+\_\+\+Driver\+\_\+\+Common.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c_8h_a6c5c548b64cb71bdc4b7021d5bc0ac40}{EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+CORRECT\+\_\+\+MASK}}~0x\+FFFFE080
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c_8h_a5fafabd8b05d8b014293383617d961d5}{EF\+\_\+\+I2\+C\+\_\+\+PR\+\_\+\+MAX\+\_\+\+VALUE}}~0x0000\+FFFF
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c_8h_ab1fdffc2f516327a24051b9b7f6061f5}{EF\+\_\+\+I2\+C\+\_\+\+IM\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE}}~0x000001\+FF
+\item 
+\#define \mbox{\hyperlink{_e_f___i2_c_8h_a602154856cc6d698f903f4e5c2b0a59f}{EF\+\_\+\+I2\+C\+\_\+\+IC\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE}}~0x000001\+FF
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a8cd33e8dde8407bb760d8a9e06548dea}{EF\+\_\+\+I2\+C\+\_\+set\+Gclk\+Enable}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, uint32\+\_\+t value)
 \begin{DoxyCompactList}\small\item\em Sets the GCLK enable bit in the I2C register to a certain value. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_ac8020e16b3158054341ac0bce22d8b7e}{EF\+\_\+\+I2\+C\+\_\+write\+To\+Address}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char addr, char data)
-\begin{DoxyCompactList}\small\item\em Performs an I2C write operation to a specific address. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_af50c9788e5f7dce39b36641ba4dd1abc}{EF\+\_\+\+I2\+C\+\_\+read\+Command}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char addr)
-\begin{DoxyCompactList}\small\item\em Issues an I2C read command to a specific address and waits for completion. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a8b32d8e6a1cb03a0c948ee85a917c652}{EF\+\_\+\+I2\+C\+\_\+write\+Address}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char addr)
-\begin{DoxyCompactList}\small\item\em Writes an address to the I2C command register. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a6bcf2d08643ce620b0f75b980a875a7f}{EF\+\_\+\+I2\+C\+\_\+start\+Cmd}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c)
-\begin{DoxyCompactList}\small\item\em Issues a start condition on the I2C bus. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_abd603b15315bef595a6bee15a56c1c99}{EF\+\_\+\+I2\+C\+\_\+read\+Cmd}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char addr)
-\begin{DoxyCompactList}\small\item\em Sends a read command to the specified address on the I2C bus. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a9c8ce9f9c67bd5ce3e965e1b8c05b437}{EF\+\_\+\+I2\+C\+\_\+write\+Cmd}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char addr)
-\begin{DoxyCompactList}\small\item\em Sends a write command to the specified address on the I2C bus. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_ae6094788f5d9a6cf203350161d6a1194}{EF\+\_\+\+I2\+C\+\_\+write\+Multiple\+Cmd}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c)
-\begin{DoxyCompactList}\small\item\em Enables the write multiple command mode for the I2C controller. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a67cb25a7e6a9f2f0c4cbda50361f38e9}{EF\+\_\+\+I2\+C\+\_\+stop\+Cmd}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c)
-\begin{DoxyCompactList}\small\item\em Issues a stop condition on the I2C bus. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a2286c60de589dcecb0fc78a48187440b}{EF\+\_\+\+I2\+C\+\_\+set\+Command\+Reg}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, uint32\+\_\+t value)
 \begin{DoxyCompactList}\small\item\em Sets the command register of the I2C controller. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_aa76113b5cce43aedb3e34ffe98377210}{EF\+\_\+\+I2\+C\+\_\+get\+Command\+Reg}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, uint32\+\_\+t $\ast$command\+\_\+value)
-\begin{DoxyCompactList}\small\item\em Gets the value of the I2C command register. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_afb19bc6a6238b42d38eefff40d8b988b}{EF\+\_\+\+I2\+C\+\_\+write\+Data}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char data)
-\begin{DoxyCompactList}\small\item\em Writes a data value to the I2C data register. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a46ebdd220798a0082da434fc07f4999a}{EF\+\_\+\+I2\+C\+\_\+read\+Data}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char $\ast$data)
-\begin{DoxyCompactList}\small\item\em Reads a data value from the I2C data register. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_acf62f06af5f37ae067b6314c5f3f1d0b}{EF\+\_\+\+I2\+C\+\_\+set\+Data\+Valid}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool valid)
-\begin{DoxyCompactList}\small\item\em Sets the data valid flag in the I2C data register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_ac5ca754457eaaeeab83e607fd78039e9}{EF\+\_\+\+I2\+C\+\_\+set\+Command\+Reg\+Non\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, uint32\+\_\+t value, bool $\ast$command\+\_\+sent)
+\begin{DoxyCompactList}\small\item\em Writes a command value to the I2C command register (non-\/blocking). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a97ff9205de09e49d12dc62eb1acdcf62}{EF\+\_\+\+I2\+C\+\_\+get\+Data\+Valid}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool $\ast$data\+\_\+valid)
 \begin{DoxyCompactList}\small\item\em Reads the data valid flag from the I2C data register. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a8f157164f51a0ea88e03311615b21ffd}{EF\+\_\+\+I2\+C\+\_\+set\+Data\+Last}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool valid)
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a20ba0e48023589b93dc8fe15519c5482}{EF\+\_\+\+I2\+C\+\_\+set\+Data\+Last}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c)
 \begin{DoxyCompactList}\small\item\em Sets the data last flag in the I2C data register. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a95c96062892f3d3061365eb5d6f83dfe}{EF\+\_\+\+I2\+C\+\_\+get\+Data\+Last}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool $\ast$data\+\_\+last)
 \begin{DoxyCompactList}\small\item\em Reads the data last flag from the I2C data register. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a3006b2445e7a7419cb1e00e11fea923e}{EF\+\_\+\+I2\+C\+\_\+set\+Data\+Reg}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, uint32\+\_\+t value)
-\begin{DoxyCompactList}\small\item\em Writes a value to the I2C data register. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a7424199ff032dabdec9b03a8c7e49f0a}{EF\+\_\+\+I2\+C\+\_\+get\+Data\+Reg}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, uint32\+\_\+t $\ast$data\+\_\+reg\+\_\+value)
-\begin{DoxyCompactList}\small\item\em Reads the value from the I2C data register. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a824f4aaa04cf1518f65a558c67172fdd}{EF\+\_\+\+I2\+C\+\_\+set\+Prescaler}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, uint32\+\_\+t value)
 \begin{DoxyCompactList}\small\item\em Sets the I2C prescaler value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a8fa9bab21502620a499c6f943fc69c4c}{EF\+\_\+\+I2\+C\+\_\+get\+Prescaler}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, uint32\+\_\+t $\ast$prescaler\+\_\+value)
@@ -60,8 +45,54 @@ C header file for I2C APIs which contains the function prototypes.
 \begin{DoxyCompactList}\small\item\em Sets the Interrupt Mask (IM) register. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_ac4509f632d8b0b1157ec42828a957600}{EF\+\_\+\+I2\+C\+\_\+get\+IM}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, uint32\+\_\+t $\ast$im\+\_\+value)
 \begin{DoxyCompactList}\small\item\em Reads the Interrupt Mask (IM) register. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a032dfe3e03b164ccf42871ea66fe2fc9}{EF\+\_\+\+I2\+C\+\_\+wait\+Busy}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a69c76d64d9e2e6d29d53026b0fa1055c}{EF\+\_\+\+I2\+C\+\_\+is\+Busy}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool $\ast$is\+\_\+busy)
+\begin{DoxyCompactList}\small\item\em Checks if the I2C peripheral is busy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a14e5de684a330a987584ba5219bf8304}{EF\+\_\+\+I2\+C\+\_\+is\+Command\+FIFOAvailable}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool $\ast$is\+\_\+available)
+\begin{DoxyCompactList}\small\item\em Checks if the command FIFO is available. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_aba9df55dc50dffa193d8990d9d3354b3}{EF\+\_\+\+I2\+C\+\_\+is\+Write\+FIFOAvailable}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool $\ast$is\+\_\+available)
+\begin{DoxyCompactList}\small\item\em Checks if the write FIFO is available. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a463bfb817bed4b5d06308211df98c7b4}{EF\+\_\+\+I2\+C\+\_\+is\+Read\+FIFOAvailable}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool $\ast$is\+\_\+available)
+\begin{DoxyCompactList}\small\item\em Checks if the read FIFO is available. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a0403b347e88030457b2681d17780b1e0}{EF\+\_\+\+I2\+C\+\_\+send\+Write\+Command}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char addr)
+\begin{DoxyCompactList}\small\item\em Sends a write command to the I2C device (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_ab809b36771601fc4fcc0ebe5b7c3c2b3}{EF\+\_\+\+I2\+C\+\_\+send\+Write\+Command\+Non\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char addr, bool $\ast$command\+\_\+sent)
+\begin{DoxyCompactList}\small\item\em Sends a write command to the I2C device (non-\/blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a5a686c3ed733700ac19aa163b98023c9}{EF\+\_\+\+I2\+C\+\_\+send\+Read\+Command}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char addr)
+\begin{DoxyCompactList}\small\item\em Sends a read command to the I2C device (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a62ef1d56f7cbc0c4fdc66551fbc6f882}{EF\+\_\+\+I2\+C\+\_\+send\+Read\+Command\+Non\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char addr, bool $\ast$command\+\_\+sent)
+\begin{DoxyCompactList}\small\item\em Sends a read command to the I2C device (non-\/blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_ad1fa3cec145bfbd8027e0370137c1b9d}{EF\+\_\+\+I2\+C\+\_\+send\+Start\+Command}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c)
+\begin{DoxyCompactList}\small\item\em Sends a start condition on the I2C bus (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a5895919e916705ee1082efade9f1488e}{EF\+\_\+\+I2\+C\+\_\+send\+Start\+Command\+Non\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool $\ast$command\+\_\+sent)
+\begin{DoxyCompactList}\small\item\em Sends a start condition on the I2C bus (non-\/blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a4545f7e33e2e35e7b100b6f3857433bd}{EF\+\_\+\+I2\+C\+\_\+send\+Stop\+Command}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c)
+\begin{DoxyCompactList}\small\item\em Sends a stop condition on the I2C bus (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_adc35bddf018b22d9f822442360d9a1e5}{EF\+\_\+\+I2\+C\+\_\+send\+Stop\+Command\+Non\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool $\ast$command\+\_\+sent)
+\begin{DoxyCompactList}\small\item\em Sends a stop condition on the I2C bus (non-\/blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a8016d94edabbc9e56aa8632d81f93a4e}{EF\+\_\+\+I2\+C\+\_\+send\+Write\+Multiple\+Command}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c)
+\begin{DoxyCompactList}\small\item\em Sends a \char`\"{}write multiple\char`\"{} command on the I2C bus (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_aebf50811caef2dbdd664a60ade5c0514}{EF\+\_\+\+I2\+C\+\_\+send\+Write\+Multiple\+Command\+Non\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, bool $\ast$command\+\_\+sent)
+\begin{DoxyCompactList}\small\item\em Sends a \char`\"{}write multiple\char`\"{} command on the I2C bus (non-\/blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a976c6f1e98d2dfbf0cc9bf31bab0b110}{EF\+\_\+\+I2\+C\+\_\+write\+Data\+To\+Write\+FIFO}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char data)
+\begin{DoxyCompactList}\small\item\em Writes data to the I2C Write FIFO (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a5908b86c6c3a5c276472e1a70fadbbd4}{EF\+\_\+\+I2\+C\+\_\+write\+Data\+To\+Write\+FIFONon\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char data, bool $\ast$data\+\_\+written)
+\begin{DoxyCompactList}\small\item\em Writes data to the I2C Write FIFO (non-\/blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_ac2d5590e0da84534bca5496836811664}{EF\+\_\+\+I2\+C\+\_\+read\+Data\+From\+Read\+FIFO}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char $\ast$data)
+\begin{DoxyCompactList}\small\item\em Reads data from the I2C Read FIFO (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a1c701c4aecb1bc623f530674337ba608}{EF\+\_\+\+I2\+C\+\_\+read\+Data\+From\+Read\+FIFONon\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char $\ast$data, bool $\ast$data\+\_\+read)
+\begin{DoxyCompactList}\small\item\em Reads data from the I2C Read FIFO (non-\/blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a756e2b744dadf6851b99c5c2cf163938}{EF\+\_\+\+I2\+C\+\_\+transmit\+Byte}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char data, char addr)
+\begin{DoxyCompactList}\small\item\em Transmits a single byte to a specified I2C address (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_acbe3b21327e821e4a28f9db978e6eaaa}{EF\+\_\+\+I2\+C\+\_\+transmit\+Byte\+Non\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char data, char addr, bool $\ast$transmitted)
+\begin{DoxyCompactList}\small\item\em Transmits a single byte to a specified I2C address (non-\/blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a60288fe0351fce34b2872e31f1c9951b}{EF\+\_\+\+I2\+C\+\_\+receive\+Byte}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char $\ast$data, char addr)
+\begin{DoxyCompactList}\small\item\em Receives a single byte from a specified I2C address (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a1789020facae10eb7788fae74ccc3bc8}{EF\+\_\+\+I2\+C\+\_\+receive\+Byte\+Non\+Blocking}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char $\ast$data, char addr, bool $\ast$received)
+\begin{DoxyCompactList}\small\item\em Receives a single byte from a specified I2C address (non-\/blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a4b3ffb782170b3f8a621ad3ca9fade8e}{EF\+\_\+\+I2\+C\+\_\+transmit\+Char\+Arr}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char $\ast$data, uint32\+\_\+t data\+\_\+length, char addr)
+\begin{DoxyCompactList}\small\item\em Transmits an array of characters to a specified I2C address (blocking). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___i2_c_8h_a774873c939f5d172d92a6587298deb5d}{EF\+\_\+\+I2\+C\+\_\+recieve\+Char\+Arr}} (\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} i2c, char $\ast$data, uint32\+\_\+t data\+\_\+length, char addr)
+\begin{DoxyCompactList}\small\item\em Receives an array of characters from a specified I2C address (blocking). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -69,29 +100,34 @@ C header file for I2C APIs which contains the function prototypes.
 
 
 
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a6c5c548b64cb71bdc4b7021d5bc0ac40}\label{_e_f___i2_c_8h_a6c5c548b64cb71bdc4b7021d5bc0ac40}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK}}
+\index{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK@{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK}{EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+COMMAND\+\_\+\+REG\+\_\+\+CMD\+\_\+\+CORRECT\+\_\+\+MASK~0x\+FFFFE080}
+
+\mbox{\Hypertarget{_e_f___i2_c_8h_a602154856cc6d698f903f4e5c2b0a59f}\label{_e_f___i2_c_8h_a602154856cc6d698f903f4e5c2b0a59f}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_IC\_REG\_MAX\_VALUE@{EF\_I2C\_IC\_REG\_MAX\_VALUE}}
+\index{EF\_I2C\_IC\_REG\_MAX\_VALUE@{EF\_I2C\_IC\_REG\_MAX\_VALUE}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_IC\_REG\_MAX\_VALUE}{EF\_I2C\_IC\_REG\_MAX\_VALUE}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+IC\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE~0x000001\+FF}
+
+\mbox{\Hypertarget{_e_f___i2_c_8h_ab1fdffc2f516327a24051b9b7f6061f5}\label{_e_f___i2_c_8h_ab1fdffc2f516327a24051b9b7f6061f5}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_IM\_REG\_MAX\_VALUE@{EF\_I2C\_IM\_REG\_MAX\_VALUE}}
+\index{EF\_I2C\_IM\_REG\_MAX\_VALUE@{EF\_I2C\_IM\_REG\_MAX\_VALUE}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_IM\_REG\_MAX\_VALUE}{EF\_I2C\_IM\_REG\_MAX\_VALUE}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+IM\+\_\+\+REG\+\_\+\+MAX\+\_\+\+VALUE~0x000001\+FF}
+
+\mbox{\Hypertarget{_e_f___i2_c_8h_a5fafabd8b05d8b014293383617d961d5}\label{_e_f___i2_c_8h_a5fafabd8b05d8b014293383617d961d5}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_PR\_MAX\_VALUE@{EF\_I2C\_PR\_MAX\_VALUE}}
+\index{EF\_I2C\_PR\_MAX\_VALUE@{EF\_I2C\_PR\_MAX\_VALUE}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_PR\_MAX\_VALUE}{EF\_I2C\_PR\_MAX\_VALUE}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+I2\+C\+\_\+\+PR\+\_\+\+MAX\+\_\+\+VALUE~0x0000\+FFFF}
+
+
+
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{_e_f___i2_c_8h_aa76113b5cce43aedb3e34ffe98377210}\label{_e_f___i2_c_8h_aa76113b5cce43aedb3e34ffe98377210}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_getCommandReg@{EF\_I2C\_getCommandReg}}
-\index{EF\_I2C\_getCommandReg@{EF\_I2C\_getCommandReg}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_getCommandReg()}{EF\_I2C\_getCommandReg()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+get\+Command\+Reg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{uint32\+\_\+t $\ast$}]{command\+\_\+value }\end{DoxyParamCaption})}
-
-
-
-Gets the value of the I2C command register. 
-
-This function reads the current value of the I2C command register. It allows the user to retrieve the current configuration of the I2C controller for debugging or monitoring purposes.
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
-\hline
-\mbox{\texttt{ out}}  & {\em command\+\_\+value} & A pointer to a 32-\/bit variable where the command register value will be stored.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
-\end{DoxyReturn}
 \mbox{\Hypertarget{_e_f___i2_c_8h_a95c96062892f3d3061365eb5d6f83dfe}\label{_e_f___i2_c_8h_a95c96062892f3d3061365eb5d6f83dfe}} 
 \index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_getDataLast@{EF\_I2C\_getDataLast}}
 \index{EF\_I2C\_getDataLast@{EF\_I2C\_getDataLast}!EF\_I2C.h@{EF\_I2C.h}}
@@ -109,36 +145,6 @@ This function retrieves the current state of the data last flag in the I2C data 
 \mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
 \hline
 \mbox{\texttt{ out}}  & {\em data\+\_\+last} & A pointer to a boolean variable where the state of the data last flag will be stored. The value is set to {\ttfamily true} if the data is the last in the transaction, or {\ttfamily false} otherwise.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
-\end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_a7424199ff032dabdec9b03a8c7e49f0a}\label{_e_f___i2_c_8h_a7424199ff032dabdec9b03a8c7e49f0a}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_getDataReg@{EF\_I2C\_getDataReg}}
-\index{EF\_I2C\_getDataReg@{EF\_I2C\_getDataReg}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_getDataReg()}{EF\_I2C\_getDataReg()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+get\+Data\+Reg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{uint32\+\_\+t $\ast$}]{data\+\_\+reg\+\_\+value }\end{DoxyParamCaption})}
-
-
-
-Reads the value from the I2C data register. 
-
-This function reads the 32-\/bit value from the I2C data register. The data register holds the I2C data (either for reading or writing) and status flags for data validity and the last byte in a block write.
-
-Data Register Breakdown$\ast$$\ast$\+:
-\begin{DoxyItemize}
-\item Bits \mbox{[}0-\/7\mbox{]}\+: Data -\/ Contains the data pulled from the read FIFO or to be pushed into the write FIFO.
-\item Bit \mbox{[}8\mbox{]}\+: Data Valid -\/ Indicates whether the read data is valid.
-\item Bit \mbox{[}9\mbox{]}\+: Data Last -\/ Indicates if the byte read or written is the last byte of a block write (write\+\_\+multiple).
-\item Bits \mbox{[}10-\/31\mbox{]}\+: Reserved -\/ These bits are reserved.
-\end{DoxyItemize}
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
-\hline
-\mbox{\texttt{ out}}  & {\em data\+\_\+reg\+\_\+value} & A pointer to a 32-\/bit variable where the value of the data register will be stored.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -290,72 +296,489 @@ RIS Register Breakdown$\ast$$\ast$\+:
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_abd603b15315bef595a6bee15a56c1c99}\label{_e_f___i2_c_8h_abd603b15315bef595a6bee15a56c1c99}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_readCmd@{EF\_I2C\_readCmd}}
-\index{EF\_I2C\_readCmd@{EF\_I2C\_readCmd}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_readCmd()}{EF\_I2C\_readCmd()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+read\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{addr }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a69c76d64d9e2e6d29d53026b0fa1055c}\label{_e_f___i2_c_8h_a69c76d64d9e2e6d29d53026b0fa1055c}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_isBusy@{EF\_I2C\_isBusy}}
+\index{EF\_I2C\_isBusy@{EF\_I2C\_isBusy}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_isBusy()}{EF\_I2C\_isBusy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+is\+Busy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{bool $\ast$}]{is\+\_\+busy }\end{DoxyParamCaption})}
 
 
 
-Sends a read command to the specified address on the I2C bus. 
+Checks if the I2C peripheral is busy. 
 
-This function configures the I2C controller to read from the specified address on the I2C bus. It sets the read bit and writes the target address into the I2C command register.
+! Sets the Interrupt Clear (ICR) register. $\ast$!
+
+This function checks the {\ttfamily STATUS} register of the I2C peripheral to determine if the bus is currently busy. The result is stored in the memory location pointed to by {\ttfamily is\+\_\+busy}.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
 \hline
-\mbox{\texttt{ in}}  & {\em addr} & The target address on the I2C bus to read from. This is typically a 7-\/bit or 10-\/bit address.\\
+\mbox{\texttt{ out}}  & {\em is\+\_\+busy} & Pointer to a boolean where the busy status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: I2C is busy.
+\item {\ttfamily false}\+: I2C is idle.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+DRIVER\+\_\+\+OK\+: The operation completed successfully.
+\item EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+PARAMETER\+: {\ttfamily i2c} or {\ttfamily is\+\_\+busy} is NULL. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a14e5de684a330a987584ba5219bf8304}\label{_e_f___i2_c_8h_a14e5de684a330a987584ba5219bf8304}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_isCommandFIFOAvailable@{EF\_I2C\_isCommandFIFOAvailable}}
+\index{EF\_I2C\_isCommandFIFOAvailable@{EF\_I2C\_isCommandFIFOAvailable}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_isCommandFIFOAvailable()}{EF\_I2C\_isCommandFIFOAvailable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+is\+Command\+FIFOAvailable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{bool $\ast$}]{is\+\_\+available }\end{DoxyParamCaption})}
+
+
+
+Checks if the command FIFO is available. 
+
+This function checks the {\ttfamily STATUS} register of the I2C peripheral to determine if the command FIFO is not full and ready to accept new commands. The result is stored in the memory location pointed to by {\ttfamily is\+\_\+available}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em is\+\_\+available} & Pointer to a boolean where the availability status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Command FIFO is available.
+\item {\ttfamily false}\+: Command FIFO is full.
+\end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_af50c9788e5f7dce39b36641ba4dd1abc}\label{_e_f___i2_c_8h_af50c9788e5f7dce39b36641ba4dd1abc}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_readCommand@{EF\_I2C\_readCommand}}
-\index{EF\_I2C\_readCommand@{EF\_I2C\_readCommand}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_readCommand()}{EF\_I2C\_readCommand()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+read\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{addr }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a463bfb817bed4b5d06308211df98c7b4}\label{_e_f___i2_c_8h_a463bfb817bed4b5d06308211df98c7b4}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_isReadFIFOAvailable@{EF\_I2C\_isReadFIFOAvailable}}
+\index{EF\_I2C\_isReadFIFOAvailable@{EF\_I2C\_isReadFIFOAvailable}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_isReadFIFOAvailable()}{EF\_I2C\_isReadFIFOAvailable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+is\+Read\+FIFOAvailable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{bool $\ast$}]{is\+\_\+available }\end{DoxyParamCaption})}
 
 
 
-Issues an I2C read command to a specific address and waits for completion. 
+Checks if the read FIFO is available. 
 
-This function initiates a read operation on the I2C bus. It performs the following steps\+:
-\begin{DoxyEnumerate}
-\item Sends a read command to the specified address on the I2C bus.
-\item Issues a stop condition to signal the end of the transaction.
-\item Waits for the I2C hardware to complete the read operation.
-\end{DoxyEnumerate}
+This function checks the {\ttfamily STATUS} register of the I2C peripheral to determine if the read FIFO is not empty and has data available to be read. The result is stored in the memory location pointed to by {\ttfamily is\+\_\+available}.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
 \hline
-\mbox{\texttt{ in}}  & {\em addr} & The address on the I2C bus from which to read.\\
+\mbox{\texttt{ out}}  & {\em is\+\_\+available} & Pointer to a boolean where the availability status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Read FIFO is available.
+\item {\ttfamily false}\+: Read FIFO is empty.
+\end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_a46ebdd220798a0082da434fc07f4999a}\label{_e_f___i2_c_8h_a46ebdd220798a0082da434fc07f4999a}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_readData@{EF\_I2C\_readData}}
-\index{EF\_I2C\_readData@{EF\_I2C\_readData}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_readData()}{EF\_I2C\_readData()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+read\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char $\ast$}]{data }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_e_f___i2_c_8h_aba9df55dc50dffa193d8990d9d3354b3}\label{_e_f___i2_c_8h_aba9df55dc50dffa193d8990d9d3354b3}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_isWriteFIFOAvailable@{EF\_I2C\_isWriteFIFOAvailable}}
+\index{EF\_I2C\_isWriteFIFOAvailable@{EF\_I2C\_isWriteFIFOAvailable}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_isWriteFIFOAvailable()}{EF\_I2C\_isWriteFIFOAvailable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+is\+Write\+FIFOAvailable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{bool $\ast$}]{is\+\_\+available }\end{DoxyParamCaption})}
 
 
 
-Reads a data value from the I2C data register. 
+Checks if the write FIFO is available. 
 
-This function reads the current value of the I2C data register. The data register is used to store the data to be transmitted or received over the I2C bus. read to pull from read data FIFO.
+This function checks the {\ttfamily STATUS} register of the I2C peripheral to determine if the write FIFO is not full and ready to accept new data. The result is stored in the memory location pointed to by {\ttfamily is\+\_\+available}.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
 \hline
-\mbox{\texttt{ out}}  & {\em data} & A pointer to an 8-\/bit variable where the data register value will be stored.\\
+\mbox{\texttt{ out}}  & {\em is\+\_\+available} & Pointer to a boolean where the availability status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Write FIFO is available.
+\item {\ttfamily false}\+: Write FIFO is full.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_ac2d5590e0da84534bca5496836811664}\label{_e_f___i2_c_8h_ac2d5590e0da84534bca5496836811664}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_readDataFromReadFIFO@{EF\_I2C\_readDataFromReadFIFO}}
+\index{EF\_I2C\_readDataFromReadFIFO@{EF\_I2C\_readDataFromReadFIFO}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_readDataFromReadFIFO()}{EF\_I2C\_readDataFromReadFIFO()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+read\+Data\+From\+Read\+FIFO (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Reads data from the I2C Read FIFO (blocking). 
+
+This function reads a single byte of data from the I2C Read FIFO. It blocks until the FIFO becomes available and validates the data read.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data} & Pointer to a variable where the read data byte will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+DRIVER\+\_\+\+OK\+: The operation completed successfully.
+\item EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+PARAMETER\+: {\ttfamily i2c} or {\ttfamily data} is NULL.
+\item EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+I2\+C\+\_\+\+INVALID\+\_\+\+DATA\+: The data read is invalid. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a1c701c4aecb1bc623f530674337ba608}\label{_e_f___i2_c_8h_a1c701c4aecb1bc623f530674337ba608}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_readDataFromReadFIFONonBlocking@{EF\_I2C\_readDataFromReadFIFONonBlocking}}
+\index{EF\_I2C\_readDataFromReadFIFONonBlocking@{EF\_I2C\_readDataFromReadFIFONonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_readDataFromReadFIFONonBlocking()}{EF\_I2C\_readDataFromReadFIFONonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+read\+Data\+From\+Read\+FIFONon\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char $\ast$}]{data,  }\item[{bool $\ast$}]{data\+\_\+read }\end{DoxyParamCaption})}
+
+
+
+Reads data from the I2C Read FIFO (non-\/blocking). 
+
+This function attempts to read a single byte of data from the I2C Read FIFO. If the FIFO is unavailable, the function returns immediately. The validity of the data is also checked.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data} & Pointer to a variable where the read data byte will be stored. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data\+\_\+read} & Pointer to a boolean where the read status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Data was read successfully and is valid.
+\item {\ttfamily false}\+: Read FIFO was unavailable or data is invalid.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+DRIVER\+\_\+\+OK\+: The operation completed successfully.
+\item EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+PARAMETER\+: {\ttfamily i2c}, {\ttfamily data}, or {\ttfamily data\+\_\+read} is NULL.
+\item EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+I2\+C\+\_\+\+INVALID\+\_\+\+DATA\+: The data read is invalid. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a60288fe0351fce34b2872e31f1c9951b}\label{_e_f___i2_c_8h_a60288fe0351fce34b2872e31f1c9951b}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_receiveByte@{EF\_I2C\_receiveByte}}
+\index{EF\_I2C\_receiveByte@{EF\_I2C\_receiveByte}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_receiveByte()}{EF\_I2C\_receiveByte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+receive\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char $\ast$}]{data,  }\item[{char}]{addr }\end{DoxyParamCaption})}
+
+
+
+Receives a single byte from a specified I2C address (blocking). 
+
+This function reads a single byte from a specified I2C address. It blocks until all operations (read command, stop command, and data retrieval) are completed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data} & Pointer to a char where the received data byte will be stored. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & I2C address from which the data will be read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a1789020facae10eb7788fae74ccc3bc8}\label{_e_f___i2_c_8h_a1789020facae10eb7788fae74ccc3bc8}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_receiveByteNonBlocking@{EF\_I2C\_receiveByteNonBlocking}}
+\index{EF\_I2C\_receiveByteNonBlocking@{EF\_I2C\_receiveByteNonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_receiveByteNonBlocking()}{EF\_I2C\_receiveByteNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+receive\+Byte\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char $\ast$}]{data,  }\item[{char}]{addr,  }\item[{bool $\ast$}]{received }\end{DoxyParamCaption})}
+
+
+
+Receives a single byte from a specified I2C address (non-\/blocking). 
+
+This function attempts to read a single byte from a specified I2C address in a non-\/blocking manner. If any step of the process (read command, stop command, or data retrieval) cannot complete immediately, the function returns.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data} & Pointer to a char where the received data byte will be stored. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & I2C address from which the data will be read. \\
+\hline
+\mbox{\texttt{ out}}  & {\em received} & Pointer to a boolean where the reception status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Data was received successfully.
+\item {\ttfamily false}\+: Reception could not be completed.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a774873c939f5d172d92a6587298deb5d}\label{_e_f___i2_c_8h_a774873c939f5d172d92a6587298deb5d}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_recieveCharArr@{EF\_I2C\_recieveCharArr}}
+\index{EF\_I2C\_recieveCharArr@{EF\_I2C\_recieveCharArr}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_recieveCharArr()}{EF\_I2C\_recieveCharArr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+recieve\+Char\+Arr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char $\ast$}]{data,  }\item[{uint32\+\_\+t}]{data\+\_\+length,  }\item[{char}]{addr }\end{DoxyParamCaption})}
+
+
+
+Receives an array of characters from a specified I2C address (blocking). 
+
+This function reads an array of characters from a specified I2C address. It issues the read command for each byte, stores the data in the provided buffer, and sends a stop command after successful reception.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data} & Pointer to the buffer where the received characters will be stored. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+\_\+length} & Number of characters to receive. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & I2C address from which the data will be read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a5a686c3ed733700ac19aa163b98023c9}\label{_e_f___i2_c_8h_a5a686c3ed733700ac19aa163b98023c9}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendReadCommand@{EF\_I2C\_sendReadCommand}}
+\index{EF\_I2C\_sendReadCommand@{EF\_I2C\_sendReadCommand}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendReadCommand()}{EF\_I2C\_sendReadCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Read\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{addr }\end{DoxyParamCaption})}
+
+
+
+Sends a read command to the I2C device (blocking). 
+
+This function sends a read command to the I2C device at the specified address. It blocks until the command FIFO becomes available.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & The I2C address of the target device.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a62ef1d56f7cbc0c4fdc66551fbc6f882}\label{_e_f___i2_c_8h_a62ef1d56f7cbc0c4fdc66551fbc6f882}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendReadCommandNonBlocking@{EF\_I2C\_sendReadCommandNonBlocking}}
+\index{EF\_I2C\_sendReadCommandNonBlocking@{EF\_I2C\_sendReadCommandNonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendReadCommandNonBlocking()}{EF\_I2C\_sendReadCommandNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Read\+Command\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{addr,  }\item[{bool $\ast$}]{command\+\_\+sent }\end{DoxyParamCaption})}
+
+
+
+Sends a read command to the I2C device (non-\/blocking). 
+
+This function attempts to send a read command to the I2C device at the specified address. If the command FIFO is unavailable, the function returns immediately.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & The I2C address of the target device. \\
+\hline
+\mbox{\texttt{ out}}  & {\em command\+\_\+sent} & Pointer to a boolean where the command status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Command was sent successfully.
+\item {\ttfamily false}\+: Command FIFO was unavailable.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_ad1fa3cec145bfbd8027e0370137c1b9d}\label{_e_f___i2_c_8h_ad1fa3cec145bfbd8027e0370137c1b9d}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendStartCommand@{EF\_I2C\_sendStartCommand}}
+\index{EF\_I2C\_sendStartCommand@{EF\_I2C\_sendStartCommand}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendStartCommand()}{EF\_I2C\_sendStartCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Start\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Sends a start condition on the I2C bus (blocking). 
+
+This function sends a start condition on the I2C bus. It blocks until the command FIFO becomes available.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a5895919e916705ee1082efade9f1488e}\label{_e_f___i2_c_8h_a5895919e916705ee1082efade9f1488e}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendStartCommandNonBlocking@{EF\_I2C\_sendStartCommandNonBlocking}}
+\index{EF\_I2C\_sendStartCommandNonBlocking@{EF\_I2C\_sendStartCommandNonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendStartCommandNonBlocking()}{EF\_I2C\_sendStartCommandNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Start\+Command\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{bool $\ast$}]{command\+\_\+sent }\end{DoxyParamCaption})}
+
+
+
+Sends a start condition on the I2C bus (non-\/blocking). 
+
+This function attempts to send a start condition on the I2C bus. If the command FIFO is unavailable, the function returns immediately.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em command\+\_\+sent} & Pointer to a boolean where the command status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Start condition was sent successfully.
+\item {\ttfamily false}\+: Command FIFO was unavailable.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a4545f7e33e2e35e7b100b6f3857433bd}\label{_e_f___i2_c_8h_a4545f7e33e2e35e7b100b6f3857433bd}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendStopCommand@{EF\_I2C\_sendStopCommand}}
+\index{EF\_I2C\_sendStopCommand@{EF\_I2C\_sendStopCommand}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendStopCommand()}{EF\_I2C\_sendStopCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Stop\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Sends a stop condition on the I2C bus (blocking). 
+
+This function sends a stop condition on the I2C bus. It blocks until the command FIFO becomes available.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_adc35bddf018b22d9f822442360d9a1e5}\label{_e_f___i2_c_8h_adc35bddf018b22d9f822442360d9a1e5}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendStopCommandNonBlocking@{EF\_I2C\_sendStopCommandNonBlocking}}
+\index{EF\_I2C\_sendStopCommandNonBlocking@{EF\_I2C\_sendStopCommandNonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendStopCommandNonBlocking()}{EF\_I2C\_sendStopCommandNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Stop\+Command\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{bool $\ast$}]{command\+\_\+sent }\end{DoxyParamCaption})}
+
+
+
+Sends a stop condition on the I2C bus (non-\/blocking). 
+
+This function attempts to send a stop condition on the I2C bus. If the command FIFO is unavailable, the function returns immediately.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em command\+\_\+sent} & Pointer to a boolean where the command status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Stop condition was sent successfully.
+\item {\ttfamily false}\+: Command FIFO was unavailable.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a0403b347e88030457b2681d17780b1e0}\label{_e_f___i2_c_8h_a0403b347e88030457b2681d17780b1e0}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendWriteCommand@{EF\_I2C\_sendWriteCommand}}
+\index{EF\_I2C\_sendWriteCommand@{EF\_I2C\_sendWriteCommand}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendWriteCommand()}{EF\_I2C\_sendWriteCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Write\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{addr }\end{DoxyParamCaption})}
+
+
+
+Sends a write command to the I2C device (blocking). 
+
+This function sends a write command to the I2C device at the specified address. It blocks until the command FIFO becomes available.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & The I2C address of the target device.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_ab809b36771601fc4fcc0ebe5b7c3c2b3}\label{_e_f___i2_c_8h_ab809b36771601fc4fcc0ebe5b7c3c2b3}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendWriteCommandNonBlocking@{EF\_I2C\_sendWriteCommandNonBlocking}}
+\index{EF\_I2C\_sendWriteCommandNonBlocking@{EF\_I2C\_sendWriteCommandNonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendWriteCommandNonBlocking()}{EF\_I2C\_sendWriteCommandNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Write\+Command\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{addr,  }\item[{bool $\ast$}]{command\+\_\+sent }\end{DoxyParamCaption})}
+
+
+
+Sends a write command to the I2C device (non-\/blocking). 
+
+This function attempts to send a write command to the I2C device at the specified address. If the command FIFO is unavailable, the function returns immediately.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & The I2C address of the target device. \\
+\hline
+\mbox{\texttt{ out}}  & {\em command\+\_\+sent} & Pointer to a boolean where the command status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Command was sent successfully.
+\item {\ttfamily false}\+: Command FIFO was unavailable.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a8016d94edabbc9e56aa8632d81f93a4e}\label{_e_f___i2_c_8h_a8016d94edabbc9e56aa8632d81f93a4e}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendWriteMultipleCommand@{EF\_I2C\_sendWriteMultipleCommand}}
+\index{EF\_I2C\_sendWriteMultipleCommand@{EF\_I2C\_sendWriteMultipleCommand}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendWriteMultipleCommand()}{EF\_I2C\_sendWriteMultipleCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Write\+Multiple\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Sends a \char`\"{}write multiple\char`\"{} command on the I2C bus (blocking). 
+
+This function sends a \char`\"{}write multiple\char`\"{} command on the I2C bus. It blocks until the command FIFO becomes available.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_aebf50811caef2dbdd664a60ade5c0514}\label{_e_f___i2_c_8h_aebf50811caef2dbdd664a60ade5c0514}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_sendWriteMultipleCommandNonBlocking@{EF\_I2C\_sendWriteMultipleCommandNonBlocking}}
+\index{EF\_I2C\_sendWriteMultipleCommandNonBlocking@{EF\_I2C\_sendWriteMultipleCommandNonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_sendWriteMultipleCommandNonBlocking()}{EF\_I2C\_sendWriteMultipleCommandNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+send\+Write\+Multiple\+Command\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{bool $\ast$}]{command\+\_\+sent }\end{DoxyParamCaption})}
+
+
+
+Sends a \char`\"{}write multiple\char`\"{} command on the I2C bus (non-\/blocking). 
+
+This function attempts to send a \char`\"{}write multiple\char`\"{} command on the I2C bus. If the command FIFO is unavailable, the function returns immediately.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em command\+\_\+sent} & Pointer to a boolean where the command status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: The \char`\"{}write multiple\char`\"{} command was sent successfully.
+\item {\ttfamily false}\+: Command FIFO was unavailable.
+\end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -371,7 +794,7 @@ status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edf
 
 Sets the command register of the I2C controller. 
 
-This function writes a specified value directly to the I2C command register. It allows manual configuration of the I2C controller for advanced or custom operations.
+This ia a blocking function that writes a specified value directly to the I2C command register. It allows manual configuration of the I2C controller for advanced or custom operations.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -383,11 +806,39 @@ This function writes a specified value directly to the I2C command register. It 
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_a8f157164f51a0ea88e03311615b21ffd}\label{_e_f___i2_c_8h_a8f157164f51a0ea88e03311615b21ffd}} 
+\mbox{\Hypertarget{_e_f___i2_c_8h_ac5ca754457eaaeeab83e607fd78039e9}\label{_e_f___i2_c_8h_ac5ca754457eaaeeab83e607fd78039e9}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_setCommandRegNonBlocking@{EF\_I2C\_setCommandRegNonBlocking}}
+\index{EF\_I2C\_setCommandRegNonBlocking@{EF\_I2C\_setCommandRegNonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_setCommandRegNonBlocking()}{EF\_I2C\_setCommandRegNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+set\+Command\+Reg\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{uint32\+\_\+t}]{value,  }\item[{bool $\ast$}]{command\+\_\+sent }\end{DoxyParamCaption})}
+
+
+
+Writes a command value to the I2C command register (non-\/blocking). 
+
+This function attempts to write a specified command value to the I2C command register in a non-\/blocking manner. It checks the availability of the command FIFO before writing and updates the provided flag to indicate success.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & The command value to be written to the command register. \\
+\hline
+\mbox{\texttt{ out}}  & {\em command\+\_\+sent} & Pointer to a boolean flag that indicates whether the command was successfully sent\+:
+\begin{DoxyItemize}
+\item true\+: Command was written successfully.
+\item false\+: Command was not written (FIFO unavailable or error).
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a20ba0e48023589b93dc8fe15519c5482}\label{_e_f___i2_c_8h_a20ba0e48023589b93dc8fe15519c5482}} 
 \index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_setDataLast@{EF\_I2C\_setDataLast}}
 \index{EF\_I2C\_setDataLast@{EF\_I2C\_setDataLast}!EF\_I2C.h@{EF\_I2C.h}}
 \doxysubsubsection{\texorpdfstring{EF\_I2C\_setDataLast()}{EF\_I2C\_setDataLast()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+set\+Data\+Last (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{bool}]{valid }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+set\+Data\+Last (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c }\end{DoxyParamCaption})}
 
 
 
@@ -400,60 +851,6 @@ This function modifies the data last flag in the I2C data register. The flag ind
 \mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
 \hline
 \mbox{\texttt{ in}}  & {\em valid} & A boolean value specifying the state of the data last flag. Set to {\ttfamily true} to mark the data as the last in the transaction, or {\ttfamily false} to clear the flag.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
-\end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_a3006b2445e7a7419cb1e00e11fea923e}\label{_e_f___i2_c_8h_a3006b2445e7a7419cb1e00e11fea923e}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_setDataReg@{EF\_I2C\_setDataReg}}
-\index{EF\_I2C\_setDataReg@{EF\_I2C\_setDataReg}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_setDataReg()}{EF\_I2C\_setDataReg()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+set\+Data\+Reg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
-
-
-
-Writes a value to the I2C data register. 
-
-This function writes a 32-\/bit value to the I2C data register. The data register is used for handling the I2C read and write FIFOs, along with managing data validity and the last byte flag. ~\newline
-
-
-Data Register Breakdown$\ast$$\ast$\+:
-\begin{DoxyItemize}
-\item Bits \mbox{[}0-\/7\mbox{]}\+: Data -\/ Used to push data into the write FIFO or pull data from the read FIFO.
-\item Bit \mbox{[}8\mbox{]}\+: Data Valid -\/ Indicates whether the read data is valid. Must be accessed atomically with 16-\/bit reads and writes.
-\item Bit \mbox{[}9\mbox{]}\+: Data Last -\/ Indicates the last byte of a block write (write\+\_\+multiple). Must be accessed atomically with 16-\/bit reads and writes.
-\item Bits \mbox{[}10-\/31\mbox{]}\+: Reserved -\/ These bits are reserved for future use and should always be written as zero to avoid undefined behavior.
-\end{DoxyItemize}
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
-\hline
-\mbox{\texttt{ in}}  & {\em value} & A 32-\/bit value to write to the data register. The value should include all relevant fields (data, data valid, data last) as specified in the register breakdown. ~\newline
- The reserved bits (10-\/31) must always be set to zero.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
-\end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_acf62f06af5f37ae067b6314c5f3f1d0b}\label{_e_f___i2_c_8h_acf62f06af5f37ae067b6314c5f3f1d0b}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_setDataValid@{EF\_I2C\_setDataValid}}
-\index{EF\_I2C\_setDataValid@{EF\_I2C\_setDataValid}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_setDataValid()}{EF\_I2C\_setDataValid()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+set\+Data\+Valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{bool}]{valid }\end{DoxyParamCaption})}
-
-
-
-Sets the data valid flag in the I2C data register. 
-
-This function modifies the data valid flag in the I2C data register. The flag indicates whether the current data in the register is valid for an I2C transaction.
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
-\hline
-\mbox{\texttt{ in}}  & {\em valid} & A boolean value specifying the state of the data valid flag. Set to {\ttfamily true} to mark the data as valid, or {\ttfamily false} to clear the flag.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -533,167 +930,131 @@ This function sets the prescaler value for the I2C peripheral. The prescaler is 
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_a6bcf2d08643ce620b0f75b980a875a7f}\label{_e_f___i2_c_8h_a6bcf2d08643ce620b0f75b980a875a7f}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_startCmd@{EF\_I2C\_startCmd}}
-\index{EF\_I2C\_startCmd@{EF\_I2C\_startCmd}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_startCmd()}{EF\_I2C\_startCmd()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+start\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a756e2b744dadf6851b99c5c2cf163938}\label{_e_f___i2_c_8h_a756e2b744dadf6851b99c5c2cf163938}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_transmitByte@{EF\_I2C\_transmitByte}}
+\index{EF\_I2C\_transmitByte@{EF\_I2C\_transmitByte}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_transmitByte()}{EF\_I2C\_transmitByte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+transmit\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{data,  }\item[{char}]{addr }\end{DoxyParamCaption})}
 
 
 
-Issues a start condition on the I2C bus. 
+Transmits a single byte to a specified I2C address (blocking). 
 
-This function sends a start condition to initiate an I2C transaction. The start condition is a signal to indicate the beginning of communication with an I2C device.
+This function transmits a single byte to a specified I2C address using the Write FIFO. It blocks until all operations (data write, write command, and stop command) are completed.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers.\\
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Data byte to be transmitted. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & I2C address to which the data will be sent.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_a67cb25a7e6a9f2f0c4cbda50361f38e9}\label{_e_f___i2_c_8h_a67cb25a7e6a9f2f0c4cbda50361f38e9}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_stopCmd@{EF\_I2C\_stopCmd}}
-\index{EF\_I2C\_stopCmd@{EF\_I2C\_stopCmd}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_stopCmd()}{EF\_I2C\_stopCmd()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+stop\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_e_f___i2_c_8h_acbe3b21327e821e4a28f9db978e6eaaa}\label{_e_f___i2_c_8h_acbe3b21327e821e4a28f9db978e6eaaa}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_transmitByteNonBlocking@{EF\_I2C\_transmitByteNonBlocking}}
+\index{EF\_I2C\_transmitByteNonBlocking@{EF\_I2C\_transmitByteNonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_transmitByteNonBlocking()}{EF\_I2C\_transmitByteNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+transmit\+Byte\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{data,  }\item[{char}]{addr,  }\item[{bool $\ast$}]{transmitted }\end{DoxyParamCaption})}
 
 
 
-Issues a stop condition on the I2C bus. 
+Transmits a single byte to a specified I2C address (non-\/blocking). 
 
-This function sends a stop condition, signaling the end of an I2C transaction. The stop condition releases the I2C bus for other devices to communicate.
+This function attempts to transmit a single byte to a specified I2C address using the Write FIFO in a non-\/blocking manner. If any step of the process (data write, write command, or stop command) cannot complete immediately, the function returns.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers.\\
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Data byte to be transmitted. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & I2C address to which the data will be sent. \\
+\hline
+\mbox{\texttt{ out}}  & {\em transmitted} & Pointer to a boolean where the transmission status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: Data was transmitted successfully.
+\item {\ttfamily false}\+: Transmission could not be completed.
+\end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_a032dfe3e03b164ccf42871ea66fe2fc9}\label{_e_f___i2_c_8h_a032dfe3e03b164ccf42871ea66fe2fc9}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_waitBusy@{EF\_I2C\_waitBusy}}
-\index{EF\_I2C\_waitBusy@{EF\_I2C\_waitBusy}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_waitBusy()}{EF\_I2C\_waitBusy()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+wait\+Busy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c }\end{DoxyParamCaption})}
-
-! Sets the Interrupt Clear (ICR) register. $\ast$! \mbox{\Hypertarget{_e_f___i2_c_8h_a8b32d8e6a1cb03a0c948ee85a917c652}\label{_e_f___i2_c_8h_a8b32d8e6a1cb03a0c948ee85a917c652}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_writeAddress@{EF\_I2C\_writeAddress}}
-\index{EF\_I2C\_writeAddress@{EF\_I2C\_writeAddress}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_writeAddress()}{EF\_I2C\_writeAddress()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+write\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{addr }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a4b3ffb782170b3f8a621ad3ca9fade8e}\label{_e_f___i2_c_8h_a4b3ffb782170b3f8a621ad3ca9fade8e}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_transmitCharArr@{EF\_I2C\_transmitCharArr}}
+\index{EF\_I2C\_transmitCharArr@{EF\_I2C\_transmitCharArr}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_transmitCharArr()}{EF\_I2C\_transmitCharArr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+transmit\+Char\+Arr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char $\ast$}]{data,  }\item[{uint32\+\_\+t}]{data\+\_\+length,  }\item[{char}]{addr }\end{DoxyParamCaption})}
 
 
 
-Writes an address to the I2C command register. 
+Transmits an array of characters to a specified I2C address (blocking). 
 
-This function writes an address to the I2C command register. It performs the following steps\+:
-\begin{DoxyEnumerate}
-\item Clears the field bits in the register using the defined mask.
-\item Sets the bits with the given value at the defined offset.
-\end{DoxyEnumerate}
+This function sends an array of characters to a specified I2C address. It handles writing the data to the I2C FIFO and ensures the last byte is appropriately marked.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
 \hline
-\mbox{\texttt{ in}}  & {\em addr} & The address to write to\\
+\mbox{\texttt{ in}}  & {\em data} & Pointer to the array of characters to be transmitted. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+\_\+length} & Number of characters in the array to transmit. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & I2C address to which the data will be sent.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_a9c8ce9f9c67bd5ce3e965e1b8c05b437}\label{_e_f___i2_c_8h_a9c8ce9f9c67bd5ce3e965e1b8c05b437}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_writeCmd@{EF\_I2C\_writeCmd}}
-\index{EF\_I2C\_writeCmd@{EF\_I2C\_writeCmd}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_writeCmd()}{EF\_I2C\_writeCmd()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+write\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{addr }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a976c6f1e98d2dfbf0cc9bf31bab0b110}\label{_e_f___i2_c_8h_a976c6f1e98d2dfbf0cc9bf31bab0b110}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_writeDataToWriteFIFO@{EF\_I2C\_writeDataToWriteFIFO}}
+\index{EF\_I2C\_writeDataToWriteFIFO@{EF\_I2C\_writeDataToWriteFIFO}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_writeDataToWriteFIFO()}{EF\_I2C\_writeDataToWriteFIFO()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+write\+Data\+To\+Write\+FIFO (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{data }\end{DoxyParamCaption})}
 
 
 
-Sends a write command to the specified address on the I2C bus. 
+Writes data to the I2C Write FIFO (blocking). 
 
-This function configures the I2C controller to write to the specified address on the I2C bus. It sets the write bit and writes the target address into the I2C command register.
+This function writes a single byte of data to the I2C Write FIFO. It blocks until the FIFO becomes available.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
 \hline
-\mbox{\texttt{ in}}  & {\em addr} & The target address on the I2C bus to write to. This is typically a 7-\/bit or 10-\/bit address.\\
+\mbox{\texttt{ in}}  & {\em data} & Data byte to be written to the FIFO.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_afb19bc6a6238b42d38eefff40d8b988b}\label{_e_f___i2_c_8h_afb19bc6a6238b42d38eefff40d8b988b}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_writeData@{EF\_I2C\_writeData}}
-\index{EF\_I2C\_writeData@{EF\_I2C\_writeData}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_writeData()}{EF\_I2C\_writeData()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+write\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{data }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_e_f___i2_c_8h_a5908b86c6c3a5c276472e1a70fadbbd4}\label{_e_f___i2_c_8h_a5908b86c6c3a5c276472e1a70fadbbd4}} 
+\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_writeDataToWriteFIFONonBlocking@{EF\_I2C\_writeDataToWriteFIFONonBlocking}}
+\index{EF\_I2C\_writeDataToWriteFIFONonBlocking@{EF\_I2C\_writeDataToWriteFIFONonBlocking}!EF\_I2C.h@{EF\_I2C.h}}
+\doxysubsubsection{\texorpdfstring{EF\_I2C\_writeDataToWriteFIFONonBlocking()}{EF\_I2C\_writeDataToWriteFIFONonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+write\+Data\+To\+Write\+FIFONon\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{data,  }\item[{bool $\ast$}]{data\+\_\+written }\end{DoxyParamCaption})}
 
 
 
-Writes a data value to the I2C data register. 
+Writes data to the I2C Write FIFO (non-\/blocking). 
 
-This function writes a data value to the I2C data register. The data register is used to store the data to be transmitted or received over the I2C bus. write to push on write data FIFO, read to pull from read data FIFO.
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
-\hline
-\mbox{\texttt{ in}}  & {\em data} & The 8-\/bit data value to write to the I2C data register.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
-\end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_ae6094788f5d9a6cf203350161d6a1194}\label{_e_f___i2_c_8h_ae6094788f5d9a6cf203350161d6a1194}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_writeMultipleCmd@{EF\_I2C\_writeMultipleCmd}}
-\index{EF\_I2C\_writeMultipleCmd@{EF\_I2C\_writeMultipleCmd}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_writeMultipleCmd()}{EF\_I2C\_writeMultipleCmd()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+write\+Multiple\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c }\end{DoxyParamCaption})}
-
-
-
-Enables the write multiple command mode for the I2C controller. 
-
-This function configures the I2C controller to enter write multiple command mode, allowing consecutive data writes without sending a stop condition between each write.
+This function attempts to write a single byte of data to the I2C Write FIFO. If the FIFO is unavailable, the function returns immediately.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers.\\
+\mbox{\texttt{ in}}  & {\em i2c} & Pointer to the I2C base address structure \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}. \\
 \hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
-\end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___i2_c_8h_ac8020e16b3158054341ac0bce22d8b7e}\label{_e_f___i2_c_8h_ac8020e16b3158054341ac0bce22d8b7e}} 
-\index{EF\_I2C.h@{EF\_I2C.h}!EF\_I2C\_writeToAddress@{EF\_I2C\_writeToAddress}}
-\index{EF\_I2C\_writeToAddress@{EF\_I2C\_writeToAddress}!EF\_I2C.h@{EF\_I2C.h}}
-\doxysubsubsection{\texorpdfstring{EF\_I2C\_writeToAddress()}{EF\_I2C\_writeToAddress()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+I2\+C\+\_\+write\+To\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}}}]{i2c,  }\item[{char}]{addr,  }\item[{char}]{data }\end{DoxyParamCaption})}
-
-
-
-Performs an I2C write operation to a specific address. 
-
-This function enables communication over the I2C bus by writing a single data byte to a specific address. It follows the standard I2C sequence for writing\+:
-\begin{DoxyEnumerate}
-\item Loads the data to be sent into the I2C data buffer.
-\item Sends the target device address as a command.
-\item Issues a stop condition to signal the end of the transaction.
-\item Waits for the I2C hardware to complete the operation.
-\end{DoxyEnumerate}
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em i2c} & An \mbox{\hyperlink{_e_f___i2_c__regs_8h_aa2269a016ba045981b24348570da1bbe}{EF\+\_\+\+I2\+C\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of I2C registers. \mbox{\hyperlink{_e_f___i2_c__regs_8h_ab0d3f158914422e7299a70fcd51e6141}{EF\+\_\+\+I2\+C\+\_\+\+TYPE}} is a structure that contains the I2C registers. \\
+\mbox{\texttt{ in}}  & {\em data} & Data byte to be written to the FIFO. \\
 \hline
-\mbox{\texttt{ in}}  & {\em addr} & The address to write to \\
-\hline
-\mbox{\texttt{ in}}  & {\em data} & The data to write\\
+\mbox{\texttt{ out}}  & {\em data\+\_\+written} & Pointer to a boolean where the write status will be stored\+:
+\begin{DoxyItemize}
+\item {\ttfamily true}\+: The data was written successfully.
+\item {\ttfamily false}\+: Write FIFO was unavailable.
+\end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

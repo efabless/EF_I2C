@@ -68,7 +68,7 @@ EF_DRIVER_STATUS EF_I2C_setGclkEnable (EF_I2C_TYPE_PTR i2c, uint32_t value){
 }
 
 
-#define EF_I2C_COMMAND_REG_CMD_CORRECT_MASK 0xFFFFE080
+
 
 EF_DRIVER_STATUS EF_I2C_setCommandReg(EF_I2C_TYPE_PTR i2c, uint32_t value){
 
@@ -159,7 +159,7 @@ EF_DRIVER_STATUS EF_I2C_getDataLast(EF_I2C_TYPE_PTR i2c, bool *data_last){
 }
 
 
-#define EF_I2C_PR_MAX_VALUE 0x0000FFFF
+
 EF_DRIVER_STATUS EF_I2C_setPrescaler(EF_I2C_TYPE_PTR i2c, uint32_t value){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -221,8 +221,7 @@ EF_DRIVER_STATUS EF_I2C_getMIS(EF_I2C_TYPE_PTR i2c, uint32_t* mis_value){
     return status;
 }
 
-#define EF_I2C_IM_REG_MAX_VALUE  0x000001FF
-#define EF_I2C_IC_REG_MAX_VALUE  0x000001FF
+
 EF_DRIVER_STATUS EF_I2C_setIM(EF_I2C_TYPE_PTR i2c, uint32_t mask){
     
     EF_DRIVER_STATUS status = EF_DRIVER_OK; 
