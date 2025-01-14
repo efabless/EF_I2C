@@ -43,7 +43,9 @@
 #define EF_DRIVER_ERROR_TIMEOUT         ((uint32_t)3)   ///< Timeout occurred
 #define EF_DRIVER_ERROR_UNSUPPORTED     ((uint32_t)4)   ///< Operation not supported
 #define EF_DRIVER_ERROR_PARAMETER       ((uint32_t)5)   ///< Parameter error
-#define EF_DRIVER_ERROR_SPECIFIC        ((uint32_t)6)   ///< Start of driver specific errors 
+#define EF_DRIVER_ERROR_SPECIFIC        ((uint32_t)6)   ///< Start of driver specific errors
+#define EF_DRIVER_ERROR_I2C_INVALID_DATA     ((uint32_t)7)   ///< Invalid I2C data
+
 
 
 /******************************************************************************

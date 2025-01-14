@@ -53,123 +53,11 @@
     */
 EF_DRIVER_STATUS EF_I2C_setGclkEnable (EF_I2C_TYPE_PTR i2c, uint32_t value);
 
-//! Performs an I2C write operation to a specific address.
-/*!
-        This function enables communication over the I2C bus by writing a single data byte to a specific address. 
-        It follows the standard I2C sequence for writing:
-        1. Loads the data to be sent into the I2C data buffer.
-        2. Sends the target device address as a command.
-        3. Issues a stop condition to signal the end of the transaction.
-        4. Waits for the I2C hardware to complete the operation.
-
-        \param [in] i2c An \ref EF_I2C_TYPE_PTR , which points to the base memory address of I2C registers. \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-        \param [in] addr The address to write to
-        \param [in] data The data to write
-        
-        \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code 
-    */
-EF_DRIVER_STATUS EF_I2C_writeToAddress(EF_I2C_TYPE_PTR i2c, char addr, char data);
-
-
-//! Issues an I2C read command to a specific address and waits for completion.
-/*!
-        This function initiates a read operation on the I2C bus. It performs the following steps:
-        1. Sends a read command to the specified address on the I2C bus.
-        2. Issues a stop condition to signal the end of the transaction.
-        3. Waits for the I2C hardware to complete the read operation.
-
-        \param [in] i2c An \ref EF_I2C_TYPE_PTR , which points to the base memory address of I2C registers. \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-        \param [in] addr The address on the I2C bus from which to read. 
-        
-        \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code 
-*/
-EF_DRIVER_STATUS EF_I2C_readCommand(EF_I2C_TYPE_PTR i2c, char addr);
-
-
-//! Writes an address to the I2C command register
-/*!
-        This function writes an address to the I2C command register. It performs the following steps:
-        1. Clears the field bits in the register using the defined mask.
-        2. Sets the bits with the given value at the defined offset.
-
-        \param [in] i2c An \ref EF_I2C_TYPE_PTR , which points to the base memory address of I2C registers. \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-        \param [in] addr The address to write to
-        
-        \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code 
-*/
-EF_DRIVER_STATUS EF_I2C_writeAddress(EF_I2C_TYPE_PTR i2c, char addr);
-
-
-//! Issues a start condition on the I2C bus.
-/*!
-    This function sends a start condition to initiate an I2C transaction. The start condition
-    is a signal to indicate the beginning of communication with an I2C device.
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code 
-*/
-EF_DRIVER_STATUS EF_I2C_startCmd(EF_I2C_TYPE_PTR i2c);
-
-
-//! Sends a read command to the specified address on the I2C bus.
-/*!
-    This function configures the I2C controller to read from the specified address on the I2C bus.
-    It sets the read bit and writes the target address into the I2C command register.
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-    \param [in] addr The target address on the I2C bus to read from. This is typically a 7-bit or 10-bit address.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code 
-*/
-EF_DRIVER_STATUS EF_I2C_readCmd(EF_I2C_TYPE_PTR i2c, char addr);
-
-
-//! Sends a write command to the specified address on the I2C bus.
-/*!
-    This function configures the I2C controller to write to the specified address on the I2C bus.
-    It sets the write bit and writes the target address into the I2C command register.
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-    \param [in] addr The target address on the I2C bus to write to. This is typically a 7-bit or 10-bit address.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code 
-*/
-EF_DRIVER_STATUS EF_I2C_writeCmd(EF_I2C_TYPE_PTR i2c, char addr);
-
-
-//! Enables the write multiple command mode for the I2C controller.
-/*!
-    This function configures the I2C controller to enter write multiple command mode, allowing 
-    consecutive data writes without sending a stop condition between each write. 
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code 
-*/
-EF_DRIVER_STATUS EF_I2C_writeMultipleCmd(EF_I2C_TYPE_PTR i2c);
-
-
-//! Issues a stop condition on the I2C bus.
-/*!
-    This function sends a stop condition, signaling the end of an I2C transaction. The stop condition 
-    releases the I2C bus for other devices to communicate.
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code 
-*/
-EF_DRIVER_STATUS EF_I2C_stopCmd(EF_I2C_TYPE_PTR i2c);
 
 
 //! Sets the command register of the I2C controller.
 /*!
-    This function writes a specified value directly to the I2C command register. It allows manual 
+    This ia a blocking function that writes a specified value directly to the I2C command register. It allows manual 
     configuration of the I2C controller for advanced or custom operations. 
 
     \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
@@ -182,61 +70,22 @@ EF_DRIVER_STATUS EF_I2C_stopCmd(EF_I2C_TYPE_PTR i2c);
 EF_DRIVER_STATUS EF_I2C_setCommandReg(EF_I2C_TYPE_PTR i2c, uint32_t value);
 
 
-//! Gets the value of the I2C command register.
+//! Writes a command value to the I2C command register (non-blocking).
 /*!
-    This function reads the current value of the I2C command register. It allows the user to 
-    retrieve the current configuration of the I2C controller for debugging or monitoring purposes.
+    This function attempts to write a specified command value to the I2C command register in a 
+    non-blocking manner. It checks the availability of the command FIFO before writing and 
+    updates the provided flag to indicate success.
 
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-    \param [out] command_value A pointer to a 32-bit variable where the command register value will be stored.
+    \param [in] i2c          Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] value        The command value to be written to the command register.
+    \param [out] command_sent Pointer to a boolean flag that indicates whether the command was successfully sent:
+                              - true: Command was written successfully.
+                              - false: Command was not written (FIFO unavailable or error).
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_getCommandReg(EF_I2C_TYPE_PTR i2c, uint32_t* command_value);
+EF_DRIVER_STATUS EF_I2C_setCommandRegNonBlocking(EF_I2C_TYPE_PTR i2c, uint32_t value, bool *command_sent);
 
-
-//! Writes a data value to the I2C data register.
-/*!
-    This function writes a data value to the I2C data register. The data register is used to store 
-    the data to be transmitted or received over the I2C bus. write to push on write data FIFO, read to pull from read data FIFO.
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-    \param [in] data The 8-bit data value to write to the I2C data register.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
-*/
-EF_DRIVER_STATUS EF_I2C_writeData(EF_I2C_TYPE_PTR i2c, char data);
-
-
-//! Reads a data value from the I2C data register.
-/*!
-    This function reads the current value of the I2C data register. The data register is used to store 
-    the data to be transmitted or received over the I2C bus. read to pull from read data FIFO.
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-    \param [out] data A pointer to an 8-bit variable where the data register value will be stored.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
-*/
-EF_DRIVER_STATUS EF_I2C_readData(EF_I2C_TYPE_PTR i2c, char *data);
-
-
-//! Sets the data valid flag in the I2C data register.
-/*!
-    This function modifies the data valid flag in the I2C data register. The flag indicates whether 
-    the current data in the register is valid for an I2C transaction.
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-    \param [in] valid A boolean value specifying the state of the data valid flag. 
-                      Set to `true` to mark the data as valid, or `false` to clear the flag.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
-*/
-EF_DRIVER_STATUS EF_I2C_setDataValid(EF_I2C_TYPE_PTR i2c, bool valid);
 
 //! Reads the data valid flag from the I2C data register.
 /*!
@@ -266,7 +115,7 @@ EF_DRIVER_STATUS EF_I2C_getDataValid(EF_I2C_TYPE_PTR i2c, bool *data_valid);
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_setDataLast(EF_I2C_TYPE_PTR i2c, bool valid);
+EF_DRIVER_STATUS EF_I2C_setDataLast(EF_I2C_TYPE_PTR i2c);
 
 
 //! Reads the data last flag from the I2C data register.
@@ -284,51 +133,6 @@ EF_DRIVER_STATUS EF_I2C_setDataLast(EF_I2C_TYPE_PTR i2c, bool valid);
 */
 EF_DRIVER_STATUS EF_I2C_getDataLast(EF_I2C_TYPE_PTR i2c, bool *data_last);
 
-
-//! Writes a value to the I2C data register.
-/*!
-    This function writes a 32-bit value to the I2C data register. The data register is used for 
-    handling the I2C read and write FIFOs, along with managing data validity and the last byte flag.  
-
-    **Data Register Breakdown**:
-    - Bits [0-7]: Data - Used to push data into the write FIFO or pull data from the read FIFO.
-    - Bit [8]: Data Valid - Indicates whether the read data is valid. Must be accessed atomically 
-               with 16-bit reads and writes.
-    - Bit [9]: Data Last - Indicates the last byte of a block write (write_multiple). Must be accessed 
-               atomically with 16-bit reads and writes.
-    - Bits [10-31]: Reserved - These bits are reserved for future use and should always be written 
-                    as zero to avoid undefined behavior.
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-    \param [in] value A 32-bit value to write to the data register. The value should include all 
-                      relevant fields (data, data valid, data last) as specified in the register breakdown.  
-                      The reserved bits (10-31) must always be set to zero.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
-*/
-EF_DRIVER_STATUS EF_I2C_setDataReg(EF_I2C_TYPE_PTR i2c, uint32_t value);
-
-
-//! Reads the value from the I2C data register.
-/*!
-    This function reads the 32-bit value from the I2C data register. The data register holds the 
-    I2C data (either for reading or writing) and status flags for data validity and the last byte in a block write. 
-
-    **Data Register Breakdown**:
-    - Bits [0-7]: Data - Contains the data pulled from the read FIFO or to be pushed into the write FIFO.
-    - Bit [8]: Data Valid - Indicates whether the read data is valid.
-    - Bit [9]: Data Last - Indicates if the byte read or written is the last byte of a block write (write_multiple).
-    - Bits [10-31]: Reserved - These bits are reserved.
-
-    \param [in] i2c An \ref EF_I2C_TYPE_PTR, which points to the base memory address of I2C registers. 
-                    \ref EF_I2C_TYPE is a structure that contains the I2C registers.
-    \param [out] data_reg_value A pointer to a 32-bit variable where the value of the data register 
-                                will be stored.
-
-    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
-*/
-EF_DRIVER_STATUS EF_I2C_getDataReg(EF_I2C_TYPE_PTR i2c, uint32_t* data_reg_value);
 
 
 //! Sets the I2C prescaler value.
@@ -492,7 +296,390 @@ EF_DRIVER_STATUS EF_I2C_getIM(EF_I2C_TYPE_PTR i2c, uint32_t* im_value);
 //EF_DRIVER_STATUS EF_I2C_setICR(EF_I2C_TYPE_PTR i2c, uint32_t mask);
 
 
-EF_DRIVER_STATUS EF_I2C_waitBusy(EF_I2C_TYPE_PTR i2c);
+// The following functions are not verified yet
+/******************************************************************************************************************************************/
+/******************************************************************************************************************************************/
+
+//! Checks if the I2C peripheral is busy.
+/*!
+    This function checks the `STATUS` register of the I2C peripheral to determine if the 
+    bus is currently busy. The result is stored in the memory location pointed to by 
+    `is_busy`.
+
+    \param [in] i2c       Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] is_busy  Pointer to a boolean where the busy status will be stored:
+                          - `true`: I2C is busy.
+                          - `false`: I2C is idle.
+
+    \return status A value of type \ref EF_DRIVER_STATUS:
+                   - EF_DRIVER_OK: The operation completed successfully.
+                   - EF_DRIVER_ERROR_PARAMETER: `i2c` or `is_busy` is NULL.
+*/
+EF_DRIVER_STATUS EF_I2C_isBusy(EF_I2C_TYPE_PTR i2c, bool *is_busy);
+
+
+
+//! Checks if the command FIFO is available.
+/*!
+    This function checks the `STATUS` register of the I2C peripheral to determine if the 
+    command FIFO is not full and ready to accept new commands. The result is stored in the 
+    memory location pointed to by `is_available`.
+
+    \param [in] i2c           Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] is_available Pointer to a boolean where the availability status will be stored:
+                              - `true`: Command FIFO is available.
+                              - `false`: Command FIFO is full.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_isCommandFIFOAvailable(EF_I2C_TYPE_PTR i2c, bool *is_available);
+
+
+
+//! Checks if the write FIFO is available.
+/*!
+    This function checks the `STATUS` register of the I2C peripheral to determine if the 
+    write FIFO is not full and ready to accept new data. The result is stored in the memory 
+    location pointed to by `is_available`.
+
+    \param [in] i2c           Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] is_available Pointer to a boolean where the availability status will be stored:
+                              - `true`: Write FIFO is available.
+                              - `false`: Write FIFO is full.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_isWriteFIFOAvailable(EF_I2C_TYPE_PTR i2c, bool *is_available);
+
+
+
+//! Checks if the read FIFO is available.
+/*!
+    This function checks the `STATUS` register of the I2C peripheral to determine if the 
+    read FIFO is not empty and has data available to be read. The result is stored in the 
+    memory location pointed to by `is_available`.
+
+    \param [in] i2c           Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] is_available Pointer to a boolean where the availability status will be stored:
+                              - `true`: Read FIFO is available.
+                              - `false`: Read FIFO is empty.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_isReadFIFOAvailable(EF_I2C_TYPE_PTR i2c, bool *is_available);
+
+
+
+
+//! Sends a write command to the I2C device (blocking).
+/*!
+    This function sends a write command to the I2C device at the specified address. 
+    It blocks until the command FIFO becomes available.
+
+    \param [in] i2c Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] addr The I2C address of the target device.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendWriteCommand(EF_I2C_TYPE_PTR i2c, char addr);
+
+
+
+//! Sends a write command to the I2C device (non-blocking).
+/*!
+    This function attempts to send a write command to the I2C device at the specified 
+    address. If the command FIFO is unavailable, the function returns immediately.
+
+    \param [in] i2c          Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] addr         The I2C address of the target device.
+    \param [out] command_sent Pointer to a boolean where the command status will be stored:
+                              - `true`: Command was sent successfully.
+                              - `false`: Command FIFO was unavailable.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent);
+
+
+
+//! Sends a read command to the I2C device (blocking).
+/*!
+    This function sends a read command to the I2C device at the specified address. 
+    It blocks until the command FIFO becomes available.
+
+    \param [in] i2c Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] addr The I2C address of the target device.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendReadCommand(EF_I2C_TYPE_PTR i2c, char addr);
+
+
+
+//! Sends a read command to the I2C device (non-blocking).
+/*!
+    This function attempts to send a read command to the I2C device at the specified 
+    address. If the command FIFO is unavailable, the function returns immediately.
+
+    \param [in] i2c          Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] addr         The I2C address of the target device.
+    \param [out] command_sent Pointer to a boolean where the command status will be stored:
+                              - `true`: Command was sent successfully.
+                              - `false`: Command FIFO was unavailable.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendReadCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent);
+
+
+
+//! Sends a start condition on the I2C bus (blocking).
+/*!
+    This function sends a start condition on the I2C bus. It blocks until the 
+    command FIFO becomes available.
+
+    \param [in] i2c Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendStartCommand(EF_I2C_TYPE_PTR i2c);
+
+
+
+//! Sends a start condition on the I2C bus (non-blocking).
+/*!
+    This function attempts to send a start condition on the I2C bus. If the command FIFO 
+    is unavailable, the function returns immediately.
+
+    \param [in] i2c          Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] command_sent Pointer to a boolean where the command status will be stored:
+                              - `true`: Start condition was sent successfully.
+                              - `false`: Command FIFO was unavailable.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendStartCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *command_sent);
+
+
+//! Sends a stop condition on the I2C bus (blocking).
+/*!
+    This function sends a stop condition on the I2C bus. It blocks until the 
+    command FIFO becomes available.
+
+    \param [in] i2c Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendStopCommand(EF_I2C_TYPE_PTR i2c);
+
+
+
+//! Sends a stop condition on the I2C bus (non-blocking).
+/*!
+    This function attempts to send a stop condition on the I2C bus. If the command FIFO 
+    is unavailable, the function returns immediately.
+
+    \param [in] i2c          Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] command_sent Pointer to a boolean where the command status will be stored:
+                              - `true`: Stop condition was sent successfully.
+                              - `false`: Command FIFO was unavailable.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendStopCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *command_sent);
+
+
+
+//! Sends a "write multiple" command on the I2C bus (blocking).
+/*!
+    This function sends a "write multiple" command on the I2C bus. It blocks until the 
+    command FIFO becomes available.
+
+    \param [in] i2c Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand(EF_I2C_TYPE_PTR i2c);
+
+
+
+//! Sends a "write multiple" command on the I2C bus (non-blocking).
+/*!
+    This function attempts to send a "write multiple" command on the I2C bus. If the command FIFO 
+    is unavailable, the function returns immediately.
+
+    \param [in] i2c          Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] command_sent Pointer to a boolean where the command status will be stored:
+                              - `true`: The "write multiple" command was sent successfully.
+                              - `false`: Command FIFO was unavailable.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *command_sent);
+
+
+//! Writes data to the I2C Write FIFO (blocking).
+/*!
+    This function writes a single byte of data to the I2C Write FIFO. It blocks until the FIFO becomes available.
+
+    \param [in] i2c  Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] data Data byte to be written to the FIFO.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO(EF_I2C_TYPE_PTR i2c, char data);
+
+
+//! Writes data to the I2C Write FIFO (non-blocking).
+/*!
+    This function attempts to write a single byte of data to the I2C Write FIFO. If the FIFO is unavailable, 
+    the function returns immediately.
+
+    \param [in] i2c          Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] data         Data byte to be written to the FIFO.
+    \param [out] data_written Pointer to a boolean where the write status will be stored:
+                              - `true`: The data was written successfully.
+                              - `false`: Write FIFO was unavailable.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking(EF_I2C_TYPE_PTR i2c, char data, bool *data_written);
+
+
+
+//! Reads data from the I2C Read FIFO (blocking).
+/*!
+    This function reads a single byte of data from the I2C Read FIFO. It blocks until the FIFO becomes available 
+    and validates the data read.
+
+    \param [in] i2c Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] data Pointer to a variable where the read data byte will be stored.
+
+    \return status A value of type \ref EF_DRIVER_STATUS:
+                   - EF_DRIVER_OK: The operation completed successfully.
+                   - EF_DRIVER_ERROR_PARAMETER: `i2c` or `data` is NULL.
+                   - EF_DRIVER_ERROR_I2C_INVALID_DATA: The data read is invalid.
+*/
+EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO(EF_I2C_TYPE_PTR i2c, char *data);
+
+
+
+//! Reads data from the I2C Read FIFO (non-blocking).
+/*!
+    This function attempts to read a single byte of data from the I2C Read FIFO. If the FIFO is unavailable, 
+    the function returns immediately. The validity of the data is also checked.
+
+    \param [in] i2c          Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] data        Pointer to a variable where the read data byte will be stored.
+    \param [out] data_read   Pointer to a boolean where the read status will be stored:
+                             - `true`: Data was read successfully and is valid.
+                             - `false`: Read FIFO was unavailable or data is invalid.
+
+    \return status A value of type \ref EF_DRIVER_STATUS:
+                   - EF_DRIVER_OK: The operation completed successfully.
+                   - EF_DRIVER_ERROR_PARAMETER: `i2c`, `data`, or `data_read` is NULL.
+                   - EF_DRIVER_ERROR_I2C_INVALID_DATA: The data read is invalid.
+*/
+EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking(EF_I2C_TYPE_PTR i2c, char *data, bool *data_read);
+
+
+//! Transmits a single byte to a specified I2C address (blocking).
+/*!
+    This function transmits a single byte to a specified I2C address using the Write FIFO. It blocks until 
+    all operations (data write, write command, and stop command) are completed.
+
+    \param [in] i2c  Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] data Data byte to be transmitted.
+    \param [in] addr I2C address to which the data will be sent.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_transmitByte(EF_I2C_TYPE_PTR i2c, char data, char addr);
+
+
+
+//! Transmits a single byte to a specified I2C address (non-blocking).
+/*!
+    This function attempts to transmit a single byte to a specified I2C address using the Write FIFO in a 
+    non-blocking manner. If any step of the process (data write, write command, or stop command) cannot 
+    complete immediately, the function returns.
+
+    \param [in] i2c          Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] data         Data byte to be transmitted.
+    \param [in] addr         I2C address to which the data will be sent.
+    \param [out] transmitted Pointer to a boolean where the transmission status will be stored:
+                             - `true`: Data was transmitted successfully.
+                             - `false`: Transmission could not be completed.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking(EF_I2C_TYPE_PTR i2c, char data, char addr, bool *transmitted);
+
+
+
+//! Receives a single byte from a specified I2C address (blocking).
+/*!
+    This function reads a single byte from a specified I2C address. It blocks until all operations 
+    (read command, stop command, and data retrieval) are completed.
+
+    \param [in] i2c  Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] data Pointer to a char where the received data byte will be stored.
+    \param [in] addr I2C address from which the data will be read.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, char *data, char addr);
+
+
+//! Receives a single byte from a specified I2C address (non-blocking).
+/*!
+    This function attempts to read a single byte from a specified I2C address in a non-blocking manner. 
+    If any step of the process (read command, stop command, or data retrieval) cannot complete immediately, 
+    the function returns.
+
+    \param [in] i2c       Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] data     Pointer to a char where the received data byte will be stored.
+    \param [in] addr      I2C address from which the data will be read.
+    \param [out] received Pointer to a boolean where the reception status will be stored:
+                          - `true`: Data was received successfully.
+                          - `false`: Reception could not be completed.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking(EF_I2C_TYPE_PTR i2c, char *data, char addr, bool *received);
+
+
+//! Transmits an array of characters to a specified I2C address (blocking).
+/*!
+    This function sends an array of characters to a specified I2C address. It handles writing the 
+    data to the I2C FIFO and ensures the last byte is appropriately marked.
+
+    \param [in] i2c         Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [in] data        Pointer to the array of characters to be transmitted.
+    \param [in] data_length Number of characters in the array to transmit.
+    \param [in] addr        I2C address to which the data will be sent.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_transmitCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr);
+
+
+//! Receives an array of characters from a specified I2C address (blocking).
+/*!
+    This function reads an array of characters from a specified I2C address. It issues the read 
+    command for each byte, stores the data in the provided buffer, and sends a stop command after 
+    successful reception.
+
+    \param [in] i2c         Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
+    \param [out] data       Pointer to the buffer where the received characters will be stored.
+    \param [in] data_length Number of characters to receive.
+    \param [in] addr        I2C address from which the data will be read.
+
+    \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
+*/
+EF_DRIVER_STATUS EF_I2C_recieveCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr);
+
+
 /******************************************************************************
 * External Variables
 ******************************************************************************/
