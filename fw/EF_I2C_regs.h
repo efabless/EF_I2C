@@ -107,7 +107,7 @@ typedef struct _EF_I2C_TYPE_ {
 } EF_I2C_TYPE;
 
 
-typedef EF_I2C_TYPE * EF_I2C_TYPE_PTR;                   // EF_I2C_PTR is a pointer to a structure of type EF_I2C_TYPE
+typedef EF_I2C_TYPE* EF_I2C_TYPE_PTR;                   // EF_I2C_PTR is a pointer to a structure of type EF_I2C_TYPE
 
 
 /******************************************************************************

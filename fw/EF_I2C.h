@@ -35,10 +35,10 @@
 /******************************************************************************
 * Macros and Constants
 ******************************************************************************/
-#define EF_I2C_COMMAND_REG_CMD_CORRECT_MASK 0xFFFFE080
-#define EF_I2C_PR_MAX_VALUE                 0x0000FFFF
-#define EF_I2C_IM_REG_MAX_VALUE             0x000001FF
-#define EF_I2C_IC_REG_MAX_VALUE             0x000001FF
+#define EF_I2C_COMMAND_REG_CMD_CORRECT_MASK ((uint32_t)0xFFFFE080)
+#define EF_I2C_PR_MAX_VALUE                 ((uint32_t)0x0000FFFF)
+#define EF_I2C_IM_REG_MAX_VALUE             ((uint32_t)0x000001FF)
+#define EF_I2C_IC_REG_MAX_VALUE             ((uint32_t)0x000001FF)
 /******************************************************************************
 * Typedefs and Enums
 ******************************************************************************/
@@ -384,7 +384,7 @@ EF_DRIVER_STATUS EF_I2C_isReadFIFOAvailable(EF_I2C_TYPE_PTR i2c, bool *is_availa
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_sendWriteCommand(EF_I2C_TYPE_PTR i2c, char addr);
+EF_DRIVER_STATUS EF_I2C_sendWriteCommand(EF_I2C_TYPE_PTR i2c, uint8_t addr);
 
 
 
@@ -401,7 +401,7 @@ EF_DRIVER_STATUS EF_I2C_sendWriteCommand(EF_I2C_TYPE_PTR i2c, char addr);
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent);
+EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent);
 
 
 
@@ -415,7 +415,7 @@ EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char ad
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_sendReadCommand(EF_I2C_TYPE_PTR i2c, char addr);
+EF_DRIVER_STATUS EF_I2C_sendReadCommand(EF_I2C_TYPE_PTR i2c, uint8_t addr);
 
 
 
@@ -432,7 +432,7 @@ EF_DRIVER_STATUS EF_I2C_sendReadCommand(EF_I2C_TYPE_PTR i2c, char addr);
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_sendReadCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent);
+EF_DRIVER_STATUS EF_I2C_sendReadCommandNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent);
 
 
 
@@ -502,7 +502,7 @@ EF_DRIVER_STATUS EF_I2C_sendStopCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *co
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand(EF_I2C_TYPE_PTR i2c);
+EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand(EF_I2C_TYPE_PTR i2c, uint8_t addr);
 
 
 
@@ -518,7 +518,7 @@ EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand(EF_I2C_TYPE_PTR i2c);
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *command_sent);
+EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent);
 
 
 //! Writes data to the I2C Write FIFO (blocking).
@@ -530,7 +530,7 @@ EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c,
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO(EF_I2C_TYPE_PTR i2c, char data);
+EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO(EF_I2C_TYPE_PTR i2c, uint8_t data);
 
 
 //! Writes data to the I2C Write FIFO (non-blocking).
@@ -546,7 +546,7 @@ EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO(EF_I2C_TYPE_PTR i2c, char data);
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking(EF_I2C_TYPE_PTR i2c, char data, bool *data_written);
+EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t data, bool *data_written);
 
 
 
@@ -563,7 +563,7 @@ EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking(EF_I2C_TYPE_PTR i2c, cha
                    - EF_DRIVER_ERROR_PARAMETER: `i2c` or `data` is NULL.
                    - EF_DRIVER_ERROR_I2C_INVALID_DATA: The data read is invalid.
 */
-EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO(EF_I2C_TYPE_PTR i2c, char *data);
+EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO(EF_I2C_TYPE_PTR i2c, uint8_t *data);
 
 
 
@@ -583,7 +583,7 @@ EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO(EF_I2C_TYPE_PTR i2c, char *data);
                    - EF_DRIVER_ERROR_PARAMETER: `i2c`, `data`, or `data_read` is NULL.
                    - EF_DRIVER_ERROR_I2C_INVALID_DATA: The data read is invalid.
 */
-EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking(EF_I2C_TYPE_PTR i2c, char *data, bool *data_read);
+EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t *data, bool *data_read);
 
 
 //! Transmits a single byte to a specified I2C address (blocking).
@@ -597,7 +597,7 @@ EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking(EF_I2C_TYPE_PTR i2c, cha
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_transmitByte(EF_I2C_TYPE_PTR i2c, char data, char addr);
+EF_DRIVER_STATUS EF_I2C_transmitByte(EF_I2C_TYPE_PTR i2c, uint8_t data, uint8_t addr);
 
 
 
@@ -616,7 +616,7 @@ EF_DRIVER_STATUS EF_I2C_transmitByte(EF_I2C_TYPE_PTR i2c, char data, char addr);
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking(EF_I2C_TYPE_PTR i2c, char data, char addr, bool *transmitted);
+EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t data, uint8_t addr, bool *transmitted);
 
 
 
@@ -626,12 +626,12 @@ EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking(EF_I2C_TYPE_PTR i2c, char data, 
     (read command, stop command, and data retrieval) are completed.
 
     \param [in] i2c  Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
-    \param [out] data Pointer to a char where the received data byte will be stored.
+    \param [out] data Pointer to a uint8_t where the received data byte will be stored.
     \param [in] addr I2C address from which the data will be read.
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, char *data, char addr);
+EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint8_t addr);
 
 
 //! Receives a single byte from a specified I2C address (non-blocking).
@@ -641,7 +641,7 @@ EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, char *data, char addr);
     the function returns.
 
     \param [in] i2c       Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
-    \param [out] data     Pointer to a char where the received data byte will be stored.
+    \param [out] data     Pointer to a uint8_t where the received data byte will be stored.
     \param [in] addr      I2C address from which the data will be read.
     \param [out] received Pointer to a boolean where the reception status will be stored:
                           - `true`: Data was received successfully.
@@ -649,38 +649,38 @@ EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, char *data, char addr);
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking(EF_I2C_TYPE_PTR i2c, char *data, char addr, bool *received);
+EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint8_t addr, bool *received);
 
 
-//! Transmits an array of characters to a specified I2C address (blocking).
+//! Transmits an array of bytes to a specified I2C address (blocking).
 /*!
-    This function sends an array of characters to a specified I2C address. It handles writing the 
+    This function sends an array of bytes to a specified I2C address. It handles writing the 
     data to the I2C FIFO and ensures the last byte is appropriately marked.
 
     \param [in] i2c         Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
-    \param [in] data        Pointer to the array of characters to be transmitted.
-    \param [in] data_length Number of characters in the array to transmit.
+    \param [in] data        Pointer to the array of bytes to be transmitted.
+    \param [in] data_length Number of bytes in the array to transmit.
     \param [in] addr        I2C address to which the data will be sent.
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_transmitCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr);
+EF_DRIVER_STATUS EF_I2C_transmitCharArr(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint32_t data_length, uint8_t addr);
 
 
-//! Receives an array of characters from a specified I2C address (blocking).
+//! Receives an array of bytes from a specified I2C address (blocking).
 /*!
-    This function reads an array of characters from a specified I2C address. It issues the read 
+    This function reads an array of bytes from a specified I2C address. It issues the read 
     command for each byte, stores the data in the provided buffer, and sends a stop command after 
     successful reception.
 
     \param [in] i2c         Pointer to the I2C base address structure \ref EF_I2C_TYPE_PTR.
-    \param [out] data       Pointer to the buffer where the received characters will be stored.
-    \param [in] data_length Number of characters to receive.
+    \param [out] data       Pointer to the buffer where the received bytes will be stored.
+    \param [in] data_length Number of bytes to receive.
     \param [in] addr        I2C address from which the data will be read.
 
     \return status A value of type \ref EF_DRIVER_STATUS : returns a success or error code
 */
-EF_DRIVER_STATUS EF_I2C_recieveCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr);
+EF_DRIVER_STATUS EF_I2C_recieveCharArr(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint32_t data_length, uint8_t addr);
 
 
 /******************************************************************************

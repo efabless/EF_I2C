@@ -76,7 +76,7 @@ EF_DRIVER_STATUS EF_I2C_setCommandReg(EF_I2C_TYPE_PTR i2c, uint32_t value){
 
     if (i2c == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER;     // Return EF_DRIVER_ERROR_PARAMETER if i2c is NULL
-    } if (value & EF_I2C_COMMAND_REG_CMD_CORRECT_MASK) {
+    } if ((value & EF_I2C_COMMAND_REG_CMD_CORRECT_MASK) != (uint32_t)0x0) {
         status = EF_DRIVER_ERROR_PARAMETER;     // Return EF_DRIVER_ERROR_PARAMETER if value is out of range
     }else{    
         bool is_command_available = false;
@@ -94,7 +94,7 @@ EF_DRIVER_STATUS EF_I2C_setCommandRegNonBlocking (EF_I2C_TYPE_PTR i2c, uint32_t 
 
     if (i2c == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER;     // Return EF_DRIVER_ERROR_PARAMETER if i2c is NULL
-    } if (value & EF_I2C_COMMAND_REG_CMD_CORRECT_MASK) {
+    } if ((value & EF_I2C_COMMAND_REG_CMD_CORRECT_MASK) != (uint32_t)0x0) {
         status = EF_DRIVER_ERROR_PARAMETER;     // Return EF_DRIVER_ERROR_PARAMETER if value is out of range
     }else{    
         bool is_command_available = false;
@@ -118,7 +118,7 @@ EF_DRIVER_STATUS EF_I2C_getDataValid(EF_I2C_TYPE_PTR i2c, bool *data_valid){
     } else if (data_valid == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER;     // Return EF_DRIVER_ERROR_PARAMETER if data_valid is NULL
     } else{
-        if ((i2c->DATA & EF_I2C_DATA_REG_DATA_VALID_MASK) >> EF_I2C_DATA_REG_DATA_VALID_BIT){
+        if (((i2c->DATA & EF_I2C_DATA_REG_DATA_VALID_MASK) >> EF_I2C_DATA_REG_DATA_VALID_BIT) != (uint32_t)0){
             *data_valid = true;
         }
         else{
@@ -135,7 +135,7 @@ EF_DRIVER_STATUS EF_I2C_setDataLast(EF_I2C_TYPE_PTR i2c){
     if (i2c == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER;     // Return EF_DRIVER_ERROR_PARAMETER if i2c is NULL
     }else{
-        i2c->DATA |= ((1 << EF_I2C_DATA_REG_DATA_LAST_BIT) & EF_I2C_DATA_REG_DATA_LAST_MASK);
+        i2c->DATA |= (((uint32_t)1 << EF_I2C_DATA_REG_DATA_LAST_BIT) & EF_I2C_DATA_REG_DATA_LAST_MASK);
     }
     return status;
 }
@@ -149,7 +149,7 @@ EF_DRIVER_STATUS EF_I2C_getDataLast(EF_I2C_TYPE_PTR i2c, bool *data_last){
     }else if (data_last == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER;     // Return EF_DRIVER_ERROR_PARAMETER if data_last is NULL
     }else{    
-        if ((i2c->DATA & EF_I2C_DATA_REG_DATA_LAST_MASK) >> EF_I2C_DATA_REG_DATA_LAST_BIT){
+        if (((i2c->DATA & EF_I2C_DATA_REG_DATA_LAST_MASK) >> EF_I2C_DATA_REG_DATA_LAST_BIT) != (uint32_t)0){
             *data_last = true;
         }else{
             *data_last = false;
@@ -345,7 +345,7 @@ EF_DRIVER_STATUS EF_I2C_isReadFIFOAvailable(EF_I2C_TYPE_PTR i2c, bool *is_availa
 
 
 // this is a blocking send write command function
-EF_DRIVER_STATUS EF_I2C_sendWriteCommand(EF_I2C_TYPE_PTR i2c, char addr){
+EF_DRIVER_STATUS EF_I2C_sendWriteCommand(EF_I2C_TYPE_PTR i2c, uint8_t addr){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -362,7 +362,7 @@ EF_DRIVER_STATUS EF_I2C_sendWriteCommand(EF_I2C_TYPE_PTR i2c, char addr){
     return status;
 }
 
-EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent){
+EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -384,7 +384,7 @@ EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char ad
 }
 
 
-EF_DRIVER_STATUS EF_I2C_sendReadCommand(EF_I2C_TYPE_PTR i2c, char addr){
+EF_DRIVER_STATUS EF_I2C_sendReadCommand(EF_I2C_TYPE_PTR i2c, uint8_t addr){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -402,7 +402,7 @@ EF_DRIVER_STATUS EF_I2C_sendReadCommand(EF_I2C_TYPE_PTR i2c, char addr){
 }
 
 
-EF_DRIVER_STATUS EF_I2C_sendReadCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent){
+EF_DRIVER_STATUS EF_I2C_sendReadCommandNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -436,7 +436,7 @@ EF_DRIVER_STATUS EF_I2C_sendStartCommand(EF_I2C_TYPE_PTR i2c){
             status = EF_I2C_isCommandFIFOAvailable(i2c, &command_FIFO_available);
         }while ((status==EF_DRIVER_OK)&&(command_FIFO_available==false));
         
-        i2c->COMMAND = ((1 << EF_I2C_COMMAND_REG_CMD_START_BIT) & EF_I2C_COMMAND_REG_CMD_START_MASK);
+        i2c->COMMAND = (((uint32_t)1 << EF_I2C_COMMAND_REG_CMD_START_BIT) & EF_I2C_COMMAND_REG_CMD_START_MASK);
     }
     return status;
 }
@@ -453,7 +453,7 @@ EF_DRIVER_STATUS EF_I2C_sendStartCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *c
         bool command_FIFO_available = false;
         status = EF_I2C_isCommandFIFOAvailable(i2c, &command_FIFO_available);
         if ((status==EF_DRIVER_OK)&&(command_FIFO_available==true)){
-            i2c->COMMAND = ((1 << EF_I2C_COMMAND_REG_CMD_START_BIT) & EF_I2C_COMMAND_REG_CMD_START_MASK);
+            i2c->COMMAND = (((uint32_t)1 << EF_I2C_COMMAND_REG_CMD_START_BIT) & EF_I2C_COMMAND_REG_CMD_START_MASK);
             *command_sent = true;
         }else{
             *command_sent = false;
@@ -474,7 +474,7 @@ EF_DRIVER_STATUS EF_I2C_sendStopCommand(EF_I2C_TYPE_PTR i2c){
             status = EF_I2C_isCommandFIFOAvailable(i2c, &command_FIFO_available);
         }while ((status==EF_DRIVER_OK)&&(command_FIFO_available==false));
         
-        i2c->COMMAND = ((1 << EF_I2C_COMMAND_REG_CMD_STOP_BIT) & EF_I2C_COMMAND_REG_CMD_STOP_MASK);
+        i2c->COMMAND = (((uint32_t)1 << EF_I2C_COMMAND_REG_CMD_STOP_BIT) & EF_I2C_COMMAND_REG_CMD_STOP_MASK);
     }
     return status;
 }
@@ -492,7 +492,7 @@ EF_DRIVER_STATUS EF_I2C_sendStopCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *co
         bool command_FIFO_available = false;
         status = EF_I2C_isCommandFIFOAvailable(i2c, &command_FIFO_available);
         if ((status==EF_DRIVER_OK)&&(command_FIFO_available==true)){
-            i2c->COMMAND = ((1 << EF_I2C_COMMAND_REG_CMD_STOP_BIT) & EF_I2C_COMMAND_REG_CMD_STOP_MASK);
+            i2c->COMMAND = (((uint32_t)1 << EF_I2C_COMMAND_REG_CMD_STOP_BIT) & EF_I2C_COMMAND_REG_CMD_STOP_MASK);
             *command_sent = true;
         }else{
             *command_sent = false;
@@ -501,7 +501,7 @@ EF_DRIVER_STATUS EF_I2C_sendStopCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *co
     return status;
 }
 
-EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand(EF_I2C_TYPE_PTR i2c){
+EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand(EF_I2C_TYPE_PTR i2c, uint8_t addr){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -510,11 +510,11 @@ EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand(EF_I2C_TYPE_PTR i2c){
         status = EF_I2C_isCommandFIFOAvailable(i2c, &command_FIFO_available);
     }while ((status==EF_DRIVER_OK)&&(command_FIFO_available==false));
     
-    i2c->COMMAND = ((1 << EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT) & EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK);
+    i2c->COMMAND = ((addr << EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT) & EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK);
     return status;
 }
 
-EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *command_sent){
+EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -524,7 +524,7 @@ EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c,
         bool command_FIFO_available = false;
         status = EF_I2C_isCommandFIFOAvailable(i2c, &command_FIFO_available);
         if ((status==EF_DRIVER_OK)&&(command_FIFO_available==true)){
-            i2c->COMMAND = ((1 << EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT) & EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK);
+            i2c->COMMAND = ((addr << EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT) & EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK);
             *command_sent = true;
         }else{
             *command_sent = false;
@@ -533,7 +533,7 @@ EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c,
     return status;
 }
 
-EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO(EF_I2C_TYPE_PTR i2c, char data){
+EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO(EF_I2C_TYPE_PTR i2c, uint8_t data){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -551,7 +551,7 @@ EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO(EF_I2C_TYPE_PTR i2c, char data){
 }
 
 
-EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking(EF_I2C_TYPE_PTR i2c, char data, bool *data_written){
+EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t data, bool *data_written){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -573,7 +573,7 @@ EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking(EF_I2C_TYPE_PTR i2c, cha
 }
 
 
-EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO(EF_I2C_TYPE_PTR i2c, char *data){
+EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO(EF_I2C_TYPE_PTR i2c, uint8_t *data){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -597,7 +597,7 @@ EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO(EF_I2C_TYPE_PTR i2c, char *data){
     return status;
 }
 
-EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking(EF_I2C_TYPE_PTR i2c, char *data, bool *data_read){
+EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t *data, bool *data_read){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -624,7 +624,7 @@ EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking(EF_I2C_TYPE_PTR i2c, cha
     return status;
 }
 
-EF_DRIVER_STATUS EF_I2C_transmitByte(EF_I2C_TYPE_PTR i2c, char data, char addr){
+EF_DRIVER_STATUS EF_I2C_transmitByte(EF_I2C_TYPE_PTR i2c, uint8_t data, uint8_t addr){
     
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
     if (i2c == NULL) {
@@ -639,7 +639,7 @@ EF_DRIVER_STATUS EF_I2C_transmitByte(EF_I2C_TYPE_PTR i2c, char data, char addr){
 
 
 
-EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking(EF_I2C_TYPE_PTR i2c, char data, char addr, bool *transmitted){
+EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t data, uint8_t addr, bool *transmitted){
     
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
     if (i2c == NULL) {
@@ -659,7 +659,7 @@ EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking(EF_I2C_TYPE_PTR i2c, char data, 
 }
 
 
-EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, char *data, char addr){
+EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint8_t addr){
     
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
     if (i2c == NULL) {
@@ -673,7 +673,7 @@ EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, char *data, char addr){
 }
 
 
-EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking(EF_I2C_TYPE_PTR i2c, char *data, char addr, bool *received){
+EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint8_t addr, bool *received){
     
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
     if (i2c == NULL) {
@@ -694,7 +694,7 @@ EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking(EF_I2C_TYPE_PTR i2c, char *data, 
 }
 
 
-EF_DRIVER_STATUS EF_I2C_transmitCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr) {
+EF_DRIVER_STATUS EF_I2C_transmitCharArr(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint32_t data_length, uint8_t addr) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
     // Validate input parameters
@@ -705,13 +705,13 @@ EF_DRIVER_STATUS EF_I2C_transmitCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_
         status = EF_I2C_writeDataToWriteFIFO(i2c, data[0]);                 // Write the first byte to the FIFO
 
         if (status == EF_DRIVER_OK) {
-            status = EF_I2C_sendWriteMultipleCommand(i2c);                  // Send the write multiple command
+            status = EF_I2C_sendWriteMultipleCommand(i2c, addr);                  // Send the write multiple command
         }else{}
 
         // Transmit the remaining bytes if no error has occurred
-        for (uint32_t i = 1; i < data_length && (status == EF_DRIVER_OK); i++) {
+        for (uint32_t i = 1; (i < data_length) && (status == EF_DRIVER_OK); i++) {
             
-            if (i == data_length - 1) {
+            if (i == (data_length - (uint32_t)1)) {
                 status = EF_I2C_setDataLast(i2c);                     // Mark the last byte appropriately
             }
 
@@ -727,15 +727,15 @@ EF_DRIVER_STATUS EF_I2C_transmitCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_
     return status;
 }
 
-EF_DRIVER_STATUS EF_I2C_recieveCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr) {
+EF_DRIVER_STATUS EF_I2C_recieveCharArr(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint32_t data_length, uint8_t addr) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
     // Validate input parameters
-    if ((i2c == NULL) || (data == NULL) || (data_length == 0)) {
+    if ((i2c == NULL) || (data == NULL) || (data_length == (uint32_t)0)) {
         status = EF_DRIVER_ERROR_PARAMETER;                                 // Set error status if parameters are invalid
     } else {
         // Transmit the remaining bytes if no error has occurred
-        for (uint32_t i = 0; i < data_length && (status == EF_DRIVER_OK); i++) {
+        for (uint32_t i = 0; (i < data_length) && (status == EF_DRIVER_OK); i++) {
             
             status = EF_I2C_sendReadCommand(i2c, addr);                     // Send the read command
 
