@@ -18,7 +18,7 @@
 
 
 /*! \file EF_I2C.c
-    \brief C header file for I2C APIs which contains the function implementations 
+    \brief C file for I2C APIs which contains the function implementations 
     
 */
 
