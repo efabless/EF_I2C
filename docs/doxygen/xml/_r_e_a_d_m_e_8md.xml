@@ -159,6 +159,14 @@
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeDataToWriteFIFO**](#function-ef_i2c_writedatatowritefifo)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>data)<sp/>&lt;br&gt;_Writes<sp/>data<sp/>to<sp/>the<sp/>I2C<sp/>Write<sp/>FIFO<sp/>(blocking)._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_I2C\_writeDataToWriteFIFONonBlocking**](#function-ef_i2c_writedatatowritefifononblocking)<sp/>([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr)<sp/>i2c,<sp/>char<sp/>data,<sp/>bool<sp/>\*data\_written)<sp/>&lt;br&gt;_Writes<sp/>data<sp/>to<sp/>the<sp/>I2C<sp/>Write<sp/>FIFO<sp/>(non-blocking)._<sp/>|</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Macros</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Type<sp/>|<sp/>Name<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>---:<sp/>|<sp/>:---<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK**](#define-ef_i2c_command_reg_cmd_correct_mask)<sp/><sp/>0xFFFFE080&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_IC\_REG\_MAX\_VALUE**](#define-ef_i2c_ic_reg_max_value)<sp/><sp/>0x000001FF&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_IM\_REG\_MAX\_VALUE**](#define-ef_i2c_im_reg_max_value)<sp/><sp/>0x000001FF&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>define<sp/><sp/>|<sp/>[**EF\_I2C\_PR\_MAX\_VALUE**](#define-ef_i2c_pr_max_value)<sp/><sp/>0x0000FFFF&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Functions<sp/>Documentation</highlight></codeline>
@@ -1179,6 +1187,32 @@
 <codeline><highlight class="normal">**Returns:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Macros<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_COMMAND_REG_CMD_CORRECT_MASK`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_COMMAND_REG_CMD_CORRECT_MASK<sp/>0xFFFFE080</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_IC_REG_MAX_VALUE`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_IC_REG_MAX_VALUE<sp/>0x000001FF</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_IM_REG_MAX_VALUE`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_IM_REG_MAX_VALUE<sp/>0x000001FF</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>define<sp/>`EF_I2C_PR_MAX_VALUE`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>EF_I2C_PR_MAX_VALUE<sp/>0x0000FFFF</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>File<sp/>EF_I2C_regs.h</highlight></codeline>

@@ -123,41 +123,41 @@ _C header file for I2C APIs which contains the function prototypes._
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_isCommandFIFOAvailable**](#function-ef_i2c_iscommandfifoavailable) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, bool \*is\_available) <br>_Checks if the command FIFO is available._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_isReadFIFOAvailable**](#function-ef_i2c_isreadfifoavailable) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, bool \*is\_available) <br>_Checks if the read FIFO is available._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_isWriteFIFOAvailable**](#function-ef_i2c_iswritefifoavailable) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, bool \*is\_available) <br>_Checks if the write FIFO is available._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_readDataFromReadFIFO**](#function-ef_i2c_readdatafromreadfifo) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char \*data) <br>_Reads data from the I2C Read FIFO (blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_readDataFromReadFIFONonBlocking**](#function-ef_i2c_readdatafromreadfifononblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char \*data, bool \*data\_read) <br>_Reads data from the I2C Read FIFO (non-blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_receiveByte**](#function-ef_i2c_receivebyte) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char \*data, char addr) <br>_Receives a single byte from a specified I2C address (blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_receiveByteNonBlocking**](#function-ef_i2c_receivebytenonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char \*data, char addr, bool \*received) <br>_Receives a single byte from a specified I2C address (non-blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_recieveCharArr**](#function-ef_i2c_recievechararr) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char \*data, uint32\_t data\_length, char addr) <br>_Receives an array of characters from a specified I2C address (blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendReadCommand**](#function-ef_i2c_sendreadcommand) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char addr) <br>_Sends a read command to the I2C device (blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendReadCommandNonBlocking**](#function-ef_i2c_sendreadcommandnonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char addr, bool \*command\_sent) <br>_Sends a read command to the I2C device (non-blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_readDataFromReadFIFO**](#function-ef_i2c_readdatafromreadfifo) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t \*data) <br>_Reads data from the I2C Read FIFO (blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_readDataFromReadFIFONonBlocking**](#function-ef_i2c_readdatafromreadfifononblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t \*data, bool \*data\_read) <br>_Reads data from the I2C Read FIFO (non-blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_receiveByte**](#function-ef_i2c_receivebyte) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t \*data, uint8\_t addr) <br>_Receives a single byte from a specified I2C address (blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_receiveByteNonBlocking**](#function-ef_i2c_receivebytenonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t \*data, uint8\_t addr, bool \*received) <br>_Receives a single byte from a specified I2C address (non-blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_recieveCharArr**](#function-ef_i2c_recievechararr) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t \*data, uint32\_t data\_length, uint8\_t addr) <br>_Receives an array of bytes from a specified I2C address (blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendReadCommand**](#function-ef_i2c_sendreadcommand) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t addr) <br>_Sends a read command to the I2C device (blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendReadCommandNonBlocking**](#function-ef_i2c_sendreadcommandnonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t addr, bool \*command\_sent) <br>_Sends a read command to the I2C device (non-blocking)._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendStartCommand**](#function-ef_i2c_sendstartcommand) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c) <br>_Sends a start condition on the I2C bus (blocking)._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendStartCommandNonBlocking**](#function-ef_i2c_sendstartcommandnonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, bool \*command\_sent) <br>_Sends a start condition on the I2C bus (non-blocking)._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendStopCommand**](#function-ef_i2c_sendstopcommand) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c) <br>_Sends a stop condition on the I2C bus (blocking)._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendStopCommandNonBlocking**](#function-ef_i2c_sendstopcommandnonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, bool \*command\_sent) <br>_Sends a stop condition on the I2C bus (non-blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendWriteCommand**](#function-ef_i2c_sendwritecommand) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char addr) <br>_Sends a write command to the I2C device (blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendWriteCommandNonBlocking**](#function-ef_i2c_sendwritecommandnonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char addr, bool \*command\_sent) <br>_Sends a write command to the I2C device (non-blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendWriteMultipleCommand**](#function-ef_i2c_sendwritemultiplecommand) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c) <br>_Sends a "write multiple" command on the I2C bus (blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendWriteMultipleCommandNonBlocking**](#function-ef_i2c_sendwritemultiplecommandnonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, bool \*command\_sent) <br>_Sends a "write multiple" command on the I2C bus (non-blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendWriteCommand**](#function-ef_i2c_sendwritecommand) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t addr) <br>_Sends a write command to the I2C device (blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendWriteCommandNonBlocking**](#function-ef_i2c_sendwritecommandnonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t addr, bool \*command\_sent) <br>_Sends a write command to the I2C device (non-blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendWriteMultipleCommand**](#function-ef_i2c_sendwritemultiplecommand) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t addr) <br>_Sends a "write multiple" command on the I2C bus (blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_sendWriteMultipleCommandNonBlocking**](#function-ef_i2c_sendwritemultiplecommandnonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t addr, bool \*command\_sent) <br>_Sends a "write multiple" command on the I2C bus (non-blocking)._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setCommandReg**](#function-ef_i2c_setcommandreg) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t value) <br>_Sets the command register of the I2C controller._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setCommandRegNonBlocking**](#function-ef_i2c_setcommandregnonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t value, bool \*command\_sent) <br>_Writes a command value to the I2C command register (non-blocking)._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setDataLast**](#function-ef_i2c_setdatalast) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c) <br>_Sets the data last flag in the I2C data register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setGclkEnable**](#function-ef_i2c_setgclkenable) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t value) <br>_Sets the GCLK enable bit in the I2C register to a certain value._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setIM**](#function-ef_i2c_setim) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t mask) <br>_Sets the Interrupt Mask (IM) register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_setPrescaler**](#function-ef_i2c_setprescaler) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint32\_t value) <br>_Sets the I2C prescaler value._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_transmitByte**](#function-ef_i2c_transmitbyte) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char data, char addr) <br>_Transmits a single byte to a specified I2C address (blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_transmitByteNonBlocking**](#function-ef_i2c_transmitbytenonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char data, char addr, bool \*transmitted) <br>_Transmits a single byte to a specified I2C address (non-blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_transmitCharArr**](#function-ef_i2c_transmitchararr) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char \*data, uint32\_t data\_length, char addr) <br>_Transmits an array of characters to a specified I2C address (blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_writeDataToWriteFIFO**](#function-ef_i2c_writedatatowritefifo) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char data) <br>_Writes data to the I2C Write FIFO (blocking)._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_writeDataToWriteFIFONonBlocking**](#function-ef_i2c_writedatatowritefifononblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, char data, bool \*data\_written) <br>_Writes data to the I2C Write FIFO (non-blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_transmitByte**](#function-ef_i2c_transmitbyte) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t data, uint8\_t addr) <br>_Transmits a single byte to a specified I2C address (blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_transmitByteNonBlocking**](#function-ef_i2c_transmitbytenonblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t data, uint8\_t addr, bool \*transmitted) <br>_Transmits a single byte to a specified I2C address (non-blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_transmitCharArr**](#function-ef_i2c_transmitchararr) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t \*data, uint32\_t data\_length, uint8\_t addr) <br>_Transmits an array of bytes to a specified I2C address (blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_writeDataToWriteFIFO**](#function-ef_i2c_writedatatowritefifo) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t data) <br>_Writes data to the I2C Write FIFO (blocking)._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_I2C\_writeDataToWriteFIFONonBlocking**](#function-ef_i2c_writedatatowritefifononblocking) ([**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr) i2c, uint8\_t data, bool \*data\_written) <br>_Writes data to the I2C Write FIFO (non-blocking)._ |
 
 ## Macros
 
 | Type | Name |
 | ---: | :--- |
-| define  | [**EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK**](#define-ef_i2c_command_reg_cmd_correct_mask)  0xFFFFE080<br> |
-| define  | [**EF\_I2C\_IC\_REG\_MAX\_VALUE**](#define-ef_i2c_ic_reg_max_value)  0x000001FF<br> |
-| define  | [**EF\_I2C\_IM\_REG\_MAX\_VALUE**](#define-ef_i2c_im_reg_max_value)  0x000001FF<br> |
-| define  | [**EF\_I2C\_PR\_MAX\_VALUE**](#define-ef_i2c_pr_max_value)  0x0000FFFF<br> |
+| define  | [**EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK**](#define-ef_i2c_command_reg_cmd_correct_mask)  ((uint32\_t)0xFFFFE080)<br> |
+| define  | [**EF\_I2C\_IC\_REG\_MAX\_VALUE**](#define-ef_i2c_ic_reg_max_value)  ((uint32\_t)0x000001FF)<br> |
+| define  | [**EF\_I2C\_IM\_REG\_MAX\_VALUE**](#define-ef_i2c_im_reg_max_value)  ((uint32\_t)0x000001FF)<br> |
+| define  | [**EF\_I2C\_PR\_MAX\_VALUE**](#define-ef_i2c_pr_max_value)  ((uint32\_t)0x0000FFFF)<br> |
 
 
 ## Functions Documentation
@@ -468,7 +468,7 @@ _Reads data from the I2C Read FIFO (blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO (
     EF_I2C_TYPE_PTR i2c,
-    char *data
+    uint8_t *data
 ) 
 ```
 
@@ -497,7 +497,7 @@ _Reads data from the I2C Read FIFO (non-blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking (
     EF_I2C_TYPE_PTR i2c,
-    char *data,
+    uint8_t *data,
     bool *data_read
 ) 
 ```
@@ -531,8 +531,8 @@ _Receives a single byte from a specified I2C address (blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_receiveByte (
     EF_I2C_TYPE_PTR i2c,
-    char *data,
-    char addr
+    uint8_t *data,
+    uint8_t addr
 ) 
 ```
 
@@ -545,7 +545,7 @@ This function reads a single byte from a specified I2C address. It blocks until 
 
 
 * `i2c` Pointer to the I2C base address structure [**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr).
-* `data` Pointer to a char where the received data byte will be stored. 
+* `data` Pointer to a uint8\_t where the received data byte will be stored. 
 * `addr` I2C address from which the data will be read.
 
 
@@ -558,8 +558,8 @@ _Receives a single byte from a specified I2C address (non-blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking (
     EF_I2C_TYPE_PTR i2c,
-    char *data,
-    char addr,
+    uint8_t *data,
+    uint8_t addr,
     bool *received
 ) 
 ```
@@ -573,7 +573,7 @@ This function attempts to read a single byte from a specified I2C address in a n
 
 
 * `i2c` Pointer to the I2C base address structure [**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr).
-* `data` Pointer to a char where the received data byte will be stored. 
+* `data` Pointer to a uint8\_t where the received data byte will be stored. 
 * `addr` I2C address from which the data will be read. 
 * `received` Pointer to a boolean where the reception status will be stored:
 
@@ -586,18 +586,18 @@ This function attempts to read a single byte from a specified I2C address in a n
 status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
 ### function `EF_I2C_recieveCharArr`
 
-_Receives an array of characters from a specified I2C address (blocking)._
+_Receives an array of bytes from a specified I2C address (blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_recieveCharArr (
     EF_I2C_TYPE_PTR i2c,
-    char *data,
+    uint8_t *data,
     uint32_t data_length,
-    char addr
+    uint8_t addr
 ) 
 ```
 
 
-This function reads an array of characters from a specified I2C address. It issues the read command for each byte, stores the data in the provided buffer, and sends a stop command after successful reception.
+This function reads an array of bytes from a specified I2C address. It issues the read command for each byte, stores the data in the provided buffer, and sends a stop command after successful reception.
 
 
 
@@ -605,8 +605,8 @@ This function reads an array of characters from a specified I2C address. It issu
 
 
 * `i2c` Pointer to the I2C base address structure [**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr).
-* `data` Pointer to the buffer where the received characters will be stored. 
-* `data_length` Number of characters to receive. 
+* `data` Pointer to the buffer where the received bytes will be stored. 
+* `data_length` Number of bytes to receive. 
 * `addr` I2C address from which the data will be read.
 
 
@@ -619,7 +619,7 @@ _Sends a read command to the I2C device (blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_sendReadCommand (
     EF_I2C_TYPE_PTR i2c,
-    char addr
+    uint8_t addr
 ) 
 ```
 
@@ -644,7 +644,7 @@ _Sends a read command to the I2C device (non-blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_sendReadCommandNonBlocking (
     EF_I2C_TYPE_PTR i2c,
-    char addr,
+    uint8_t addr,
     bool *command_sent
 ) 
 ```
@@ -776,7 +776,7 @@ _Sends a write command to the I2C device (blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_sendWriteCommand (
     EF_I2C_TYPE_PTR i2c,
-    char addr
+    uint8_t addr
 ) 
 ```
 
@@ -801,7 +801,7 @@ _Sends a write command to the I2C device (non-blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking (
     EF_I2C_TYPE_PTR i2c,
-    char addr,
+    uint8_t addr,
     bool *command_sent
 ) 
 ```
@@ -830,7 +830,8 @@ status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : ret
 _Sends a "write multiple" command on the I2C bus (blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand (
-    EF_I2C_TYPE_PTR i2c
+    EF_I2C_TYPE_PTR i2c,
+    uint8_t addr
 ) 
 ```
 
@@ -854,6 +855,7 @@ _Sends a "write multiple" command on the I2C bus (non-blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking (
     EF_I2C_TYPE_PTR i2c,
+    uint8_t addr,
     bool *command_sent
 ) 
 ```
@@ -1041,8 +1043,8 @@ _Transmits a single byte to a specified I2C address (blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_transmitByte (
     EF_I2C_TYPE_PTR i2c,
-    char data,
-    char addr
+    uint8_t data,
+    uint8_t addr
 ) 
 ```
 
@@ -1068,8 +1070,8 @@ _Transmits a single byte to a specified I2C address (non-blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking (
     EF_I2C_TYPE_PTR i2c,
-    char data,
-    char addr,
+    uint8_t data,
+    uint8_t addr,
     bool *transmitted
 ) 
 ```
@@ -1096,18 +1098,18 @@ This function attempts to transmit a single byte to a specified I2C address usin
 status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
 ### function `EF_I2C_transmitCharArr`
 
-_Transmits an array of characters to a specified I2C address (blocking)._
+_Transmits an array of bytes to a specified I2C address (blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_transmitCharArr (
     EF_I2C_TYPE_PTR i2c,
-    char *data,
+    uint8_t *data,
     uint32_t data_length,
-    char addr
+    uint8_t addr
 ) 
 ```
 
 
-This function sends an array of characters to a specified I2C address. It handles writing the data to the I2C FIFO and ensures the last byte is appropriately marked.
+This function sends an array of bytes to a specified I2C address. It handles writing the data to the I2C FIFO and ensures the last byte is appropriately marked.
 
 
 
@@ -1115,8 +1117,8 @@ This function sends an array of characters to a specified I2C address. It handle
 
 
 * `i2c` Pointer to the I2C base address structure [**EF\_I2C\_TYPE\_PTR**](#typedef-ef_i2c_type_ptr).
-* `data` Pointer to the array of characters to be transmitted. 
-* `data_length` Number of characters in the array to transmit. 
+* `data` Pointer to the array of bytes to be transmitted. 
+* `data_length` Number of bytes in the array to transmit. 
 * `addr` I2C address to which the data will be sent.
 
 
@@ -1129,7 +1131,7 @@ _Writes data to the I2C Write FIFO (blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO (
     EF_I2C_TYPE_PTR i2c,
-    char data
+    uint8_t data
 ) 
 ```
 
@@ -1154,7 +1156,7 @@ _Writes data to the I2C Write FIFO (non-blocking)._
 ```c
 EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking (
     EF_I2C_TYPE_PTR i2c,
-    char data,
+    uint8_t data,
     bool *data_written
 ) 
 ```
@@ -1184,25 +1186,25 @@ status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : ret
 ### define `EF_I2C_COMMAND_REG_CMD_CORRECT_MASK`
 
 ```c
-#define EF_I2C_COMMAND_REG_CMD_CORRECT_MASK 0xFFFFE080
+#define EF_I2C_COMMAND_REG_CMD_CORRECT_MASK ((uint32_t)0xFFFFE080)
 ```
 
 ### define `EF_I2C_IC_REG_MAX_VALUE`
 
 ```c
-#define EF_I2C_IC_REG_MAX_VALUE 0x000001FF
+#define EF_I2C_IC_REG_MAX_VALUE ((uint32_t)0x000001FF)
 ```
 
 ### define `EF_I2C_IM_REG_MAX_VALUE`
 
 ```c
-#define EF_I2C_IM_REG_MAX_VALUE 0x000001FF
+#define EF_I2C_IM_REG_MAX_VALUE ((uint32_t)0x000001FF)
 ```
 
 ### define `EF_I2C_PR_MAX_VALUE`
 
 ```c
-#define EF_I2C_PR_MAX_VALUE 0x0000FFFF
+#define EF_I2C_PR_MAX_VALUE ((uint32_t)0x0000FFFF)
 ```
 
 

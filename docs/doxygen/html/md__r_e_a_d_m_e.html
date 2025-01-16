@@ -271,8 +271,26 @@ Functions</h1>
 <em>Writes data to the I2C Write FIFO (non-blocking).</em>   </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md18"></a>
+Macros</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadRight">Type   </th><th class="markdownTableHeadLeft">Name    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">define   </td><td class="markdownTableBodyLeft">**EF\_I2C\_COMMAND\_REG\_CMD\_CORRECT\_MASK** 0xFFFFE080<br  />
+    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">define   </td><td class="markdownTableBodyLeft">**EF\_I2C\_IC\_REG\_MAX\_VALUE** 0x000001FF<br  />
+    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">define   </td><td class="markdownTableBodyLeft">**EF\_I2C\_IM\_REG\_MAX\_VALUE** 0x000001FF<br  />
+    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">define   </td><td class="markdownTableBodyLeft">**EF\_I2C\_PR\_MAX\_VALUE** 0x0000FFFF<br  />
+   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md19"></a>
 Functions Documentation</h1>
-<h2><a class="anchor" id="autotoc_md19"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 function &lt;tt&gt;EF_I2C_getDataLast&lt;/tt&gt;</h2>
 <p><em>Reads the data last flag from the I2C data register.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a95c96062892f3d3061365eb5d6f83dfe">EF_I2C_getDataLast</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -288,7 +306,7 @@ function &lt;tt&gt;EF_I2C_getDataLast&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 function &lt;tt&gt;EF_I2C_getDataValid&lt;/tt&gt;</h2>
 <p><em>Reads the data valid flag from the I2C data register.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a97ff9205de09e49d12dc62eb1acdcf62">EF_I2C_getDataValid</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -303,7 +321,7 @@ function &lt;tt&gt;EF_I2C_getDataValid&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md22"></a>
 function &lt;tt&gt;EF_I2C_getIM&lt;/tt&gt;</h2>
 <p><em>Reads the Interrupt Mask (IM) register.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#ac4509f632d8b0b1157ec42828a957600">EF_I2C_getIM</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -330,7 +348,7 @@ function &lt;tt&gt;EF_I2C_getIM&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 function &lt;tt&gt;EF_I2C_getMIS&lt;/tt&gt;</h2>
 <p><em>Reads the Masked Interrupt Status (MIS) register.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#aa87448a542b497393695dca2acc6d6b8">EF_I2C_getMIS</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -357,7 +375,7 @@ function &lt;tt&gt;EF_I2C_getMIS&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 function &lt;tt&gt;EF_I2C_getPrescaler&lt;/tt&gt;</h2>
 <p><em>Gets the I2C prescaler value.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a8fa9bab21502620a499c6f943fc69c4c">EF_I2C_getPrescaler</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -372,7 +390,7 @@ function &lt;tt&gt;EF_I2C_getPrescaler&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 function &lt;tt&gt;EF_I2C_getRIS&lt;/tt&gt;</h2>
 <p><em>Reads the Raw Interrupt Status (RIS) register.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a8efd0e0e84b49d60edbea6c2513929a5">EF_I2C_getRIS</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -400,7 +418,7 @@ function &lt;tt&gt;EF_I2C_getRIS&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 function &lt;tt&gt;EF_I2C_isBusy&lt;/tt&gt;</h2>
 <p><em>Checks if the I2C peripheral is busy.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a69c76d64d9e2e6d29d53026b0fa1055c">EF_I2C_isBusy</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -424,7 +442,7 @@ function &lt;tt&gt;EF_I2C_isBusy&lt;/tt&gt;</h2>
 <li>EF_DRIVER_OK: The operation completed successfully.</li>
 <li>EF_DRIVER_ERROR_PARAMETER: <code>i2c</code> or<code>is_busy</code> is NULL. </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md26"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 function &lt;tt&gt;EF_I2C_isCommandFIFOAvailable&lt;/tt&gt;</h2>
 <p><em>Checks if the command FIFO is available.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a14e5de684a330a987584ba5219bf8304">EF_I2C_isCommandFIFOAvailable</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -443,7 +461,7 @@ function &lt;tt&gt;EF_I2C_isCommandFIFOAvailable&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 function &lt;tt&gt;EF_I2C_isReadFIFOAvailable&lt;/tt&gt;</h2>
 <p><em>Checks if the read FIFO is available.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a463bfb817bed4b5d06308211df98c7b4">EF_I2C_isReadFIFOAvailable</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -462,7 +480,7 @@ function &lt;tt&gt;EF_I2C_isReadFIFOAvailable&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md28"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
 function &lt;tt&gt;EF_I2C_isWriteFIFOAvailable&lt;/tt&gt;</h2>
 <p><em>Checks if the write FIFO is available.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#aba9df55dc50dffa193d8990d9d3354b3">EF_I2C_isWriteFIFOAvailable</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -481,13 +499,13 @@ function &lt;tt&gt;EF_I2C_isWriteFIFOAvailable&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md30"></a>
 function &lt;tt&gt;EF_I2C_readDataFromReadFIFO&lt;/tt&gt;</h2>
-<p><em>Reads data from the I2C Read FIFO (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#ac2d5590e0da84534bca5496836811664">EF_I2C_readDataFromReadFIFO</a> (</div>
+<p><em>Reads data from the I2C Read FIFO (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a1d9931eb963c13f5bbc96e2ba3c5bdab">EF_I2C_readDataFromReadFIFO</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> *data</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_ac2d5590e0da84534bca5496836811664"><div class="ttname"><a href="_e_f___i2_c_8c.html#ac2d5590e0da84534bca5496836811664">EF_I2C_readDataFromReadFIFO</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO(EF_I2C_TYPE_PTR i2c, char *data)</div><div class="ttdoc">Reads data from the I2C Read FIFO (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:576</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a1d9931eb963c13f5bbc96e2ba3c5bdab"><div class="ttname"><a href="_e_f___i2_c_8c.html#a1d9931eb963c13f5bbc96e2ba3c5bdab">EF_I2C_readDataFromReadFIFO</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO(EF_I2C_TYPE_PTR i2c, uint8_t *data)</div><div class="ttdoc">Reads data from the I2C Read FIFO (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:576</div></div>
 </div><!-- fragment --><p>This function reads a single byte of data from the I2C Read FIFO. It blocks until the FIFO becomes available and validates the data read.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -501,14 +519,14 @@ function &lt;tt&gt;EF_I2C_readDataFromReadFIFO&lt;/tt&gt;</h2>
 <li>EF_DRIVER_ERROR_PARAMETER: <code>i2c</code> or<code>data</code> is NULL.</li>
 <li>EF_DRIVER_ERROR_I2C_INVALID_DATA: The data read is invalid. </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md30"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 function &lt;tt&gt;EF_I2C_readDataFromReadFIFONonBlocking&lt;/tt&gt;</h2>
-<p><em>Reads data from the I2C Read FIFO (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a1c701c4aecb1bc623f530674337ba608">EF_I2C_readDataFromReadFIFONonBlocking</a> (</div>
+<p><em>Reads data from the I2C Read FIFO (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#abc156cb4e2acec2cc205775b7ce3fccd">EF_I2C_readDataFromReadFIFONonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> *data,</div>
 <div class="line">    <span class="keywordtype">bool</span> *data_read</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a1c701c4aecb1bc623f530674337ba608"><div class="ttname"><a href="_e_f___i2_c_8c.html#a1c701c4aecb1bc623f530674337ba608">EF_I2C_readDataFromReadFIFONonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking(EF_I2C_TYPE_PTR i2c, char *data, bool *data_read)</div><div class="ttdoc">Reads data from the I2C Read FIFO (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:600</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_abc156cb4e2acec2cc205775b7ce3fccd"><div class="ttname"><a href="_e_f___i2_c_8c.html#abc156cb4e2acec2cc205775b7ce3fccd">EF_I2C_readDataFromReadFIFONonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t *data, bool *data_read)</div><div class="ttdoc">Reads data from the I2C Read FIFO (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:600</div></div>
 </div><!-- fragment --><p>This function attempts to read a single byte of data from the I2C Read FIFO. If the FIFO is unavailable, the function returns immediately. The validity of the data is also checked.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -527,14 +545,14 @@ function &lt;tt&gt;EF_I2C_readDataFromReadFIFONonBlocking&lt;/tt&gt;</h2>
 <li>EF_DRIVER_ERROR_PARAMETER: <code>i2c</code>,<code>data</code>, or<code>data_read</code> is NULL.</li>
 <li>EF_DRIVER_ERROR_I2C_INVALID_DATA: The data read is invalid. </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md31"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 function &lt;tt&gt;EF_I2C_receiveByte&lt;/tt&gt;</h2>
-<p><em>Receives a single byte from a specified I2C address (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a60288fe0351fce34b2872e31f1c9951b">EF_I2C_receiveByte</a> (</div>
+<p><em>Receives a single byte from a specified I2C address (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a0689bd62e532fda19ee62cd4b45b65c5">EF_I2C_receiveByte</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> *data,</div>
 <div class="line">    <span class="keywordtype">char</span> addr</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a60288fe0351fce34b2872e31f1c9951b"><div class="ttname"><a href="_e_f___i2_c_8c.html#a60288fe0351fce34b2872e31f1c9951b">EF_I2C_receiveByte</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, char *data, char addr)</div><div class="ttdoc">Receives a single byte from a specified I2C address (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:662</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a0689bd62e532fda19ee62cd4b45b65c5"><div class="ttname"><a href="_e_f___i2_c_8c.html#a0689bd62e532fda19ee62cd4b45b65c5">EF_I2C_receiveByte</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_receiveByte(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint8_t addr)</div><div class="ttdoc">Receives a single byte from a specified I2C address (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:662</div></div>
 </div><!-- fragment --><p>This function reads a single byte from a specified I2C address. It blocks until all operations (read command, stop command, and data retrieval) are completed.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -544,15 +562,15 @@ function &lt;tt&gt;EF_I2C_receiveByte&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md33"></a>
 function &lt;tt&gt;EF_I2C_receiveByteNonBlocking&lt;/tt&gt;</h2>
-<p><em>Receives a single byte from a specified I2C address (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a1789020facae10eb7788fae74ccc3bc8">EF_I2C_receiveByteNonBlocking</a> (</div>
+<p><em>Receives a single byte from a specified I2C address (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a13b810bd29c715c8698c77e8991d5913">EF_I2C_receiveByteNonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> *data,</div>
 <div class="line">    <span class="keywordtype">char</span> addr,</div>
 <div class="line">    <span class="keywordtype">bool</span> *received</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a1789020facae10eb7788fae74ccc3bc8"><div class="ttname"><a href="_e_f___i2_c_8c.html#a1789020facae10eb7788fae74ccc3bc8">EF_I2C_receiveByteNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking(EF_I2C_TYPE_PTR i2c, char *data, char addr, bool *received)</div><div class="ttdoc">Receives a single byte from a specified I2C address (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:676</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a13b810bd29c715c8698c77e8991d5913"><div class="ttname"><a href="_e_f___i2_c_8c.html#a13b810bd29c715c8698c77e8991d5913">EF_I2C_receiveByteNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint8_t addr, bool *received)</div><div class="ttdoc">Receives a single byte from a specified I2C address (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:676</div></div>
 </div><!-- fragment --><p>This function attempts to read a single byte from a specified I2C address in a non-blocking manner. If any step of the process (read command, stop command, or data retrieval) cannot complete immediately, the function returns.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -567,15 +585,15 @@ function &lt;tt&gt;EF_I2C_receiveByteNonBlocking&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md33"></a>
+<h2><a class="anchor" id="autotoc_md34"></a>
 function &lt;tt&gt;EF_I2C_recieveCharArr&lt;/tt&gt;</h2>
-<p><em>Receives an array of characters from a specified I2C address (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a774873c939f5d172d92a6587298deb5d">EF_I2C_recieveCharArr</a> (</div>
+<p><em>Receives an array of characters from a specified I2C address (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a82de40473f83b733860a491e825bfa2c">EF_I2C_recieveCharArr</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> *data,</div>
 <div class="line">    uint32_t data_length,</div>
 <div class="line">    <span class="keywordtype">char</span> addr</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a774873c939f5d172d92a6587298deb5d"><div class="ttname"><a href="_e_f___i2_c_8c.html#a774873c939f5d172d92a6587298deb5d">EF_I2C_recieveCharArr</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_recieveCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr)</div><div class="ttdoc">Receives an array of characters from a specified I2C address (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:730</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a82de40473f83b733860a491e825bfa2c"><div class="ttname"><a href="_e_f___i2_c_8c.html#a82de40473f83b733860a491e825bfa2c">EF_I2C_recieveCharArr</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_recieveCharArr(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint32_t data_length, uint8_t addr)</div><div class="ttdoc">Receives an array of bytes from a specified I2C address (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:730</div></div>
 </div><!-- fragment --><p>This function reads an array of characters from a specified I2C address. It issues the read command for each byte, stores the data in the provided buffer, and sends a stop command after successful reception.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -586,13 +604,13 @@ function &lt;tt&gt;EF_I2C_recieveCharArr&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 function &lt;tt&gt;EF_I2C_sendReadCommand&lt;/tt&gt;</h2>
-<p><em>Sends a read command to the I2C device (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a5a686c3ed733700ac19aa163b98023c9">EF_I2C_sendReadCommand</a> (</div>
+<p><em>Sends a read command to the I2C device (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a5a4eefaa77952dce9da7af76b06e8d90">EF_I2C_sendReadCommand</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> addr</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a5a686c3ed733700ac19aa163b98023c9"><div class="ttname"><a href="_e_f___i2_c_8c.html#a5a686c3ed733700ac19aa163b98023c9">EF_I2C_sendReadCommand</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendReadCommand(EF_I2C_TYPE_PTR i2c, char addr)</div><div class="ttdoc">Sends a read command to the I2C device (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:387</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a5a4eefaa77952dce9da7af76b06e8d90"><div class="ttname"><a href="_e_f___i2_c_8c.html#a5a4eefaa77952dce9da7af76b06e8d90">EF_I2C_sendReadCommand</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendReadCommand(EF_I2C_TYPE_PTR i2c, uint8_t addr)</div><div class="ttdoc">Sends a read command to the I2C device (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:387</div></div>
 </div><!-- fragment --><p>This function sends a read command to the I2C device at the specified address. It blocks until the command FIFO becomes available.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -601,14 +619,14 @@ function &lt;tt&gt;EF_I2C_sendReadCommand&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 function &lt;tt&gt;EF_I2C_sendReadCommandNonBlocking&lt;/tt&gt;</h2>
-<p><em>Sends a read command to the I2C device (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a62ef1d56f7cbc0c4fdc66551fbc6f882">EF_I2C_sendReadCommandNonBlocking</a> (</div>
+<p><em>Sends a read command to the I2C device (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#ad761e01240a00cd0a0163838aa52fbf3">EF_I2C_sendReadCommandNonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> addr,</div>
 <div class="line">    <span class="keywordtype">bool</span> *command_sent</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a62ef1d56f7cbc0c4fdc66551fbc6f882"><div class="ttname"><a href="_e_f___i2_c_8c.html#a62ef1d56f7cbc0c4fdc66551fbc6f882">EF_I2C_sendReadCommandNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendReadCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent)</div><div class="ttdoc">Sends a read command to the I2C device (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:405</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_ad761e01240a00cd0a0163838aa52fbf3"><div class="ttname"><a href="_e_f___i2_c_8c.html#ad761e01240a00cd0a0163838aa52fbf3">EF_I2C_sendReadCommandNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendReadCommandNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent)</div><div class="ttdoc">Sends a read command to the I2C device (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:405</div></div>
 </div><!-- fragment --><p>This function attempts to send a read command to the I2C device at the specified address. If the command FIFO is unavailable, the function returns immediately.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -622,7 +640,7 @@ function &lt;tt&gt;EF_I2C_sendReadCommandNonBlocking&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 function &lt;tt&gt;EF_I2C_sendStartCommand&lt;/tt&gt;</h2>
 <p><em>Sends a start condition on the I2C bus (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#ad1fa3cec145bfbd8027e0370137c1b9d">EF_I2C_sendStartCommand</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c</div>
@@ -635,7 +653,7 @@ function &lt;tt&gt;EF_I2C_sendStartCommand&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 function &lt;tt&gt;EF_I2C_sendStartCommandNonBlocking&lt;/tt&gt;</h2>
 <p><em>Sends a start condition on the I2C bus (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a5895919e916705ee1082efade9f1488e">EF_I2C_sendStartCommandNonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -654,7 +672,7 @@ function &lt;tt&gt;EF_I2C_sendStartCommandNonBlocking&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 function &lt;tt&gt;EF_I2C_sendStopCommand&lt;/tt&gt;</h2>
 <p><em>Sends a stop condition on the I2C bus (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a4545f7e33e2e35e7b100b6f3857433bd">EF_I2C_sendStopCommand</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c</div>
@@ -667,7 +685,7 @@ function &lt;tt&gt;EF_I2C_sendStopCommand&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 function &lt;tt&gt;EF_I2C_sendStopCommandNonBlocking&lt;/tt&gt;</h2>
 <p><em>Sends a stop condition on the I2C bus (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#adc35bddf018b22d9f822442360d9a1e5">EF_I2C_sendStopCommandNonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -686,13 +704,13 @@ function &lt;tt&gt;EF_I2C_sendStopCommandNonBlocking&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md40"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 function &lt;tt&gt;EF_I2C_sendWriteCommand&lt;/tt&gt;</h2>
-<p><em>Sends a write command to the I2C device (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a0403b347e88030457b2681d17780b1e0">EF_I2C_sendWriteCommand</a> (</div>
+<p><em>Sends a write command to the I2C device (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a374bdcd7a2d9994dd762b93260e7e988">EF_I2C_sendWriteCommand</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> addr</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a0403b347e88030457b2681d17780b1e0"><div class="ttname"><a href="_e_f___i2_c_8c.html#a0403b347e88030457b2681d17780b1e0">EF_I2C_sendWriteCommand</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendWriteCommand(EF_I2C_TYPE_PTR i2c, char addr)</div><div class="ttdoc">Sends a write command to the I2C device (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:348</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a374bdcd7a2d9994dd762b93260e7e988"><div class="ttname"><a href="_e_f___i2_c_8c.html#a374bdcd7a2d9994dd762b93260e7e988">EF_I2C_sendWriteCommand</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendWriteCommand(EF_I2C_TYPE_PTR i2c, uint8_t addr)</div><div class="ttdoc">Sends a write command to the I2C device (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:348</div></div>
 </div><!-- fragment --><p>This function sends a write command to the I2C device at the specified address. It blocks until the command FIFO becomes available.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -701,14 +719,14 @@ function &lt;tt&gt;EF_I2C_sendWriteCommand&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md41"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 function &lt;tt&gt;EF_I2C_sendWriteCommandNonBlocking&lt;/tt&gt;</h2>
-<p><em>Sends a write command to the I2C device (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#ab809b36771601fc4fcc0ebe5b7c3c2b3">EF_I2C_sendWriteCommandNonBlocking</a> (</div>
+<p><em>Sends a write command to the I2C device (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a1ca44050fd31a0970d9a843ce2b660b7">EF_I2C_sendWriteCommandNonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> addr,</div>
 <div class="line">    <span class="keywordtype">bool</span> *command_sent</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_ab809b36771601fc4fcc0ebe5b7c3c2b3"><div class="ttname"><a href="_e_f___i2_c_8c.html#ab809b36771601fc4fcc0ebe5b7c3c2b3">EF_I2C_sendWriteCommandNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent)</div><div class="ttdoc">Sends a write command to the I2C device (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:365</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a1ca44050fd31a0970d9a843ce2b660b7"><div class="ttname"><a href="_e_f___i2_c_8c.html#a1ca44050fd31a0970d9a843ce2b660b7">EF_I2C_sendWriteCommandNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent)</div><div class="ttdoc">Sends a write command to the I2C device (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:365</div></div>
 </div><!-- fragment --><p>This function attempts to send a write command to the I2C device at the specified address. If the command FIFO is unavailable, the function returns immediately.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -722,12 +740,12 @@ function &lt;tt&gt;EF_I2C_sendWriteCommandNonBlocking&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 function &lt;tt&gt;EF_I2C_sendWriteMultipleCommand&lt;/tt&gt;</h2>
-<p><em>Sends a "write multiple" command on the I2C bus (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a8016d94edabbc9e56aa8632d81f93a4e">EF_I2C_sendWriteMultipleCommand</a> (</div>
+<p><em>Sends a "write multiple" command on the I2C bus (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#acfba97829c658e87ce338d95ab35cd6a">EF_I2C_sendWriteMultipleCommand</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a8016d94edabbc9e56aa8632d81f93a4e"><div class="ttname"><a href="_e_f___i2_c_8c.html#a8016d94edabbc9e56aa8632d81f93a4e">EF_I2C_sendWriteMultipleCommand</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand(EF_I2C_TYPE_PTR i2c)</div><div class="ttdoc">Sends a &quot;write multiple&quot; command on the I2C bus (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:504</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_acfba97829c658e87ce338d95ab35cd6a"><div class="ttname"><a href="_e_f___i2_c_8c.html#acfba97829c658e87ce338d95ab35cd6a">EF_I2C_sendWriteMultipleCommand</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand(EF_I2C_TYPE_PTR i2c, uint8_t addr)</div><div class="ttdoc">Sends a &quot;write multiple&quot; command on the I2C bus (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:504</div></div>
 </div><!-- fragment --><p>This function sends a "write multiple" command on the I2C bus. It blocks until the command FIFO becomes available.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -735,13 +753,13 @@ function &lt;tt&gt;EF_I2C_sendWriteMultipleCommand&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 function &lt;tt&gt;EF_I2C_sendWriteMultipleCommandNonBlocking&lt;/tt&gt;</h2>
-<p><em>Sends a "write multiple" command on the I2C bus (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#aebf50811caef2dbdd664a60ade5c0514">EF_I2C_sendWriteMultipleCommandNonBlocking</a> (</div>
+<p><em>Sends a "write multiple" command on the I2C bus (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a4e0baaf0ed013abb939201fe71e179ae">EF_I2C_sendWriteMultipleCommandNonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">bool</span> *command_sent</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_aebf50811caef2dbdd664a60ade5c0514"><div class="ttname"><a href="_e_f___i2_c_8c.html#aebf50811caef2dbdd664a60ade5c0514">EF_I2C_sendWriteMultipleCommandNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c, bool *command_sent)</div><div class="ttdoc">Sends a &quot;write multiple&quot; command on the I2C bus (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:517</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a4e0baaf0ed013abb939201fe71e179ae"><div class="ttname"><a href="_e_f___i2_c_8c.html#a4e0baaf0ed013abb939201fe71e179ae">EF_I2C_sendWriteMultipleCommandNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent)</div><div class="ttdoc">Sends a &quot;write multiple&quot; command on the I2C bus (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:517</div></div>
 </div><!-- fragment --><p>This function attempts to send a "write multiple" command on the I2C bus. If the command FIFO is unavailable, the function returns immediately.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -754,7 +772,7 @@ function &lt;tt&gt;EF_I2C_sendWriteMultipleCommandNonBlocking&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 function &lt;tt&gt;EF_I2C_setCommandReg&lt;/tt&gt;</h2>
 <p><em>Sets the command register of the I2C controller.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a2286c60de589dcecb0fc78a48187440b">EF_I2C_setCommandReg</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -769,7 +787,7 @@ function &lt;tt&gt;EF_I2C_setCommandReg&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 function &lt;tt&gt;EF_I2C_setCommandRegNonBlocking&lt;/tt&gt;</h2>
 <p><em>Writes a command value to the I2C command register (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#ac5ca754457eaaeeab83e607fd78039e9">EF_I2C_setCommandRegNonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -790,7 +808,7 @@ function &lt;tt&gt;EF_I2C_setCommandRegNonBlocking&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md46"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 function &lt;tt&gt;EF_I2C_setDataLast&lt;/tt&gt;</h2>
 <p><em>Sets the data last flag in the I2C data register.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a20ba0e48023589b93dc8fe15519c5482">EF_I2C_setDataLast</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c</div>
@@ -804,7 +822,7 @@ function &lt;tt&gt;EF_I2C_setDataLast&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 function &lt;tt&gt;EF_I2C_setGclkEnable&lt;/tt&gt;</h2>
 <p><em>Sets the GCLK enable bit in the I2C register to a certain value.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a8cd33e8dde8407bb760d8a9e06548dea">EF_I2C_setGclkEnable</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -818,7 +836,7 @@ function &lt;tt&gt;EF_I2C_setGclkEnable&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md48"></a>
+<h2><a class="anchor" id="autotoc_md49"></a>
 function &lt;tt&gt;EF_I2C_setIM&lt;/tt&gt;</h2>
 <p><em>Sets the Interrupt Mask (IM) register.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#ac9a53ca41924b84ebf52d2b659c029c7">EF_I2C_setIM</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -845,7 +863,7 @@ function &lt;tt&gt;EF_I2C_setIM&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md49"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 function &lt;tt&gt;EF_I2C_setPrescaler&lt;/tt&gt;</h2>
 <p><em>Sets the I2C prescaler value.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a824f4aaa04cf1518f65a558c67172fdd">EF_I2C_setPrescaler</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
@@ -860,14 +878,14 @@ function &lt;tt&gt;EF_I2C_setPrescaler&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md50"></a>
+<h2><a class="anchor" id="autotoc_md51"></a>
 function &lt;tt&gt;EF_I2C_transmitByte&lt;/tt&gt;</h2>
-<p><em>Transmits a single byte to a specified I2C address (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a756e2b744dadf6851b99c5c2cf163938">EF_I2C_transmitByte</a> (</div>
+<p><em>Transmits a single byte to a specified I2C address (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a2b86143755c8196c79b8eeb89299a101">EF_I2C_transmitByte</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> data,</div>
 <div class="line">    <span class="keywordtype">char</span> addr</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a756e2b744dadf6851b99c5c2cf163938"><div class="ttname"><a href="_e_f___i2_c_8c.html#a756e2b744dadf6851b99c5c2cf163938">EF_I2C_transmitByte</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_transmitByte(EF_I2C_TYPE_PTR i2c, char data, char addr)</div><div class="ttdoc">Transmits a single byte to a specified I2C address (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:627</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a2b86143755c8196c79b8eeb89299a101"><div class="ttname"><a href="_e_f___i2_c_8c.html#a2b86143755c8196c79b8eeb89299a101">EF_I2C_transmitByte</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_transmitByte(EF_I2C_TYPE_PTR i2c, uint8_t data, uint8_t addr)</div><div class="ttdoc">Transmits a single byte to a specified I2C address (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:627</div></div>
 </div><!-- fragment --><p>This function transmits a single byte to a specified I2C address using the Write FIFO. It blocks until all operations (data write, write command, and stop command) are completed.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -877,15 +895,15 @@ function &lt;tt&gt;EF_I2C_transmitByte&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md52"></a>
 function &lt;tt&gt;EF_I2C_transmitByteNonBlocking&lt;/tt&gt;</h2>
-<p><em>Transmits a single byte to a specified I2C address (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#acbe3b21327e821e4a28f9db978e6eaaa">EF_I2C_transmitByteNonBlocking</a> (</div>
+<p><em>Transmits a single byte to a specified I2C address (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a33dc1953f3b3819bf3c2c88191f80b03">EF_I2C_transmitByteNonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> data,</div>
 <div class="line">    <span class="keywordtype">char</span> addr,</div>
 <div class="line">    <span class="keywordtype">bool</span> *transmitted</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_acbe3b21327e821e4a28f9db978e6eaaa"><div class="ttname"><a href="_e_f___i2_c_8c.html#acbe3b21327e821e4a28f9db978e6eaaa">EF_I2C_transmitByteNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking(EF_I2C_TYPE_PTR i2c, char data, char addr, bool *transmitted)</div><div class="ttdoc">Transmits a single byte to a specified I2C address (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:642</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a33dc1953f3b3819bf3c2c88191f80b03"><div class="ttname"><a href="_e_f___i2_c_8c.html#a33dc1953f3b3819bf3c2c88191f80b03">EF_I2C_transmitByteNonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t data, uint8_t addr, bool *transmitted)</div><div class="ttdoc">Transmits a single byte to a specified I2C address (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:642</div></div>
 </div><!-- fragment --><p>This function attempts to transmit a single byte to a specified I2C address using the Write FIFO in a non-blocking manner. If any step of the process (data write, write command, or stop command) cannot complete immediately, the function returns.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -900,15 +918,15 @@ function &lt;tt&gt;EF_I2C_transmitByteNonBlocking&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md52"></a>
+<h2><a class="anchor" id="autotoc_md53"></a>
 function &lt;tt&gt;EF_I2C_transmitCharArr&lt;/tt&gt;</h2>
-<p><em>Transmits an array of characters to a specified I2C address (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a4b3ffb782170b3f8a621ad3ca9fade8e">EF_I2C_transmitCharArr</a> (</div>
+<p><em>Transmits an array of characters to a specified I2C address (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#aee77f1eec83d3dd4b709eeedc9ede05d">EF_I2C_transmitCharArr</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> *data,</div>
 <div class="line">    uint32_t data_length,</div>
 <div class="line">    <span class="keywordtype">char</span> addr</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a4b3ffb782170b3f8a621ad3ca9fade8e"><div class="ttname"><a href="_e_f___i2_c_8c.html#a4b3ffb782170b3f8a621ad3ca9fade8e">EF_I2C_transmitCharArr</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_transmitCharArr(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr)</div><div class="ttdoc">Transmits an array of characters to a specified I2C address (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:697</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_aee77f1eec83d3dd4b709eeedc9ede05d"><div class="ttname"><a href="_e_f___i2_c_8c.html#aee77f1eec83d3dd4b709eeedc9ede05d">EF_I2C_transmitCharArr</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_transmitCharArr(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint32_t data_length, uint8_t addr)</div><div class="ttdoc">Transmits an array of bytes to a specified I2C address (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:697</div></div>
 </div><!-- fragment --><p>This function sends an array of characters to a specified I2C address. It handles writing the data to the I2C FIFO and ensures the last byte is appropriately marked.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -919,13 +937,13 @@ function &lt;tt&gt;EF_I2C_transmitCharArr&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md53"></a>
+<h2><a class="anchor" id="autotoc_md54"></a>
 function &lt;tt&gt;EF_I2C_writeDataToWriteFIFO&lt;/tt&gt;</h2>
-<p><em>Writes data to the I2C Write FIFO (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a976c6f1e98d2dfbf0cc9bf31bab0b110">EF_I2C_writeDataToWriteFIFO</a> (</div>
+<p><em>Writes data to the I2C Write FIFO (blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a2145a943f79505d4c057bc6958d034eb">EF_I2C_writeDataToWriteFIFO</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> data</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a976c6f1e98d2dfbf0cc9bf31bab0b110"><div class="ttname"><a href="_e_f___i2_c_8c.html#a976c6f1e98d2dfbf0cc9bf31bab0b110">EF_I2C_writeDataToWriteFIFO</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO(EF_I2C_TYPE_PTR i2c, char data)</div><div class="ttdoc">Writes data to the I2C Write FIFO (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:536</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a2145a943f79505d4c057bc6958d034eb"><div class="ttname"><a href="_e_f___i2_c_8c.html#a2145a943f79505d4c057bc6958d034eb">EF_I2C_writeDataToWriteFIFO</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO(EF_I2C_TYPE_PTR i2c, uint8_t data)</div><div class="ttdoc">Writes data to the I2C Write FIFO (blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:536</div></div>
 </div><!-- fragment --><p>This function writes a single byte of data to the I2C Write FIFO. It blocks until the FIFO becomes available.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -934,14 +952,14 @@ function &lt;tt&gt;EF_I2C_writeDataToWriteFIFO&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </p>
-<h2><a class="anchor" id="autotoc_md54"></a>
+<h2><a class="anchor" id="autotoc_md55"></a>
 function &lt;tt&gt;EF_I2C_writeDataToWriteFIFONonBlocking&lt;/tt&gt;</h2>
-<p><em>Writes data to the I2C Write FIFO (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a5908b86c6c3a5c276472e1a70fadbbd4">EF_I2C_writeDataToWriteFIFONonBlocking</a> (</div>
+<p><em>Writes data to the I2C Write FIFO (non-blocking).</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___i2_c_8c.html#a9cf8cd0c4282ed5cc45954c6de74cae8">EF_I2C_writeDataToWriteFIFONonBlocking</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE_PTR</a> i2c,</div>
 <div class="line">    <span class="keywordtype">char</span> data,</div>
 <div class="line">    <span class="keywordtype">bool</span> *data_written</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___i2_c_8c_html_a5908b86c6c3a5c276472e1a70fadbbd4"><div class="ttname"><a href="_e_f___i2_c_8c.html#a5908b86c6c3a5c276472e1a70fadbbd4">EF_I2C_writeDataToWriteFIFONonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking(EF_I2C_TYPE_PTR i2c, char data, bool *data_written)</div><div class="ttdoc">Writes data to the I2C Write FIFO (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:554</div></div>
+<div class="ttc" id="a_e_f___i2_c_8c_html_a9cf8cd0c4282ed5cc45954c6de74cae8"><div class="ttname"><a href="_e_f___i2_c_8c.html#a9cf8cd0c4282ed5cc45954c6de74cae8">EF_I2C_writeDataToWriteFIFONonBlocking</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking(EF_I2C_TYPE_PTR i2c, uint8_t data, bool *data_written)</div><div class="ttdoc">Writes data to the I2C Write FIFO (non-blocking).</div><div class="ttdef"><b>Definition:</b> EF_I2C.c:554</div></div>
 </div><!-- fragment --><p>This function attempts to write a single byte of data to the I2C Write FIFO. If the FIFO is unavailable, the function returns immediately.</p>
 <p><b>Parameters:</b></p>
 <ul>
@@ -955,9 +973,23 @@ function &lt;tt&gt;EF_I2C_writeDataToWriteFIFONonBlocking&lt;/tt&gt;</h2>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code</p>
-<h1><a class="anchor" id="autotoc_md55"></a>
-File EF_I2C_regs.h</h1>
 <h1><a class="anchor" id="autotoc_md56"></a>
+Macros Documentation</h1>
+<h2><a class="anchor" id="autotoc_md57"></a>
+define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_CORRECT_MASK&lt;/tt&gt;</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_CORRECT_MASK 0xFFFFE080</span></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md58"></a>
+define &lt;tt&gt;EF_I2C_IC_REG_MAX_VALUE&lt;/tt&gt;</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_IC_REG_MAX_VALUE 0x000001FF</span></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md59"></a>
+define &lt;tt&gt;EF_I2C_IM_REG_MAX_VALUE&lt;/tt&gt;</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_IM_REG_MAX_VALUE 0x000001FF</span></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md60"></a>
+define &lt;tt&gt;EF_I2C_PR_MAX_VALUE&lt;/tt&gt;</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_PR_MAX_VALUE 0x0000FFFF</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md61"></a>
+File EF_I2C_regs.h</h1>
+<h1><a class="anchor" id="autotoc_md62"></a>
 Structures and Types</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -972,7 +1004,7 @@ Structures and Types</h1>
 <td class="markdownTableBodyRight">struct   </td><td class="markdownTableBodyLeft">**\_EF\_I2C\_TYPE\_** <br  />
    </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md57"></a>
+<h1><a class="anchor" id="autotoc_md63"></a>
 Macros</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -1143,16 +1175,16 @@ Macros</h1>
 <td class="markdownTableBodyRight">define   </td><td class="markdownTableBodyLeft">**\_\_W** volatile uint32_t<br  />
    </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md58"></a>
+<h1><a class="anchor" id="autotoc_md64"></a>
 Structures and Types Documentation</h1>
-<h2><a class="anchor" id="autotoc_md59"></a>
+<h2><a class="anchor" id="autotoc_md65"></a>
 typedef &lt;tt&gt;EF_I2C_TYPE&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">_EF_I2C_TYPE_</a> <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE</a>;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md60"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md66"></a>
 typedef &lt;tt&gt;EF_I2C_TYPE_PTR&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code hl_struct" href="struct___e_f___i2_c___t_y_p_e__.html">EF_I2C_TYPE</a>* <a class="code hl_typedef" href="_e_f___i2_c__regs_8h.html#aa2269a016ba045981b24348570da1bbe">EF_I2C_TYPE_PTR</a>;</div>
 <div class="ttc" id="a_e_f___i2_c__regs_8h_html_aa2269a016ba045981b24348570da1bbe"><div class="ttname"><a href="_e_f___i2_c__regs_8h.html#aa2269a016ba045981b24348570da1bbe">EF_I2C_TYPE_PTR</a></div><div class="ttdeci">EF_I2C_TYPE * EF_I2C_TYPE_PTR</div><div class="ttdef"><b>Definition:</b> EF_I2C_regs.h:110</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md61"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md67"></a>
 struct &lt;tt&gt;_EF_I2C_TYPE_&lt;/tt&gt;</h2>
 <p>Variables:</p>
 <ul>
@@ -1177,171 +1209,171 @@ struct &lt;tt&gt;_EF_I2C_TYPE_&lt;/tt&gt;</h2>
 <li>**\_\_R** reserved_2 <br  />
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md62"></a>
+<h1><a class="anchor" id="autotoc_md68"></a>
 Macros Documentation</h1>
-<h2><a class="anchor" id="autotoc_md63"></a>
+<h2><a class="anchor" id="autotoc_md69"></a>
 define &lt;tt&gt;EF_I2C_CMDE_FLAG&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_CMDE_FLAG ((uint32_t)0x2)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md64"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md70"></a>
 define &lt;tt&gt;EF_I2C_CMDF_FLAG&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_CMDF_FLAG ((uint32_t)0x4)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md65"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md71"></a>
 define &lt;tt&gt;EF_I2C_CMDOVF_FLAG&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_CMDOVF_FLAG ((uint32_t)0x8)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md66"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md72"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT ((uint32_t)0)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md67"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md73"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_ADDRESS_MASK ((uint32_t)0x7f)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md68"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md74"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_READ_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_READ_BIT ((uint32_t)9)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md69"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md75"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_READ_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_READ_MASK ((uint32_t)0x200)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md70"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md76"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_START_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_START_BIT ((uint32_t)8)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md71"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md77"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_START_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_START_MASK ((uint32_t)0x100)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md72"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md78"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_STOP_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_STOP_BIT ((uint32_t)12)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md73"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md79"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_STOP_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_STOP_MASK ((uint32_t)0x1000)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md74"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md80"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_WRITE_BIT ((uint32_t)10)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md75"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md81"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_WRITE_MASK ((uint32_t)0x400)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md76"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md82"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT ((uint32_t)11)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md77"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md83"></a>
 define &lt;tt&gt;EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK ((uint32_t)0x800)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md78"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md84"></a>
 define &lt;tt&gt;EF_I2C_DATA_REG_DATA_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_DATA_REG_DATA_BIT ((uint32_t)0)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md79"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md85"></a>
 define &lt;tt&gt;EF_I2C_DATA_REG_DATA_LAST_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_DATA_REG_DATA_LAST_BIT ((uint32_t)9)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md80"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md86"></a>
 define &lt;tt&gt;EF_I2C_DATA_REG_DATA_LAST_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_DATA_REG_DATA_LAST_MASK ((uint32_t)0x200)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md81"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md87"></a>
 define &lt;tt&gt;EF_I2C_DATA_REG_DATA_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_DATA_REG_DATA_MASK ((uint32_t)0xff)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md82"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md88"></a>
 define &lt;tt&gt;EF_I2C_DATA_REG_DATA_VALID_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_DATA_REG_DATA_VALID_BIT ((uint32_t)8)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md83"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md89"></a>
 define &lt;tt&gt;EF_I2C_DATA_REG_DATA_VALID_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_DATA_REG_DATA_VALID_MASK ((uint32_t)0x100)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md84"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md90"></a>
 define &lt;tt&gt;EF_I2C_MISS_ACK_FLAG&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_MISS_ACK_FLAG ((uint32_t)0x1)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md85"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md91"></a>
 define &lt;tt&gt;EF_I2C_RDE_FLAG&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_RDE_FLAG ((uint32_t)0x80)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md86"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md92"></a>
 define &lt;tt&gt;EF_I2C_RDF_FLAG&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_RDF_FLAG ((uint32_t)0x100)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md87"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md93"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_BUSY_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_BUSY_BIT ((uint32_t)0)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md88"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md94"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_BUSY_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_BUSY_MASK ((uint32_t)0x1)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md89"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md95"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_BUS_ACT_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_BUS_ACT_BIT ((uint32_t)2)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md90"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md96"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_BUS_ACT_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_BUS_ACT_MASK ((uint32_t)0x4)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md91"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md97"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_BUS_CONT_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_BUS_CONT_BIT ((uint32_t)1)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md92"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md98"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_BUS_CONT_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_BUS_CONT_MASK ((uint32_t)0x2)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md93"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md99"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_CMD_EMPTY_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_CMD_EMPTY_BIT ((uint32_t)8)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md94"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md100"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_CMD_EMPTY_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_CMD_EMPTY_MASK ((uint32_t)0x100)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md95"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md101"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_CMD_FULL_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_CMD_FULL_BIT ((uint32_t)9)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md96"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md102"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_CMD_FULL_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_CMD_FULL_MASK ((uint32_t)0x200)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md97"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md103"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_CMD_OVF_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_CMD_OVF_BIT ((uint32_t)10)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md98"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md104"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_CMD_OVF_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_CMD_OVF_MASK ((uint32_t)0x400)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md99"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md105"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_MISS_ACK_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_MISS_ACK_BIT ((uint32_t)3)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md100"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md106"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_MISS_ACK_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_MISS_ACK_MASK ((uint32_t)0x8)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md101"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md107"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_RD_EMPTY_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_RD_EMPTY_BIT ((uint32_t)14)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md102"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md108"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_RD_EMPTY_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_RD_EMPTY_MASK ((uint32_t)0x4000)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md103"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md109"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_RD_FULL_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_RD_FULL_BIT ((uint32_t)15)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md104"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md110"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_RD_FULL_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_RD_FULL_MASK ((uint32_t)0x8000)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md105"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md111"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_WR_EMPTY_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_WR_EMPTY_BIT ((uint32_t)11)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md106"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md112"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_WR_EMPTY_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_WR_EMPTY_MASK ((uint32_t)0x800)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md107"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md113"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_WR_FULL_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_WR_FULL_BIT ((uint32_t)12)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md108"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md114"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_WR_FULL_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_WR_FULL_MASK ((uint32_t)0x1000)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md109"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md115"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_WR_OVF_BIT&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_WR_OVF_BIT ((uint32_t)13)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md110"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md116"></a>
 define &lt;tt&gt;EF_I2C_STATUS_REG_WR_OVF_MASK&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_STATUS_REG_WR_OVF_MASK ((uint32_t)0x2000)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md111"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md117"></a>
 define &lt;tt&gt;EF_I2C_WRE_FLAG&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_WRE_FLAG ((uint32_t)0x10)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md112"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md118"></a>
 define &lt;tt&gt;EF_I2C_WRF_FLAG&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_WRF_FLAG ((uint32_t)0x20)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md113"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md119"></a>
 define &lt;tt&gt;EF_I2C_WROVF_FLAG&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define EF_I2C_WROVF_FLAG ((uint32_t)0x40)</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md114"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md120"></a>
 define &lt;tt&gt;IO_TYPES&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define IO_TYPES </span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md115"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md121"></a>
 define &lt;tt&gt;__R&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define __R volatile const uint32_t</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md116"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md122"></a>
 define &lt;tt&gt;__RW&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define __RW volatile       uint32_t</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md117"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md123"></a>
 define &lt;tt&gt;__W&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#define __W volatile       uint32_t</span></div>
 </div><!-- fragment --> </div></div><!-- contents -->

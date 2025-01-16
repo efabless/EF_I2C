@@ -824,17 +824,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="330" column="18" bodyfile="EF_I2C.c" bodystart="330" bodyend="344"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a0403b347e88030457b2681d17780b1e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a374bdcd7a2d9994dd762b93260e7e988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_sendWriteCommand</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char addr)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t addr)</argsstring>
         <name>EF_I2C_sendWriteCommand</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <briefdescription>
@@ -867,17 +867,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="348" column="18" bodyfile="EF_I2C.c" bodystart="348" bodyend="363"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1ab809b36771601fc4fcc0ebe5b7c3c2b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a1ca44050fd31a0970d9a843ce2b660b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_sendWriteCommandNonBlocking</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent)</argsstring>
         <name>EF_I2C_sendWriteCommandNonBlocking</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <param>
@@ -926,17 +926,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="365" column="18" bodyfile="EF_I2C.c" bodystart="365" bodyend="384"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a5a686c3ed733700ac19aa163b98023c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a5a4eefaa77952dce9da7af76b06e8d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_sendReadCommand</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char addr)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t addr)</argsstring>
         <name>EF_I2C_sendReadCommand</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <briefdescription>
@@ -969,17 +969,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="387" column="18" bodyfile="EF_I2C.c" bodystart="387" bodyend="402"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a62ef1d56f7cbc0c4fdc66551fbc6f882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1ad761e01240a00cd0a0163838aa52fbf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_sendReadCommandNonBlocking</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char addr, bool *command_sent)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent)</argsstring>
         <name>EF_I2C_sendReadCommandNonBlocking</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <param>
@@ -1184,14 +1184,18 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="483" column="18" bodyfile="EF_I2C.c" bodystart="483" bodyend="502"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a8016d94edabbc9e56aa8632d81f93a4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1acfba97829c658e87ce338d95ab35cd6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommand</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t addr)</argsstring>
         <name>EF_I2C_sendWriteMultipleCommand</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>addr</declname>
         </param>
         <briefdescription>
 <para>Sends a &quot;write multiple&quot; command on the I2C bus (blocking). </para>
@@ -1215,14 +1219,18 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="504" column="18" bodyfile="EF_I2C.c" bodystart="504" bodyend="515"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1aebf50811caef2dbdd664a60ade5c0514" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a4e0baaf0ed013abb939201fe71e179ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_sendWriteMultipleCommandNonBlocking</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, bool *command_sent)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t addr, bool *command_sent)</argsstring>
         <name>EF_I2C_sendWriteMultipleCommandNonBlocking</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>addr</declname>
         </param>
         <param>
           <type>bool *</type>
@@ -1262,17 +1270,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="517" column="18" bodyfile="EF_I2C.c" bodystart="517" bodyend="534"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a976c6f1e98d2dfbf0cc9bf31bab0b110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a2145a943f79505d4c057bc6958d034eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFO</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char data)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t data)</argsstring>
         <name>EF_I2C_writeDataToWriteFIFO</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>data</declname>
         </param>
         <briefdescription>
@@ -1305,17 +1313,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="536" column="18" bodyfile="EF_I2C.c" bodystart="536" bodyend="551"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a5908b86c6c3a5c276472e1a70fadbbd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a9cf8cd0c4282ed5cc45954c6de74cae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_writeDataToWriteFIFONonBlocking</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char data, bool *data_written)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t data, bool *data_written)</argsstring>
         <name>EF_I2C_writeDataToWriteFIFONonBlocking</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>data</declname>
         </param>
         <param>
@@ -1364,17 +1372,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="554" column="18" bodyfile="EF_I2C.c" bodystart="554" bodyend="573"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1ac2d5590e0da84534bca5496836811664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a1d9931eb963c13f5bbc96e2ba3c5bdab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFO</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char *data)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t *data)</argsstring>
         <name>EF_I2C_readDataFromReadFIFO</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char *</type>
+          <type>uint8_t *</type>
           <declname>data</declname>
         </param>
         <briefdescription>
@@ -1412,17 +1420,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="576" column="18" bodyfile="EF_I2C.c" bodystart="576" bodyend="598"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a1c701c4aecb1bc623f530674337ba608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1abc156cb4e2acec2cc205775b7ce3fccd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_readDataFromReadFIFONonBlocking</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char *data, bool *data_read)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t *data, bool *data_read)</argsstring>
         <name>EF_I2C_readDataFromReadFIFONonBlocking</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char *</type>
+          <type>uint8_t *</type>
           <declname>data</declname>
         </param>
         <param>
@@ -1476,21 +1484,21 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="600" column="18" bodyfile="EF_I2C.c" bodystart="600" bodyend="625"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a756e2b744dadf6851b99c5c2cf163938" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a2b86143755c8196c79b8eeb89299a101" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_transmitByte</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char data, char addr)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t data, uint8_t addr)</argsstring>
         <name>EF_I2C_transmitByte</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>data</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <briefdescription>
@@ -1531,21 +1539,21 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="627" column="18" bodyfile="EF_I2C.c" bodystart="627" bodyend="638"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1acbe3b21327e821e4a28f9db978e6eaaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a33dc1953f3b3819bf3c2c88191f80b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_transmitByteNonBlocking</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char data, char addr, bool *transmitted)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t data, uint8_t addr, bool *transmitted)</argsstring>
         <name>EF_I2C_transmitByteNonBlocking</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>data</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <param>
@@ -1602,21 +1610,21 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="642" column="18" bodyfile="EF_I2C.c" bodystart="642" bodyend="659"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a60288fe0351fce34b2872e31f1c9951b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a0689bd62e532fda19ee62cd4b45b65c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_receiveByte</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char *data, char addr)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint8_t addr)</argsstring>
         <name>EF_I2C_receiveByte</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char *</type>
+          <type>uint8_t *</type>
           <declname>data</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <briefdescription>
@@ -1637,7 +1645,7 @@
 <parametername direction="out">data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pointer to a char where the received data byte will be stored. </para>
+<para>Pointer to a uint8_t where the received data byte will be stored. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1657,21 +1665,21 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="662" column="18" bodyfile="EF_I2C.c" bodystart="662" bodyend="673"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a1789020facae10eb7788fae74ccc3bc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a13b810bd29c715c8698c77e8991d5913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_receiveByteNonBlocking</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char *data, char addr, bool *received)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint8_t addr, bool *received)</argsstring>
         <name>EF_I2C_receiveByteNonBlocking</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char *</type>
+          <type>uint8_t *</type>
           <declname>data</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <param>
@@ -1696,7 +1704,7 @@
 <parametername direction="out">data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pointer to a char where the received data byte will be stored. </para>
+<para>Pointer to a uint8_t where the received data byte will be stored. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1728,17 +1736,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="676" column="18" bodyfile="EF_I2C.c" bodystart="676" bodyend="694"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a4b3ffb782170b3f8a621ad3ca9fade8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1aee77f1eec83d3dd4b709eeedc9ede05d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_transmitCharArr</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint32_t data_length, uint8_t addr)</argsstring>
         <name>EF_I2C_transmitCharArr</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char *</type>
+          <type>uint8_t *</type>
           <declname>data</declname>
         </param>
         <param>
@@ -1746,14 +1754,14 @@
           <declname>data_length</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <briefdescription>
-<para>Transmits an array of characters to a specified I2C address (blocking). </para>
+<para>Transmits an array of bytes to a specified I2C address (blocking). </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sends an array of characters to a specified I2C address. It handles writing the data to the I2C FIFO and ensures the last byte is appropriately marked.</para>
+<para>This function sends an array of bytes to a specified I2C address. It handles writing the data to the I2C FIFO and ensures the last byte is appropriately marked.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">i2c</parametername>
@@ -1767,7 +1775,7 @@
 <parametername direction="in">data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pointer to the array of characters to be transmitted. </para>
+<para>Pointer to the array of bytes to be transmitted. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1775,7 +1783,7 @@
 <parametername direction="in">data_length</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of characters in the array to transmit. </para>
+<para>Number of bytes in the array to transmit. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1795,17 +1803,17 @@
         </inbodydescription>
         <location file="EF_I2C.c" line="697" column="18" bodyfile="EF_I2C.c" bodystart="697" bodyend="728"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___i2_c_8c_1a774873c939f5d172d92a6587298deb5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___i2_c_8c_1a82de40473f83b733860a491e825bfa2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_I2C_recieveCharArr</definition>
-        <argsstring>(EF_I2C_TYPE_PTR i2c, char *data, uint32_t data_length, char addr)</argsstring>
+        <argsstring>(EF_I2C_TYPE_PTR i2c, uint8_t *data, uint32_t data_length, uint8_t addr)</argsstring>
         <name>EF_I2C_recieveCharArr</name>
         <param>
           <type><ref refid="_e_f___i2_c__regs_8h_1aa2269a016ba045981b24348570da1bbe" kindref="member">EF_I2C_TYPE_PTR</ref></type>
           <declname>i2c</declname>
         </param>
         <param>
-          <type>char *</type>
+          <type>uint8_t *</type>
           <declname>data</declname>
         </param>
         <param>
@@ -1813,14 +1821,14 @@
           <declname>data_length</declname>
         </param>
         <param>
-          <type>char</type>
+          <type>uint8_t</type>
           <declname>addr</declname>
         </param>
         <briefdescription>
-<para>Receives an array of characters from a specified I2C address (blocking). </para>
+<para>Receives an array of bytes from a specified I2C address (blocking). </para>
         </briefdescription>
         <detaileddescription>
-<para>This function reads an array of characters from a specified I2C address. It issues the read command for each byte, stores the data in the provided buffer, and sends a stop command after successful reception.</para>
+<para>This function reads an array of bytes from a specified I2C address. It issues the read command for each byte, stores the data in the provided buffer, and sends a stop command after successful reception.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">i2c</parametername>
@@ -1834,7 +1842,7 @@
 <parametername direction="out">data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pointer to the buffer where the received characters will be stored. </para>
+<para>Pointer to the buffer where the received bytes will be stored. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1842,7 +1850,7 @@
 <parametername direction="in">data_length</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of characters to receive. </para>
+<para>Number of bytes to receive. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1942,7 +1950,7 @@
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>i2c<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&amp;<sp/><ref refid="_e_f___i2_c_8h_1a6c5c548b64cb71bdc4b7021d5bc0ac40" kindref="member">EF_I2C_COMMAND_REG_CMD_CORRECT_MASK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((value<sp/>&amp;<sp/><ref refid="_e_f___i2_c_8h_1a6c5c548b64cb71bdc4b7021d5bc0ac40" kindref="member">EF_I2C_COMMAND_REG_CMD_CORRECT_MASK</ref>)<sp/>!=<sp/>(uint32_t)0x0)<sp/>{</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>value<sp/>is<sp/>out<sp/>of<sp/>range</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_command_available<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
@@ -1960,7 +1968,7 @@
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>i2c<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&amp;<sp/><ref refid="_e_f___i2_c_8h_1a6c5c548b64cb71bdc4b7021d5bc0ac40" kindref="member">EF_I2C_COMMAND_REG_CMD_CORRECT_MASK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((value<sp/>&amp;<sp/><ref refid="_e_f___i2_c_8h_1a6c5c548b64cb71bdc4b7021d5bc0ac40" kindref="member">EF_I2C_COMMAND_REG_CMD_CORRECT_MASK</ref>)<sp/>!=<sp/>(uint32_t)0x0)<sp/>{</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>value<sp/>is<sp/>out<sp/>of<sp/>range</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_command_available<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
@@ -1984,7 +1992,7 @@
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data_valid<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>data_valid<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" kindref="member">DATA</ref><sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a43093f7f9657aa84c882e41024d2086b" kindref="member">EF_I2C_DATA_REG_DATA_VALID_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a9bd367f94dd56d4da68fd7d01b4b03ef" kindref="member">EF_I2C_DATA_REG_DATA_VALID_BIT</ref>){</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(((i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" kindref="member">DATA</ref><sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a43093f7f9657aa84c882e41024d2086b" kindref="member">EF_I2C_DATA_REG_DATA_VALID_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a9bd367f94dd56d4da68fd7d01b4b03ef" kindref="member">EF_I2C_DATA_REG_DATA_VALID_BIT</ref>)<sp/>!=<sp/>(uint32_t)0){</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data_valid<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
@@ -2001,7 +2009,7 @@
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>i2c<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" kindref="member">DATA</ref><sp/>|=<sp/>((1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a6988500ab62cd3c3c68c94cab9cdd1d4" kindref="member">EF_I2C_DATA_REG_DATA_LAST_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a7f3b7a8f8a3ac82a0846217c396a68cf" kindref="member">EF_I2C_DATA_REG_DATA_LAST_MASK</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" kindref="member">DATA</ref><sp/>|=<sp/>(((uint32_t)1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a6988500ab62cd3c3c68c94cab9cdd1d4" kindref="member">EF_I2C_DATA_REG_DATA_LAST_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a7f3b7a8f8a3ac82a0846217c396a68cf" kindref="member">EF_I2C_DATA_REG_DATA_LAST_MASK</ref>);</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="141"><highlight class="normal">}</highlight></codeline>
@@ -2015,7 +2023,7 @@
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data_last<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>data_last<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" kindref="member">DATA</ref><sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a7f3b7a8f8a3ac82a0846217c396a68cf" kindref="member">EF_I2C_DATA_REG_DATA_LAST_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a6988500ab62cd3c3c68c94cab9cdd1d4" kindref="member">EF_I2C_DATA_REG_DATA_LAST_BIT</ref>){</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(((i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a1d71f2b00aacf91465563f68b25642ee" kindref="member">DATA</ref><sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a7f3b7a8f8a3ac82a0846217c396a68cf" kindref="member">EF_I2C_DATA_REG_DATA_LAST_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a6988500ab62cd3c3c68c94cab9cdd1d4" kindref="member">EF_I2C_DATA_REG_DATA_LAST_BIT</ref>)<sp/>!=<sp/>(uint32_t)0){</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data_last<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data_last<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
@@ -2211,7 +2219,7 @@
 <codeline lineno="345"><highlight class="normal"></highlight></codeline>
 <codeline lineno="346"><highlight class="normal"></highlight></codeline>
 <codeline lineno="347"><highlight class="normal"></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>a<sp/>blocking<sp/>send<sp/>write<sp/>command<sp/>function</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="348"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a0403b347e88030457b2681d17780b1e0" kindref="member">EF_I2C_sendWriteCommand</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr){</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a374bdcd7a2d9994dd762b93260e7e988" kindref="member">EF_I2C_sendWriteCommand</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>addr){</highlight></codeline>
 <codeline lineno="349"><highlight class="normal"></highlight></codeline>
 <codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="351"><highlight class="normal"></highlight></codeline>
@@ -2228,7 +2236,7 @@
 <codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="363"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="364"><highlight class="normal"></highlight></codeline>
-<codeline lineno="365"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1ab809b36771601fc4fcc0ebe5b7c3c2b3" kindref="member">EF_I2C_sendWriteCommandNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*command_sent){</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a1ca44050fd31a0970d9a843ce2b660b7" kindref="member">EF_I2C_sendWriteCommandNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*command_sent){</highlight></codeline>
 <codeline lineno="366"><highlight class="normal"></highlight></codeline>
 <codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="368"><highlight class="normal"></highlight></codeline>
@@ -2250,7 +2258,7 @@
 <codeline lineno="384"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="385"><highlight class="normal"></highlight></codeline>
 <codeline lineno="386"><highlight class="normal"></highlight></codeline>
-<codeline lineno="387"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a5a686c3ed733700ac19aa163b98023c9" kindref="member">EF_I2C_sendReadCommand</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr){</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a5a4eefaa77952dce9da7af76b06e8d90" kindref="member">EF_I2C_sendReadCommand</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>addr){</highlight></codeline>
 <codeline lineno="388"><highlight class="normal"></highlight></codeline>
 <codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="390"><highlight class="normal"></highlight></codeline>
@@ -2268,7 +2276,7 @@
 <codeline lineno="402"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="403"><highlight class="normal"></highlight></codeline>
 <codeline lineno="404"><highlight class="normal"></highlight></codeline>
-<codeline lineno="405"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a62ef1d56f7cbc0c4fdc66551fbc6f882" kindref="member">EF_I2C_sendReadCommandNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*command_sent){</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1ad761e01240a00cd0a0163838aa52fbf3" kindref="member">EF_I2C_sendReadCommandNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*command_sent){</highlight></codeline>
 <codeline lineno="406"><highlight class="normal"></highlight></codeline>
 <codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="408"><highlight class="normal"></highlight></codeline>
@@ -2302,7 +2310,7 @@
 <codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a14e5de684a330a987584ba5219bf8304" kindref="member">EF_I2C_isCommandFIFOAvailable</ref>(i2c,<sp/>&amp;command_FIFO_available);</highlight></codeline>
 <codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((status==<ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(command_FIFO_available==</highlight><highlight class="keyword">false</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>((1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a37c7a7e1a9c95bbd1c6d6bde3c4f513d" kindref="member">EF_I2C_COMMAND_REG_CMD_START_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a57898082e7f89df311756096cf82b53a" kindref="member">EF_I2C_COMMAND_REG_CMD_START_MASK</ref>);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>(((uint32_t)1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a37c7a7e1a9c95bbd1c6d6bde3c4f513d" kindref="member">EF_I2C_COMMAND_REG_CMD_START_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a57898082e7f89df311756096cf82b53a" kindref="member">EF_I2C_COMMAND_REG_CMD_START_MASK</ref>);</highlight></codeline>
 <codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="442"><highlight class="normal">}</highlight></codeline>
@@ -2319,7 +2327,7 @@
 <codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>command_FIFO_available<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a14e5de684a330a987584ba5219bf8304" kindref="member">EF_I2C_isCommandFIFOAvailable</ref>(i2c,<sp/>&amp;command_FIFO_available);</highlight></codeline>
 <codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status==<ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(command_FIFO_available==</highlight><highlight class="keyword">true</highlight><highlight class="normal">)){</highlight></codeline>
-<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>((1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a37c7a7e1a9c95bbd1c6d6bde3c4f513d" kindref="member">EF_I2C_COMMAND_REG_CMD_START_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a57898082e7f89df311756096cf82b53a" kindref="member">EF_I2C_COMMAND_REG_CMD_START_MASK</ref>);</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>(((uint32_t)1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a37c7a7e1a9c95bbd1c6d6bde3c4f513d" kindref="member">EF_I2C_COMMAND_REG_CMD_START_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a57898082e7f89df311756096cf82b53a" kindref="member">EF_I2C_COMMAND_REG_CMD_START_MASK</ref>);</highlight></codeline>
 <codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*command_sent<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*command_sent<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
@@ -2340,7 +2348,7 @@
 <codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a14e5de684a330a987584ba5219bf8304" kindref="member">EF_I2C_isCommandFIFOAvailable</ref>(i2c,<sp/>&amp;command_FIFO_available);</highlight></codeline>
 <codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((status==<ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(command_FIFO_available==</highlight><highlight class="keyword">false</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>((1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a5dd2e00cae19e862ca6e50b32d28af0f" kindref="member">EF_I2C_COMMAND_REG_CMD_STOP_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a49de998bf6fc603985ece7d4b5f1a2a8" kindref="member">EF_I2C_COMMAND_REG_CMD_STOP_MASK</ref>);</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>(((uint32_t)1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a5dd2e00cae19e862ca6e50b32d28af0f" kindref="member">EF_I2C_COMMAND_REG_CMD_STOP_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a49de998bf6fc603985ece7d4b5f1a2a8" kindref="member">EF_I2C_COMMAND_REG_CMD_STOP_MASK</ref>);</highlight></codeline>
 <codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="480"><highlight class="normal">}</highlight></codeline>
@@ -2358,7 +2366,7 @@
 <codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>command_FIFO_available<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a14e5de684a330a987584ba5219bf8304" kindref="member">EF_I2C_isCommandFIFOAvailable</ref>(i2c,<sp/>&amp;command_FIFO_available);</highlight></codeline>
 <codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status==<ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(command_FIFO_available==</highlight><highlight class="keyword">true</highlight><highlight class="normal">)){</highlight></codeline>
-<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>((1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a5dd2e00cae19e862ca6e50b32d28af0f" kindref="member">EF_I2C_COMMAND_REG_CMD_STOP_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a49de998bf6fc603985ece7d4b5f1a2a8" kindref="member">EF_I2C_COMMAND_REG_CMD_STOP_MASK</ref>);</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>(((uint32_t)1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a5dd2e00cae19e862ca6e50b32d28af0f" kindref="member">EF_I2C_COMMAND_REG_CMD_STOP_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a49de998bf6fc603985ece7d4b5f1a2a8" kindref="member">EF_I2C_COMMAND_REG_CMD_STOP_MASK</ref>);</highlight></codeline>
 <codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*command_sent<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*command_sent<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
@@ -2367,7 +2375,7 @@
 <codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="502"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="503"><highlight class="normal"></highlight></codeline>
-<codeline lineno="504"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a8016d94edabbc9e56aa8632d81f93a4e" kindref="member">EF_I2C_sendWriteMultipleCommand</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c){</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1acfba97829c658e87ce338d95ab35cd6a" kindref="member">EF_I2C_sendWriteMultipleCommand</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>addr){</highlight></codeline>
 <codeline lineno="505"><highlight class="normal"></highlight></codeline>
 <codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="507"><highlight class="normal"></highlight></codeline>
@@ -2376,11 +2384,11 @@
 <codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a14e5de684a330a987584ba5219bf8304" kindref="member">EF_I2C_isCommandFIFOAvailable</ref>(i2c,<sp/>&amp;command_FIFO_available);</highlight></codeline>
 <codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((status==<ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(command_FIFO_available==</highlight><highlight class="keyword">false</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>((1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a1ce068cc21a8dd04853eca8fafa86e8b" kindref="member">EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a4f3157f848946db64740fb331db483cb" kindref="member">EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK</ref>);</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>((addr<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a1bceef95d7131b66c7ffa2800519f326" kindref="member">EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a4f3157f848946db64740fb331db483cb" kindref="member">EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK</ref>);</highlight></codeline>
 <codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="515"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="516"><highlight class="normal"></highlight></codeline>
-<codeline lineno="517"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1aebf50811caef2dbdd664a60ade5c0514" kindref="member">EF_I2C_sendWriteMultipleCommandNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*command_sent){</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a4e0baaf0ed013abb939201fe71e179ae" kindref="member">EF_I2C_sendWriteMultipleCommandNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*command_sent){</highlight></codeline>
 <codeline lineno="518"><highlight class="normal"></highlight></codeline>
 <codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="520"><highlight class="normal"></highlight></codeline>
@@ -2390,7 +2398,7 @@
 <codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>command_FIFO_available<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a14e5de684a330a987584ba5219bf8304" kindref="member">EF_I2C_isCommandFIFOAvailable</ref>(i2c,<sp/>&amp;command_FIFO_available);</highlight></codeline>
 <codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status==<ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(command_FIFO_available==</highlight><highlight class="keyword">true</highlight><highlight class="normal">)){</highlight></codeline>
-<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>((1<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a1ce068cc21a8dd04853eca8fafa86e8b" kindref="member">EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a4f3157f848946db64740fb331db483cb" kindref="member">EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK</ref>);</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2c-&gt;<ref refid="struct___e_f___i2_c___t_y_p_e___1a4dc8938ade35c9aa6a6aa76cc78dea07" kindref="member">COMMAND</ref><sp/>=<sp/>((addr<sp/>&lt;&lt;<sp/><ref refid="_e_f___i2_c__regs_8h_1a1bceef95d7131b66c7ffa2800519f326" kindref="member">EF_I2C_COMMAND_REG_CMD_ADDRESS_BIT</ref>)<sp/>&amp;<sp/><ref refid="_e_f___i2_c__regs_8h_1a4f3157f848946db64740fb331db483cb" kindref="member">EF_I2C_COMMAND_REG_CMD_WRITE_MULTIPLE_MASK</ref>);</highlight></codeline>
 <codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*command_sent<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*command_sent<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
@@ -2399,7 +2407,7 @@
 <codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="534"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="535"><highlight class="normal"></highlight></codeline>
-<codeline lineno="536"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a976c6f1e98d2dfbf0cc9bf31bab0b110" kindref="member">EF_I2C_writeDataToWriteFIFO</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data){</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a2145a943f79505d4c057bc6958d034eb" kindref="member">EF_I2C_writeDataToWriteFIFO</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>data){</highlight></codeline>
 <codeline lineno="537"><highlight class="normal"></highlight></codeline>
 <codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="539"><highlight class="normal"></highlight></codeline>
@@ -2417,7 +2425,7 @@
 <codeline lineno="551"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="552"><highlight class="normal"></highlight></codeline>
 <codeline lineno="553"><highlight class="normal"></highlight></codeline>
-<codeline lineno="554"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a5908b86c6c3a5c276472e1a70fadbbd4" kindref="member">EF_I2C_writeDataToWriteFIFONonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*data_written){</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a9cf8cd0c4282ed5cc45954c6de74cae8" kindref="member">EF_I2C_writeDataToWriteFIFONonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>data,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*data_written){</highlight></codeline>
 <codeline lineno="555"><highlight class="normal"></highlight></codeline>
 <codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="557"><highlight class="normal"></highlight></codeline>
@@ -2439,7 +2447,7 @@
 <codeline lineno="573"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="574"><highlight class="normal"></highlight></codeline>
 <codeline lineno="575"><highlight class="normal"></highlight></codeline>
-<codeline lineno="576"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1ac2d5590e0da84534bca5496836811664" kindref="member">EF_I2C_readDataFromReadFIFO</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data){</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a1d9931eb963c13f5bbc96e2ba3c5bdab" kindref="member">EF_I2C_readDataFromReadFIFO</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>*data){</highlight></codeline>
 <codeline lineno="577"><highlight class="normal"></highlight></codeline>
 <codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="579"><highlight class="normal"></highlight></codeline>
@@ -2463,7 +2471,7 @@
 <codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="598"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="599"><highlight class="normal"></highlight></codeline>
-<codeline lineno="600"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a1c701c4aecb1bc623f530674337ba608" kindref="member">EF_I2C_readDataFromReadFIFONonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*data_read){</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1abc156cb4e2acec2cc205775b7ce3fccd" kindref="member">EF_I2C_readDataFromReadFIFONonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>*data,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*data_read){</highlight></codeline>
 <codeline lineno="601"><highlight class="normal"></highlight></codeline>
 <codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="603"><highlight class="normal"></highlight></codeline>
@@ -2490,14 +2498,14 @@
 <codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="625"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="626"><highlight class="normal"></highlight></codeline>
-<codeline lineno="627"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a756e2b744dadf6851b99c5c2cf163938" kindref="member">EF_I2C_transmitByte</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr){</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a2b86143755c8196c79b8eeb89299a101" kindref="member">EF_I2C_transmitByte</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>data,<sp/>uint8_t<sp/>addr){</highlight></codeline>
 <codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="630"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>i2c<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="632"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a976c6f1e98d2dfbf0cc9bf31bab0b110" kindref="member">EF_I2C_writeDataToWriteFIFO</ref>(i2c,<sp/>data);</highlight></codeline>
-<codeline lineno="634"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a0403b347e88030457b2681d17780b1e0" kindref="member">EF_I2C_sendWriteCommand</ref>(i2c,<sp/>addr);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a2145a943f79505d4c057bc6958d034eb" kindref="member">EF_I2C_writeDataToWriteFIFO</ref>(i2c,<sp/>data);</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a374bdcd7a2d9994dd762b93260e7e988" kindref="member">EF_I2C_sendWriteCommand</ref>(i2c,<sp/>addr);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
 <codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a4545f7e33e2e35e7b100b6f3857433bd" kindref="member">EF_I2C_sendStopCommand</ref>(i2c);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
 <codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
@@ -2505,7 +2513,7 @@
 <codeline lineno="639"><highlight class="normal"></highlight></codeline>
 <codeline lineno="640"><highlight class="normal"></highlight></codeline>
 <codeline lineno="641"><highlight class="normal"></highlight></codeline>
-<codeline lineno="642"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1acbe3b21327e821e4a28f9db978e6eaaa" kindref="member">EF_I2C_transmitByteNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*transmitted){</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a33dc1953f3b3819bf3c2c88191f80b03" kindref="member">EF_I2C_transmitByteNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>data,<sp/>uint8_t<sp/>addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*transmitted){</highlight></codeline>
 <codeline lineno="643"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="644"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="645"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
@@ -2516,8 +2524,8 @@
 <codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>command_sent<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>data_written<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stop_command_sent<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a5908b86c6c3a5c276472e1a70fadbbd4" kindref="member">EF_I2C_writeDataToWriteFIFONonBlocking</ref>(i2c,<sp/>data,<sp/>&amp;data_written);</highlight></codeline>
-<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(data_written<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">))<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1ab809b36771601fc4fcc0ebe5b7c3c2b3" kindref="member">EF_I2C_sendWriteCommandNonBlocking</ref>(i2c,<sp/>addr,<sp/>&amp;command_sent);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a9cf8cd0c4282ed5cc45954c6de74cae8" kindref="member">EF_I2C_writeDataToWriteFIFONonBlocking</ref>(i2c,<sp/>data,<sp/>&amp;data_written);</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(data_written<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">))<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a1ca44050fd31a0970d9a843ce2b660b7" kindref="member">EF_I2C_sendWriteCommandNonBlocking</ref>(i2c,<sp/>addr,<sp/>&amp;command_sent);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
 <codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(command_sent<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">))<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1adc35bddf018b22d9f822442360d9a1e5" kindref="member">EF_I2C_sendStopCommandNonBlocking</ref>(i2c,<sp/>&amp;stop_command_sent);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
 <codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(stop_command_sent<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">))<sp/>{*transmitted<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{*transmitted<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;}</highlight></codeline>
 <codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -2525,21 +2533,21 @@
 <codeline lineno="659"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="660"><highlight class="normal"></highlight></codeline>
 <codeline lineno="661"><highlight class="normal"></highlight></codeline>
-<codeline lineno="662"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a60288fe0351fce34b2872e31f1c9951b" kindref="member">EF_I2C_receiveByte</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr){</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a0689bd62e532fda19ee62cd4b45b65c5" kindref="member">EF_I2C_receiveByte</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>*data,<sp/>uint8_t<sp/>addr){</highlight></codeline>
 <codeline lineno="663"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>i2c<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a5a686c3ed733700ac19aa163b98023c9" kindref="member">EF_I2C_sendReadCommand</ref>(i2c,<sp/>addr);</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a5a4eefaa77952dce9da7af76b06e8d90" kindref="member">EF_I2C_sendReadCommand</ref>(i2c,<sp/>addr);</highlight></codeline>
 <codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a4545f7e33e2e35e7b100b6f3857433bd" kindref="member">EF_I2C_sendStopCommand</ref>(i2c);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1ac2d5590e0da84534bca5496836811664" kindref="member">EF_I2C_readDataFromReadFIFO</ref>(i2c,<sp/>data);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a1d9931eb963c13f5bbc96e2ba3c5bdab" kindref="member">EF_I2C_readDataFromReadFIFO</ref>(i2c,<sp/>data);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
 <codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="673"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="674"><highlight class="normal"></highlight></codeline>
 <codeline lineno="675"><highlight class="normal"></highlight></codeline>
-<codeline lineno="676"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a1789020facae10eb7788fae74ccc3bc8" kindref="member">EF_I2C_receiveByteNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*received){</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a13b810bd29c715c8698c77e8991d5913" kindref="member">EF_I2C_receiveByteNonBlocking</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>*data,<sp/>uint8_t<sp/>addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*received){</highlight></codeline>
 <codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
@@ -2551,16 +2559,16 @@
 <codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>data_read<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stop_command_sent<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a62ef1d56f7cbc0c4fdc66551fbc6f882" kindref="member">EF_I2C_sendReadCommandNonBlocking</ref>(i2c,<sp/>addr,<sp/>&amp;command_sent);</highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1ad761e01240a00cd0a0163838aa52fbf3" kindref="member">EF_I2C_sendReadCommandNonBlocking</ref>(i2c,<sp/>addr,<sp/>&amp;command_sent);</highlight></codeline>
 <codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(command_sent<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">))<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1adc35bddf018b22d9f822442360d9a1e5" kindref="member">EF_I2C_sendStopCommandNonBlocking</ref>(i2c,<sp/>&amp;stop_command_sent);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(stop_command_sent<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">))<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a1c701c4aecb1bc623f530674337ba608" kindref="member">EF_I2C_readDataFromReadFIFONonBlocking</ref>(i2c,<sp/>data,<sp/>&amp;data_read);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(stop_command_sent<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">))<sp/>{status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1abc156cb4e2acec2cc205775b7ce3fccd" kindref="member">EF_I2C_readDataFromReadFIFONonBlocking</ref>(i2c,<sp/>data,<sp/>&amp;data_read);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
 <codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)&amp;&amp;(data_read<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">))<sp/>{*received<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{*received<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;}</highlight></codeline>
 <codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="694"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="695"><highlight class="normal"></highlight></codeline>
 <codeline lineno="696"><highlight class="normal"></highlight></codeline>
-<codeline lineno="697"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a4b3ffb782170b3f8a621ad3ca9fade8e" kindref="member">EF_I2C_transmitCharArr</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/>uint32_t<sp/>data_length,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr)<sp/>{</highlight></codeline>
+<codeline lineno="697"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1aee77f1eec83d3dd4b709eeedc9ede05d" kindref="member">EF_I2C_transmitCharArr</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/>data_length,<sp/>uint8_t<sp/>addr)<sp/>{</highlight></codeline>
 <codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="699"><highlight class="normal"></highlight></codeline>
 <codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>input<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
@@ -2568,21 +2576,21 @@
 <codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>error<sp/>status<sp/>if<sp/>parameters<sp/>are<sp/>invalid</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="704"><highlight class="normal"></highlight></codeline>
-<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a976c6f1e98d2dfbf0cc9bf31bab0b110" kindref="member">EF_I2C_writeDataToWriteFIFO</ref>(i2c,<sp/>data[0]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>first<sp/>byte<sp/>to<sp/>the<sp/>FIFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a2145a943f79505d4c057bc6958d034eb" kindref="member">EF_I2C_writeDataToWriteFIFO</ref>(i2c,<sp/>data[0]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>first<sp/>byte<sp/>to<sp/>the<sp/>FIFO</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="706"><highlight class="normal"></highlight></codeline>
 <codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a8016d94edabbc9e56aa8632d81f93a4e" kindref="member">EF_I2C_sendWriteMultipleCommand</ref>(i2c);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>write<sp/>multiple<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1acfba97829c658e87ce338d95ab35cd6a" kindref="member">EF_I2C_sendWriteMultipleCommand</ref>(i2c,<sp/>addr);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>write<sp/>multiple<sp/>command</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
 <codeline lineno="710"><highlight class="normal"></highlight></codeline>
 <codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transmit<sp/>the<sp/>remaining<sp/>bytes<sp/>if<sp/>no<sp/>error<sp/>has<sp/>occurred</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>data_length<sp/>&amp;&amp;<sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>1;<sp/>(i<sp/>&lt;<sp/>data_length)<sp/>&amp;&amp;<sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>);<sp/>i++)<sp/>{</highlight></codeline>
 <codeline lineno="713"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="714"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>data_length<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>(data_length<sp/>-<sp/>(uint32_t)1))<sp/>{</highlight></codeline>
 <codeline lineno="715"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a20ba0e48023589b93dc8fe15519c5482" kindref="member">EF_I2C_setDataLast</ref>(i2c);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mark<sp/>the<sp/>last<sp/>byte<sp/>appropriately</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="716"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="717"><highlight class="normal"></highlight></codeline>
 <codeline lineno="718"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a976c6f1e98d2dfbf0cc9bf31bab0b110" kindref="member">EF_I2C_writeDataToWriteFIFO</ref>(i2c,<sp/>data[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>current<sp/>byte<sp/>to<sp/>the<sp/>FIFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a2145a943f79505d4c057bc6958d034eb" kindref="member">EF_I2C_writeDataToWriteFIFO</ref>(i2c,<sp/>data[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>current<sp/>byte<sp/>to<sp/>the<sp/>FIFO</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="721"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="722"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -2593,17 +2601,17 @@
 <codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="728"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="729"><highlight class="normal"></highlight></codeline>
-<codeline lineno="730"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a774873c939f5d172d92a6587298deb5d" kindref="member">EF_I2C_recieveCharArr</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/>uint32_t<sp/>data_length,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>addr)<sp/>{</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___i2_c_8c_1a82de40473f83b733860a491e825bfa2c" kindref="member">EF_I2C_recieveCharArr</ref>(<ref refid="struct___e_f___i2_c___t_y_p_e__" kindref="compound">EF_I2C_TYPE_PTR</ref><sp/>i2c,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/>data_length,<sp/>uint8_t<sp/>addr)<sp/>{</highlight></codeline>
 <codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="732"><highlight class="normal"></highlight></codeline>
 <codeline lineno="733"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>input<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((i2c<sp/>==<sp/>NULL)<sp/>||<sp/>(data<sp/>==<sp/>NULL)<sp/>||<sp/>(data_length<sp/>==<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((i2c<sp/>==<sp/>NULL)<sp/>||<sp/>(data<sp/>==<sp/>NULL)<sp/>||<sp/>(data_length<sp/>==<sp/>(uint32_t)0))<sp/>{</highlight></codeline>
 <codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>error<sp/>status<sp/>if<sp/>parameters<sp/>are<sp/>invalid</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transmit<sp/>the<sp/>remaining<sp/>bytes<sp/>if<sp/>no<sp/>error<sp/>has<sp/>occurred</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length<sp/>&amp;&amp;<sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>(i<sp/>&lt;<sp/>data_length)<sp/>&amp;&amp;<sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>);<sp/>i++)<sp/>{</highlight></codeline>
 <codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a5a686c3ed733700ac19aa163b98023c9" kindref="member">EF_I2C_sendReadCommand</ref>(i2c,<sp/>addr);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>read<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___i2_c_8c_1a5a4eefaa77952dce9da7af76b06e8d90" kindref="member">EF_I2C_sendReadCommand</ref>(i2c,<sp/>addr);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>read<sp/>command</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="741"><highlight class="normal"></highlight></codeline>
 <codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_I2C_readData(i2c,<sp/>data[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>the<sp/>current<sp/>byte<sp/>to<sp/>the<sp/>FIFO</highlight><highlight class="normal"></highlight></codeline>
