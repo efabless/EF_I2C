@@ -29,10 +29,22 @@ EF_I2C_WB INST (
 
 #### Wrappers with DFT support
 Wrappers in the directory ``/hdl/rtl/bus_wrappers/DFT`` have an extra input port ``sc_testmode`` to disable the clock gate whenever the scan chain testmode is enabled.
+### External IO interfaces
+|IO name|Direction|Width|Description|
+|---|---|---|---|
+|scl_i|input|1|i2c scl (Serial Clock) input|
+|scl_o|output|1|i2c scl (Serial Clock) output|
+|scl_oen_o|output|1|i2c scl (Serial Clock) output enable|
+|sda_i|input|1|i2c scl (Serial Data) input|
+|sda_o|output|1|i2c scl (Serial Data) output|
+|sda_oen_o|output|1|i2c scl (Serial Data) output enable|
+|i2c_irq|output|1|i2c interrupt|
+### Interrupt Request Line (irq)
+This IP generates interrupts on specific events, which are described in the [Interrupt Flags](#interrupt-flags) section bellow. The IRQ port should be connected to the system interrupt controller.
 
 ## Implementation example  
 
-The following table is the result for implementing the EF_I2C IP with different wrappers using Sky130 PDK and [OpenLane2](https://github.com/efabless/openlane2) flow.
+The following table is the result for implementing the EF_I2C IP with different wrappers using Sky130 HD library and [OpenLane2](https://github.com/efabless/openlane2) flow.
 |Module | Number of cells | Max. freq |
 |---|---|---|
 |EF_I2C|TBD| TBD |
@@ -119,13 +131,13 @@ prescale = Fclk / (FI2Cclk * 4)
 The wrapped IP provides four registers to deal with interrupts: IM, RIS, MIS and IC. These registers exist for all wrapper types.
 
 Each register has a group of bits for the interrupt sources/flags.
-- `IM` [offset: 0xff00]: is used to enable/disable interrupt sources.
+- `IM` [offset: ``0xff00``]: is used to enable/disable interrupt sources.
 
-- `RIS` [offset: 0xff08]: has the current interrupt status (interrupt flags) whether they are enabled or disabled.
+- `RIS` [offset: ``0xff08``]: has the current interrupt status (interrupt flags) whether they are enabled or disabled.
 
-- `MIS` [offset: 0xff04]: is the result of masking (ANDing) RIS by IM.
+- `MIS` [offset: ``0xff04``]: is the result of masking (ANDing) RIS by IM.
 
-- `IC` [offset: 0xff0c]: is used to clear an interrupt flag.
+- `IC` [offset: ``0xff0c``]: is used to clear an interrupt flag.
 
 
 The following are the bit definitions for the interrupt registers:
@@ -142,15 +154,31 @@ The following are the bit definitions for the interrupt registers:
 |7|RDE|1|Read FIFO is Empty|
 |8|RDF|1|Read FIFO is Full|
 ### Clock Gating
-The IP has clock gating feature, enabling the selective activation and deactivation of the clock as required through the ``GCLK`` register. This functionality is implemented through the ``ef_util_gating_cell``, which is part of the the common modules library, [ef_util_lib.v](https://github.com/efabless/EF_IP_UTIL/blob/main/hdl/ef_util_lib.v). By default, the clock gating is disabled. To enable behavioral implmentation clock gating for simulation purposes, you should use the ``CLKG_GENERIC`` macro. Alternatively, if you wish to use the SKY130 clock gating cell, ``sky130_fd_sc_hd__dlclkp_4``, you can enable it by using the ``CLKG_SKY130_HD`` macro.
+The IP includes a clock gating feature that allows selective activation and deactivation of the clock using the ``GCLK`` register. This capability is implemented through the ``ef_util_gating_cell`` module, which is part of the common modules library, [ef_util_lib.v](https://github.com/efabless/EF_IP_UTIL/blob/main/hdl/ef_util_lib.v). By default, the clock gating is disabled. To enable behavioral implmentation clock gating, only for simulation purposes, you should define the ``CLKG_GENERIC`` macro. Alternatively, define the ``CLKG_SKY130_HD`` macro if you wish to use the SKY130 HD library clock gating cell, ``sky130_fd_sc_hd__dlclkp_4``.
 
-**Note:** If you choose the [OpenLane2](https://github.com/efabless/openlane2) flow for implementation and would like to add the clock gating feature, you need to add ``CLKG_SKY130_HD`` macro to the ``VERILOG_DEFINES`` configuration variable. Update OpenLane2 YAML configuration file as follows: 
+**Note:** If you choose the [OpenLane2](https://github.com/efabless/openlane2) flow for implementation and would like to enable the clock gating feature, you need to add ``CLKG_SKY130_HD`` macro to the ``VERILOG_DEFINES`` configuration variable. Update OpenLane2 YAML configuration file as follows: 
 ```
 VERILOG_DEFINES:
 - CLKG_SKY130_HD
 ```
+## Firmware Drivers:
+Firmware drivers for EF_I2C can be found in the [Drivers](https://github.com/efabless/EFIS/tree/main/Drivers) directory in the [EFIS](https://github.com/efabless/EFIS) (Efabless Firmware Interface Standard) repo. EF_I2C driver documentation  is available [here](https://github.com/efabless/EFIS/blob/main/Drivers/docs/EF_Driver_I2C/README.md).
+You can also find an example C application using the EF_I2C drivers [here](https://github.com/efabless/EFIS/tree/main/Drivers/docs/EF_Driver_I2C/example).
+## Installation:
+You can install the IP either by cloning this repository or by using [IPM](https://github.com/efabless/IPM).
+### 1. Using [IPM](https://github.com/efabless/IPM):
+- [Optional] If you do not have IPM installed, follow the installation guide [here](https://github.com/efabless/IPM/blob/main/README.md)
+- After installing IPM, execute the following command ```ipm install EF_I2C```.
+> **Note:** This method is recommended as it automatically installs [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) as a dependency.
+### 2. Cloning this repo: 
+- Clone [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) repository, which includes the required modules from the common modules library, [ef_util_lib.v](https://github.com/efabless/EF_IP_UTIL/blob/main/hdl/ef_util_lib.v).
+```git clone https://github.com/efabless/EF_IP_UTIL.git```
+- Clone the IP repository
+```git clone https://github.com/efabless/EF_I2C```
 
-### The Interface 
+### The Wrapped IP Interface 
+
+>**_NOTE:_** This section is intended for advanced users who wish to gain more information about the interface of the wrapped IP, in case they want to create their own wrappers.
 
 <img src="docs/_static/EF_I2C.svg" width="600"/>
 
@@ -193,17 +221,3 @@ VERILOG_DEFINES:
 |i2c_sda_o|output|1|i2c scl (Serial Data) output|
 |i2c_sda_t|output|1|i2c scl (Serial Data) tristate|
 |flags|output|16|i2c flags|
-## Firmware Drivers:
-Firmware drivers for EF_I2C can be found in the [fw](https://github.com/efabless/EF_I2C/tree/main/fw) directory. EF_I2C driver documentation  is available [here](https://github.com/efabless/EF_I2C/blob/main/fw/README.md).
-You can also find an example C application using the EF_I2C drivers [here]().
-## Installation:
-You can install the IP either by cloning the repository or using [IPM](https://github.com/efabless/IPM), an open-source IP Package Manager.
-##### 1. Using [IPM](https://github.com/efabless/IPM):
-- If you do not have IPM installed, follow installation guide  [here](https://github.com/efabless/IPM/blob/main/README.md)
-- Run ```ipm install EF_I2C```
-> **Note:** This method is recommended as it automatically installs [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) as a dependency.
-##### 2. Cloning: 
-- Clone [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) repository, which includes the required modules from the common.
-```git clone https://github.com/efabless/EF_IP_UTIL.git```
-- Then, clone the IP repository
-```git clone https://github.com/efabless/EF_I2C```
