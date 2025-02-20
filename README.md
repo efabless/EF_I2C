@@ -1,33 +1,27 @@
 # EF_I2C
 
 APB and wishbone wrappers for the I2C master controller which is implemented in Verilog in the [alexforencich/verilog-i2c](https://github.com/efabless/I2C) repository.
+## The wrapped IP
 
+
+ The IP comes with an APB Wrapper
 
 #### Wrapped IP System Integration
 
 ```verilog
-EF_I2C_WB INST (
-	.clk_i(clk_i),
-	.rst_i(rst_i),
-	.adr_i(adr_i),
-	.dat_i(dat_i),
-	.dat_o(dat_o),
-	.sel_i(sel_i),
-	.cyc_i(cyc_i),
-	.stb_i(stb_i),
-	.ack_o(ack_o),
-	.we_i(we_i), 
-	.IRQ(irq),
-	.scl_i(scl_i),
-	.scl_o(scl_o),
-	.scl_oen_o(scl_oen_o),
-	.sda_i(sda_i),
-	.sda_o(sda_o),
+EF_I2C_APB INST (
+	`TB_APB_SLAVE_CONN,
+	.scl_i(scl_i)
+	.scl_o(scl_o)
+	.scl_oen_o(scl_oen_o)
+	.sda_i(sda_i)
+	.sda_o(sda_o)
 	.sda_oen_o(sda_oen_o)
+	.i2c_irq(i2c_irq)
 );
 ```
-
-#### Wrappers with DFT support
+> **_NOTE:_** `TB_APB_SLAVE_CONN is a convenient macro provided by [BusWrap](https://github.com/efabless/BusWrap/tree/main).
+### Wrappers with DFT support
 Wrappers in the directory ``/hdl/rtl/bus_wrappers/DFT`` have an extra input port ``sc_testmode`` to disable the clock gate whenever the scan chain testmode is enabled.
 ### External IO interfaces
 |IO name|Direction|Width|Description|
@@ -144,15 +138,18 @@ The following are the bit definitions for the interrupt registers:
 
 |Bit|Flag|Width|Description|
 |---|---|---|---|
-|0|MISS_ACK|1|Slave ACK is missed|
-|1|CMDE|1|Command FIFO is Empty|
-|2|CMDF|1|Command FIFO is Full|
-|3|CMDOVF|1|Command FIFO overflow; write 1 to clear|
-|4|WRE|1|Write FIFO is Empty|
-|5|WRF|1|Write FIFO is Full|
-|6|WROVF|1|Write FIFO overflow; write 1 to clear|
-|7|RDE|1|Read FIFO is Empty|
-|8|RDF|1|Read FIFO is Full|
+|0|BUSY|-1|High when module is performing an I2C operation|
+|-1|BUSCONT|-1|High when module has control of active bus|
+|-2|BUSACT|-1|High when bus is active|
+|-3|MISS_ACK|-1|Slave ACK is missed|
+|-4|CMDE|-1|Command FIFO is Empty|
+|-5|CMDF|-1|Command FIFO is Full|
+|-6|CMDOVF|-1|Command FIFO overflow; write 1 to clear|
+|-7|WRE|-1|Write FIFO is Empty|
+|-8|WRF|-1|Write FIFO is Full|
+|-9|WROVF|-1|Write FIFO overflow; write 1 to clear|
+|-10|RDE|-1|Read FIFO is Empty|
+|-11|RDF|-1|Read FIFO is Full|
 ### Clock Gating
 The IP includes a clock gating feature that allows selective activation and deactivation of the clock using the ``GCLK`` register. This capability is implemented through the ``ef_util_gating_cell`` module, which is part of the common modules library, [ef_util_lib.v](https://github.com/efabless/EF_IP_UTIL/blob/main/hdl/ef_util_lib.v). By default, the clock gating is disabled. To enable behavioral implmentation clock gating, only for simulation purposes, you should define the ``CLKG_GENERIC`` macro. Alternatively, define the ``CLKG_SKY130_HD`` macro if you wish to use the SKY130 HD library clock gating cell, ``sky130_fd_sc_hd__dlclkp_4``.
 
@@ -162,8 +159,8 @@ VERILOG_DEFINES:
 - CLKG_SKY130_HD
 ```
 ## Firmware Drivers:
-Firmware drivers for EF_I2C can be found in the [Drivers](https://github.com/efabless/EFIS/tree/main/Drivers) directory in the [EFIS](https://github.com/efabless/EFIS) (Efabless Firmware Interface Standard) repo. EF_I2C driver documentation  is available [here](https://github.com/efabless/EFIS/blob/main/Drivers/docs/EF_Driver_I2C/README.md).
-You can also find an example C application using the EF_I2C drivers [here](https://github.com/efabless/EFIS/tree/main/Drivers/docs/EF_Driver_I2C/example).
+Firmware drivers for EF_I2C can be found in the [Drivers](https://github.com/efabless/EFIS/tree/main/Drivers) directory in the [EFIS](https://github.com/efabless/EFIS) (Efabless Firmware Interface Standard) repo. EF_I2C driver documentation  is available [here](https://github.com/efabless/EFIS/blob/main/Drivers/Docs/EF_I2C/README.md).
+You can also find an example C application using the EF_I2C drivers [here](https://github.com/efabless/EFIS/tree/main/Drivers/Docs/EF_I2C/example).
 ## Installation:
 You can install the IP either by cloning this repository or by using [IPM](https://github.com/efabless/IPM).
 ### 1. Using [IPM](https://github.com/efabless/IPM):
